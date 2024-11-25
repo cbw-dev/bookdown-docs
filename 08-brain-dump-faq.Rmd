@@ -1,1 +1,9 @@
 # Brain Dump / FAQ
+
+
+## Danger Zones
+
+- renaming your file with this project, doesn't change the .Rprog file!
+
+
+- GIT TIPS PAGE ???

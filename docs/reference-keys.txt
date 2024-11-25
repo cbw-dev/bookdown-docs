@@ -5,10 +5,17 @@ cbws-bookdown-documentation
 getting-started
 rstudio-setup
 build-site
-usage
+how-to-edit-_bookdown.yml
+how-to-edit-_output.yml-rc
+mandatory-index.rmd-landing-page
+build-the-book
 render-book
 preview-book
-how-to-make-a-repo
+git-instructions
+how-to-make-a-git-repo-rc
+how-to-make-the-git-connection-adding-your-local-repo-to-github
+updating-github-via-rstudio
+how-to-git-clone-isc
 how-to-push-to-github
 how-to-deploy-your-workshop-website
 storing-all-formatting-content
@@ -30,3 +37,4 @@ pages
 metadata-for-sharing
 how-to-render-code
 brain-dump-faq
+danger-zones

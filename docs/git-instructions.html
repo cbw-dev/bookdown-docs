@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 How to Push to GitHub | CBW’s Bookdown Template Documentation</title>
+  <title>4 Git Instructions | CBW’s Bookdown Template Documentation</title>
   <meta name="description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 How to Push to GitHub | CBW’s Bookdown Template Documentation" />
+  <meta property="og:title" content="4 Git Instructions | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 How to Push to GitHub | CBW’s Bookdown Template Documentation" />
+  <meta name="twitter:title" content="4 Git Instructions | CBW’s Bookdown Template Documentation" />
   
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
@@ -35,8 +35,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="git-instructions.html"/>
-<link rel="next" href="how-to-deploy-your-workshop-website.html"/>
+<link rel="prev" href="build-site.html"/>
+<link rel="next" href="how-to-push-to-github.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -242,17 +242,91 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="how-to-push-to-github" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">5</span> How to Push to GitHub<a href="how-to-push-to-github.html#how-to-push-to-github" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="git-instructions" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Git Instructions<a href="git-instructions.html#git-instructions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="how-to-make-a-git-repo-rc" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> How to Make a Git Repo (RC)<a href="git-instructions.html#how-to-make-a-git-repo-rc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://github.com/cbw-dev" class="uri">https://github.com/cbw-dev</a> (CHANGE?) and scroll to your repositories.</p></li>
+<li><p>Click the green “New” button to the right of the repositories search bar.</p></li>
+<li><p>Create the new repository. Give it a <em>name</em> and <em>description</em>. Select <em>Public</em> instead of private, as shown below.</p></li>
+</ol>
+<blockquote>
+<p>🚧 Warning</p>
+<p>MAKE NAMING CONVENTION</p>
+</blockquote>
+<p><img src="img/git-instruct/create-git-repo.png" alt="imgage showing the proper way to make a repo" />
+4. Click the green <em>Create repository</em> button at the bottom.</p>
+<p>Now, we already have a local project. Now we want it on GitHub, so everyone on your team can make changes to the workshop! Let’s make the GitHub connection (i.e let’s add our local code to GitHub!)</p>
+<div id="how-to-make-the-git-connection-adding-your-local-repo-to-github" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> How to Make the Git Connection (Adding your Local Repo to GitHub)<a href="git-instructions.html#how-to-make-the-git-connection-adding-your-local-repo-to-github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After the previous step, you will be brought to this page.The only things that will differ are the name of the repo.</p>
+<div class="float">
+<img src="img/git-instruct/git-connection.png" alt="landing page after making a git repo" />
+<div class="figcaption">landing page after making a git repo</div>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Open Terminal (Mac) or Command Prompt/Powershell (Windows).</p></li>
+<li><p>Go to where we created the bookdown project.</p></li>
+<li><p>Once inside the folder with the project. Let’s make the git repo. First we initialize: <code>git init</code>. (Put this into terminal and press enter.)</p></li>
+<li><p>Let’s add all the files: <code>git add *</code></p></li>
+<li><p>Let’s commit these files, with a descriptive message to help make it clear to others what we just did. For now, our message can be simple: <code>git commit -m "first commit"</code>. (Put this into terminal and press enter.)</p></li>
+<li><p>Next, put this into terminal and press enter: <code>git branch -M main</code>.</p></li>
+<li><p><strong>Important:</strong> This step is why I highlighted that specific text above. Copy that command, and put it into terminal. Generally, it will look something like this: <code>git remote add origin git@github.com:cbw-dev/NAME-OF-YOUR-REPO.git</code></p></li>
+<li><p>Next, put <code>git push -u origin main</code> into terminal and press enter.</p></li>
+</ol>
+<p>All the steps are shown below.</p>
+<div class="float">
+<img src="img/git-instruct/git-instructions-in-terminal.png" alt="all the git steps typed out into terminal with results" />
+<div class="figcaption">all the git steps typed out into terminal with results</div>
+</div>
+</div>
+</div>
+<div id="updating-github-via-rstudio" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Updating GitHub via RStudio<a href="git-instructions.html#updating-github-via-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now, close your RStudio session, and reopen it.</p>
+<p>Now, we will be able to see a Git window in the top right. Click “Git” to open this window.</p>
+<div class="float">
+<img src="img/git-instruct/RStudio-with-git-window-open.png" alt="RStudio with Git window open" />
+<div class="figcaption">RStudio with Git window open</div>
+</div>
+<p>Let’s say we only edited <code>index.Rmd</code>, now we see the newly edited files. (Do not worry too much about <code>.DS_Store</code> and <code>.gitignore</code> do.) Let’s try to push this change to GitHub.</p>
+<ol start="13" style="list-style-type: decimal">
+<li>Select all the edited files.</li>
+</ol>
+<div class="float">
+<img src="img/git-instruct/git-window-selected-items.png" alt="selected files in the git window and the commit button highlighted" />
+<div class="figcaption">selected files in the git window and the commit button highlighted</div>
+</div>
+<ol start="14" style="list-style-type: decimal">
+<li>Then, click the Commit button, which appears above your selected items. A window pane will appear (shown below).</li>
+</ol>
+<div class="float">
+<img src="img/git-instruct/git-commit-window.png" alt="git commit window pane" />
+<div class="figcaption">git commit window pane</div>
+</div>
+<ol start="15" style="list-style-type: decimal">
+<li><p>Add a commit message in the corresponding box, and then press commit below it.</p></li>
+<li><p>A new window will show up, detailing your updates. Close this window and then press <strong>Push</strong> to push your updates to GitHub.</p></li>
+</ol>
+<div class="float">
+<img src="img/git-instruct/git-window-post-commit.png" alt="post git commit window" />
+<div class="figcaption">post git commit window</div>
+</div>
+<p>Now, we’re done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a <strong>Pull</strong> button in the Git window within RStudio!</p>
+</div>
+<div id="how-to-git-clone-isc" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> How to Git Clone (ISC)<a href="git-instructions.html#how-to-git-clone-isc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="git-instructions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="how-to-deploy-your-workshop-website.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="build-site.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-to-push-to-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -283,7 +357,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cbw-dev/bookdown-docs/04-push.Rmd",
+"link": "https://github.com/cbw-dev/bookdown-docs/03-repo.Rmd",
 "text": "Edit"
 },
 "history": {

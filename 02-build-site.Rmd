@@ -1,14 +1,30 @@
 # Build Site
 
-## Usage 
+## How to edit _bookdown.yml
+- add a new line, `output_dir: "docs"` to _bookdown.yml
+- save
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+## How to edit _output.yml (RC)
+- after *before:* change your workshop name link
+- after *edit:* put the link to the workshop repo, and end the link with `/%s`
+- save
+
+
+## Mandatory “index.Rmd” landing page
+
+Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading. 
 
 Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
 
 The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
 
-## Render book
+## Build the book:
+- “Build” button in RStudio IDE /OR/ bookdown::render_book()
+- Preview the book: - updates on saves in viewer window bookdown::serve_book()
+
+Before building 
+
+### Render book
 
 You can render the HTML version of this example book without changing anything:
 
@@ -24,10 +40,11 @@ bookdown::render_book()
 
 To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
 
-## Preview book
+### Preview book
 
 As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
 
 ```{r eval=FALSE}
 bookdown::serve_book()
 ```
+

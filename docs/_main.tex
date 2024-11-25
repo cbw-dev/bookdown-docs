@@ -161,7 +161,29 @@ If you don't know which one to use, click \href{}{here} to learn more!
 
 \chapter{Build Site}\label{build-site}
 
-\section{Usage}\label{usage}
+\section{How to edit \_bookdown.yml}\label{how-to-edit-_bookdown.yml}
+
+\begin{itemize}
+\tightlist
+\item
+  add a new line, \texttt{output\_dir:\ "docs"} to \_bookdown.yml
+\item
+  save
+\end{itemize}
+
+\section{How to edit \_output.yml (RC)}\label{how-to-edit-_output.yml-rc}
+
+\begin{itemize}
+\tightlist
+\item
+  after \emph{before:} change your workshop name link
+\item
+  after \emph{edit:} put the link to the workshop repo, and end the link with \texttt{/\%s}
+\item
+  save
+\end{itemize}
+
+\section{Mandatory ``index.Rmd'' landing page}\label{mandatory-index.rmd-landing-page}
 
 Each \textbf{bookdown} chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter \emph{must} start with a first-level heading: \texttt{\#\ A\ good\ chapter}, and can contain one (and only one) first-level heading.
 
@@ -169,7 +191,19 @@ Use second-level and higher headings within chapters like: \texttt{\#\#\ A\ shor
 
 The \texttt{index.Rmd} file is required, and is also your first book chapter. It will be the homepage when you render the book.
 
-\section{Render book}\label{render-book}
+\section{Build the book:}\label{build-the-book}
+
+\begin{itemize}
+\tightlist
+\item
+  ``Build'' button in RStudio IDE /OR/ bookdown::render\_book()
+\item
+  Preview the book: - updates on saves in viewer window bookdown::serve\_book()
+\end{itemize}
+
+Before building
+
+\subsection{Render book}\label{render-book}
 
 You can render the HTML version of this example book without changing anything:
 
@@ -191,7 +225,7 @@ Or build the book from the R console:
 
 To render this example to PDF as a \texttt{bookdown::pdf\_book}, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
 
-\section{Preview book}\label{preview-book}
+\subsection{Preview book}\label{preview-book}
 
 As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console:
 
@@ -201,13 +235,142 @@ As you work, you may start a local server to live preview this HTML book. This p
 \end{Highlighting}
 \end{Shaded}
 
-\chapter{How to Make A Repo}\label{how-to-make-a-repo}
+\chapter{Git Instructions}\label{git-instructions}
+
+\section{How to Make a Git Repo (RC)}\label{how-to-make-a-git-repo-rc}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Go to \url{https://github.com/cbw-dev} (CHANGE?) and scroll to your repositories.
+\item
+  Click the green ``New'' button to the right of the repositories search bar.
+\item
+  Create the new repository. Give it a \emph{name} and \emph{description}. Select \emph{Public} instead of private, as shown below.
+\end{enumerate}
+
+\begin{quote}
+🚧 Warning
+
+MAKE NAMING CONVENTION
+\end{quote}
+
+\includegraphics{img/git-instruct/create-git-repo.png}
+4. Click the green \emph{Create repository} button at the bottom.
+
+Now, we already have a local project. Now we want it on GitHub, so everyone on your team can make changes to the workshop! Let's make the GitHub connection (i.e let's add our local code to GitHub!)
+
+\subsection{How to Make the Git Connection (Adding your Local Repo to GitHub)}\label{how-to-make-the-git-connection-adding-your-local-repo-to-github}
+
+After the previous step, you will be brought to this page.The only things that will differ are the name of the repo.
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/git-connection.png}
+\caption{landing page after making a git repo}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Open Terminal (Mac) or Command Prompt/Powershell (Windows).
+\item
+  Go to where we created the bookdown project.
+\item
+  Once inside the folder with the project. Let's make the git repo. First we initialize: \texttt{git\ init}. (Put this into terminal and press enter.)
+\item
+  Let's add all the files: \texttt{git\ add\ *}
+\item
+  Let's commit these files, with a descriptive message to help make it clear to others what we just did. For now, our message can be simple: \texttt{git\ commit\ -m\ "first\ commit"}. (Put this into terminal and press enter.)
+\item
+  Next, put this into terminal and press enter: \texttt{git\ branch\ -M\ main}.
+\item
+  \textbf{Important:} This step is why I highlighted that specific text above. Copy that command, and put it into terminal. Generally, it will look something like this: \texttt{git\ remote\ add\ origin\ git@github.com:cbw-dev/NAME-OF-YOUR-REPO.git}
+\item
+  Next, put \texttt{git\ push\ -u\ origin\ main} into terminal and press enter.
+\end{enumerate}
+
+All the steps are shown below.
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/git-instructions-in-terminal.png}
+\caption{all the git steps typed out into terminal with results}
+\end{figure}
+
+\section{Updating GitHub via RStudio}\label{updating-github-via-rstudio}
+
+Now, close your RStudio session, and reopen it.
+
+Now, we will be able to see a Git window in the top right. Click ``Git'' to open this window.
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/RStudio-with-git-window-open.png}
+\caption{RStudio with Git window open}
+\end{figure}
+
+Let's say we only edited \texttt{index.Rmd}, now we see the newly edited files. (Do not worry too much about \texttt{.DS\_Store} and \texttt{.gitignore} do.) Let's try to push this change to GitHub.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Select all the edited files.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/git-window-selected-items.png}
+\caption{selected files in the git window and the commit button highlighted}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  Then, click the Commit button, which appears above your selected items. A window pane will appear (shown below).
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/git-commit-window.png}
+\caption{git commit window pane}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\item
+  Add a commit message in the corresponding box, and then press commit below it.
+\item
+  A new window will show up, detailing your updates. Close this window and then press \textbf{Push} to push your updates to GitHub.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/git-window-post-commit.png}
+\caption{post git commit window}
+\end{figure}
+
+Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a \textbf{Pull} button in the Git window within RStudio!
+
+\section{How to Git Clone (ISC)}\label{how-to-git-clone-isc}
 
 \chapter{How to Push to GitHub}\label{how-to-push-to-github}
 
 \chapter{How to Deploy Your Workshop Website}\label{how-to-deploy-your-workshop-website}
 
 \chapter{Storing all formatting content}\label{storing-all-formatting-content}
+
+\begin{itemize}
+\tightlist
+\item
+  How to edit index.Rmd
+\end{itemize}
 
 \section{Chapters}\label{chapters}
 
@@ -394,6 +557,15 @@ Or use:
 \chapter{How to Render Code}\label{how-to-render-code}
 
 \chapter{Brain Dump / FAQ}\label{brain-dump-faq}
+
+\section{Danger Zones}\label{danger-zones}
+
+\begin{itemize}
+\item
+  renaming your file with this project, doesn't change the .Rprog file!
+\item
+  GIT TIPS PAGE ???
+\end{itemize}
 
   \bibliography{book.bib,packages.bib}
 
