@@ -168,7 +168,9 @@ If you don't know which one to use, click \href{}{here} to learn more!
 \item
   add a new line, \texttt{output\_dir:\ "docs"} to \_bookdown.yml
 \item
-  save
+  build the site
+\item
+  add a \texttt{.nojekyll} file into the produced docs folder
 \end{itemize}
 
 \section{How to edit \_output.yml (RC)}\label{how-to-edit-_output.yml-rc}
@@ -363,6 +365,49 @@ Now, we're done! We should see the updates on GitHub now. Also note, if we ever 
 \chapter{How to Push to GitHub}\label{how-to-push-to-github}
 
 \chapter{How to Deploy Your Workshop Website}\label{how-to-deploy-your-workshop-website}
+
+Let's recap.
+
+We've made a bookdown project that builds into a website. We've reconfigured the output to go to a folder called ``docs'' (output\_dir: ``docs''). We've pushed our content onto github, and also made a ``.nojekyll'' file, which we placed into docs.
+
+Now in our ./docs folder, we have a bunch of html files that make up our website. We want GitHub to look at these files in the docs folder and host the website for us!
+
+We deploy our website using GitHub pages. GitHub pages uses jekyll, so the .nojekyll file tells it to no longer rely on jekyll. Now, all we need to do is tell GitHub pages to deploy (create/update the website) from our docs folder.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Go to your repo on GitHub.
+\item
+  In the top navigation bar, select settings.
+  \includegraphics{img/git-instruct/github-settings.png}
+\item
+  Then, go to the pages sidebar.
+  \includegraphics{img/git-instruct/github-select-pages.png}
+\item
+  ``Deploy from a branch'' is already selected, which is what we want. We must change the branch from ``none'' to main.
+  \includegraphics{img/git-instruct/github-deploy-main.png}
+\item
+  Then, change the folder from \texttt{/\ root} to \texttt{/docs}. Then press save.
+  \includegraphics{img/git-instruct/github-deploy-docs.png}
+\end{enumerate}
+
+Great! Now we're waiting on the page to build and deploy, which should take less than a minute.
+
+To see updates, go to the \textbf{Actions} page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/github-pages-actions-explained.png}
+\caption{Image showing the different possibilities of deploy a github page}
+\end{figure}
+
+You can click \textbf{pages build and deployment} for updates. It will give you errors (which may not be very clear) or the link of your deployed page!
+
+\includegraphics{img/git-instruct/successful-deploy.png}
+\includegraphics{img/git-instruct/failed-deploy.png}
+
+Click around to explore more!
 
 \chapter{Storing all formatting content}\label{storing-all-formatting-content}
 

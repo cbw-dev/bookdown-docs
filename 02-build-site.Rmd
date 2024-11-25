@@ -2,7 +2,8 @@
 
 ## How to edit _bookdown.yml
 - add a new line, `output_dir: "docs"` to _bookdown.yml
-- save
+- build the site
+- add a `.nojekyll` file into the produced docs folder
 
 ## How to edit _output.yml (RC)
 - after *before:* change your workshop name link

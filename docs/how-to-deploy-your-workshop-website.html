@@ -244,6 +244,31 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="how-to-deploy-your-workshop-website" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">6</span> How to Deploy Your Workshop Website<a href="how-to-deploy-your-workshop-website.html#how-to-deploy-your-workshop-website" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Let’s recap.</p>
+<p>We’ve made a bookdown project that builds into a website. We’ve reconfigured the output to go to a folder called “docs” (output_dir: “docs”). We’ve pushed our content onto github, and also made a “.nojekyll” file, which we placed into docs.</p>
+<p>Now in our ./docs folder, we have a bunch of html files that make up our website. We want GitHub to look at these files in the docs folder and host the website for us!</p>
+<p>We deploy our website using GitHub pages. GitHub pages uses jekyll, so the .nojekyll file tells it to no longer rely on jekyll. Now, all we need to do is tell GitHub pages to deploy (create/update the website) from our docs folder.</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to your repo on GitHub.</p></li>
+<li><p>In the top navigation bar, select settings.
+<img src="img/git-instruct/github-settings.png" alt="Base repo, pointing at settings" /></p></li>
+<li><p>Then, go to the pages sidebar.
+<img src="img/git-instruct/github-select-pages.png" alt="Selecting pages from the settings page" /></p></li>
+<li><p>“Deploy from a branch” is already selected, which is what we want. We must change the branch from “none” to main.
+<img src="img/git-instruct/github-deploy-main.png" alt="Select main as the branc" /></p></li>
+<li><p>Then, change the folder from <code>/ root</code> to <code>/docs</code>. Then press save.
+<img src="img/git-instruct/github-deploy-docs.png" alt="Select /docs as the branch" /></p></li>
+</ol>
+<p>Great! Now we’re waiting on the page to build and deploy, which should take less than a minute.</p>
+<p>To see updates, go to the <strong>Actions</strong> page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.</p>
+<div class="float">
+<img src="img/git-instruct/github-pages-actions-explained.png" alt="Image showing the different possibilities of deploy a github page" />
+<div class="figcaption">Image showing the different possibilities of deploy a github page</div>
+</div>
+<p>You can click <u><strong>pages build and deployment</strong></u> for updates. It will give you errors (which may not be very clear) or the link of your deployed page!</p>
+<p><img src="img/git-instruct/successful-deploy.png" alt="successful deploy" />
+<img src="img/git-instruct/failed-deploy.png" alt="failed deploy" /></p>
+<p>Click around to explore more!</p>
 
 </div>
             </section>
