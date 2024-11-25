@@ -1,7 +1,7 @@
 fig:nice-fig
 tab:nice-tab
 eq:binom
-about
+cbws-bookdown-documentation
 usage
 render-book
 preview-book
@@ -22,3 +22,4 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
+brain-dump-faq
