@@ -106,11 +106,7 @@ The R Markdown Cookbook provides more help on how to use custom blocks to design
 
 
 
-
-
-
-
-# Sharing your book
+## Sharing your book
 
 ## Publishing
 

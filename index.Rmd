@@ -16,4 +16,10 @@ github-repo: rstudio/bookdown-demo
 
 # CBW's Bookdown Documentation
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+Welcome to CBW's documentation for creating a workshop website using Bookdown. Bookdown is an R package that is used to build books, and in our case, the websites hosting CBW's workshops!
+
+You only need to know markdown and whatever coding language you be using to learn bookdown!
+
+Note, this is the documentation to create a workshop using *bookdown*. If **Jupyter Book** suits you better, see [here]().
+
+If you don't know which one to use, click [here]() to learn more!

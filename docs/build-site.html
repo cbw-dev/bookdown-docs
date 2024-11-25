@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>CBW’s Bookdown Template Documentation</title>
+  <title>3 Build Site | CBW’s Bookdown Template Documentation</title>
   <meta name="description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="CBW’s Bookdown Template Documentation" />
+  <meta property="og:title" content="3 Build Site | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="CBW’s Bookdown Template Documentation" />
+  <meta name="twitter:title" content="3 Build Site | CBW’s Bookdown Template Documentation" />
   
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
@@ -35,8 +35,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="getting-started.html"/>
+<link rel="prev" href="getting-started.html"/>
+<link rel="next" href="how-to-make-a-repo.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -226,25 +226,39 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">CBW’s Bookdown Template Documentation</h1>
-<p class="date"><em>2024-11-25</em></p>
+<div id="build-site" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Build Site<a href="build-site.html#build-site" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="usage" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Usage<a href="build-site.html#usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Each <strong>bookdown</strong> chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter <em>must</em> start with a first-level heading: <code># A good chapter</code>, and can contain one (and only one) first-level heading.</p>
+<p>Use second-level and higher headings within chapters like: <code>## A short section</code> or <code>### An even shorter section</code>.</p>
+<p>The <code>index.Rmd</code> file is required, and is also your first book chapter. It will be the homepage when you render the book.</p>
 </div>
-<div id="cbws-bookdown-documentation" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> CBW’s Bookdown Documentation<a href="index.html#cbws-bookdown-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Welcome to CBW’s documentation for creating a workshop website using Bookdown. Bookdown is an R package that is used to build books, and in our case, the websites hosting CBW’s workshops!</p>
-<p>You only need to know markdown and whatever coding language you be using to learn bookdown!</p>
-<p>Note, this is the documentation to create a workshop using <em>bookdown</em>. If <strong>Jupyter Book</strong> suits you better, see <a href="">here</a>.</p>
-<p>If you don’t know which one to use, click <a href="">here</a> to learn more!</p>
+<div id="render-book" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Render book<a href="build-site.html#render-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can render the HTML version of this example book without changing anything:</p>
+<ol style="list-style-type: decimal">
+<li><p>Find the <strong>Build</strong> pane in the RStudio IDE, and</p></li>
+<li><p>Click on <strong>Build Book</strong>, then select your output format, or select “All formats” if you’d like to use multiple formats from the same book source files.</p></li>
+</ol>
+<p>Or build the book from the R console:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="build-site.html#cb1-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
+<p>To render this example to PDF as a <code>bookdown::pdf_book</code>, you’ll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>.</p>
+</div>
+<div id="preview-book" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Preview book<a href="build-site.html#preview-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in “Preview book”, or from the R console:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="build-site.html#cb2-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="getting-started.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-to-make-a-repo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -275,7 +289,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cbw-dev/bookdown-docs/index.Rmd",
+"link": "https://github.com/cbw-dev/bookdown-docs/02-build-site.Rmd",
 "text": "Edit"
 },
 "history": {

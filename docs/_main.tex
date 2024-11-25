@@ -147,7 +147,19 @@
 }
 \chapter{CBW's Bookdown Documentation}\label{cbws-bookdown-documentation}
 
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports; for example, a math equation \(a^2 + b^2 = c^2\).
+Welcome to CBW's documentation for creating a workshop website using Bookdown. Bookdown is an R package that is used to build books, and in our case, the websites hosting CBW's workshops!
+
+You only need to know markdown and whatever coding language you be using to learn bookdown!
+
+Note, this is the documentation to create a workshop using \emph{bookdown}. If \textbf{Jupyter Book} suits you better, see \href{}{here}.
+
+If you don't know which one to use, click \href{}{here} to learn more!
+
+\chapter{Getting Started}\label{getting-started}
+
+\section{RStudio setup}\label{rstudio-setup}
+
+\chapter{Build Site}\label{build-site}
 
 \section{Usage}\label{usage}
 
@@ -189,7 +201,15 @@ As you work, you may start a local server to live preview this HTML book. This p
 \end{Highlighting}
 \end{Shaded}
 
-\chapter{Hello bookdown}\label{hello-bookdown}
+\chapter{How to Make A Repo}\label{how-to-make-a-repo}
+
+\chapter{How to Push to GitHub}\label{how-to-push-to-github}
+
+\chapter{How to Deploy Your Workshop Website}\label{how-to-deploy-your-workshop-website}
+
+\chapter{Storing all formatting content}\label{storing-all-formatting-content}
+
+\section{Chapters}\label{chapters}
 
 All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
 
@@ -202,7 +222,7 @@ All chapter sections start with a second-level (\texttt{\#\#}) or higher heading
 
 Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
 
-\chapter{Cross-references}\label{cross}
+\section{Cross-references}\label{cross}
 
 Cross-references make it easier for your readers to find and link to elements in your book.
 
@@ -289,7 +309,7 @@ temperature & pressure\\
 \end{tabular}
 \end{table}
 
-\chapter{Parts}\label{parts}
+\section{Parts}\label{parts}
 
 You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
 
@@ -298,8 +318,6 @@ Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by \texttt{\
 Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
 
 Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
-
-\chapter{Footnotes and citations}\label{footnotes-and-citations}
 
 \section{Footnotes}\label{footnotes}
 
@@ -314,7 +332,7 @@ Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YA
 
 The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
 
-\chapter{Blocks}\label{blocks}
+\section{Blocks}\label{blocks}
 
 \section{Equations}\label{equations}
 
@@ -343,7 +361,7 @@ Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-b
 
 The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
 
-\chapter{Sharing your book}\label{sharing-your-book}
+\section{Sharing your book}\label{sharing-your-book}
 
 \section{Publishing}\label{publishing}
 
@@ -372,6 +390,8 @@ Or use:
 \NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{gitbook}
 \end{Highlighting}
 \end{Shaded}
+
+\chapter{How to Render Code}\label{how-to-render-code}
 
 \chapter{Brain Dump / FAQ}\label{brain-dump-faq}
 
