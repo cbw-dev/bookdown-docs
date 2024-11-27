@@ -3,7 +3,8 @@ tab:nice-tab
 eq:binom
 cbws-bookdown-documentation
 getting-started
-rstudio-setup
+installation
+file-setup
 build-site
 how-to-edit-_bookdown.yml
 how-to-edit-_output.yml-rc

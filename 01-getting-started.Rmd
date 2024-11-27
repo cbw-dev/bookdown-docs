@@ -1,3 +1,8 @@
 # Getting Started
 
-## RStudio setup
+## Installation
+Install RStudio, get bookdown locally
+
+## File Setup
+
+Explain file setup (tree diagram?)
