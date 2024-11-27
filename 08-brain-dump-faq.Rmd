@@ -7,3 +7,10 @@
 
 
 - GIT TIPS PAGE ???
+
+- MAKE SURE TO EXPLAIN WHAT HAPPENS WHEN MERGE CONFLICTS APPEAR
+
+Ex. Forgot to pull before editing?
+- Your git window will say (at the top of the window) your branch is ahead of the main branch
+- You will probably have to deal with a merge conflict
+- [this is pretty in-depth]
