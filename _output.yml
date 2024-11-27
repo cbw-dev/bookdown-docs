@@ -6,8 +6,6 @@ bookdown::gitbook:
         <img src="img/bioinformatics.ca-logo.svg" width=100%>
         <li><a href="./">CBW's Bookdown Template Documentation</a></li>
       after: |
-        <img src="img/bioinformatics.ca-logo.svg" width=100%>
-        <img src="img/bioinformatics.ca-logo.svg" width=100%>
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/cbw-dev/bookdown-docs/%s
     download: ["pdf", "epub"]
