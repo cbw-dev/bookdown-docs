@@ -15,7 +15,7 @@ github-repo: rstudio/bookdown-demo
 favicon: img/favicon.ico
 ---
 
-# CBW's Bookdown Documentation {-}
+# CBW's Bookdown Documentation
 
 Welcome to CBW's documentation for creating a workshop website using Bookdown. Bookdown is an R package that is used to build books, and in our case, the websites hosting CBW's workshops!
 

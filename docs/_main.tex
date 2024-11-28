@@ -119,7 +119,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}2024-11-27}
+\date{\vspace{-2.5em}2024-11-28}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -145,8 +145,7 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\chapter*{CBW's Bookdown Documentation}\label{cbws-bookdown-documentation}
-\addcontentsline{toc}{chapter}{CBW's Bookdown Documentation}
+\chapter{CBW's Bookdown Documentation}\label{cbws-bookdown-documentation}
 
 Welcome to CBW's documentation for creating a workshop website using Bookdown. Bookdown is an R package that is used to build books, and in our case, the websites hosting CBW's workshops!
 
@@ -633,6 +632,17 @@ Ex. Forgot to pull before editing?
 \item
   update favicon.ico image in template with one with higher quality
 \end{itemize}
+
+\section{Potential Errors \& Bugs}\label{potential-errors-bugs}
+
+\begin{itemize}
+\item
+  If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see ``Permission denied'' in your warning messages, trying running this command \texttt{chmod\ -R\ u+w\ docs} in terminal, in the folder containing your docs folder {[}CLARIFY ?{]}
+\item
+  ``Could not produce X output'' - by default, bookdown builds all possible formats: gitbook, pdf, epub versions. We only need the gitbook, so if you're having issues, change your build settings to only creating the gitbook {[}CLARIFY + INCLUDE IMAGES{]}
+\end{itemize}
+
+\section{FAQ}\label{faq}
 
   \bibliography{book.bib,packages.bib}
 

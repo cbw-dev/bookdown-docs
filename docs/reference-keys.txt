@@ -1,6 +1,7 @@
 fig:nice-fig
 tab:nice-tab
 eq:binom
+cbws-bookdown-documentation
 getting-started
 installation
 file-setup
@@ -38,3 +39,5 @@ metadata-for-sharing
 how-to-render-code
 brain-dump-faq
 danger-zones
+potential-errors-bugs
+faq
