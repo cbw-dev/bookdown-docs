@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Storing all formatting content | CBW’s Bookdown Template Documentation</title>
+  <title>9 How to Deploy Your Workshop Website | CBW’s Bookdown Template Documentation</title>
   <meta name="description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Storing all formatting content | CBW’s Bookdown Template Documentation" />
+  <meta property="og:title" content="9 How to Deploy Your Workshop Website | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Storing all formatting content | CBW’s Bookdown Template Documentation" />
+  <meta name="twitter:title" content="9 How to Deploy Your Workshop Website | CBW’s Bookdown Template Documentation" />
   
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
@@ -35,8 +35,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="starting-to-set-up-your-new-workshop.html"/>
-<link rel="next" href="how-to-render-code.html"/>
+<link rel="prev" href="git-instructions.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -127,29 +127,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <style type="text/css">
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -255,200 +232,42 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="storing-all-formatting-content" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">4</span> Storing all formatting content<a href="storing-all-formatting-content.html#storing-all-formatting-content" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<ul>
-<li>How to edit index.Rmd</li>
-</ul>
-<div id="chapters" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Chapters<a href="storing-all-formatting-content.html#chapters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (<code>#</code>) per .Rmd file.</p>
-</div>
-<div id="a-section" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> A section<a href="storing-all-formatting-content.html#a-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>All chapter sections start with a second-level (<code>##</code>) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.</p>
-<div id="an-unnumbered-section" class="section level3 unnumbered hasAnchor">
-<h3>An unnumbered section<a href="storing-all-formatting-content.html#an-unnumbered-section" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Chapters and sections are numbered by default. To un-number a heading, add a <code>{.unnumbered}</code> or the shorter <code>{-}</code> at the end of the heading, like in this section.</p>
-</div>
-</div>
-<div id="cross" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Cross-references<a href="storing-all-formatting-content.html#cross" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Cross-references make it easier for your readers to find and link to elements in your book.</p>
-</div>
-<div id="chapters-and-sub-chapters" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Chapters and sub-chapters<a href="storing-all-formatting-content.html#chapters-and-sub-chapters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are two steps to cross-reference any heading:</p>
+<div id="how-to-deploy-your-workshop-website-1" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> How to Deploy Your Workshop Website<a href="how-to-deploy-your-workshop-website-1.html#how-to-deploy-your-workshop-website-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Let’s recap.</p>
+<p>We’ve made a bookdown project that builds into a website. We’ve reconfigured the output to go to a folder called “docs” (output_dir: “docs”). We’ve pushed our content onto github, and also made a “.nojekyll” file, which we placed into docs.</p>
+<p>Now in our ./docs folder, we have a bunch of html files that make up our website. We want GitHub to look at these files in the docs folder and host the website for us!</p>
+<p>We deploy our website using GitHub pages. GitHub pages uses jekyll, so the .nojekyll file tells it to no longer rely on jekyll. Now, all we need to do is tell GitHub pages to deploy (create/update the website) from our docs folder.</p>
 <ol style="list-style-type: decimal">
-<li>Label the heading: <code># Hello world {#nice-label}</code>.
-<ul>
-<li>Leave the label off if you like the automated heading generated based on your heading title: for example, <code># Hello world</code> = <code># Hello world {#hello-world}</code>.</li>
-<li>To label an un-numbered heading, use: <code># Hello world {-#nice-label}</code> or <code>{# Hello world .unnumbered}</code>.</li>
-</ul></li>
-<li>Next, reference the labeled heading anywhere in the text using <code>\@ref(nice-label)</code>; for example, please see Chapter <a href="storing-all-formatting-content.html#cross">4.3</a>.
-<ul>
-<li>If you prefer text as the link instead of a numbered reference use: <a href="storing-all-formatting-content.html#cross">any text you want can go here</a>.</li>
-</ul></li>
+<li><p>Go to your repo on GitHub.</p></li>
+<li><p>In the top navigation bar, select settings.
+<img src="img/git-instruct/github-settings.png" alt="Base repo, pointing at settings" /></p></li>
+<li><p>Then, go to the pages sidebar.
+<img src="img/git-instruct/github-select-pages.png" alt="Selecting pages from the settings page" /></p></li>
+<li><p>“Deploy from a branch” is already selected, which is what we want. We must change the branch from “none” to main.
+<img src="img/git-instruct/github-deploy-main.png" alt="Select main as the branc" /></p></li>
+<li><p>Then, change the folder from <code>/ root</code> to <code>/docs</code>. Then press save.
+<img src="img/git-instruct/github-deploy-docs.png" alt="Select /docs as the branch" /></p></li>
 </ol>
+<p>Great! Now we’re waiting on the page to build and deploy, which should take less than a minute.</p>
+<p>To see updates, go to the <strong>Actions</strong> page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.</p>
+<div class="float">
+<img src="img/git-instruct/github-pages-actions-explained.png" alt="Image showing the different possibilities of deploy a github page" />
+<div class="figcaption">Image showing the different possibilities of deploy a github page</div>
 </div>
-<div id="captioned-figures-and-tables" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Captioned figures and tables<a href="storing-all-formatting-content.html#captioned-figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Figures and tables <em>with captions</em> can also be cross-referenced from elsewhere in your book using <code>\@ref(fig:chunk-label)</code> and <code>\@ref(tab:chunk-label)</code>, respectively.</p>
-<p>See Figure <a href="storing-all-formatting-content.html#fig:nice-fig">4.1</a>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="storing-all-formatting-content.html#cb1-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb1-2"><a href="storing-all-formatting-content.html#cb1-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
-<img src="_main_files/figure-html/nice-fig-1.png" alt="Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases." width="80%" />
-<p class="caption">
-Figure 4.1: Here is a nice figure!
-</p>
-</div>
-<p>Don’t miss Table <a href="storing-all-formatting-content.html#tab:nice-tab">4.1</a>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="storing-all-formatting-content.html#cb2-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb2-2"><a href="storing-all-formatting-content.html#cb2-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb2-3"><a href="storing-all-formatting-content.html#cb2-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb2-4"><a href="storing-all-formatting-content.html#cb2-4" tabindex="-1"></a>)</span></code></pre></div>
-<table>
-<caption><span id="tab:nice-tab">Table 4.1: </span>Here is a nice table!</caption>
-<thead>
-<tr class="header">
-<th align="right">temperature</th>
-<th align="right">pressure</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">0</td>
-<td align="right">0.0002</td>
-</tr>
-<tr class="even">
-<td align="right">20</td>
-<td align="right">0.0012</td>
-</tr>
-<tr class="odd">
-<td align="right">40</td>
-<td align="right">0.0060</td>
-</tr>
-<tr class="even">
-<td align="right">60</td>
-<td align="right">0.0300</td>
-</tr>
-<tr class="odd">
-<td align="right">80</td>
-<td align="right">0.0900</td>
-</tr>
-<tr class="even">
-<td align="right">100</td>
-<td align="right">0.2700</td>
-</tr>
-<tr class="odd">
-<td align="right">120</td>
-<td align="right">0.7500</td>
-</tr>
-<tr class="even">
-<td align="right">140</td>
-<td align="right">1.8500</td>
-</tr>
-<tr class="odd">
-<td align="right">160</td>
-<td align="right">4.2000</td>
-</tr>
-<tr class="even">
-<td align="right">180</td>
-<td align="right">8.8000</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="parts" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> Parts<a href="storing-all-formatting-content.html#parts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.</p>
-<p>Add a numbered part: <code># (PART) Act one {-}</code> (followed by <code># A chapter</code>)</p>
-<p>Add an unnumbered part: <code># (PART\*) Act one {-}</code> (followed by <code># A chapter</code>)</p>
-<p>Add an appendix as a special kind of un-numbered part: <code># (APPENDIX) Other stuff {-}</code> (followed by <code># A chapter</code>). Chapters in an appendix are prepended with letters instead of numbers.</p>
-</div>
-<div id="footnotes" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> Footnotes<a href="storing-all-formatting-content.html#footnotes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Footnotes are put inside the square brackets after a caret <code>^[]</code>. Like this one <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
-</div>
-<div id="citations" class="section level2 hasAnchor" number="4.8">
-<h2><span class="header-section-number">4.8</span> Citations<a href="storing-all-formatting-content.html#citations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Reference items in your bibliography file(s) using <code>@key</code>.</p>
-<p>For example, we are using the <strong>bookdown</strong> package <span class="citation">(<a href="#ref-R-bookdown">Xie 2024</a>)</span> (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(<a href="#ref-xie2015">Xie 2015</a>)</span> (this citation was added manually in an external file book.bib).
-Note that the <code>.bib</code> files need to be listed in the index.Rmd with the YAML <code>bibliography</code> key.</p>
-<p>The RStudio Visual Markdown Editor can also make it easier to insert citations: <a href="https://rstudio.github.io/visual-markdown-editing/#/citations" class="uri">https://rstudio.github.io/visual-markdown-editing/#/citations</a></p>
-</div>
-<div id="blocks" class="section level2 hasAnchor" number="4.9">
-<h2><span class="header-section-number">4.9</span> Blocks<a href="storing-all-formatting-content.html#blocks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-</div>
-<div id="equations" class="section level2 hasAnchor" number="4.10">
-<h2><span class="header-section-number">4.10</span> Equations<a href="storing-all-formatting-content.html#equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here is an equation.</p>
-<p><span class="math display" id="eq:binom">\[\begin{equation}
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \tag{4.1}
-\end{equation}\]</span></p>
-<p>You may refer to using <code>\@ref(eq:binom)</code>, like see Equation <a href="storing-all-formatting-content.html#eq:binom">(4.1)</a>.</p>
-</div>
-<div id="theorems-and-proofs" class="section level2 hasAnchor" number="4.11">
-<h2><span class="header-section-number">4.11</span> Theorems and proofs<a href="storing-all-formatting-content.html#theorems-and-proofs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Labeled theorems can be referenced in text using <code>\@ref(thm:tri)</code>, for example, check out this smart theorem <a href="storing-all-formatting-content.html#thm:tri">4.1</a>.</p>
-<div class="theorem">
-<p><span id="thm:tri" class="theorem"><strong>Theorem 4.1  </strong></span>For a right triangle, if <span class="math inline">\(c\)</span> denotes the <em>length</em> of the hypotenuse
-and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the <strong>other</strong> two sides, we have
-<span class="math display">\[a^2 + b^2 = c^2\]</span></p>
-</div>
-<p>Read more here <a href="https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html" class="uri">https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html</a>.</p>
-</div>
-<div id="callout-blocks" class="section level2 hasAnchor" number="4.12">
-<h2><span class="header-section-number">4.12</span> Callout blocks<a href="storing-all-formatting-content.html#callout-blocks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: <a href="https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html</a></p>
-</div>
-<div id="sharing-your-book" class="section level2 hasAnchor" number="4.13">
-<h2><span class="header-section-number">4.13</span> Sharing your book<a href="storing-all-formatting-content.html#sharing-your-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-</div>
-<div id="publishing" class="section level2 hasAnchor" number="4.14">
-<h2><span class="header-section-number">4.14</span> Publishing<a href="storing-all-formatting-content.html#publishing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>HTML books can be published online, see: <a href="https://bookdown.org/yihui/bookdown/publishing.html" class="uri">https://bookdown.org/yihui/bookdown/publishing.html</a></p>
-</div>
-<div id="pages" class="section level2 hasAnchor" number="4.15">
-<h2><span class="header-section-number">4.15</span> 404 pages<a href="storing-all-formatting-content.html#pages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you’d like to customize your 404 page instead of using the default, you may add either a <code>_404.Rmd</code> or <code>_404.md</code> file to your project root and use code and/or Markdown syntax.</p>
-</div>
-<div id="metadata-for-sharing" class="section level2 hasAnchor" number="4.16">
-<h2><span class="header-section-number">4.16</span> Metadata for sharing<a href="storing-all-formatting-content.html#metadata-for-sharing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the <code>index.Rmd</code> YAML. To setup, set the <code>url</code> for your book and the path to your <code>cover-image</code> file. Your book’s <code>title</code> and <code>description</code> are also used.</p>
-<p>This <code>gitbook</code> uses the same social sharing data across all chapters in your book- all links shared will look the same.</p>
-<p>Specify your book’s source repository on GitHub using the <code>edit</code> key under the configuration options in the <code>_output.yml</code> file, which allows users to suggest an edit by linking to a chapter’s source file.</p>
-<p>Read more about the features of this output format here:</p>
-<p><a href="https://pkgs.rstudio.com/bookdown/reference/gitbook.html" class="uri">https://pkgs.rstudio.com/bookdown/reference/gitbook.html</a></p>
-<p>Or use:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="storing-all-formatting-content.html#cb3-1" tabindex="-1"></a>?bookdown<span class="sc">::</span>gitbook</span></code></pre></div>
+<p>You can click <u><strong>pages build and deployment</strong></u> for updates. It will give you errors (which may not be very clear) or the link of your deployed page!</p>
+<p><img src="img/git-instruct/successful-deploy.png" alt="successful deploy" />
+<img src="img/git-instruct/failed-deploy.png" alt="failed deploy" /></p>
+<p>Click around to explore more!</p>
 
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div id="ref-xie2015" class="csl-entry">
-Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
-</div>
-<div id="ref-R-bookdown" class="csl-entry">
-———. 2024. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>This is a footnote.<a href="storing-all-formatting-content.html#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="starting-to-set-up-your-new-workshop.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="how-to-render-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="git-instructions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -479,7 +298,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cbw-dev/bookdown-docs/06-formatting-md.Rmd",
+"link": "https://github.com/cbw-dev/bookdown-docs/92-deploy.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -502,20 +321,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

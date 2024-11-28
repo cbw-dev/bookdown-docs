@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 How to Deploy Your Workshop Website | CBW’s Bookdown Template Documentation</title>
+  <title>3 Starting to Set Up Your Workshop | CBW’s Bookdown Template Documentation</title>
   <meta name="description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 How to Deploy Your Workshop Website | CBW’s Bookdown Template Documentation" />
+  <meta property="og:title" content="3 Starting to Set Up Your Workshop | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 How to Deploy Your Workshop Website | CBW’s Bookdown Template Documentation" />
+  <meta name="twitter:title" content="3 Starting to Set Up Your Workshop | CBW’s Bookdown Template Documentation" />
   
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
@@ -35,8 +35,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="how-to-push-to-github.html"/>
-<link rel="next" href="storing-all-formatting-content.html"/>
+<link rel="prev" href="getting-started.html"/>
+<link rel="next" href="build-site.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -59,97 +59,10 @@ set in the _output.yml file.</p>" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -174,11 +87,12 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#installation"><i class="fa fa-check"></i><b>2.1</b> Installation</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="starting-to-set-up-your-new-workshop.html"><a href="starting-to-set-up-your-new-workshop.html"><i class="fa fa-check"></i><b>3</b> Starting to Set Up Your <strong>New</strong> Workshop</a>
+<li class="chapter" data-level="3" data-path="starting-to-set-up-your-workshop.html"><a href="starting-to-set-up-your-workshop.html"><i class="fa fa-check"></i><b>3</b> Starting to Set Up Your Workshop</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="starting-to-set-up-your-new-workshop.html"><a href="starting-to-set-up-your-new-workshop.html#workshop-setup-rc"><i class="fa fa-check"></i><b>3.1</b> Workshop Setup (RC)</a></li>
-<li class="chapter" data-level="3.2" data-path="starting-to-set-up-your-new-workshop.html"><a href="starting-to-set-up-your-new-workshop.html#getting-the-template-on-your-local-computer---git-clone"><i class="fa fa-check"></i><b>3.2</b> Getting the Template on Your Local Computer - Git Clone</a></li>
-<li class="chapter" data-level="3.3" data-path="starting-to-set-up-your-new-workshop.html"><a href="starting-to-set-up-your-new-workshop.html#file-setup-explanation"><i class="fa fa-check"></i><b>3.3</b> File Setup Explanation</a></li>
+<li class="chapter" data-level="3.1" data-path="starting-to-set-up-your-workshop.html"><a href="starting-to-set-up-your-workshop.html#workshop-setup-rc"><i class="fa fa-check"></i><b>3.1</b> Workshop Setup (RC)</a></li>
+<li class="chapter" data-level="3.2" data-path="starting-to-set-up-your-workshop.html"><a href="starting-to-set-up-your-workshop.html#getting-the-template-on-your-local-computer---git-clone"><i class="fa fa-check"></i><b>3.2</b> Getting the Template on Your Local Computer - Git Clone</a></li>
+<li class="chapter" data-level="3.3" data-path="starting-to-set-up-your-workshop.html"><a href="starting-to-set-up-your-workshop.html#creating-the-git-connection"><i class="fa fa-check"></i><b>3.3</b> Creating the Git Connection</a></li>
+<li class="chapter" data-level="3.4" data-path="starting-to-set-up-your-workshop.html"><a href="starting-to-set-up-your-workshop.html#file-setup-explanation"><i class="fa fa-check"></i><b>3.4</b> File Setup Explanation</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="build-site.html"><a href="build-site.html"><i class="fa fa-check"></i><b>4</b> Build Site</a>
 <ul>
@@ -251,42 +165,46 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="how-to-deploy-your-workshop-website" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">7</span> How to Deploy Your Workshop Website<a href="how-to-deploy-your-workshop-website.html#how-to-deploy-your-workshop-website" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Let’s recap.</p>
-<p>We’ve made a bookdown project that builds into a website. We’ve reconfigured the output to go to a folder called “docs” (output_dir: “docs”). We’ve pushed our content onto github, and also made a “.nojekyll” file, which we placed into docs.</p>
-<p>Now in our ./docs folder, we have a bunch of html files that make up our website. We want GitHub to look at these files in the docs folder and host the website for us!</p>
-<p>We deploy our website using GitHub pages. GitHub pages uses jekyll, so the .nojekyll file tells it to no longer rely on jekyll. Now, all we need to do is tell GitHub pages to deploy (create/update the website) from our docs folder.</p>
+<div id="starting-to-set-up-your-workshop" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Starting to Set Up Your Workshop<a href="starting-to-set-up-your-workshop.html#starting-to-set-up-your-workshop" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Certain aspects of the setup for workshops will be different depending on your role. Headers ending in “(RC)” are for Regional Coordinators. Headers without “(RC)” are assumed to be relevant to both RC and workshop teams.</p>
+<div id="workshop-setup-rc" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Workshop Setup (RC)<a href="starting-to-set-up-your-workshop.html#workshop-setup-rc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop.</p>
 <ol style="list-style-type: decimal">
-<li><p>Go to your repo on GitHub.</p></li>
-<li><p>In the top navigation bar, select settings.
-<img src="img/git-instruct/github-settings.png" alt="Base repo, pointing at settings" /></p></li>
-<li><p>Then, go to the pages sidebar.
-<img src="img/git-instruct/github-select-pages.png" alt="Selecting pages from the settings page" /></p></li>
-<li><p>“Deploy from a branch” is already selected, which is what we want. We must change the branch from “none” to main.
-<img src="img/git-instruct/github-deploy-main.png" alt="Select main as the branc" /></p></li>
-<li><p>Then, change the folder from <code>/ root</code> to <code>/docs</code>. Then press save.
-<img src="img/git-instruct/github-deploy-docs.png" alt="Select /docs as the branch" /></p></li>
+<li><p>First, let’s go the <a href="https://github.com/cbw-dev/bookdown-template">bookdown template</a>.</p></li>
+<li><p>Click on the “Use this template” green button, which is to the left of the title of the repository “bookdown-template”. Then, press the dropdown option: “Create a new repository”, as seen below.</p></li>
 </ol>
-<p>Great! Now we’re waiting on the page to build and deploy, which should take less than a minute.</p>
-<p>To see updates, go to the <strong>Actions</strong> page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.</p>
-<div class="float">
-<img src="img/git-instruct/github-pages-actions-explained.png" alt="Image showing the different possibilities of deploy a github page" />
-<div class="figcaption">Image showing the different possibilities of deploy a github page</div>
+<p><img src="img/template/make-a-template.png" alt="Image of the repo and how to find make a template" /><br />
+<br> <!-- enforces a space after the image --></p>
+<ol start="3" style="list-style-type: decimal">
+<li>You will be brought to a “Create a new repository” page. Fill out the blanks as seen below. That is, fill in the repository name and description according to <a href="">CBW Guidelines</a>. <br>“Include all branches” does not need to be selected (???). <br>The new repository you are making should be public.</li>
+</ol>
+<p><img src="img/template/make-new-repo.png" alt="Image showing how to make a new repo from a template repo" /><br />
+<br></p>
+<ol start="4" style="list-style-type: decimal">
+<li></li>
+</ol>
 </div>
-<p>You can click <u><strong>pages build and deployment</strong></u> for updates. It will give you errors (which may not be very clear) or the link of your deployed page!</p>
-<p><img src="img/git-instruct/successful-deploy.png" alt="successful deploy" />
-<img src="img/git-instruct/failed-deploy.png" alt="failed deploy" /></p>
-<p>Click around to explore more!</p>
+<div id="getting-the-template-on-your-local-computer---git-clone" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Getting the Template on Your Local Computer - Git Clone<a href="starting-to-set-up-your-workshop.html#getting-the-template-on-your-local-computer---git-clone" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="creating-the-git-connection" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Creating the Git Connection<a href="starting-to-set-up-your-workshop.html#creating-the-git-connection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="file-setup-explanation" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> File Setup Explanation<a href="starting-to-set-up-your-workshop.html#file-setup-explanation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Explain file setup (tree diagram?)</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="how-to-push-to-github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="storing-all-formatting-content.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="build-site.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -317,7 +235,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cbw-dev/bookdown-docs/05-deploy.Rmd",
+"link": "https://github.com/cbw-dev/bookdown-docs/011-git-clone.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -340,20 +258,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
