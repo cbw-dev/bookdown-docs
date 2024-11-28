@@ -4,7 +4,9 @@ eq:binom
 cbws-bookdown-documentation
 getting-started
 installation
-file-setup
+rc-template-setup
+git-clone
+file-setup-explanation
 build-site
 how-to-edit-_bookdown.yml
 how-to-edit-_output.yml-rc

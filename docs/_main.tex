@@ -157,11 +157,34 @@ If you don't know which one to use, click \href{}{here} to learn more!
 
 \chapter{Getting Started}\label{getting-started}
 
+Bookdown is an open-source R package that helps write books and articles. We will be building our bookdown-based workshop websites using this, specifically the gitbook template. (This is just the name of the specific template style, you will be working in a workshop template that CBW has prepared for you!)
+
+If you're ready to start making a workshop website in bookdown, let's setup your device (PC, laptop)!
+
+First, let's explain installations.
+
 \section{Installation}\label{installation}
 
-Install RStudio, get bookdown locally
+Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated development environment i.e.~the platform we will be working in) is RStudio.
 
-\section{File Setup}\label{file-setup}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Download and install R (You need R 3.6.0+ installed for RStudio) \href{https://cran.rstudio.com/}{here}. Follow the instructions for your operating system (Linux/macOS/Windows).
+  {[}Maybe we should have more installation instructions - a video?{]}
+\item
+  Download and install RStudio \href{https://posit.co/download/rstudio-desktop/\#:~:text=AND\%20INSTALL\%20R-,2\%3A\%20Install\%20RStudio,-DOWNLOAD\%20RSTUDIO\%20DESKTOP}{here}. Scroll down to find downloads for non-macOS.
+\item
+  Installl the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: \texttt{install.packages("bookdown")}
+\end{enumerate}
+
+We're ready to start working with CBW's bookdown workshop template now!
+
+\chapter{(RC) Template Setup}\label{rc-template-setup}
+
+\section{Git Clone}\label{git-clone}
+
+\section{File Setup Explanation}\label{file-setup-explanation}
 
 Explain file setup (tree diagram?)
 
@@ -637,9 +660,11 @@ Ex. Forgot to pull before editing?
 
 \begin{itemize}
 \item
-  If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see ``Permission denied'' in your warning messages, trying running this command \texttt{chmod\ -R\ u+w\ docs} in terminal, in the folder containing your docs folder {[}CLARIFY ?{]}
+  If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see \textbf{``Permission denied''} in your warning messages, trying running this command \texttt{chmod\ -R\ u+w\ docs} in terminal, in the folder containing your docs folder {[}CLARIFY ?{]}
 \item
-  ``Could not produce X output'' - by default, bookdown builds all possible formats: gitbook, pdf, epub versions. We only need the gitbook, so if you're having issues, change your build settings to only creating the gitbook {[}CLARIFY + INCLUDE IMAGES{]}
+  \textbf{``Could not produce X output''} - by default, bookdown builds all possible formats: gitbook, pdf, epub versions. We only need the gitbook, so if you're having issues, change your build settings to only creating the gitbook {[}CLARIFY + INCLUDE IMAGES{]}
+\item
+  A very common bug is \textbf{``missing X package''}, just install it using this command in your console (the bottom left window in RStudio) \texttt{install.packages("missing\ package\ name,\ include\ these\ surrouding\ quotations")}
 \end{itemize}
 
 \section{FAQ}\label{faq}

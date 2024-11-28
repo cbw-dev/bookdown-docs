@@ -1,0 +1,8 @@
+# (RC) Template Setup
+
+
+## Git Clone
+
+## File Setup Explanation
+
+Explain file setup (tree diagram?)
