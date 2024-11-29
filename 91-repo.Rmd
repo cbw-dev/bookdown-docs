@@ -68,5 +68,3 @@ Let's say we only edited `index.Rmd`, now we see the newly edited files. (Do not
 ![post git commit window](img/git-instruct/git-window-post-commit.png)
 
 Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a **Pull** button in the Git window within RStudio!
-
-## How to Git Clone (ISC)

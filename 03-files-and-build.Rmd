@@ -62,6 +62,31 @@ But which files do we edit? Well alas, it's time to discuss the file setup.
 
 ## File Setup Explanation {#file-setup}
 
-Explain file setup (tree diagram?)
+[INSERT TREE ASCII] - asked IT whether I can install homebrew
 
-## Push Your Changes
+## Push to GitHub via RStudio
+
+Now, we know what our files mean and how to edit them. How do we get this onto GitHub? We can write git commands into our Terminal/Command Prompt, or alternatively (and more easily), RStudio has a built-in git interface.
+
+Now, we will be able to see a Git window in the top right. Click "Git" to open this window.
+
+![RStudio with Git window open](img/git-instruct/RStudio-with-git-window-open.png)
+
+Let's say we only edited `index.Rmd`, now we see the newly edited files. Changed files that need to be updated on GitHub will show up in this window, like how `index.Rmd` is seen above. (Do not worry too much about `.DS_Store` and `.gitignore` do.) Let's try to push this change to GitHub.
+
+13. Select all the edited files.
+
+![selected files in the git window and the commit button highlighted](img/git-instruct/git-window-selected-items.png)\
+
+14. Then, click the Commit button, which appears above your selected items. A window pane will appear (shown below).
+
+![git commit window pane](img/git-instruct/git-commit-window.png)\
+
+15. Add a commit message in the corresponding box, and then press commit below it.
+
+16. A new window will show up, detailing your updates. Close this window and then press **Push** to push your updates to GitHub.
+
+![post git commit window](img/git-instruct/git-window-post-commit.png)\
+
+Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a **Pull** button in the Git window within RStudio!
+

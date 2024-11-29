@@ -348,9 +348,54 @@ But which files do we edit? Well alas, it's time to discuss the file setup.
 
 \section{File Setup Explanation}\label{file-setup}
 
-Explain file setup (tree diagram?)
+{[}INSERT TREE ASCII{]} - asked IT whether I can install homebrew
 
-\section{Push Your Changes}\label{push-your-changes}
+\section{Push to GitHub via RStudio}\label{push-to-github-via-rstudio}
+
+Now, we know what our files mean and how to edit them. How do we get this onto GitHub? We can write git commands into our Terminal/Command Prompt, or alternatively (and more easily), RStudio has a built-in git interface.
+
+Now, we will be able to see a Git window in the top right. Click ``Git'' to open this window.
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/RStudio-with-git-window-open.png}
+\caption{RStudio with Git window open}
+\end{figure}
+
+Let's say we only edited \texttt{index.Rmd}, now we see the newly edited files. Changed files that need to be updated on GitHub will show up in this window, like how \texttt{index.Rmd} is seen above. (Do not worry too much about \texttt{.DS\_Store} and \texttt{.gitignore} do.) Let's try to push this change to GitHub.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Select all the edited files.
+\end{enumerate}
+
+\includegraphics{img/git-instruct/git-window-selected-items.png}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  Then, click the Commit button, which appears above your selected items. A window pane will appear (shown below).
+\end{enumerate}
+
+\includegraphics{img/git-instruct/git-commit-window.png}\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\item
+  Add a commit message in the corresponding box, and then press commit below it.
+\item
+  A new window will show up, detailing your updates. Close this window and then press \textbf{Push} to push your updates to GitHub.
+\end{enumerate}
+
+\includegraphics{img/git-instruct/git-window-post-commit.png}\\
+
+Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a \textbf{Pull} button in the Git window within RStudio!
 
 \chapter{Storing all formatting content}\label{storing-all-formatting-content}
 
@@ -785,8 +830,6 @@ Let's say we only edited \texttt{index.Rmd}, now we see the newly edited files. 
 \end{figure}
 
 Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a \textbf{Pull} button in the Git window within RStudio!
-
-\section{How to Git Clone (ISC)}\label{how-to-git-clone-isc}
 
 \chapter{How to Deploy Your Workshop Website}\label{how-to-deploy-your-workshop-website-1}
 

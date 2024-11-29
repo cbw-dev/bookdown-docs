@@ -17,7 +17,7 @@ other-ways-to-build-your-book
 knit-your-book
 preview-your-book
 file-setup
-push-your-changes
+push-to-github-via-rstudio
 storing-all-formatting-content
 chapters
 a-section
@@ -51,5 +51,4 @@ git-instructions
 how-to-make-a-git-repo-rc
 how-to-make-the-git-connection-adding-your-local-repo-to-github
 updating-github-via-rstudio
-how-to-git-clone-isc
 how-to-deploy-your-workshop-website-1

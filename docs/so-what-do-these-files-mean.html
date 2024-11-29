@@ -194,7 +194,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.3.3" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#preview-your-book"><i class="fa fa-check"></i><b>4.3.3</b> Preview Your Book</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#file-setup"><i class="fa fa-check"></i><b>4.4</b> File Setup Explanation</a></li>
-<li class="chapter" data-level="4.5" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#push-your-changes"><i class="fa fa-check"></i><b>4.5</b> Push Your Changes</a></li>
+<li class="chapter" data-level="4.5" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#push-to-github-via-rstudio"><i class="fa fa-check"></i><b>4.5</b> Push to GitHub via RStudio</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html"><i class="fa fa-check"></i><b>5</b> Storing all formatting content</a>
 <ul>
@@ -244,7 +244,6 @@ div.csl-indent {
 <li class="chapter" data-level="9.1.1" data-path="git-instructions.html"><a href="git-instructions.html#how-to-make-the-git-connection-adding-your-local-repo-to-github"><i class="fa fa-check"></i><b>9.1.1</b> How to Make the Git Connection (Adding your Local Repo to GitHub)</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="git-instructions.html"><a href="git-instructions.html#updating-github-via-rstudio"><i class="fa fa-check"></i><b>9.2</b> Updating GitHub via RStudio</a></li>
-<li class="chapter" data-level="9.3" data-path="git-instructions.html"><a href="git-instructions.html#how-to-git-clone-isc"><i class="fa fa-check"></i><b>9.3</b> How to Git Clone (ISC)</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="how-to-deploy-your-workshop-website-1.html"><a href="how-to-deploy-your-workshop-website-1.html"><i class="fa fa-check"></i><b>10</b> How to Deploy Your Workshop Website</a></li>
 <li class="divider"></li>
@@ -323,10 +322,34 @@ div.csl-indent {
 </div>
 <div id="file-setup" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> File Setup Explanation<a href="so-what-do-these-files-mean.html#file-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Explain file setup (tree diagram?)</p>
+<p>[INSERT TREE ASCII] - asked IT whether I can install homebrew</p>
 </div>
-<div id="push-your-changes" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Push Your Changes<a href="so-what-do-these-files-mean.html#push-your-changes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="push-to-github-via-rstudio" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Push to GitHub via RStudio<a href="so-what-do-these-files-mean.html#push-to-github-via-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now, we know what our files mean and how to edit them. How do we get this onto GitHub? We can write git commands into our Terminal/Command Prompt, or alternatively (and more easily), RStudio has a built-in git interface.</p>
+<p>Now, we will be able to see a Git window in the top right. Click “Git” to open this window.</p>
+<div class="float">
+<img src="img/git-instruct/RStudio-with-git-window-open.png" alt="RStudio with Git window open" />
+<div class="figcaption">RStudio with Git window open</div>
+</div>
+<p>Let’s say we only edited <code>index.Rmd</code>, now we see the newly edited files. Changed files that need to be updated on GitHub will show up in this window, like how <code>index.Rmd</code> is seen above. (Do not worry too much about <code>.DS_Store</code> and <code>.gitignore</code> do.) Let’s try to push this change to GitHub.</p>
+<ol start="13" style="list-style-type: decimal">
+<li>Select all the edited files.</li>
+</ol>
+<p><img src="img/git-instruct/git-window-selected-items.png" alt="selected files in the git window and the commit button highlighted" /><br />
+</p>
+<ol start="14" style="list-style-type: decimal">
+<li>Then, click the Commit button, which appears above your selected items. A window pane will appear (shown below).</li>
+</ol>
+<p><img src="img/git-instruct/git-commit-window.png" alt="git commit window pane" /><br />
+</p>
+<ol start="15" style="list-style-type: decimal">
+<li><p>Add a commit message in the corresponding box, and then press commit below it.</p></li>
+<li><p>A new window will show up, detailing your updates. Close this window and then press <strong>Push</strong> to push your updates to GitHub.</p></li>
+</ol>
+<p><img src="img/git-instruct/git-window-post-commit.png" alt="post git commit window" /><br />
+</p>
+<p>Now, we’re done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a <strong>Pull</strong> button in the Git window within RStudio!</p>
 
 </div>
 </div>
