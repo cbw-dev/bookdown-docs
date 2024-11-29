@@ -119,7 +119,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}2024-11-28}
+\date{\vspace{-2.5em}2024-11-29}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -262,9 +262,95 @@ NOTE: Consider having only one team member (or perhaps your RC) make git pushes 
 
 But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? It's time for you to go to the next page :D
 
-\section{File Setup Explanation}\label{file-setup-explanation}
+\chapter{So What Do These Files Mean?}\label{so-what-do-these-files-mean}
+
+Ok now we all have our workshop locally, which is made up of all these files and folders?
+
+First, let's figure out RStudio. Skip to \hyperref[file-setup]{file setup} if you already know how to use RStudio (and it's built in git control window).
+
+\section{Open in RStudio}\label{open-in-rstudio}
+
+Enter the folder you just git cloned, it should be titled ``{[}workshop-name{]}''. Right click on {[}workshop-name{]}.Rproj and press ``Open in RStudio''. There is only one file with this file ending.
+
+A RStudio window should open up and look like the image below.
+\includegraphics{img/files-and-build/newly-opened-RStudio.png}\\
+
+\section{Explaining RStudio}\label{explaining-rstudio}
+
+In the bottom left, have our console and other debug related windows (such as terminal!). Any code we run will appear in the console. We can access the terminal (just like editing in the Terminal app) under the ``Terminal'' tab.
+
+In the bottom right, we have all of our files and subfolders. These files will be explained \hyperref[file-setup]{below}. This window also contains helpful views, like ``Viewer'' and ``Plots''. We will touch on these later.
+
+Try opening \texttt{index.Rmd}: a new pane will open in the top left that shows the contents of \texttt{index.Rmd}. This is where we will be editing our files! Notice, the ``Knit'' button.
+
+In your top right, we have a different window with more different views. The most relevant windows to us are the ``Build'' and the ``Git'' windows.
+
+\begin{quote}
+No ``Git'' Window?
+
+Try closing (and maybe even restarting RStudio) and then reopening it. A ``Git'' tab should appear to the right of the ``Build'' tab and to the left of the ``Tutorial'' tab.
+\end{quote}
+
+\section{Build the book}\label{build-the-book}
+
+Try pressing ``Build Book'' within the ``Build'' window. Your build window is going to fill up with text, and soon, a website is going to pop-up as your new window. This is the website you will be editing to create your workshop!
+
+By building the book, all of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don't have to save before building!).
+
+\subsection{Other Ways to Build Your Book}\label{other-ways-to-build-your-book}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Build the book from the R console:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{render\_book}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Press the keyboard buttons: \texttt{cmd\ OR\ ctrl\ +\ shift\ +\ B}
+\end{enumerate}
+
+\subsection{Knit Your Book}\label{knit-your-book}
+
+Building can take a long time. If you are editing just one file, you can press the ``Knit'' button that is at the top of the window with your file. This will run the code in the page, and show you what that page would look like in the website (as well as saving that file).
+
+\begin{quote}
+Note: Other pages in your website will not update.
+\end{quote}
+
+\begin{quote}
+A quicker way to knit is using the keboard controls
+
+\texttt{cmd\ OR\ ctrl\ +\ shift\ +\ K}
+\end{quote}
+
+\subsection{Preview Your Book}\label{preview-your-book}
+
+If you want live updates to your changes, you can preview the page as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console (in the bottom left window):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{serve\_book}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+But which files do we edit? Well alas, it's time to discuss the file setup.
+
+\section{File Setup Explanation}\label{file-setup}
 
 Explain file setup (tree diagram?)
+
+\section{Push Your Changes}\label{push-your-changes}
 
 \chapter{Storing all formatting content}\label{storing-all-formatting-content}
 
@@ -533,7 +619,7 @@ Use second-level and higher headings within chapters like: \texttt{\#\#\ A\ shor
 
 The \texttt{index.Rmd} file is required, and is also your first book chapter. It will be the homepage when you render the book.
 
-\section{Build the book:}\label{build-the-book}
+\section{Build the book:}\label{build-the-book-1}
 
 \begin{itemize}
 \tightlist

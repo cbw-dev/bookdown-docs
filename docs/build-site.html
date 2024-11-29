@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 Build Site | CBW’s Bookdown Template Documentation</title>
+  <title>8 Build Site | CBW’s Bookdown Template Documentation</title>
   <meta name="description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 Build Site | CBW’s Bookdown Template Documentation" />
+  <meta property="og:title" content="8 Build Site | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 Build Site | CBW’s Bookdown Template Documentation" />
+  <meta name="twitter:title" content="8 Build Site | CBW’s Bookdown Template Documentation" />
   
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
@@ -28,7 +28,7 @@ set in the _output.yml file.</p>" />
 
 
 
-<meta name="date" content="2024-11-28" />
+<meta name="date" content="2024-11-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -128,6 +128,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -159,59 +182,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="starting-to-set-up-your-new-workshop.html"><a href="starting-to-set-up-your-new-workshop.html#setting-up-team-access-nia-will-fill-this-in"><i class="fa fa-check"></i><b>3.2</b> Setting Up Team Access (Nia will fill this in)</a></li>
 <li class="chapter" data-level="3.3" data-path="starting-to-set-up-your-new-workshop.html"><a href="starting-to-set-up-your-new-workshop.html#getting-the-template-on-your-local-computer---git-clone"><i class="fa fa-check"></i><b>3.3</b> Getting the Template on Your Local Computer - Git Clone</a></li>
-<li class="chapter" data-level="3.4" data-path="starting-to-set-up-your-new-workshop.html"><a href="starting-to-set-up-your-new-workshop.html#file-setup-explanation"><i class="fa fa-check"></i><b>3.4</b> File Setup Explanation</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html"><i class="fa fa-check"></i><b>4</b> Storing all formatting content</a>
+<li class="chapter" data-level="4" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html"><i class="fa fa-check"></i><b>4</b> So What Do These Files Mean?</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#chapters"><i class="fa fa-check"></i><b>4.1</b> Chapters</a></li>
-<li class="chapter" data-level="4.2" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#a-section"><i class="fa fa-check"></i><b>4.2</b> A section</a>
+<li class="chapter" data-level="4.1" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#open-in-rstudio"><i class="fa fa-check"></i><b>4.1</b> Open in RStudio</a></li>
+<li class="chapter" data-level="4.2" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#explaining-rstudio"><i class="fa fa-check"></i><b>4.2</b> Explaining RStudio</a></li>
+<li class="chapter" data-level="4.3" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#build-the-book"><i class="fa fa-check"></i><b>4.3</b> Build the book</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#other-ways-to-build-your-book"><i class="fa fa-check"></i><b>4.3.1</b> Other Ways to Build Your Book</a></li>
+<li class="chapter" data-level="4.3.2" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#knit-your-book"><i class="fa fa-check"></i><b>4.3.2</b> Knit Your Book</a></li>
+<li class="chapter" data-level="4.3.3" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#preview-your-book"><i class="fa fa-check"></i><b>4.3.3</b> Preview Your Book</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#file-setup"><i class="fa fa-check"></i><b>4.4</b> File Setup Explanation</a></li>
+<li class="chapter" data-level="4.5" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html#push-your-changes"><i class="fa fa-check"></i><b>4.5</b> Push Your Changes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html"><i class="fa fa-check"></i><b>5</b> Storing all formatting content</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#chapters"><i class="fa fa-check"></i><b>5.1</b> Chapters</a></li>
+<li class="chapter" data-level="5.2" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#a-section"><i class="fa fa-check"></i><b>5.2</b> A section</a>
 <ul>
 <li class="chapter" data-level="" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#cross"><i class="fa fa-check"></i><b>4.3</b> Cross-references</a></li>
-<li class="chapter" data-level="4.4" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>4.4</b> Chapters and sub-chapters</a></li>
-<li class="chapter" data-level="4.5" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>4.5</b> Captioned figures and tables</a></li>
-<li class="chapter" data-level="4.6" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#parts"><i class="fa fa-check"></i><b>4.6</b> Parts</a></li>
-<li class="chapter" data-level="4.7" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#footnotes"><i class="fa fa-check"></i><b>4.7</b> Footnotes</a></li>
-<li class="chapter" data-level="4.8" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#citations"><i class="fa fa-check"></i><b>4.8</b> Citations</a></li>
-<li class="chapter" data-level="4.9" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#blocks"><i class="fa fa-check"></i><b>4.9</b> Blocks</a></li>
-<li class="chapter" data-level="4.10" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#equations"><i class="fa fa-check"></i><b>4.10</b> Equations</a></li>
-<li class="chapter" data-level="4.11" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#theorems-and-proofs"><i class="fa fa-check"></i><b>4.11</b> Theorems and proofs</a></li>
-<li class="chapter" data-level="4.12" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#callout-blocks"><i class="fa fa-check"></i><b>4.12</b> Callout blocks</a></li>
-<li class="chapter" data-level="4.13" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#sharing-your-book"><i class="fa fa-check"></i><b>4.13</b> Sharing your book</a></li>
-<li class="chapter" data-level="4.14" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#publishing"><i class="fa fa-check"></i><b>4.14</b> Publishing</a></li>
-<li class="chapter" data-level="4.15" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#pages"><i class="fa fa-check"></i><b>4.15</b> 404 pages</a></li>
-<li class="chapter" data-level="4.16" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#metadata-for-sharing"><i class="fa fa-check"></i><b>4.16</b> Metadata for sharing</a></li>
+<li class="chapter" data-level="5.3" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#cross"><i class="fa fa-check"></i><b>5.3</b> Cross-references</a></li>
+<li class="chapter" data-level="5.4" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>5.4</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="5.5" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>5.5</b> Captioned figures and tables</a></li>
+<li class="chapter" data-level="5.6" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#parts"><i class="fa fa-check"></i><b>5.6</b> Parts</a></li>
+<li class="chapter" data-level="5.7" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#footnotes"><i class="fa fa-check"></i><b>5.7</b> Footnotes</a></li>
+<li class="chapter" data-level="5.8" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#citations"><i class="fa fa-check"></i><b>5.8</b> Citations</a></li>
+<li class="chapter" data-level="5.9" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#blocks"><i class="fa fa-check"></i><b>5.9</b> Blocks</a></li>
+<li class="chapter" data-level="5.10" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#equations"><i class="fa fa-check"></i><b>5.10</b> Equations</a></li>
+<li class="chapter" data-level="5.11" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#theorems-and-proofs"><i class="fa fa-check"></i><b>5.11</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="5.12" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#callout-blocks"><i class="fa fa-check"></i><b>5.12</b> Callout blocks</a></li>
+<li class="chapter" data-level="5.13" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#sharing-your-book"><i class="fa fa-check"></i><b>5.13</b> Sharing your book</a></li>
+<li class="chapter" data-level="5.14" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#publishing"><i class="fa fa-check"></i><b>5.14</b> Publishing</a></li>
+<li class="chapter" data-level="5.15" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#pages"><i class="fa fa-check"></i><b>5.15</b> 404 pages</a></li>
+<li class="chapter" data-level="5.16" data-path="storing-all-formatting-content.html"><a href="storing-all-formatting-content.html#metadata-for-sharing"><i class="fa fa-check"></i><b>5.16</b> Metadata for sharing</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="how-to-render-code.html"><a href="how-to-render-code.html"><i class="fa fa-check"></i><b>5</b> How to Render Code</a></li>
-<li class="chapter" data-level="6" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html"><i class="fa fa-check"></i><b>6</b> Brain Dump / FAQ</a>
+<li class="chapter" data-level="6" data-path="how-to-render-code.html"><a href="how-to-render-code.html"><i class="fa fa-check"></i><b>6</b> How to Render Code</a></li>
+<li class="chapter" data-level="7" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html"><i class="fa fa-check"></i><b>7</b> Brain Dump / FAQ</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html#danger-zones"><i class="fa fa-check"></i><b>6.1</b> Danger Zones</a></li>
-<li class="chapter" data-level="6.2" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html#potential-errors-bugs"><i class="fa fa-check"></i><b>6.2</b> Potential Errors &amp; Bugs</a></li>
-<li class="chapter" data-level="6.3" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html#faq"><i class="fa fa-check"></i><b>6.3</b> FAQ</a></li>
+<li class="chapter" data-level="7.1" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html#danger-zones"><i class="fa fa-check"></i><b>7.1</b> Danger Zones</a></li>
+<li class="chapter" data-level="7.2" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html#potential-errors-bugs"><i class="fa fa-check"></i><b>7.2</b> Potential Errors &amp; Bugs</a></li>
+<li class="chapter" data-level="7.3" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html#faq"><i class="fa fa-check"></i><b>7.3</b> FAQ</a></li>
 </ul></li>
 <li class="part"><span><b>I DEVELOPERS GUIDE</b></span></li>
-<li class="chapter" data-level="7" data-path="build-site.html"><a href="build-site.html"><i class="fa fa-check"></i><b>7</b> Build Site</a>
+<li class="chapter" data-level="8" data-path="build-site.html"><a href="build-site.html"><i class="fa fa-check"></i><b>8</b> Build Site</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="build-site.html"><a href="build-site.html#how-to-edit-_bookdown.yml"><i class="fa fa-check"></i><b>7.1</b> How to edit _bookdown.yml</a></li>
-<li class="chapter" data-level="7.2" data-path="build-site.html"><a href="build-site.html#how-to-edit-_output.yml-rc"><i class="fa fa-check"></i><b>7.2</b> How to edit _output.yml (RC)</a></li>
-<li class="chapter" data-level="7.3" data-path="build-site.html"><a href="build-site.html#mandatory-index.rmd-landing-page"><i class="fa fa-check"></i><b>7.3</b> Mandatory “index.Rmd” landing page</a></li>
-<li class="chapter" data-level="7.4" data-path="build-site.html"><a href="build-site.html#build-the-book"><i class="fa fa-check"></i><b>7.4</b> Build the book:</a>
+<li class="chapter" data-level="8.1" data-path="build-site.html"><a href="build-site.html#how-to-edit-_bookdown.yml"><i class="fa fa-check"></i><b>8.1</b> How to edit _bookdown.yml</a></li>
+<li class="chapter" data-level="8.2" data-path="build-site.html"><a href="build-site.html#how-to-edit-_output.yml-rc"><i class="fa fa-check"></i><b>8.2</b> How to edit _output.yml (RC)</a></li>
+<li class="chapter" data-level="8.3" data-path="build-site.html"><a href="build-site.html#mandatory-index.rmd-landing-page"><i class="fa fa-check"></i><b>8.3</b> Mandatory “index.Rmd” landing page</a></li>
+<li class="chapter" data-level="8.4" data-path="build-site.html"><a href="build-site.html#build-the-book-1"><i class="fa fa-check"></i><b>8.4</b> Build the book:</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="build-site.html"><a href="build-site.html#render-book"><i class="fa fa-check"></i><b>7.4.1</b> Render book</a></li>
-<li class="chapter" data-level="7.4.2" data-path="build-site.html"><a href="build-site.html#preview-book"><i class="fa fa-check"></i><b>7.4.2</b> Preview book</a></li>
+<li class="chapter" data-level="8.4.1" data-path="build-site.html"><a href="build-site.html#render-book"><i class="fa fa-check"></i><b>8.4.1</b> Render book</a></li>
+<li class="chapter" data-level="8.4.2" data-path="build-site.html"><a href="build-site.html#preview-book"><i class="fa fa-check"></i><b>8.4.2</b> Preview book</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="git-instructions.html"><a href="git-instructions.html"><i class="fa fa-check"></i><b>8</b> Git Instructions</a>
+<li class="chapter" data-level="9" data-path="git-instructions.html"><a href="git-instructions.html"><i class="fa fa-check"></i><b>9</b> Git Instructions</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="git-instructions.html"><a href="git-instructions.html#how-to-make-a-git-repo-rc"><i class="fa fa-check"></i><b>8.1</b> How to Make a Git Repo (RC)</a>
+<li class="chapter" data-level="9.1" data-path="git-instructions.html"><a href="git-instructions.html#how-to-make-a-git-repo-rc"><i class="fa fa-check"></i><b>9.1</b> How to Make a Git Repo (RC)</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="git-instructions.html"><a href="git-instructions.html#how-to-make-the-git-connection-adding-your-local-repo-to-github"><i class="fa fa-check"></i><b>8.1.1</b> How to Make the Git Connection (Adding your Local Repo to GitHub)</a></li>
+<li class="chapter" data-level="9.1.1" data-path="git-instructions.html"><a href="git-instructions.html#how-to-make-the-git-connection-adding-your-local-repo-to-github"><i class="fa fa-check"></i><b>9.1.1</b> How to Make the Git Connection (Adding your Local Repo to GitHub)</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="git-instructions.html"><a href="git-instructions.html#updating-github-via-rstudio"><i class="fa fa-check"></i><b>8.2</b> Updating GitHub via RStudio</a></li>
-<li class="chapter" data-level="8.3" data-path="git-instructions.html"><a href="git-instructions.html#how-to-git-clone-isc"><i class="fa fa-check"></i><b>8.3</b> How to Git Clone (ISC)</a></li>
+<li class="chapter" data-level="9.2" data-path="git-instructions.html"><a href="git-instructions.html#updating-github-via-rstudio"><i class="fa fa-check"></i><b>9.2</b> Updating GitHub via RStudio</a></li>
+<li class="chapter" data-level="9.3" data-path="git-instructions.html"><a href="git-instructions.html#how-to-git-clone-isc"><i class="fa fa-check"></i><b>9.3</b> How to Git Clone (ISC)</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="how-to-deploy-your-workshop-website-1.html"><a href="how-to-deploy-your-workshop-website-1.html"><i class="fa fa-check"></i><b>9</b> How to Deploy Your Workshop Website</a></li>
+<li class="chapter" data-level="10" data-path="how-to-deploy-your-workshop-website-1.html"><a href="how-to-deploy-your-workshop-website-1.html"><i class="fa fa-check"></i><b>10</b> How to Deploy Your Workshop Website</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -232,52 +267,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="build-site" class="section level1 hasAnchor" number="7">
-<h1><span class="header-section-number">7</span> Build Site<a href="build-site.html#build-site" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="how-to-edit-_bookdown.yml" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> How to edit _bookdown.yml<a href="build-site.html#how-to-edit-_bookdown.yml" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="build-site" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Build Site<a href="build-site.html#build-site" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="how-to-edit-_bookdown.yml" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> How to edit _bookdown.yml<a href="build-site.html#how-to-edit-_bookdown.yml" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>add a new line, <code>output_dir: "docs"</code> to _bookdown.yml</li>
 <li>build the site</li>
 <li>add a <code>.nojekyll</code> file into the produced docs folder</li>
 </ul>
 </div>
-<div id="how-to-edit-_output.yml-rc" class="section level2 hasAnchor" number="7.2">
-<h2><span class="header-section-number">7.2</span> How to edit _output.yml (RC)<a href="build-site.html#how-to-edit-_output.yml-rc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="how-to-edit-_output.yml-rc" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> How to edit _output.yml (RC)<a href="build-site.html#how-to-edit-_output.yml-rc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>after <em>before:</em> change your workshop name link</li>
 <li>after <em>edit:</em> put the link to the workshop repo, and end the link with <code>/%s</code></li>
 <li>save</li>
 </ul>
 </div>
-<div id="mandatory-index.rmd-landing-page" class="section level2 hasAnchor" number="7.3">
-<h2><span class="header-section-number">7.3</span> Mandatory “index.Rmd” landing page<a href="build-site.html#mandatory-index.rmd-landing-page" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="mandatory-index.rmd-landing-page" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Mandatory “index.Rmd” landing page<a href="build-site.html#mandatory-index.rmd-landing-page" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Each <strong>bookdown</strong> chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter <em>must</em> start with a first-level heading: <code># A good chapter</code>, and can contain one (and only one) first-level heading.</p>
 <p>Use second-level and higher headings within chapters like: <code>## A short section</code> or <code>### An even shorter section</code>.</p>
 <p>The <code>index.Rmd</code> file is required, and is also your first book chapter. It will be the homepage when you render the book.</p>
 </div>
-<div id="build-the-book" class="section level2 hasAnchor" number="7.4">
-<h2><span class="header-section-number">7.4</span> Build the book:<a href="build-site.html#build-the-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="build-the-book-1" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Build the book:<a href="build-site.html#build-the-book-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>“Build” button in RStudio IDE /OR/ bookdown::render_book()</li>
 <li>Preview the book: - updates on saves in viewer window bookdown::serve_book()</li>
 </ul>
 <p>Before building</p>
-<div id="render-book" class="section level3 hasAnchor" number="7.4.1">
-<h3><span class="header-section-number">7.4.1</span> Render book<a href="build-site.html#render-book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="render-book" class="section level3 hasAnchor" number="8.4.1">
+<h3><span class="header-section-number">8.4.1</span> Render book<a href="build-site.html#render-book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can render the HTML version of this example book without changing anything:</p>
 <ol style="list-style-type: decimal">
 <li><p>Find the <strong>Build</strong> pane in the RStudio IDE, and</p></li>
 <li><p>Click on <strong>Build Book</strong>, then select your output format, or select “All formats” if you’d like to use multiple formats from the same book source files.</p></li>
 </ol>
 <p>Or build the book from the R console:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="build-site.html#cb1-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="build-site.html#cb6-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
 <p>To render this example to PDF as a <code>bookdown::pdf_book</code>, you’ll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <a href="https://yihui.org/tinytex/" class="uri">https://yihui.org/tinytex/</a>.</p>
 </div>
-<div id="preview-book" class="section level3 hasAnchor" number="7.4.2">
-<h3><span class="header-section-number">7.4.2</span> Preview book<a href="build-site.html#preview-book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="preview-book" class="section level3 hasAnchor" number="8.4.2">
+<h3><span class="header-section-number">8.4.2</span> Preview book<a href="build-site.html#preview-book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in “Preview book”, or from the R console:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="build-site.html#cb2-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="build-site.html#cb7-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
 
 </div>
 </div>
@@ -342,6 +377,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

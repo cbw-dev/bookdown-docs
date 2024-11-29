@@ -9,7 +9,15 @@ workshop-setup-rc
 how-to-deploy-your-workshop-website
 setting-up-team-access-nia-will-fill-this-in
 getting-the-template-on-your-local-computer---git-clone
-file-setup-explanation
+so-what-do-these-files-mean
+open-in-rstudio
+explaining-rstudio
+build-the-book
+other-ways-to-build-your-book
+knit-your-book
+preview-your-book
+file-setup
+push-your-changes
 storing-all-formatting-content
 chapters
 a-section
@@ -36,7 +44,7 @@ build-site
 how-to-edit-_bookdown.yml
 how-to-edit-_output.yml-rc
 mandatory-index.rmd-landing-page
-build-the-book
+build-the-book-1
 render-book
 preview-book
 git-instructions
