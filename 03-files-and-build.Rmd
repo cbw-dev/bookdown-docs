@@ -64,6 +64,8 @@ But which files do we edit? Well alas, it's time to discuss the file setup.
 
 [INSERT TREE ASCII] - asked IT whether I can install homebrew
 
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=960&amp;h=720">
+
 To help us understand the files we're editing to make the website, let's get a full understand of how bookdown actually works.
 
 
