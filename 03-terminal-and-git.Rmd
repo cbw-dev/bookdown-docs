@@ -1,4 +1,6 @@
-# Command Line & Git Clone
+# Command Line, SSH Connection & Git Clone
+
+If you're familiar with the command line and have already established a SSH connection, continue to [git cloning your workshop template locally](#git-clone).
 
 ## Introduction to the Command Line
 This is for those who have no (or extremely little) experience with the command line.
@@ -14,19 +16,65 @@ Using the command line, you can use text commands to interact with your computer
 - terminal (mac, unix based) vs command prompt (windows)
 
 - pwd
-- ls + `enter`
-- cd
+- ls
+- cd + `tab`
+- mkdir
+- rmdir
+- rmdir -r
 - . = current folder
 - .. = previous folder
 - ~ = home
 - up and down arrows
 
+## Creating the SSH Connection
+
+We need to create an SSH connection. Essentially, we're doing this to make sure we are updating and receiving updates from GitHub with security!
+
+Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub and SSH connection, consider using the official docs.)
+
+### [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+
+1. Open Terminal/Command Prompt.
+
+2. Copy and paste this text into your terminal/command prompt. **Replace the email given below with your GitHub email address.
+
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+You will get this output:
+```
+> Generating public/private ALGORITHM key pair.
+```
+
+You will then be prompted with this message: 
+```
+> Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):
+```
+Press enter.
+
+If you have already created a SSH key and you are asked to rewrite another key, look at the [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name.) for specific steps.
+
+3. Type a secure passphrase (make up a password) when prompted with:
+
+```
+> Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
+> Enter same passphrase again: [TYPE THE SAME PASSPHRASE]
+```
+
+### [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
+
+
+
+### [Adding a new SSH key to your account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account)
+
+Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps!
 
 ## Getting the Template on Your Local Computer - Git Clone! {#git-clone}
 
 1. Navigate to where in your local file system you want to have your workshop in (hint: cd + `enter`).
 
-2. Find the ssh for your workshop repository: first, click the green button entitled `< > Code` ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like git@github.com:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
+2. Return to your workshop repository on GitHub. <br>Find the ssh for your workshop repository: first, click the green button entitled `< > Code` ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like git@github.com:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
 
 ![how to find the ssh for your repo](img/git-instruct/copy-ssh.png)\
 
@@ -34,10 +82,10 @@ Then put this command into your command line, within the folder you want the wor
 
 For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal/command prompt.
 ```
-git clone *git@github.com:jq-11/workshop-name.git*
+git clone git@github.com:jq-11/workshop-name.git
 ``` 
 
-4. You should be ready to go! With your given permissions, you should be able to git push adn git pull fine!
+4. You should be ready to go! With your given permissions, you should be able to git push and git pull fine!
 
 >NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
 

@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Getting Started | CBW’s Bookdown Template Documentation</title>
+  <title>4 Command Line, SSH Connection &amp; Git Clone | CBW’s Bookdown Template Documentation</title>
   <meta name="description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Getting Started | CBW’s Bookdown Template Documentation" />
+  <meta property="og:title" content="4 Command Line, SSH Connection &amp; Git Clone | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Getting Started | CBW’s Bookdown Template Documentation" />
+  <meta name="twitter:title" content="4 Command Line, SSH Connection &amp; Git Clone | CBW’s Bookdown Template Documentation" />
   
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
@@ -35,8 +35,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="creating-rc-and-deploying-your-new-workshop.html"/>
+<link rel="prev" href="creating-rc-and-deploying-your-new-workshop.html"/>
+<link rel="next" href="so-what-do-these-files-mean.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -279,31 +279,81 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="getting-started" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Getting Started<a href="getting-started.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<!-- Maybe a more gradual introduction ? -->
-<p>Bookdown is an open-source R package that helps write books and articles. We will be building our bookdown-based workshop websites using this, specifically the gitbook template. (This is just the name of the specific template style, you will be working in a workshop template that CBW has prepared for you!)</p>
-<p>If you’re ready to start making a workshop website in bookdown, let’s setup your device (PC, laptop)!</p>
-<p>First, let’s explain installations.</p>
-<div id="installation" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Installation<a href="getting-started.html#installation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated development environment i.e. the platform we will be working in) is RStudio.</p>
+<div id="command-line-ssh-connection-git-clone" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Command Line, SSH Connection &amp; Git Clone<a href="command-line-ssh-connection-git-clone.html#command-line-ssh-connection-git-clone" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>If you’re familiar with the command line and have already established a SSH connection, continue to <a href="command-line-ssh-connection-git-clone.html#git-clone">git cloning your workshop template locally</a>.</p>
+<div id="introduction-to-the-command-line" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Introduction to the Command Line<a href="command-line-ssh-connection-git-clone.html#introduction-to-the-command-line" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is for those who have no (or extremely little) experience with the command line.</p>
+<p>Using the command line, you can use text commands to interact with your computer’s operating system. For us, we will be using it to move around our folders and to <a href="command-line-ssh-connection-git-clone.html#git-clone">git clone</a> our workshop into our computer, so we can work on it using RStudio!</p>
+<blockquote>
+<p>Note:</p>
+<p>Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!</p>
+</blockquote>
+<p>[FILL IN LATER - JULIA CAN GUIDE NEHA]</p>
+<ul>
+<li><p>terminal (mac, unix based) vs command prompt (windows)</p></li>
+<li><p>pwd</p></li>
+<li><p>ls</p></li>
+<li><p>cd + <code>tab</code></p></li>
+<li><p>mkdir</p></li>
+<li><p>rmdir</p></li>
+<li><p>rmdir -r</p></li>
+<li><p>. = current folder</p></li>
+<li><p>.. = previous folder</p></li>
+<li><p>~ = home</p></li>
+<li><p>up and down arrows</p></li>
+</ul>
+</div>
+<div id="creating-the-ssh-connection" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Creating the SSH Connection<a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We need to create an SSH connection. Essentially, we’re doing this to make sure we are updating and receiving updates from GitHub with security!</p>
+<p>Follow the following 3 main steps. Each of these subheaders links to GitHub’s official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you’ve already been working with GitHub and SSH connection, consider using the official docs.)</p>
+<div id="generating-a-new-ssh-key" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">Generating a new SSH key</a><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>Download and install R (You need R 3.6.0+ installed for RStudio) <a href="https://cran.rstudio.com/">here</a>. Follow the instructions for your operating system (Linux/macOS/Windows).
-<br>
-[Maybe we should have more installation instructions - a video?]</li>
+<li><p>Open Terminal/Command Prompt.</p></li>
+<li><p>Copy and paste this text into your terminal/command prompt. **Replace the email given below with your GitHub email address.</p></li>
+</ol>
+<pre><code>ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;</code></pre>
+<p>You will get this output:</p>
+<pre><code>&gt; Generating public/private ALGORITHM key pair.</code></pre>
+<p>You will then be prompted with this message:</p>
+<pre><code>&gt; Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):</code></pre>
+<p>Press enter.</p>
+<p>If you have already created a SSH key and you are asked to rewrite another key, look at the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name.">GitHub Docs</a> for specific steps.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Type a secure passphrase (make up a password) when prompted with:</li>
+</ol>
+<pre><code>&gt; Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
+&gt; Enter same passphrase again: [TYPE THE SAME PASSPHRASE]</code></pre>
+</div>
+<div id="adding-your-ssh-key-to-the-ssh-agent" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent">Adding your SSH key to the ssh-agent</a><a href="command-line-ssh-connection-git-clone.html#adding-your-ssh-key-to-the-ssh-agent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="adding-a-new-ssh-key-to-your-account" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account">Adding a new SSH key to your account</a><a href="command-line-ssh-connection-git-clone.html#adding-a-new-ssh-key-to-your-account" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps!</p>
+</div>
+</div>
+<div id="git-clone" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Getting the Template on Your Local Computer - Git Clone!<a href="command-line-ssh-connection-git-clone.html#git-clone" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Navigate to where in your local file system you want to have your workshop in (hint: cd + <code>enter</code>).</p></li>
+<li><p>Return to your workshop repository on GitHub. <br>Find the ssh for your workshop repository: first, click the green button entitled <code>&lt; &gt; Code</code> ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like <a href="mailto:git@github.com" class="email">git@github.com</a>:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.</p></li>
+</ol>
+<p><img src="img/git-instruct/copy-ssh.png" alt="how to find the ssh for your repo" /><br />
+</p>
+<p>Then put this command into your command line, within the folder you want the workshop folder to be in.</p>
+<p>For example, if my organization is named: jq-11 and my workshop name is “workshop-name”, I would enter this into my terminal/command prompt.</p>
+<pre><code>git clone git@github.com:jq-11/workshop-name.git</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>You should be ready to go! With your given permissions, you should be able to git push and git pull fine!</li>
 </ol>
 <blockquote>
-<p>Note: You can check if windows was installed properly on <em>macOS</em> by running the command <code>R</code> in terminal. On <em>windows</em>, –must test–.</p>
+<p>NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.</p>
 </blockquote>
-<blockquote>
-<p>Note: We will not be using the R console, instead, we will be using RStudio!</p>
-</blockquote>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Download and install RStudio <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP">here</a>. Scroll down to find downloads for non-macOS.</p></li>
-<li><p>Installl the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: <code>install.packages("bookdown")</code>.</p></li>
-</ol>
-<p>We’re ready to start working with CBW’s bookdown workshop template now!</p>
+<p>But what do any of these files mean? Which ones do I edit? Which ones shouldn’t I edit? How do I open this in RStudio? And how exactly is a page made from all thes files??? It’s time for you to go to the next page :D</p>
 
 </div>
 </div>
@@ -312,8 +362,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="creating-rc-and-deploying-your-new-workshop.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="creating-rc-and-deploying-your-new-workshop.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="so-what-do-these-files-mean.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -344,7 +394,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cbw-dev/bookdown-docs/01-getting-started.Rmd",
+"link": "https://github.com/cbw-dev/bookdown-docs/03-terminal-and-git.Rmd",
 "text": "Edit"
 },
 "history": {

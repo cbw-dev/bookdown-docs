@@ -289,7 +289,9 @@ This is a very specific (and unlikely) warning. It occurs when 1 deploy hasn't f
 
 \section{Setting Up Team Access (Nia will fill this in)}\label{setting-up-team-access-nia-will-fill-this-in}
 
-\chapter{Command Line \& Git Clone}\label{command-line-git-clone}
+\chapter{Command Line, SSH Connection \& Git Clone}\label{command-line-ssh-connection-git-clone}
+
+If you're familiar with the command line and have already established a SSH connection, continue to \hyperref[git-clone]{git cloning your workshop template locally}.
 
 \section{Introduction to the Command Line}\label{introduction-to-the-command-line}
 
@@ -311,9 +313,15 @@ Do not be worried about using terminal, espeically git commands in terminal! Onc
 \item
   pwd
 \item
-  ls + \texttt{enter}
+  ls
 \item
-  cd
+  cd + \texttt{tab}
+\item
+  mkdir
+\item
+  rmdir
+\item
+  rmdir -r
 \item
   . = current folder
 \item
@@ -324,6 +332,61 @@ Do not be worried about using terminal, espeically git commands in terminal! Onc
   up and down arrows
 \end{itemize}
 
+\section{Creating the SSH Connection}\label{creating-the-ssh-connection}
+
+We need to create an SSH connection. Essentially, we're doing this to make sure we are updating and receiving updates from GitHub with security!
+
+Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub and SSH connection, consider using the official docs.)
+
+\subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key}{Generating a new SSH key}}{Generating a new SSH key}}\label{generating-a-new-ssh-key}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Open Terminal/Command Prompt.
+\item
+  Copy and paste this text into your terminal/command prompt. **Replace the email given below with your GitHub email address.
+\end{enumerate}
+
+\begin{verbatim}
+ssh-keygen -t ed25519 -C "your_email@example.com"
+\end{verbatim}
+
+You will get this output:
+
+\begin{verbatim}
+> Generating public/private ALGORITHM key pair.
+\end{verbatim}
+
+You will then be prompted with this message:
+
+\begin{verbatim}
+> Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):
+\end{verbatim}
+
+Press enter.
+
+If you have already created a SSH key and you are asked to rewrite another key, look at the \href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key:~:text=Please\%20note\%20that\%20if\%20you\%20created\%20SSH\%20keys\%20previously\%2C\%20ssh\%2Dkeygen\%20may\%20ask\%20you\%20to\%20rewrite\%20another\%20key\%2C\%20in\%20which\%20case\%20we\%20recommend\%20creating\%20a\%20custom\%2Dnamed\%20SSH\%20key.\%20To\%20do\%20so\%2C\%20type\%20the\%20default\%20file\%20location\%20and\%20replace\%20id_ALGORITHM\%20with\%20your\%20custom\%20key\%20name.}{GitHub Docs} for specific steps.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Type a secure passphrase (make up a password) when prompted with:
+\end{enumerate}
+
+\begin{verbatim}
+> Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
+> Enter same passphrase again: [TYPE THE SAME PASSPHRASE]
+\end{verbatim}
+
+\subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#adding-your-ssh-key-to-the-ssh-agent}{Adding your SSH key to the ssh-agent}}{Adding your SSH key to the ssh-agent}}\label{adding-your-ssh-key-to-the-ssh-agent}
+
+\subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account\#adding-a-new-ssh-key-to-your-account}{Adding a new SSH key to your account}}{Adding a new SSH key to your account}}\label{adding-a-new-ssh-key-to-your-account}
+
+Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps!
+
 \section{Getting the Template on Your Local Computer - Git Clone!}\label{git-clone}
 
 \begin{enumerate}
@@ -331,7 +394,7 @@ Do not be worried about using terminal, espeically git commands in terminal! Onc
 \item
   Navigate to where in your local file system you want to have your workshop in (hint: cd + \texttt{enter}).
 \item
-  Find the ssh for your workshop repository: first, click the green button entitled \texttt{\textless{}\ \textgreater{}\ Code} ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
+  Return to your workshop repository on GitHub. Find the ssh for your workshop repository: first, click the green button entitled \texttt{\textless{}\ \textgreater{}\ Code} ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
 \end{enumerate}
 
 \includegraphics{img/git-instruct/copy-ssh.png}\\
@@ -341,7 +404,7 @@ Then put this command into your command line, within the folder you want the wor
 For example, if my organization is named: jq-11 and my workshop name is ``workshop-name'', I would enter this into my terminal/command prompt.
 
 \begin{verbatim}
-git clone *git@github.com:jq-11/workshop-name.git*
+git clone git@github.com:jq-11/workshop-name.git
 \end{verbatim}
 
 \begin{enumerate}
@@ -349,7 +412,7 @@ git clone *git@github.com:jq-11/workshop-name.git*
 \setcounter{enumi}{3}
 \tightlist
 \item
-  You should be ready to go! With your given permissions, you should be able to git push adn git pull fine!
+  You should be ready to go! With your given permissions, you should be able to git push and git pull fine!
 \end{enumerate}
 
 \begin{quote}

@@ -35,7 +35,7 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="command-line-git-clone.html"/>
+<link rel="prev" href="command-line-ssh-connection-git-clone.html"/>
 <link rel="next" href="formatting-your-content---markdown.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -183,10 +183,16 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#setting-up-team-access-nia-will-fill-this-in"><i class="fa fa-check"></i><b>3.2</b> Setting Up Team Access (Nia will fill this in)</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="command-line-git-clone.html"><a href="command-line-git-clone.html"><i class="fa fa-check"></i><b>4</b> Command Line &amp; Git Clone</a>
+<li class="chapter" data-level="4" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html"><i class="fa fa-check"></i><b>4</b> Command Line, SSH Connection &amp; Git Clone</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="command-line-git-clone.html"><a href="command-line-git-clone.html#introduction-to-the-command-line"><i class="fa fa-check"></i><b>4.1</b> Introduction to the Command Line</a></li>
-<li class="chapter" data-level="4.2" data-path="command-line-git-clone.html"><a href="command-line-git-clone.html#git-clone"><i class="fa fa-check"></i><b>4.2</b> Getting the Template on Your Local Computer - Git Clone!</a></li>
+<li class="chapter" data-level="4.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#introduction-to-the-command-line"><i class="fa fa-check"></i><b>4.1</b> Introduction to the Command Line</a></li>
+<li class="chapter" data-level="4.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection"><i class="fa fa-check"></i><b>4.2</b> Creating the SSH Connection</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key"><i class="fa fa-check"></i><b>4.2.1</b> Generating a new SSH key</a></li>
+<li class="chapter" data-level="4.2.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#adding-your-ssh-key-to-the-ssh-agent"><i class="fa fa-check"></i><b>4.2.2</b> Adding your SSH key to the ssh-agent</a></li>
+<li class="chapter" data-level="4.2.3" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#adding-a-new-ssh-key-to-your-account"><i class="fa fa-check"></i><b>4.2.3</b> Adding a new SSH key to your account</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#git-clone"><i class="fa fa-check"></i><b>4.3</b> Getting the Template on Your Local Computer - Git Clone!</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html"><i class="fa fa-check"></i><b>5</b> So What Do These Files Mean?</a>
 <ul>
@@ -280,7 +286,7 @@ div.csl-indent {
 <div id="bookdown-simple-explanation" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Bookdown Simple Explanation<a href="so-what-do-these-files-mean.html#bookdown-simple-explanation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here is a general summary of how Bookdown creates html websites from .Rmd files.</p>
-<p><img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=960&amp;h=720"></p>
+<p><img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=794&amp;h=147"></p>
 <p>Essentially, knitr renders and runs all the code, and the outpus are converted into markdown. After knitr, we eseentially have a bunch of only markdown files.</p>
 <p>Pandoc translates this markdown into html, so that we get a website! It can be helpful to know when and how these packages work, to help debug later on!</p>
 <p>Now, let’s figure out RStudio. Skip to <a href="so-what-do-these-files-mean.html#file-setup">file setup</a> if you already know how to use RStudio (and it’s built in git control window).</p>
@@ -312,7 +318,7 @@ div.csl-indent {
 <ol style="list-style-type: decimal">
 <li>Build the book from the R console:</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="so-what-do-these-files-mean.html#cb2-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="so-what-do-these-files-mean.html#cb6-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Press the keyboard buttons: <code>cmd OR ctrl + shift + B</code></li>
 </ol>
@@ -331,7 +337,7 @@ div.csl-indent {
 <div id="preview-your-book" class="section level3 hasAnchor" number="5.4.3">
 <h3><span class="header-section-number">5.4.3</span> Preview Your Book<a href="so-what-do-these-files-mean.html#preview-your-book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you want live updates to your changes, you can preview the page as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in “Preview book”, or from the R console (in the bottom left window):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="so-what-do-these-files-mean.html#cb3-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="so-what-do-these-files-mean.html#cb7-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
 <p>But which files do we edit? Well alas, it’s time to discuss the file setup.</p>
 </div>
 </div>
@@ -380,7 +386,7 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="command-line-git-clone.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="command-line-ssh-connection-git-clone.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="formatting-your-content---markdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

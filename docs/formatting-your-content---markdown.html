@@ -183,10 +183,16 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#setting-up-team-access-nia-will-fill-this-in"><i class="fa fa-check"></i><b>3.2</b> Setting Up Team Access (Nia will fill this in)</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="command-line-git-clone.html"><a href="command-line-git-clone.html"><i class="fa fa-check"></i><b>4</b> Command Line &amp; Git Clone</a>
+<li class="chapter" data-level="4" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html"><i class="fa fa-check"></i><b>4</b> Command Line, SSH Connection &amp; Git Clone</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="command-line-git-clone.html"><a href="command-line-git-clone.html#introduction-to-the-command-line"><i class="fa fa-check"></i><b>4.1</b> Introduction to the Command Line</a></li>
-<li class="chapter" data-level="4.2" data-path="command-line-git-clone.html"><a href="command-line-git-clone.html#git-clone"><i class="fa fa-check"></i><b>4.2</b> Getting the Template on Your Local Computer - Git Clone!</a></li>
+<li class="chapter" data-level="4.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#introduction-to-the-command-line"><i class="fa fa-check"></i><b>4.1</b> Introduction to the Command Line</a></li>
+<li class="chapter" data-level="4.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection"><i class="fa fa-check"></i><b>4.2</b> Creating the SSH Connection</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key"><i class="fa fa-check"></i><b>4.2.1</b> Generating a new SSH key</a></li>
+<li class="chapter" data-level="4.2.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#adding-your-ssh-key-to-the-ssh-agent"><i class="fa fa-check"></i><b>4.2.2</b> Adding your SSH key to the ssh-agent</a></li>
+<li class="chapter" data-level="4.2.3" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#adding-a-new-ssh-key-to-your-account"><i class="fa fa-check"></i><b>4.2.3</b> Adding a new SSH key to your account</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#git-clone"><i class="fa fa-check"></i><b>4.3</b> Getting the Template on Your Local Computer - Git Clone!</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="so-what-do-these-files-mean.html"><a href="so-what-do-these-files-mean.html"><i class="fa fa-check"></i><b>5</b> So What Do These Files Mean?</a>
 <ul>
@@ -317,8 +323,8 @@ div.csl-indent {
 <h2><span class="header-section-number">6.5</span> Captioned figures and tables<a href="formatting-your-content---markdown.html#captioned-figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Figures and tables <em>with captions</em> can also be cross-referenced from elsewhere in your book using <code>\@ref(fig:chunk-label)</code> and <code>\@ref(tab:chunk-label)</code>, respectively.</p>
 <p>See Figure <a href="formatting-your-content---markdown.html#fig:nice-fig">6.1</a>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="formatting-your-content---markdown.html#cb8-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb8-2"><a href="formatting-your-content---markdown.html#cb8-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="formatting-your-content---markdown.html#cb12-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
+<span id="cb12-2"><a href="formatting-your-content---markdown.html#cb12-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
 <img src="_main_files/figure-html/nice-fig-1.png" alt="Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases." width="80%" />
 <p class="caption">
@@ -326,10 +332,10 @@ Figure 6.1: Here is a nice figure!
 </p>
 </div>
 <p>Don’t miss Table <a href="formatting-your-content---markdown.html#tab:nice-tab">6.1</a>.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="formatting-your-content---markdown.html#cb9-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb9-2"><a href="formatting-your-content---markdown.html#cb9-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb9-3"><a href="formatting-your-content---markdown.html#cb9-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb9-4"><a href="formatting-your-content---markdown.html#cb9-4" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="formatting-your-content---markdown.html#cb13-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb13-2"><a href="formatting-your-content---markdown.html#cb13-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
+<span id="cb13-3"><a href="formatting-your-content---markdown.html#cb13-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb13-4"><a href="formatting-your-content---markdown.html#cb13-4" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <caption><span id="tab:nice-tab">Table 6.1: </span>Here is a nice table!</caption>
 <thead>
@@ -452,7 +458,7 @@ and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</
 <p>Read more about the features of this output format here:</p>
 <p><a href="https://pkgs.rstudio.com/bookdown/reference/gitbook.html" class="uri">https://pkgs.rstudio.com/bookdown/reference/gitbook.html</a></p>
 <p>Or use:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="formatting-your-content---markdown.html#cb10-1" tabindex="-1"></a>?bookdown<span class="sc">::</span>gitbook</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="formatting-your-content---markdown.html#cb14-1" tabindex="-1"></a>?bookdown<span class="sc">::</span>gitbook</span></code></pre></div>
 
 </div>
 </div>

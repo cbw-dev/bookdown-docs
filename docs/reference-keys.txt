@@ -9,8 +9,12 @@ workshop-setup-rc
 workshop-repo-vs-workshop-website
 how-to-deploy-your-workshop-website
 setting-up-team-access-nia-will-fill-this-in
-command-line-git-clone
+command-line-ssh-connection-git-clone
 introduction-to-the-command-line
+creating-the-ssh-connection
+generating-a-new-ssh-key
+adding-your-ssh-key-to-the-ssh-agent
+adding-a-new-ssh-key-to-your-account
 git-clone
 so-what-do-these-files-mean
 bookdown-simple-explanation
