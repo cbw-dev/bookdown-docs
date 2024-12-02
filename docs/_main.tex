@@ -180,11 +180,11 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 
 We're ready to start working with CBW's bookdown workshop template now!
 
-\chapter{\texorpdfstring{Starting to Set Up Your \textbf{New} Workshop}{Starting to Set Up Your New Workshop}}\label{starting-to-set-up-your-new-workshop}
+\chapter{\texorpdfstring{Creating {[}RC{]} and Deploying Your \textbf{New} Workshop}{Creating {[}RC{]} and Deploying Your New Workshop}}\label{creating-rc-and-deploying-your-new-workshop}
 
-Certain aspects of the setup for workshops will be different depending on your role. Headers ending in ``(RC)'' are for Regional Coordinators. Headers without ``(RC)'' are assumed to be relevant to both RC and workshop teams.
+Certain aspects of the setup for workshops will be different depending on your role. Headers ending in ``{[}RC{]}'' are for Regional Coordinators. Headers without ``{[}RC{]}'' are assumed to be relevant to both RC and workshop teams.
 
-\section{Workshop Setup {[}RC{]} \textless--- MAKE SQUARE BRACKETS}\label{workshop-setup-rc-make-square-brackets}
+\section{Workshop Setup {[}RC{]}}\label{workshop-setup-rc}
 
 Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop.
 
@@ -203,10 +203,9 @@ Regional Coordinators will be tasked with creating and slightly editing each new
 \setcounter{enumi}{2}
 \tightlist
 \item
-  You will be brought to a ``Create a new repository'' page. Fill out the blanks as seen below. That is, change the owner to ``bioinformatics.ca'', make it public, fill in the repository name and description according to \href{}{CBW Guidelines}. ``Include all branches'' does not need to be selected (???).
+  You will be brought to a ``Create a new repository'' page. Fill out the blanks as seen below. That is, change the owner to ``bioinformatics.ca'' {[}NOTE FOR TESTING PURPOSES: use cbw-dev{]}, make it public, fill in the repository name and description according to \href{}{CBW Guidelines}. ``Include all branches'' does not need to be selected (??? - might need to look into this?).
 \end{enumerate}
 
-NOTE: CHANGE OWNER TO XXX (ask Nia, probably cbw-dev for now)
 \includegraphics{img/template/make-new-repo.png}\\
 
 This may take a couple seconds to generate. After it loads, you will be brought to a new repository for the new workshop!
@@ -242,20 +241,45 @@ You can click \textbf{pages build and deployment} for updates. It will give you 
 \includegraphics{img/git-instruct/successful-deploy.png}\\
 \includegraphics{img/git-instruct/failed-deploy.png}\\
 
-INCLUDE ! ERROR DEPLOY BEFORE ANOTHER DEPLOY IS DONE
+\subsubsection*{A Very Specific Build and Deployment Warning}\label{a-very-specific-build-and-deployment-warning}
+\addcontentsline{toc}{subsubsection}{A Very Specific Build and Deployment Warning}
+
+\includegraphics{img/git-instruct/exclamation-point-deploy-warning.png}\\
+
+This is a very specific (and unlikely) warning. It occurs when 1 deploy hasn't finished, but another deploy began. THIS IS NOT A CONCERN. This is a warning message you do not have to worry about!
 
 \section{Setting Up Team Access (Nia will fill this in)}\label{setting-up-team-access-nia-will-fill-this-in}
 
-\section{Getting the Template on Your Local Computer - Git Clone}\label{getting-the-template-on-your-local-computer---git-clone}
+\chapter{Command Line \& Git Clone}\label{command-line-git-clone}
+
+\section{Introduction to the Command Line}\label{introduction-to-the-command-line}
+
+This is for those who have no (or extremely little) experience with the command line.
+
+Using the command line, you can use text commands to interact with your computer's operating system. For us, we will be using it to move around our folders and \hyperref[git-clone]{git clone}
+
+\section{Getting the Template on Your Local Computer - Git Clone!}\label{git-clone}
 
 TALK ABOUT THE COMMAND LINE - CREATE CH 4 w/ terminal, but specify wont need to use since bookdown
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  navigate to where in your local file system you want to have your workshop in (hint: cd)
+  Navigate to where in your local file system you want to have your workshop in (hint: cd)
 \item
-  git clone \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:jq-11/workshop-name.git
+  Now execute the following command:
+\end{enumerate}
+
+\begin{verbatim}
+git clone *git@github.com:jq-11/workshop-name.git*
+\end{verbatim}
+
+NOTE: Find the ssh from your repo
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
 \item
   ready to go ! you should have permissions to git push
 \end{enumerate}
@@ -270,9 +294,9 @@ But what do any of these files mean? Which ones do I edit? Which ones shouldn't 
 
 Ok now we all have our workshop locally, which is made up of all these files and folders?
 
-First, let's figure out RStudio. Skip to \hyperref[file-setup]{file setup} if you already know how to use RStudio (and it's built in git control window).
+\section{Bookdown Simple Explanation}\label{bookdown-simple-explanation}
 
-\section{WORKFLOW DIAGRAM HERE}\label{workflow-diagram-here}
+First, let's figure out RStudio. Skip to \hyperref[file-setup]{file setup} if you already know how to use RStudio (and it's built in git control window).
 
 \section{Open in RStudio}\label{open-in-rstudio}
 

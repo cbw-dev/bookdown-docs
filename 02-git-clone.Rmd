@@ -1,4 +1,4 @@
-# Starting to Set Up Your **New** Workshop
+# Creating [RC] and Deploying Your **New** Workshop
 
 Certain aspects of the setup for workshops will be different depending on your role. Headers ending in "[RC]" are for Regional Coordinators. Headers without "[RC]" are assumed to be relevant to both RC and workshop teams.
 
@@ -13,9 +13,8 @@ Regional Coordinators will be tasked with creating and slightly editing each new
 ![Image of the repo and how to find make a template](img/template/make-a-template.png)\
 <br> <!-- enforces a space after the image -->
 
-3. You will be brought to a "Create a new repository" page. Fill out the blanks as seen below. That is, change the owner to "bioinformatics.ca" [NOTE FOR TESTING PURPOSES: use cbw-dev], make it public, fill in the repository name and description according to [CBW Guidelines](). <br>"Include all branches" does not need to be selected (???).
+3. You will be brought to a "Create a new repository" page. Fill out the blanks as seen below. That is, change the owner to "bioinformatics.ca" [NOTE FOR TESTING PURPOSES: use cbw-dev], make it public, fill in the repository name and description according to [CBW Guidelines](). <br>"Include all branches" does not need to be selected (??? - might need to look into this?).
 
-NOTE: CHANGE OWNER TO XXX (ask Nia, probably cbw-dev for now)
 ![Image showing how to make a new repo from a template repo](img/template/make-new-repo.png)\
 <br>
 
@@ -48,20 +47,10 @@ You can click <u>**pages build and deployment**</u> for updates. It will give yo
 ![successful deploy](img/git-instruct/successful-deploy.png)\
 ![failed deploy](img/git-instruct/failed-deploy.png)\
 
-INCLUDE ! ERROR DEPLOY BEFORE ANOTHER DEPLOY IS DONE
+#### A Very Specific Build and Deployment Warning {-}
+
+![two consecutive deploy warnings](img/git-instruct/exclamation-point-deploy-warning.png)\
+
+This is a very specific (and unlikely) warning. It occurs when 1 deploy hasn't finished, but another deploy began. THIS IS NOT A CONCERN. This is a warning message you do not have to worry about!
 
 ## Setting Up Team Access (Nia will fill this in)
-
-## Getting the Template on Your Local Computer - Git Clone !
-
-TALK ABOUT THE COMMAND LINE - CREATE CH 4 w/ terminal, but specify wont need to use since bookdown
-
-1. navigate to where in your local file system you want to have your workshop in (hint: cd)
-
-2. git clone git@github.com:jq-11/workshop-name.git
-
-3. ready to go ! you should have permissions to git push
-
->NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
-
-But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? It's time for you to go to the next page :D

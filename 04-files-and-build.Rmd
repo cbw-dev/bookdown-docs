@@ -1,0 +1,109 @@
+# So What Do These Files Mean?
+
+Ok now we all have our workshop locally, which is made up of all these files and folders?
+
+## Bookdown Simple Explanation
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=960&amp;h=720">
+
+First, let's figure out RStudio. Skip to [file setup](#file-setup) if you already know how to use RStudio (and it's built in git control window).
+
+
+## Open in RStudio
+
+Enter the folder you just git cloned using Findr/File Command, it should be titled "[workshop-name]". Right click on [workshop-name].Rproj and press "Open in RStudio". There is only one file with this file extension. 
+
+A RStudio window should open up and look something like the image below. 
+![newly opened RStudio window](img/files-and-build/newly-opened-RStudio.png)\
+
+## Explaining RStudio
+
+In the bottom left, have our console and other debug related windows (such as terminal!). Any code we run will appear in the console. We can access the terminal (just like editing in the Terminal app) under the "Terminal" tab.
+
+In the bottom right, we have all of our files and subfolders. These files will be explained [below](#file-setup). This window also contains helpful views, like "Viewer" and "Plots". We will touch on these later.
+
+Try opening `index.Rmd`: a new pane will open in the top left that shows the contents of `index.Rmd`. This is where we will be editing our files! Notice, the "Knit" button.
+
+In your top right, we have a different window with more different views. The most relevant windows to us are the "Build" and the "Git" windows. 
+
+> No "Git" Window?
+>
+> Try closing (and maybe even restarting RStudio) and then reopening it. A "Git" tab should appear to the right of the "Build" tab and to the left of the "Tutorial" tab.
+
+## Build the book
+
+Try pressing "Build Book" within the "Build" window. Your build window is going to fill up with text, and soon, a website is going to pop-up as your new window. This is the website you will be editing to create your workshop!
+
+By building the book, all of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don't have to save before building!). 
+
+### Other Ways to Build Your Book
+
+1. Build the book from the R console:
+
+```{r, eval=FALSE}
+bookdown::render_book()
+```
+
+2. Press the keyboard buttons: `cmd OR ctrl + shift + B`
+
+### Knit Your Book
+Building can take a long time. If you are editing just one file, you can press the "Knit" button that is at the top of the window with your file. This will run the code in the page, and show you what that page would look like in the website (as well as saving that file).
+
+> Note: Other pages in your website will not update.
+
+> A quicker way to knit is using the keboard controls
+>
+> `cmd OR ctrl + shift + K`
+
+### Preview Your Book
+
+If you want live updates to your changes, you can preview the page as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console (in the bottom left window):
+
+```{r eval=FALSE}
+bookdown::serve_book()
+```
+
+But which files do we edit? Well alas, it's time to discuss the file setup.
+
+## File Setup Explanation {#file-setup}
+
+[INSERT TREE ASCII] - asked IT whether I can install homebrew
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=960&amp;h=720">
+
+To help us understand the files we're editing to make the website, let's get a full understand of how bookdown actually works.
+
+
+
+As we touched on earlier 
+
+## Push to GitHub via RStudio
+
+Now, we know what our files mean and how to edit them. How do we get this onto GitHub? We can write git commands into our Terminal/Command Prompt, or alternatively (and more easily), RStudio has a built-in git interface.
+
+Now, we will be able to see a Git window in the top right. Click "Git" to open this window.
+
+![RStudio with Git window open](img/git-instruct/RStudio-with-git-window-open.png)
+
+Let's say we only edited `index.Rmd`, now we see the newly edited files. Changed files that need to be updated on GitHub will show up in this window, like how `index.Rmd` is seen above. (Do not worry too much about `.DS_Store` and `.gitignore` do.) Let's try to push this change to GitHub.
+
+13. Select all the edited files.
+
+![selected files in the git window and the commit button highlighted](img/git-instruct/git-window-selected-items.png)\
+
+14. Then, click the Commit button, which appears above your selected items. A window pane will appear (shown below).
+
+![git commit window pane](img/git-instruct/git-commit-window.png)\
+
+15. Add a commit message in the corresponding box, and then press commit below it.
+
+16. A new window will show up, detailing your updates. Close this window and then press **Push** to push your updates to GitHub.
+
+![post git commit window](img/git-instruct/git-window-post-commit.png)\
+
+Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a **Pull** button in the Git window within RStudio! 
+
+YOU WILL HAVE TO DO THIS IF YOUR TEAM MAKES UPDATES
+
+This will automatically update the website, you can see the updates and progress in the actions window we saw previously.
+

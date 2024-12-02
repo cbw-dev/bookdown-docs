@@ -1,0 +1,26 @@
+# Command Line & Git Clone
+
+## Introduction to the Command Line
+This is for those who have no (or extremely little) experience with the command line.
+
+Using the command line, you can use text commands to interact with your computer's operating system. For us, we will be using it to move around our folders and [git clone](#git-clone)
+
+
+## Getting the Template on Your Local Computer - Git Clone! {#git-clone}
+
+TALK ABOUT THE COMMAND LINE - CREATE CH 4 w/ terminal, but specify wont need to use since bookdown
+
+1. Navigate to where in your local file system you want to have your workshop in (hint: cd)
+
+2. Now execute the following command:
+```
+git clone *git@github.com:jq-11/workshop-name.git*
+```
+NOTE: Find the ssh from your repo
+
+
+3. ready to go ! you should have permissions to git push
+
+>NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
+
+But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? It's time for you to go to the next page :D
