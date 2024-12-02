@@ -22,6 +22,14 @@ This may take a couple seconds to generate. After it loads, you will be brought 
 
 Now, let's turn this into a website - let's deploy!
 
+### Workshop Repo VS Workshop Website
+
+Now, you have made a repository that holds what GitHub needs to make our website (the basic workshop template). Essentially, the template has already been configured so that the html files that make up our website go into a folder called `docs`. We need to tell GitHub to look at the `docs` folder to find our website files and make it available to see online (a.k.a deploy it).
+
+> Distinction:
+>
+> GitHub (ex. https://github.com/cbw-dev/bookdown-template) holds your repo, which has version control for all your files! <br> The deployed website (ex. https://cbw-dev.github.io/bookdown-template/) has the workshop online.
+
 ### How to Deploy Your Workshop Website
 
 1. In the top navigation bar, select settings.
@@ -54,7 +62,7 @@ A failed deploy will have a red cross next to it. Clicking through the steps can
 
 > Warning: A website can build properly, but may not deploy properly! It is a good idea to check after making big changes.
 
-![failed deploy](img/git-instruct/failed-deploy.png)
+![failed deploy](img/git-instruct/failed-deploy.png)\
 
 #### A Very Specific Build and Deployment Warning {-}
 

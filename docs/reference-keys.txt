@@ -6,6 +6,7 @@ getting-started
 installation
 creating-rc-and-deploying-your-new-workshop
 workshop-setup-rc
+workshop-repo-vs-workshop-website
 how-to-deploy-your-workshop-website
 setting-up-team-access-nia-will-fill-this-in
 command-line-git-clone
