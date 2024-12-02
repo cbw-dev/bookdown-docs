@@ -5,11 +5,12 @@ cbws-bookdown-documentation
 getting-started
 installation
 starting-to-set-up-your-new-workshop
-workshop-setup-rc
+workshop-setup-rc-make-square-brackets
 how-to-deploy-your-workshop-website
 setting-up-team-access-nia-will-fill-this-in
 getting-the-template-on-your-local-computer---git-clone
 so-what-do-these-files-mean
+workflow-diagram-here
 open-in-rstudio
 explaining-rstudio
 build-the-book

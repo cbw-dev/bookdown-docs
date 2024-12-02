@@ -119,7 +119,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}2024-11-29}
+\date{\vspace{-2.5em}2024-12-02}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -149,7 +149,7 @@
 
 Welcome to CBW's documentation for creating a workshop website using Bookdown. Bookdown is an R package that is used to build books, and in our case, the websites hosting CBW's workshops!
 
-You only need to know markdown and whatever coding language you be using to learn bookdown!
+You only need to know markdown and whatever coding language you will be using to learn bookdown!
 
 Note, this is the documentation to create a workshop using \emph{bookdown}. If \textbf{Jupyter Book} suits you better, see \href{https://cbw-dev.github.io/jupyterbook-docs/}{here}.
 
@@ -184,7 +184,7 @@ We're ready to start working with CBW's bookdown workshop template now!
 
 Certain aspects of the setup for workshops will be different depending on your role. Headers ending in ``(RC)'' are for Regional Coordinators. Headers without ``(RC)'' are assumed to be relevant to both RC and workshop teams.
 
-\section{Workshop Setup (RC)}\label{workshop-setup-rc}
+\section{Workshop Setup {[}RC{]} \textless--- MAKE SQUARE BRACKETS}\label{workshop-setup-rc-make-square-brackets}
 
 Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop.
 
@@ -203,7 +203,7 @@ Regional Coordinators will be tasked with creating and slightly editing each new
 \setcounter{enumi}{2}
 \tightlist
 \item
-  You will be brought to a ``Create a new repository'' page. Fill out the blanks as seen below. That is, change the owner to XXX, make it public, fill in the repository name and description according to \href{}{CBW Guidelines}. ``Include all branches'' does not need to be selected (???).
+  You will be brought to a ``Create a new repository'' page. Fill out the blanks as seen below. That is, change the owner to ``bioinformatics.ca'', make it public, fill in the repository name and description according to \href{}{CBW Guidelines}. ``Include all branches'' does not need to be selected (???).
 \end{enumerate}
 
 NOTE: CHANGE OWNER TO XXX (ask Nia, probably cbw-dev for now)
@@ -242,9 +242,13 @@ You can click \textbf{pages build and deployment} for updates. It will give you 
 \includegraphics{img/git-instruct/successful-deploy.png}\\
 \includegraphics{img/git-instruct/failed-deploy.png}\\
 
+INCLUDE ! ERROR DEPLOY BEFORE ANOTHER DEPLOY IS DONE
+
 \section{Setting Up Team Access (Nia will fill this in)}\label{setting-up-team-access-nia-will-fill-this-in}
 
 \section{Getting the Template on Your Local Computer - Git Clone}\label{getting-the-template-on-your-local-computer---git-clone}
+
+TALK ABOUT THE COMMAND LINE - CREATE CH 4 w/ terminal, but specify wont need to use since bookdown
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -268,11 +272,13 @@ Ok now we all have our workshop locally, which is made up of all these files and
 
 First, let's figure out RStudio. Skip to \hyperref[file-setup]{file setup} if you already know how to use RStudio (and it's built in git control window).
 
+\section{WORKFLOW DIAGRAM HERE}\label{workflow-diagram-here}
+
 \section{Open in RStudio}\label{open-in-rstudio}
 
-Enter the folder you just git cloned, it should be titled ``{[}workshop-name{]}''. Right click on {[}workshop-name{]}.Rproj and press ``Open in RStudio''. There is only one file with this file ending.
+Enter the folder you just git cloned using Findr/File Command, it should be titled ``{[}workshop-name{]}''. Right click on {[}workshop-name{]}.Rproj and press ``Open in RStudio''. There is only one file with this file extension.
 
-A RStudio window should open up and look like the image below.
+A RStudio window should open up and look something like the image below.
 \includegraphics{img/files-and-build/newly-opened-RStudio.png}\\
 
 \section{Explaining RStudio}\label{explaining-rstudio}
@@ -400,6 +406,10 @@ Let's say we only edited \texttt{index.Rmd}, now we see the newly edited files. 
 \includegraphics{img/git-instruct/git-window-post-commit.png}\\
 
 Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a \textbf{Pull} button in the Git window within RStudio!
+
+YOU WILL HAVE TO DO THIS IF YOUR TEAM MAKES UPDATES
+
+This will automatically update the website, you can see the updates and progress in the actions window we saw previously.
 
 \chapter{Storing all formatting content}\label{storing-all-formatting-content}
 

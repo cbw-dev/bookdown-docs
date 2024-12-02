@@ -1,8 +1,8 @@
 # Starting to Set Up Your **New** Workshop
 
-Certain aspects of the setup for workshops will be different depending on your role. Headers ending in "(RC)" are for Regional Coordinators. Headers without "(RC)" are assumed to be relevant to both RC and workshop teams.
+Certain aspects of the setup for workshops will be different depending on your role. Headers ending in "[RC]" are for Regional Coordinators. Headers without "[RC]" are assumed to be relevant to both RC and workshop teams.
 
-## Workshop Setup [RC] <--- MAKE SQUARE BRACKETS
+## Workshop Setup [RC]
 
 Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop.
 
