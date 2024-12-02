@@ -321,15 +321,23 @@ But what do any of these files mean? Which ones do I edit? Which ones shouldn't 
 
 \chapter{So What Do These Files Mean?}\label{so-what-do-these-files-mean}
 
-Ok now we all have our workshop locally, which is made up of all these files and folders?
+Ok now we have our workshop locally (on our computer), which is made up of all these files and folders?
+
+Before we dive deep into what to do with these folders, let's explore how bookdown actually works and how to understand RStudio.
 
 \section{Bookdown Simple Explanation}\label{bookdown-simple-explanation}
 
-First, let's figure out RStudio. Skip to \hyperref[file-setup]{file setup} if you already know how to use RStudio (and it's built in git control window).
+Here is a general summary of how Bookdown creates html websites from .Rmd files.
+
+Essentially, knitr renders and runs all the code, and the outpus are converted into markdown. After knitr, we eseentially have a bunch of only markdown files.
+
+Pandoc translates this markdown into html, so that we get a website! It can be helpful to know when and how these packages work, to help debug later on!
+
+Now, let's figure out RStudio. Skip to \hyperref[file-setup]{file setup} if you already know how to use RStudio (and it's built in git control window).
 
 \section{Open in RStudio}\label{open-in-rstudio}
 
-Enter the folder you just git cloned using Findr/File Command, it should be titled ``{[}workshop-name{]}''. Right click on {[}workshop-name{]}.Rproj and press ``Open in RStudio''. There is only one file with this file extension.
+Enter the folder you just git cloned using Findr/File Command, it should be titled ``{[}workshop-name{]}''. Right click on {[}workshop-name{]}.Rproj and press ``Open in RStudio''. There is only one file with this file extension. The .Rproj file is what you will open each time you want to work on this workshop! You must explicitly \textbf{open the .Rproj} file to build properly!
 
 A RStudio window should open up and look something like the image below.
 \includegraphics{img/files-and-build/newly-opened-RStudio.png}\\
@@ -409,9 +417,15 @@ But which files do we edit? Well alas, it's time to discuss the file setup.
 
 {[}INSERT TREE ASCII{]} - asked IT whether I can install homebrew
 
-To help us understand the files we're editing to make the website, let's get a full understand of how bookdown actually works.
+Look at all these .Rmd files! Recall that .Rmd -\textgreater{} .md -\textgreater{} .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.
 
-As we touched on earlier
+However, 2 other important files are the \texttt{\_output.yml} files and the \texttt{\_bookdown.yml} files. They help tell bookdown what we want and what to do, especially when making our website. Everything you need to edit here is made clear in the template, so do not worry too much about getting the ride code so that your project builds!
+
+The only .Rmd that must have some configuration details is the landing page: index.Rmd. This is what fills up the beginning of the index.Rmd file, before the -\/-\/-, which tells bookdown to stop looking for configuration information.
+
+Let's move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with \#, each subheaders have increasingly more \# symbols (\#\#, \#\#\#, and more all create smaller subheaders). Try to have only 1 single \# as a header on one page! (You may get warnings otherwise).
+
+But then how does bookdown know which page goes next on our sidebar? The order of the sidebar is completely dependent on the alphaetical order of the files (see your bottom right!). Our template has numbering first, to help ease our understanding.
 
 \section{Push to GitHub via RStudio}\label{push-to-github-via-rstudio}
 
@@ -460,9 +474,9 @@ Let's say we only edited \texttt{index.Rmd}, now we see the newly edited files. 
 
 Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a \textbf{Pull} button in the Git window within RStudio!
 
-YOU WILL HAVE TO DO THIS IF YOUR TEAM MAKES UPDATES
+\emph{Git pushing} puts your edits onto GitHub, \emph{git pulling} takes the edits make on GitHub, and brings them to your local computer. For example, if one of your workshop team members made an edit, you want to have that edit on your computer before you start editing! It's a good idea to do this before you start editing, in case somehow your edits conflicts with their edits.
 
-This will automatically update the website, you can see the updates and progress in the actions window we saw previously.
+Git pushing will automatically update the website, you can see the updates and progress in the actions window we saw previously. (Check out your website on the web once it's done deploying!)
 
 \chapter{Storing all formatting content}\label{storing-all-formatting-content}
 
