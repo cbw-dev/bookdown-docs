@@ -256,39 +256,68 @@ This is a very specific (and unlikely) warning. It occurs when 1 deploy hasn't f
 
 This is for those who have no (or extremely little) experience with the command line.
 
-Using the command line, you can use text commands to interact with your computer's operating system. For us, we will be using it to move around our folders and \hyperref[git-clone]{git clone}
+Using the command line, you can use text commands to interact with your computer's operating system. For us, we will be using it to move around our folders and to \hyperref[git-clone]{git clone} our workshop into our computer, so we can work on it using RStudio!
+
+\begin{quote}
+Note:
+
+Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!
+\end{quote}
+
+{[}FILL IN LATER - JULIA CAN GUIDE NEHA{]}
+
+\begin{itemize}
+\item
+  terminal (mac, unix based) vs command prompt (windows)
+\item
+  pwd
+\item
+  ls + \texttt{enter}
+\item
+  cd
+\item
+  . = current folder
+\item
+  .. = previous folder
+\item
+  \textasciitilde{} = home
+\item
+  up and down arrows
+\end{itemize}
 
 \section{Getting the Template on Your Local Computer - Git Clone!}\label{git-clone}
-
-TALK ABOUT THE COMMAND LINE - CREATE CH 4 w/ terminal, but specify wont need to use since bookdown
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Navigate to where in your local file system you want to have your workshop in (hint: cd)
+  Navigate to where in your local file system you want to have your workshop in (hint: cd + \texttt{enter}).
 \item
-  Now execute the following command:
+  Find the ssh for your workshop repository: first, click the green button entitled \texttt{\textless{}\ \textgreater{}\ Code} ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
 \end{enumerate}
+
+\includegraphics{img/git-instruct/copy-ssh.png}\\
+
+Then put this command into your command line, within the folder you want the workshop folder to be in.
+
+For example, if my organization is named: jq-11 and my workshop name is ``workshop-name'', I would enter this into my terminal/command prompt.
 
 \begin{verbatim}
 git clone *git@github.com:jq-11/workshop-name.git*
 \end{verbatim}
 
-NOTE: Find the ssh from your repo
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
+\setcounter{enumi}{3}
 \tightlist
 \item
-  ready to go ! you should have permissions to git push
+  You should be ready to go! With your given permissions, you should be able to git push adn git pull fine!
 \end{enumerate}
 
 \begin{quote}
 NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
 \end{quote}
 
-But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? It's time for you to go to the next page :D
+But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? And how exactly is a page made from all thes files??? It's time for you to go to the next page :D
 
 \chapter{So What Do These Files Mean?}\label{so-what-do-these-files-mean}
 

@@ -3,24 +3,42 @@
 ## Introduction to the Command Line
 This is for those who have no (or extremely little) experience with the command line.
 
-Using the command line, you can use text commands to interact with your computer's operating system. For us, we will be using it to move around our folders and [git clone](#git-clone)
+Using the command line, you can use text commands to interact with your computer's operating system. For us, we will be using it to move around our folders and to [git clone](#git-clone) our workshop into our computer, so we can work on it using RStudio!
+
+> Note:
+>
+> Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!
+
+[FILL IN LATER - JULIA CAN GUIDE NEHA]
+
+- terminal (mac, unix based) vs command prompt (windows)
+
+- pwd
+- ls + `enter`
+- cd
+- . = current folder
+- .. = previous folder
+- ~ = home
+- up and down arrows
 
 
 ## Getting the Template on Your Local Computer - Git Clone! {#git-clone}
 
-TALK ABOUT THE COMMAND LINE - CREATE CH 4 w/ terminal, but specify wont need to use since bookdown
+1. Navigate to where in your local file system you want to have your workshop in (hint: cd + `enter`).
 
-1. Navigate to where in your local file system you want to have your workshop in (hint: cd)
+2. Find the ssh for your workshop repository: first, click the green button entitled `< > Code` ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like git@github.com:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
 
-2. Now execute the following command:
+![how to find the ssh for your repo](img/git-instruct/copy-ssh.png)\
+
+Then put this command into your command line, within the folder you want the workshop folder to be in.
+
+For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal/command prompt.
 ```
 git clone *git@github.com:jq-11/workshop-name.git*
-```
-NOTE: Find the ssh from your repo
+``` 
 
-
-3. ready to go ! you should have permissions to git push
+4. You should be ready to go! With your given permissions, you should be able to git push adn git pull fine!
 
 >NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
 
-But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? It's time for you to go to the next page :D
+But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? And how exactly is a page made from all thes files??? It's time for you to go to the next page :D

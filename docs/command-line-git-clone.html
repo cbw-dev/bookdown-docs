@@ -276,24 +276,41 @@ div.csl-indent {
 <div id="introduction-to-the-command-line" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Introduction to the Command Line<a href="command-line-git-clone.html#introduction-to-the-command-line" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This is for those who have no (or extremely little) experience with the command line.</p>
-<p>Using the command line, you can use text commands to interact with your computer’s operating system. For us, we will be using it to move around our folders and <a href="command-line-git-clone.html#git-clone">git clone</a></p>
+<p>Using the command line, you can use text commands to interact with your computer’s operating system. For us, we will be using it to move around our folders and to <a href="command-line-git-clone.html#git-clone">git clone</a> our workshop into our computer, so we can work on it using RStudio!</p>
+<blockquote>
+<p>Note:</p>
+<p>Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!</p>
+</blockquote>
+<p>[FILL IN LATER - JULIA CAN GUIDE NEHA]</p>
+<ul>
+<li><p>terminal (mac, unix based) vs command prompt (windows)</p></li>
+<li><p>pwd</p></li>
+<li><p>ls + <code>enter</code></p></li>
+<li><p>cd</p></li>
+<li><p>. = current folder</p></li>
+<li><p>.. = previous folder</p></li>
+<li><p>~ = home</p></li>
+<li><p>up and down arrows</p></li>
+</ul>
 </div>
 <div id="git-clone" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Getting the Template on Your Local Computer - Git Clone!<a href="command-line-git-clone.html#git-clone" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>TALK ABOUT THE COMMAND LINE - CREATE CH 4 w/ terminal, but specify wont need to use since bookdown</p>
 <ol style="list-style-type: decimal">
-<li><p>Navigate to where in your local file system you want to have your workshop in (hint: cd)</p></li>
-<li><p>Now execute the following command:</p></li>
+<li><p>Navigate to where in your local file system you want to have your workshop in (hint: cd + <code>enter</code>).</p></li>
+<li><p>Find the ssh for your workshop repository: first, click the green button entitled <code>&lt; &gt; Code</code> ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like <a href="mailto:git@github.com" class="email">git@github.com</a>:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.</p></li>
 </ol>
+<p><img src="img/git-instruct/copy-ssh.png" alt="how to find the ssh for your repo" /><br />
+</p>
+<p>Then put this command into your command line, within the folder you want the workshop folder to be in.</p>
+<p>For example, if my organization is named: jq-11 and my workshop name is “workshop-name”, I would enter this into my terminal/command prompt.</p>
 <pre><code>git clone *git@github.com:jq-11/workshop-name.git*</code></pre>
-<p>NOTE: Find the ssh from your repo</p>
-<ol start="3" style="list-style-type: decimal">
-<li>ready to go ! you should have permissions to git push</li>
+<ol start="4" style="list-style-type: decimal">
+<li>You should be ready to go! With your given permissions, you should be able to git push adn git pull fine!</li>
 </ol>
 <blockquote>
 <p>NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.</p>
 </blockquote>
-<p>But what do any of these files mean? Which ones do I edit? Which ones shouldn’t I edit? How do I open this in RStudio? It’s time for you to go to the next page :D</p>
+<p>But what do any of these files mean? Which ones do I edit? Which ones shouldn’t I edit? How do I open this in RStudio? And how exactly is a page made from all thes files??? It’s time for you to go to the next page :D</p>
 
 </div>
 </div>
