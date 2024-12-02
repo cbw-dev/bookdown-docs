@@ -1,0 +1,54 @@
+\contentsline {chapter}{\numberline {1}CBW's Bookdown Documentation}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Getting Started}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Installation}{7}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Starting to Set Up Your \textbf {New} Workshop}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Workshop Setup {[}RC{]}}{9}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}How to Deploy Your Workshop Website}{11}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Setting Up Team Access (Nia will fill this in)}{14}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Getting the Template on Your Local Computer - Git Clone !}{14}{section.3.3}%
+\contentsline {chapter}{\numberline {4}So What Do These Files Mean?}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}WORKFLOW DIAGRAM HERE}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Open in RStudio}{17}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Explaining RStudio}{18}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Build the book}{19}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Other Ways to Build Your Book}{19}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Knit Your Book}{19}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Preview Your Book}{19}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}File Setup Explanation}{20}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Push to GitHub via RStudio}{20}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Storing all formatting content}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Chapters}{23}{section.5.1}%
+\contentsline {section}{\numberline {5.2}A section}{23}{section.5.2}%
+\contentsline {subsection}{An unnumbered section}{23}{section*.2}%
+\contentsline {section}{\numberline {5.3}Cross-references}{23}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Chapters and sub-chapters}{24}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Captioned figures and tables}{24}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Parts}{25}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Footnotes}{25}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Citations}{26}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Blocks}{26}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Equations}{26}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Theorems and proofs}{26}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Callout blocks}{26}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Sharing your book}{27}{section.5.13}%
+\contentsline {section}{\numberline {5.14}Publishing}{27}{section.5.14}%
+\contentsline {section}{\numberline {5.15}404 pages}{27}{section.5.15}%
+\contentsline {section}{\numberline {5.16}Metadata for sharing}{27}{section.5.16}%
+\contentsline {chapter}{\numberline {6}How to Render Code}{29}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Brain Dump / FAQ}{31}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Danger Zones}{31}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Potential Errors \& Bugs}{31}{section.7.2}%
+\contentsline {section}{\numberline {7.3}FAQ}{32}{section.7.3}%
+\contentsline {part}{I\hspace {1em}DEVELOPERS GUIDE}{33}{part.1}%
+\contentsline {chapter}{\numberline {8}Build Site}{35}{chapter.8}%
+\contentsline {section}{\numberline {8.1}How to edit \_bookdown.yml}{35}{section.8.1}%
+\contentsline {section}{\numberline {8.2}How to edit \_output.yml (RC)}{35}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Mandatory ``index.Rmd'' landing page}{35}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Build the book:}{35}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Render book}{36}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Preview book}{36}{subsection.8.4.2}%
+\contentsline {chapter}{\numberline {9}Git Instructions}{37}{chapter.9}%
+\contentsline {section}{\numberline {9.1}How to Make a Git Repo (RC)}{37}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}How to Make the Git Connection (Adding your Local Repo to GitHub)}{39}{subsection.9.1.1}%
+\contentsline {section}{\numberline {9.2}Updating GitHub via RStudio}{40}{section.9.2}%
+\contentsline {chapter}{\numberline {10}How to Deploy Your Workshop Website}{45}{chapter.10}%
