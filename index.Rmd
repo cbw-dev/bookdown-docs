@@ -19,7 +19,7 @@ favicon: img/favicon.ico
 
 Welcome to CBW's documentation for creating a workshop website using Bookdown. Bookdown is an R package that is used to build books, and in our case, the websites hosting CBW's workshops!
 
-You only need to know markdown and whatever coding language you be using to learn bookdown!
+You only need to know markdown and whatever coding language you will be using to learn bookdown!
 
 Note, this is the documentation to create a workshop using *bookdown*. If **Jupyter Book** suits you better, see [here](https://cbw-dev.github.io/jupyterbook-docs/).
 

@@ -2,7 +2,7 @@
 
 Certain aspects of the setup for workshops will be different depending on your role. Headers ending in "(RC)" are for Regional Coordinators. Headers without "(RC)" are assumed to be relevant to both RC and workshop teams.
 
-## Workshop Setup (RC)
+## Workshop Setup [RC] <--- MAKE SQUARE BRACKETS
 
 Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop.
 
@@ -13,7 +13,7 @@ Regional Coordinators will be tasked with creating and slightly editing each new
 ![Image of the repo and how to find make a template](img/template/make-a-template.png)\
 <br> <!-- enforces a space after the image -->
 
-3. You will be brought to a "Create a new repository" page. Fill out the blanks as seen below. That is, change the owner to XXX, make it public, fill in the repository name and description according to [CBW Guidelines](). <br>"Include all branches" does not need to be selected (???).
+3. You will be brought to a "Create a new repository" page. Fill out the blanks as seen below. That is, change the owner to "bioinformatics.ca", make it public, fill in the repository name and description according to [CBW Guidelines](). <br>"Include all branches" does not need to be selected (???).
 
 NOTE: CHANGE OWNER TO XXX (ask Nia, probably cbw-dev for now)
 ![Image showing how to make a new repo from a template repo](img/template/make-new-repo.png)\
@@ -48,9 +48,15 @@ You can click <u>**pages build and deployment**</u> for updates. It will give yo
 ![successful deploy](img/git-instruct/successful-deploy.png)\
 ![failed deploy](img/git-instruct/failed-deploy.png)\
 
+
+
+INCLUDE ! ERROR DEPLOY BEFORE ANOTHER DEPLOY IS DONE
+
 ## Setting Up Team Access (Nia will fill this in)
 
 ## Getting the Template on Your Local Computer - Git Clone
+
+TALK ABOUT THE COMMAND LINE - CREATE CH 4 w/ terminal, but specify wont need to use since bookdown
 
 1. navigate to where in your local file system you want to have your workshop in (hint: cd)
 

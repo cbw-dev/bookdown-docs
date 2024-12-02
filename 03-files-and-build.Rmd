@@ -4,11 +4,14 @@ Ok now we all have our workshop locally, which is made up of all these files and
 
 First, let's figure out RStudio. Skip to [file setup](#file-setup) if you already know how to use RStudio (and it's built in git control window).
 
+## WORKFLOW DIAGRAM HERE
+
+
 ## Open in RStudio
 
-Enter the folder you just git cloned, it should be titled "[workshop-name]". Right click on [workshop-name].Rproj and press "Open in RStudio". There is only one file with this file ending. 
+Enter the folder you just git cloned using Findr/File Command, it should be titled "[workshop-name]". Right click on [workshop-name].Rproj and press "Open in RStudio". There is only one file with this file extension. 
 
-A RStudio window should open up and look like the image below. 
+A RStudio window should open up and look something like the image below. 
 ![newly opened RStudio window](img/files-and-build/newly-opened-RStudio.png)\
 
 ## Explaining RStudio
@@ -96,5 +99,9 @@ Let's say we only edited `index.Rmd`, now we see the newly edited files. Changed
 
 ![post git commit window](img/git-instruct/git-window-post-commit.png)\
 
-Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a **Pull** button in the Git window within RStudio!
+Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a **Pull** button in the Git window within RStudio! 
+
+YOU WILL HAVE TO DO THIS IF YOUR TEAM MAKES UPDATES
+
+This will automatically update the website, you can see the updates and progress in the actions window we saw previously.
 
