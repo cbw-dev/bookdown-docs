@@ -214,7 +214,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.5" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>6.5</b> Captioned figures and tables</a></li>
 <li class="chapter" data-level="6.6" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#parts"><i class="fa fa-check"></i><b>6.6</b> Parts</a></li>
 <li class="chapter" data-level="6.7" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#footnotes"><i class="fa fa-check"></i><b>6.7</b> Footnotes</a></li>
-<li class="chapter" data-level="6.8" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#citations-not-sure-if-we-workshops-need-citations"><i class="fa fa-check"></i><b>6.8</b> Citations (NOT SURE IF WE WORKSHOPS NEED CITATIONS?)</a></li>
+<li class="chapter" data-level="6.8" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#citations-not-sure-if-we-need-workshops-need-citations"><i class="fa fa-check"></i><b>6.8</b> Citations (NOT SURE IF WE NEED WORKSHOPS NEED CITATIONS?)</a></li>
 <li class="chapter" data-level="6.9" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#blocks"><i class="fa fa-check"></i><b>6.9</b> Blocks</a></li>
 <li class="chapter" data-level="6.10" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#equations"><i class="fa fa-check"></i><b>6.10</b> Equations</a></li>
 <li class="chapter" data-level="6.11" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.11</b> Theorems and proofs</a></li>
@@ -279,13 +279,13 @@ div.csl-indent {
 <h2><span class="header-section-number">3.1</span> Workshop Setup [RC]<a href="creating-rc-and-deploying-your-new-workshop.html#workshop-setup-rc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop.</p>
 <ol style="list-style-type: decimal">
-<li><p>First, let’s go the <a href="https://github.com/cbw-dev/bookdown-template">bookdown template</a>.</p></li>
+<li><p>First, let’s go to the <a href="https://github.com/cbw-dev/bookdown-template">bookdown template</a>.</p></li>
 <li><p>Click on the “Use this template” green button, which is to the left of the title of the repository “bookdown-template”. Then, press the dropdown option: “Create a new repository”, as seen below.</p></li>
 </ol>
 <p><img src="img/template/make-a-template.png" alt="Image of the repo and how to find make a template" /><br />
 <br> <!-- enforces a space after the image --></p>
 <ol start="3" style="list-style-type: decimal">
-<li>You will be brought to a “Create a new repository” page. Fill out the blanks as seen below. That is, change the owner to “bioinformatics.ca” [NOTE FOR TESTING PURPOSES: use cbw-dev], make it public, fill in the repository name and description according to <a href="">CBW Guidelines</a>. <br>“Include all branches” does not need to be selected (??? - might need to look into this?).</li>
+<li>You will be brought to a “Create a new repository” page. Fill out the blanks as seen below. That is, change the owner to “bioinformatics.ca” [NOTE FOR TESTING PURPOSES: use cbw-dev], make it public, fill in the repository name and description according to <a href="">CBW Guidelines</a>. <br>“Include all branches” does not need to be selected.</li>
 </ol>
 <p><img src="img/template/make-new-repo.png" alt="Image showing how to make a new repo from a template repo" /><br />
 <br></p>
@@ -298,8 +298,9 @@ div.csl-indent {
 <img src="img/git-instruct/github-settings.png" alt="Base repo, pointing at settings" /></p></li>
 <li><p>Then, go to the pages sidebar.
 <img src="img/git-instruct/github-select-pages.png" alt="Selecting pages from the settings page" /></p></li>
-<li><p>“Deploy from a branch” is already selected, which is what we want. We must change the branch from “none” to main.
-<img src="img/git-instruct/github-deploy-main.png" alt="Select main as the branc" /></p></li>
+<li><p>“Deploy from a branch” is already selected, which is what we want. We must change the branch from “none” to “main”. Select the “None” dropdown button and select “main”.
+<img src="img/git-instruct/github-deploy-main.png" alt="Select main as the branc" /><br />
+</p></li>
 <li><p>Then, change the folder from <code>/ root</code> to <code>/docs</code>. Then press save.
 <img src="img/git-instruct/github-deploy-docs.png" alt="Select /docs as the branch" /><br />
 </p></li>
@@ -308,10 +309,22 @@ div.csl-indent {
 <p>To see updates, go to the <strong>Actions</strong> page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.</p>
 <p><img src="img/git-instruct/github-pages-actions-explained.png" alt="Image showing the different possibilities of deploy a github page" /><br />
 </p>
-<p>You can click <u><strong>pages build and deployment</strong></u> for updates. It will give you errors (which may not be very clear) or the link of your deployed page!</p>
+<p>You can click <u><strong>pages build and deployment</strong></u> for updates.</p>
+<div class="float">
+<img src="img/git-instruct/pages-build-and-deployment.png" alt="where to click for pages build and deployment information" />
+<div class="figcaption">where to click for pages build and deployment information</div>
+</div>
+<p>A successful deploy will have a green checkmark next to it. You can inspect the 3 steps: build, report-build-status, deploy. Once it’s done deploying, you can find the website at the link provided under “deploy”!</p>
 <p><img src="img/git-instruct/successful-deploy.png" alt="successful deploy" /><br />
-<img src="img/git-instruct/failed-deploy.png" alt="failed deploy" /><br />
 </p>
+<p>A failed deploy will have a red cross next to it. Clicking through the steps can help you determine what went wrong in the deploy.</p>
+<blockquote>
+<p>Warning: A website can build properly, but may not deploy properly! It is a good idea to check after making big changes.</p>
+</blockquote>
+<div class="float">
+<img src="img/git-instruct/failed-deploy.png" alt="failed deploy" />
+<div class="figcaption">failed deploy</div>
+</div>
 <div id="a-very-specific-build-and-deployment-warning" class="section level4 unnumbered hasAnchor">
 <h4>A Very Specific Build and Deployment Warning<a href="creating-rc-and-deploying-your-new-workshop.html#a-very-specific-build-and-deployment-warning" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><img src="img/git-instruct/exclamation-point-deploy-warning.png" alt="two consecutive deploy warnings" /><br />

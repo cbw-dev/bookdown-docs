@@ -169,13 +169,27 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Download and install R (You need R 3.6.0+ installed for RStudio) \href{https://cran.rstudio.com/}{here}. Follow the instructions for your operating system (Linux/macOS/Windows).
   {[}Maybe we should have more installation instructions - a video?{]}
+\end{enumerate}
+
+\begin{quote}
+Note: You can check if windows was installed properly on \emph{macOS} by running the command \texttt{R} in terminal. On \emph{windows}, --must test--.
+\end{quote}
+
+\begin{quote}
+Note: We will not be using the R console, instead, we will be using RStudio!
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
 \item
   Download and install RStudio \href{https://posit.co/download/rstudio-desktop/\#:~:text=AND\%20INSTALL\%20R-,2\%3A\%20Install\%20RStudio,-DOWNLOAD\%20RSTUDIO\%20DESKTOP}{here}. Scroll down to find downloads for non-macOS.
 \item
-  Installl the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: \texttt{install.packages("bookdown")}
+  Installl the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: \texttt{install.packages("bookdown")}.
 \end{enumerate}
 
 We're ready to start working with CBW's bookdown workshop template now!
@@ -191,7 +205,7 @@ Regional Coordinators will be tasked with creating and slightly editing each new
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  First, let's go the \href{https://github.com/cbw-dev/bookdown-template}{bookdown template}.
+  First, let's go to the \href{https://github.com/cbw-dev/bookdown-template}{bookdown template}.
 \item
   Click on the ``Use this template'' green button, which is to the left of the title of the repository ``bookdown-template''. Then, press the dropdown option: ``Create a new repository'', as seen below.
 \end{enumerate}
@@ -203,7 +217,7 @@ Regional Coordinators will be tasked with creating and slightly editing each new
 \setcounter{enumi}{2}
 \tightlist
 \item
-  You will be brought to a ``Create a new repository'' page. Fill out the blanks as seen below. That is, change the owner to ``bioinformatics.ca'' {[}NOTE FOR TESTING PURPOSES: use cbw-dev{]}, make it public, fill in the repository name and description according to \href{}{CBW Guidelines}. ``Include all branches'' does not need to be selected (??? - might need to look into this?).
+  You will be brought to a ``Create a new repository'' page. Fill out the blanks as seen below. That is, change the owner to ``bioinformatics.ca'' {[}NOTE FOR TESTING PURPOSES: use cbw-dev{]}, make it public, fill in the repository name and description according to \href{}{CBW Guidelines}. ``Include all branches'' does not need to be selected.
 \end{enumerate}
 
 \includegraphics{img/template/make-new-repo.png}\\
@@ -223,8 +237,8 @@ Now, let's turn this into a website - let's deploy!
   Then, go to the pages sidebar.
   \includegraphics{img/git-instruct/github-select-pages.png}
 \item
-  ``Deploy from a branch'' is already selected, which is what we want. We must change the branch from ``none'' to main.
-  \includegraphics{img/git-instruct/github-deploy-main.png}
+  ``Deploy from a branch'' is already selected, which is what we want. We must change the branch from ``none'' to ``main''. Select the ``None'' dropdown button and select ``main''.
+  \includegraphics{img/git-instruct/github-deploy-main.png}\\
 \item
   Then, change the folder from \texttt{/\ root} to \texttt{/docs}. Then press save.
   \includegraphics{img/git-instruct/github-deploy-docs.png}\\
@@ -236,10 +250,29 @@ To see updates, go to the \textbf{Actions} page (found along the top navigation 
 
 \includegraphics{img/git-instruct/github-pages-actions-explained.png}\\
 
-You can click \textbf{pages build and deployment} for updates. It will give you errors (which may not be very clear) or the link of your deployed page!
+You can click \textbf{pages build and deployment} for updates.
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/pages-build-and-deployment.png}
+\caption{where to click for pages build and deployment information}
+\end{figure}
+
+A successful deploy will have a green checkmark next to it. You can inspect the 3 steps: build, report-build-status, deploy. Once it's done deploying, you can find the website at the link provided under ``deploy''!
 
 \includegraphics{img/git-instruct/successful-deploy.png}\\
-\includegraphics{img/git-instruct/failed-deploy.png}\\
+
+A failed deploy will have a red cross next to it. Clicking through the steps can help you determine what went wrong in the deploy.
+
+\begin{quote}
+Warning: A website can build properly, but may not deploy properly! It is a good idea to check after making big changes.
+\end{quote}
+
+\begin{figure}
+\centering
+\includegraphics{img/git-instruct/failed-deploy.png}
+\caption{failed deploy}
+\end{figure}
 
 \subsubsection*{A Very Specific Build and Deployment Warning}\label{a-very-specific-build-and-deployment-warning}
 \addcontentsline{toc}{subsubsection}{A Very Specific Build and Deployment Warning}
@@ -610,7 +643,7 @@ STOP NEHA HERE !!! \\
 
 You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
 
-Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
+Add a numbered part: \texttt{\#\ (PART)\ Introduction\ \{-\}} (followed by \texttt{\#\ Welcome})
 
 Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
 
@@ -620,7 +653,7 @@ Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ O
 
 Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
 
-\section{Citations (NOT SURE IF WE WORKSHOPS NEED CITATIONS?)}\label{citations-not-sure-if-we-workshops-need-citations}
+\section{Citations (NOT SURE IF WE NEED WORKSHOPS NEED CITATIONS?)}\label{citations-not-sure-if-we-need-workshops-need-citations}
 
 Reference items in your bibliography file(s) using \texttt{@key}.
 

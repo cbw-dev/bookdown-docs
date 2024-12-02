@@ -30,7 +30,7 @@ chapters-and-sub-chapters
 captioned-figures-and-tables
 parts
 footnotes
-citations-not-sure-if-we-workshops-need-citations
+citations-not-sure-if-we-need-workshops-need-citations
 blocks
 equations
 theorems-and-proofs

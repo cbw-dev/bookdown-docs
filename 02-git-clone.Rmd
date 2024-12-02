@@ -6,14 +6,14 @@ Certain aspects of the setup for workshops will be different depending on your r
 
 Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop.
 
-1. First, let's go the [bookdown template](https://github.com/cbw-dev/bookdown-template). 
+1. First, let's go to the [bookdown template](https://github.com/cbw-dev/bookdown-template). 
 
 2. Click on the "Use this template" green button, which is to the left of the title of the repository "bookdown-template". Then, press the dropdown option: "Create a new repository", as seen below.
 
 ![Image of the repo and how to find make a template](img/template/make-a-template.png)\
 <br> <!-- enforces a space after the image -->
 
-3. You will be brought to a "Create a new repository" page. Fill out the blanks as seen below. That is, change the owner to "bioinformatics.ca" [NOTE FOR TESTING PURPOSES: use cbw-dev], make it public, fill in the repository name and description according to [CBW Guidelines](). <br>"Include all branches" does not need to be selected (??? - might need to look into this?).
+3. You will be brought to a "Create a new repository" page. Fill out the blanks as seen below. That is, change the owner to "bioinformatics.ca" [NOTE FOR TESTING PURPOSES: use cbw-dev], make it public, fill in the repository name and description according to [CBW Guidelines](). <br>"Include all branches" does not need to be selected.
 
 ![Image showing how to make a new repo from a template repo](img/template/make-new-repo.png)\
 <br>
@@ -30,8 +30,8 @@ Now, let's turn this into a website - let's deploy!
 2. Then, go to the pages sidebar.
 ![Selecting pages from the settings page](img/git-instruct/github-select-pages.png)
 
-3. "Deploy from a branch" is already selected, which is what we want. We must change the branch from "none" to main.
-![Select main as the branc](img/git-instruct/github-deploy-main.png)
+3. "Deploy from a branch" is already selected, which is what we want. We must change the branch from "none" to "main". Select the "None" dropdown button and select "main".
+![Select main as the branc](img/git-instruct/github-deploy-main.png)\
 
 4. Then, change the folder from `/ root` to `/docs`. Then press save.
 ![Select /docs as the branch](img/git-instruct/github-deploy-docs.png)\
@@ -42,10 +42,19 @@ To see updates, go to the **Actions** page (found along the top navigation bar. 
 
 ![Image showing the different possibilities of deploy a github page](img/git-instruct/github-pages-actions-explained.png)\
 
-You can click <u>**pages build and deployment**</u> for updates. It will give you errors (which may not be very clear) or the link of your deployed page!
+You can click <u>**pages build and deployment**</u> for updates.
+
+![where to click for pages build and deployment information](img/git-instruct/pages-build-and-deployment.png)
+
+A successful deploy will have a green checkmark next to it. You can inspect the 3 steps: build, report-build-status, deploy. Once it's done deploying, you can find the website at the link provided under "deploy"!
 
 ![successful deploy](img/git-instruct/successful-deploy.png)\
-![failed deploy](img/git-instruct/failed-deploy.png)\
+
+A failed deploy will have a red cross next to it. Clicking through the steps can help you determine what went wrong in the deploy.
+
+> Warning: A website can build properly, but may not deploy properly! It is a good idea to check after making big changes.
+
+![failed deploy](img/git-instruct/failed-deploy.png)
 
 #### A Very Specific Build and Deployment Warning {-}
 
