@@ -1,22 +1,40 @@
-# Storing all formatting content
+# Formatting Your Content - Markdown
 
-- How to edit index.Rmd
+Now we know which files to edit, but how can we edit these files? How do we format 
 
 ## Chapters
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+As mentioned earlier, headers are defined by a `#` before the title. Subheaders get increasingly more nested as add more `#` symbols before it. For example,
 
-## A section
+```
+# Hello
+```
+would create a chapter title. Since there is only one `#` symbol, this would also create a new page. Again, try to keep only one chapter title per .Rmd file.
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+```
+## Subheader
+```
+## Subheader
 
-### An unnumbered section {-}
+This is what a subheader would look like.
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+```
+### Subheader
+```
+### Subheader
+
+This is what a subheader with 3 `#` symbols would look like. You can add as many `#` symbols as you would like! There is also no limit to the the number of subheaders you can have. 
+
+### An unnumbered subheader {-}
+
+Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the `{-}` at the end of the heading. For example, the above subheader was written like this:
+```
+### An unnumbered subheader {-}
+```
 
 ## Cross-references {#cross}
 
-Cross-references make it easier for your readers to find and link to elements in your book.
+Cross-references are ways to link to different to different parts of your workshop website.
 
 ## Chapters and sub-chapters
 
@@ -26,8 +44,7 @@ There are two steps to cross-reference any heading:
     - Leave the label off if you like the automated heading generated based on your heading title: for example, `# Hello world` = `# Hello world {#hello-world}`.
     - To label an un-numbered heading, use: `# Hello world {-#nice-label}` or `{# Hello world .unnumbered}`.
 
-1. Next, reference the labeled heading anywhere in the text using `\@ref(nice-label)`; for example, please see Chapter \@ref(cross). 
-    - If you prefer text as the link instead of a numbered reference use: [any text you want can go here](#cross).
+2. The reference your text as follows `[any text you want can go here](#cross)`. This will end up looking like: [any text you want can go here](#cross).
 
 ## Captioned figures and tables
 
@@ -49,6 +66,10 @@ knitr::kable(
 )
 ```
 
+---
+STOP NEHA HERE !!!
+---
+
 ## Parts
 
 You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file. 
@@ -59,12 +80,11 @@ Add an unnumbered part: `# (PART\*) Act one {-}` (followed by `# A chapter`)
 
 Add an appendix as a special kind of un-numbered part: `# (APPENDIX) Other stuff {-}` (followed by `# A chapter`). Chapters in an appendix are prepended with letters instead of numbers.
 
-
 ## Footnotes
 
 Footnotes are put inside the square brackets after a caret `^[]`. Like this one ^[This is a footnote.]. 
 
-## Citations
+## Citations (NOT SURE IF WE WORKSHOPS NEED CITATIONS?)
 
 Reference items in your bibliography file(s) using `@key`.
 

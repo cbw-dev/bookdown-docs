@@ -478,30 +478,48 @@ Now, we're done! We should see the updates on GitHub now. Also note, if we ever 
 
 Git pushing will automatically update the website, you can see the updates and progress in the actions window we saw previously. (Check out your website on the web once it's done deploying!)
 
-\chapter{Storing all formatting content}\label{storing-all-formatting-content}
+\chapter{Formatting Your Content - Markdown}\label{formatting-your-content---markdown}
 
-\begin{itemize}
-\tightlist
-\item
-  How to edit index.Rmd
-\end{itemize}
+Now we know which files to edit, but how can we edit these files? How do we format
 
 \section{Chapters}\label{chapters}
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+As mentioned earlier, headers are defined by a \texttt{\#} before the title. Subheaders get increasingly more nested as add more \texttt{\#} symbols before it. For example,
 
-\section{A section}\label{a-section}
+\begin{verbatim}
+# Hello
+\end{verbatim}
 
-All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+would create a chapter title. Since there is only one \texttt{\#} symbol, this would also create a new page. Again, try to keep only one chapter title per .Rmd file.
 
-\subsection*{An unnumbered section}\label{an-unnumbered-section}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+\begin{verbatim}
+## Subheader
+\end{verbatim}
 
-Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+\section{Subheader}\label{subheader}
+
+This is what a subheader would look like.
+
+\begin{verbatim}
+### Subheader
+\end{verbatim}
+
+\subsection{Subheader}\label{subheader-1}
+
+This is what a subheader with 3 \texttt{\#} symbols would look like. You can add as many \texttt{\#} symbols as you would like! There is also no limit to the the number of subheaders you can have.
+
+\subsection*{An unnumbered subheader}\label{an-unnumbered-subheader}
+\addcontentsline{toc}{subsection}{An unnumbered subheader}
+
+Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the \texttt{\{-\}} at the end of the heading. For example, the above subheader was written like this:
+
+\begin{verbatim}
+### An unnumbered subheader {-}
+\end{verbatim}
 
 \section{Cross-references}\label{cross}
 
-Cross-references make it easier for your readers to find and link to elements in your book.
+Cross-references are ways to link to different to different parts of your workshop website.
 
 \section{Chapters and sub-chapters}\label{chapters-and-sub-chapters}
 
@@ -521,13 +539,7 @@ There are two steps to cross-reference any heading:
     To label an un-numbered heading, use: \texttt{\#\ Hello\ world\ \{-\#nice-label\}} or \texttt{\{\#\ Hello\ world\ .unnumbered\}}.
   \end{itemize}
 \item
-  Next, reference the labeled heading anywhere in the text using \texttt{\textbackslash{}@ref(nice-label)}; for example, please see Chapter \ref{cross}.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    If you prefer text as the link instead of a numbered reference use: \hyperref[cross]{any text you want can go here}.
-  \end{itemize}
+  The reference your text as follows \texttt{{[}any\ text\ you\ want\ can\ go\ here{]}(\#cross)}. This will end up looking like: \hyperref[cross]{any text you want can go here}.
 \end{enumerate}
 
 \section{Captioned figures and tables}\label{captioned-figures-and-tables}
@@ -586,6 +598,14 @@ temperature & pressure\\
 \end{tabular}
 \end{table}
 
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+STOP NEHA HERE !!! \\
+\end{longtable}
+
 \section{Parts}\label{parts}
 
 You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
@@ -600,7 +620,7 @@ Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ O
 
 Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
 
-\section{Citations}\label{citations}
+\section{Citations (NOT SURE IF WE WORKSHOPS NEED CITATIONS?)}\label{citations-not-sure-if-we-workshops-need-citations}
 
 Reference items in your bibliography file(s) using \texttt{@key}.
 
