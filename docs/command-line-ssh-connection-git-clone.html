@@ -304,20 +304,29 @@ div.csl-indent {
 </div>
 <div id="creating-the-ssh-connection" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Creating the SSH Connection<a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We need to create an SSH connection. Essentially, we’re doing this to make sure we are updating and receiving updates from GitHub with security!</p>
-<p>Follow the following 3 main steps. Each of these subheaders links to GitHub’s official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you’ve already been working with GitHub and SSH connection, consider using the official docs.)</p>
+<p>We need to create an SSH connection. You have already set this up if you have been git cloning, pulling from and pushing to GitHub. If you have, continue to <a href="command-line-ssh-connection-git-clone.html#git-clone">git cloning</a>. If you haven’t, keep reading!</p>
+<p>Essentially, we’re doing these steps to update and receive updates from our GitHub repository, with security!</p>
+<p>Follow the following 3 main steps. Each of these subheaders links to GitHub’s official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you’ve already been working with GitHub and SSH connection, consider using the official docs.) The official docs may be more up-to-date.</p>
 <div id="generating-a-new-ssh-key" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">Generating a new SSH key</a><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li><p>Open Terminal/Command Prompt.</p></li>
-<li><p>Copy and paste this text into your terminal/command prompt. <strong>Replace the email given below with your GitHub email address</strong> (the email address you used to sign up for Github).</p></li>
+<li>Open Terminal/Command Prompt.</li>
+</ol>
+<blockquote>
+<p>Note: You can do these commands anywhere in your file explorer.</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Copy and paste this text into your terminal/command prompt. <strong>Replace the email given below with your GitHub email address</strong> (the email address you used to sign up for Github). Press enter to run the command.</li>
 </ol>
 <pre><code>ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;</code></pre>
 <p>You will get this output:</p>
 <pre><code>&gt; Generating public/private ALGORITHM key pair.</code></pre>
+<blockquote>
+<p>Note: Output in your terminal begins with this “&gt;” symbol, as seen above!</p>
+</blockquote>
 <p>You will then be prompted with this message:</p>
 <pre><code>&gt; Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):</code></pre>
-<p>Press enter.</p>
+<p>Press enter. (This uses a default file and default file location.)</p>
 <p>If you have already created a SSH key and you are asked to rewrite another key, look at the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name.">GitHub Docs</a> for specific steps.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Type a secure passphrase (make up a password) when prompted with:</li>
@@ -327,6 +336,19 @@ div.csl-indent {
 </div>
 <div id="adding-your-ssh-key-to-the-ssh-agent" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent">Adding your SSH key to the ssh-agent</a><a href="command-line-ssh-connection-git-clone.html#adding-your-ssh-key-to-the-ssh-agent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>In terminal, run the following command</li>
+</ol>
+<pre><code>eval &quot;$(ssh-agent -s)&quot;</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>If you’re using macOS Sierra 10.12.2 or later additions, you need to modify your <code>~/.ssh/config</code> file.
+<ol style="list-style-type: decimal">
+<li>Check if you have a <code>~/.ssh/config</code> file.</li>
+<li>dsfds</li>
+<li>asdsa</li>
+</ol></li>
+<li></li>
+</ol>
 </div>
 <div id="adding-a-new-ssh-key-to-your-account" class="section level3 hasAnchor" number="4.2.3">
 <h3><span class="header-section-number">4.2.3</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account">Adding a new SSH key to your account</a><a href="command-line-ssh-connection-git-clone.html#adding-a-new-ssh-key-to-your-account" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -350,7 +372,7 @@ div.csl-indent {
 <blockquote>
 <p>NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.</p>
 </blockquote>
-<p>But what do any of these files mean? Which ones do I edit? Which ones shouldn’t I edit? How do I open this in RStudio? And how exactly is a page made from all thes files??? It’s time for you to go to the next page :D</p>
+<p>But what do any of these files mean? Which ones do I edit? Which ones shouldn’t I edit? How do I open this in RStudio? And how exactly is a page made from all these files??? It’s time for you to go to the next page :D</p>
 
 </div>
 </div>

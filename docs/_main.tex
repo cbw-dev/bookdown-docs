@@ -334,18 +334,31 @@ Do not be worried about using terminal, espeically git commands in terminal! Onc
 
 \section{Creating the SSH Connection}\label{creating-the-ssh-connection}
 
-We need to create an SSH connection. Essentially, we're doing this to make sure we are updating and receiving updates from GitHub with security!
+We need to create an SSH connection. You have already set this up if you have been git cloning, pulling from and pushing to GitHub. If you have, continue to \hyperref[git-clone]{git cloning}. If you haven't, keep reading!
 
-Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub and SSH connection, consider using the official docs.)
+Essentially, we're doing these steps to update and receive updates from our GitHub repository, with security!
+
+Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub and SSH connection, consider using the official docs.) The official docs may be more up-to-date.
 
 \subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key}{Generating a new SSH key}}{Generating a new SSH key}}\label{generating-a-new-ssh-key}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Open Terminal/Command Prompt.
+\end{enumerate}
+
+\begin{quote}
+Note: You can do these commands anywhere in your file explorer.
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
 \item
-  Copy and paste this text into your terminal/command prompt. \textbf{Replace the email given below with your GitHub email address} (the email address you used to sign up for Github).
+  Copy and paste this text into your terminal/command prompt. \textbf{Replace the email given below with your GitHub email address} (the email address you used to sign up for Github). Press enter to run the command.
 \end{enumerate}
 
 \begin{verbatim}
@@ -358,13 +371,17 @@ You will get this output:
 > Generating public/private ALGORITHM key pair.
 \end{verbatim}
 
+\begin{quote}
+Note: Output in your terminal begins with this ``\textgreater{}'' symbol, as seen above!
+\end{quote}
+
 You will then be prompted with this message:
 
 \begin{verbatim}
 > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):
 \end{verbatim}
 
-Press enter.
+Press enter. (This uses a default file and default file location.)
 
 If you have already created a SSH key and you are asked to rewrite another key, look at the \href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key:~:text=Please\%20note\%20that\%20if\%20you\%20created\%20SSH\%20keys\%20previously\%2C\%20ssh\%2Dkeygen\%20may\%20ask\%20you\%20to\%20rewrite\%20another\%20key\%2C\%20in\%20which\%20case\%20we\%20recommend\%20creating\%20a\%20custom\%2Dnamed\%20SSH\%20key.\%20To\%20do\%20so\%2C\%20type\%20the\%20default\%20file\%20location\%20and\%20replace\%20id_ALGORITHM\%20with\%20your\%20custom\%20key\%20name.}{GitHub Docs} for specific steps.
 
@@ -382,6 +399,37 @@ If you have already created a SSH key and you are asked to rewrite another key, 
 \end{verbatim}
 
 \subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#adding-your-ssh-key-to-the-ssh-agent}{Adding your SSH key to the ssh-agent}}{Adding your SSH key to the ssh-agent}}\label{adding-your-ssh-key-to-the-ssh-agent}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In terminal, run the following command
+\end{enumerate}
+
+\begin{verbatim}
+eval "$(ssh-agent -s)"
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  If you're using macOS Sierra 10.12.2 or later additions, you need to modify your \texttt{\textasciitilde{}/.ssh/config} file.
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    Check if you have a \texttt{\textasciitilde{}/.ssh/config} file.
+  \item
+    dsfds
+  \item
+    asdsa
+  \end{enumerate}
+\item
+\end{enumerate}
 
 \subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account\#adding-a-new-ssh-key-to-your-account}{Adding a new SSH key to your account}}{Adding a new SSH key to your account}}\label{adding-a-new-ssh-key-to-your-account}
 
@@ -419,7 +467,7 @@ git clone git@github.com:jq-11/workshop-name.git
 NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
 \end{quote}
 
-But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? And how exactly is a page made from all thes files??? It's time for you to go to the next page :D
+But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? And how exactly is a page made from all these files??? It's time for you to go to the next page :D
 
 \chapter{So What Do These Files Mean?}\label{so-what-do-these-files-mean}
 
