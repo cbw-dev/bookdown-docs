@@ -24,7 +24,7 @@ build-the-book
 other-ways-to-build-your-book
 knit-your-book
 preview-your-book
-file-setup
+file-setup-explanation-file-setup-this-section-is-in-review-neha-can-try-looking-at-the-files-in-the-bottom-right-and-read-along-to-what-we-currently-have
 push-to-github-via-rstudio
 formatting-your-content---markdown
 chapters
@@ -36,14 +36,9 @@ captioned-figures-and-tables
 parts
 footnotes
 citations-not-sure-if-we-need-workshops-need-citations
-blocks
 equations
 theorems-and-proofs
-callout-blocks
-sharing-your-book
-publishing
-pages
-metadata-for-sharing
+callout-blocks-will-be-added-later
 how-to-render-code
 brain-dump-faq
 danger-zones

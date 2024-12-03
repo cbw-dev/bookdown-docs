@@ -36,7 +36,7 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 
 1. Open Terminal/Command Prompt.
 
-2. Copy and paste this text into your terminal/command prompt. **Replace the email given below with your GitHub email address.
+2. Copy and paste this text into your terminal/command prompt. **Replace the email given below with your GitHub email address** (the email address you used to sign up for Github).
 
 ```
 ssh-keygen -t ed25519 -C "your_email@example.com"

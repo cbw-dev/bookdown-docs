@@ -119,7 +119,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}2024-12-02}
+\date{\vspace{-2.5em}2024-12-03}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -345,7 +345,7 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 \item
   Open Terminal/Command Prompt.
 \item
-  Copy and paste this text into your terminal/command prompt. **Replace the email given below with your GitHub email address.
+  Copy and paste this text into your terminal/command prompt. \textbf{Replace the email given below with your GitHub email address} (the email address you used to sign up for Github).
 \end{enumerate}
 
 \begin{verbatim}
@@ -515,9 +515,7 @@ If you want live updates to your changes, you can preview the page as you edit t
 
 But which files do we edit? Well alas, it's time to discuss the file setup.
 
-\section{File Setup Explanation}\label{file-setup}
-
-{[}INSERT TREE ASCII{]} - asked IT whether I can install homebrew
+\section{File Setup Explanation \{\#file-setup\} (this section is in review, Neha can try looking at the files in the bottom right and read along to what we currently have)}\label{file-setup-explanation-file-setup-this-section-is-in-review-neha-can-try-looking-at-the-files-in-the-bottom-right-and-read-along-to-what-we-currently-have}
 
 Look at all these .Rmd files! Recall that .Rmd -\textgreater{} .md -\textgreater{} .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.
 
@@ -700,23 +698,13 @@ temperature & pressure\\
 \end{tabular}
 \end{table}
 
-\begin{longtable}[]{@{}l@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-STOP NEHA HERE !!! \\
-\end{longtable}
-
 \section{Parts}\label{parts}
 
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
+Notice how index.Rmd in our CBW Bookdown template has \texttt{\#\ (PART)\ Introduction\ \{-\}} (followed by \texttt{\#\ Welcome}). This creates the ``Introduction'' section on the sidebar.
 
-Add a numbered part: \texttt{\#\ (PART)\ Introduction\ \{-\}} (followed by \texttt{\#\ Welcome})
+There are already 2 main parts in the template: the introduction and modules sections.
 
-Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
-
-Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
+If you want to add more parts, simply paste this: \texttt{\#\ (PART)\ Introduction\ \{-\}} into a new .Rmd file, at the top of the file, before the main \texttt{\#\ header}.
 
 \section{Footnotes}\label{footnotes}
 
@@ -731,11 +719,9 @@ Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YA
 
 The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
 
-\section{Blocks}\label{blocks}
-
 \section{Equations}\label{equations}
 
-Here is an equation.
+Here is an equation. Equations are written in latex.
 
 \begin{equation} 
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
@@ -746,7 +732,17 @@ You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equatio
 
 \section{Theorems and proofs}\label{theorems-and-proofs}
 
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
+We also have specific syntax for theorems and proofs, for example, this code:
+
+\begin{verbatim}
+::: {.theorem #tri}
+For a right triangle, if $c$ denotes the *length* of the hypotenuse
+and $a$ and $b$ denote the lengths of the **other** two sides, we have
+$$a^2 + b^2 = c^2$$
+:::
+\end{verbatim}
+
+produces
 
 \begin{theorem}
 \protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
@@ -754,41 +750,13 @@ and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
 \[a^2 + b^2 = c^2\]
 \end{theorem}
 
-Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
+Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
 
-\section{Callout blocks}\label{callout-blocks}
+You can learn more about this \href{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}{here}!
+
+\section{Callout blocks (will be added later)}\label{callout-blocks-will-be-added-later}
 
 The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
-
-\section{Sharing your book}\label{sharing-your-book}
-
-\section{Publishing}\label{publishing}
-
-HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
-
-\section{404 pages}\label{pages}
-
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
-
-\section{Metadata for sharing}\label{metadata-for-sharing}
-
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
-
-This \texttt{gitbook} uses the same social sharing data across all chapters in your book- all links shared will look the same.
-
-Specify your book's source repository on GitHub using the \texttt{edit} key under the configuration options in the \texttt{\_output.yml} file, which allows users to suggest an edit by linking to a chapter's source file.
-
-Read more about the features of this output format here:
-
-\url{https://pkgs.rstudio.com/bookdown/reference/gitbook.html}
-
-Or use:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{gitbook}
-\end{Highlighting}
-\end{Shaded}
 
 \chapter{How to Render Code}\label{how-to-render-code}
 
