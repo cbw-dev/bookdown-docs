@@ -36,7 +36,7 @@ Chapters and sections are numbered by default. To un-number a heading, add a `{.
 
 Cross-references are ways to link to different to different parts of your workshop website.
 
-## Chapters and sub-chapters
+### Chapters and sub-chapters
 
 There are two steps to cross-reference any heading:
 
