@@ -346,7 +346,7 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Open Terminal/Command Prompt.
+  Open Terminal/Command Prompt/preferred command line interpretter.
 \end{enumerate}
 
 \begin{quote}
@@ -404,17 +404,19 @@ If you have already created a SSH key and you are asked to rewrite another key, 
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  In terminal, run the following command
+  In terminal/command prompt, run the following command
 \end{enumerate}
 
 \begin{verbatim}
 eval "$(ssh-agent -s)"
 \end{verbatim}
 
+You will get this output:
+\texttt{\textgreater{}\ Agent\ pid\ 59566}
+
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
-\tightlist
 \item
   If you're using macOS Sierra 10.12.2 or later additions, you need to modify your \texttt{\textasciitilde{}/.ssh/config} file.
 
@@ -422,16 +424,106 @@ eval "$(ssh-agent -s)"
   \def\labelenumii{\arabic{enumii}.}
   \tightlist
   \item
-    Check if you have a \texttt{\textasciitilde{}/.ssh/config} file.
+    Check if you have a \texttt{\textasciitilde{}/.ssh/config} file: Run the following command:
+  \end{enumerate}
+
+\begin{verbatim}
+open ~/.ssh/config
+\end{verbatim}
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{1}
+  \tightlist
   \item
-    dsfds
+    If you get the following ouput:
+  \end{enumerate}
+
+\begin{verbatim}
+> The file /Users/YOU/.ssh/config does not exist.
+\end{verbatim}
+
+  Create the file using the touch command: run the command given below
+  \texttt{touch\ \textasciitilde{}/.ssh/config}
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{2}
+  \tightlist
   \item
-    asdsa
+    Edit your \texttt{\textasciitilde{}/.ssh/config} file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Run \texttt{nano\ \textasciitilde{}/.ssh/config}
+    \item
+      Add the following lines to this file. (You should be able to immediately edit.)
+    \end{itemize}
+
+\begin{verbatim}
+Host github.com
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_ed25519
+\end{verbatim}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Exit nano: \texttt{ctrl\ +\ X}
+    \item
+      Type ``Y'' and hit enter to save changes, when asked the following
+    \end{itemize}
+
+\begin{verbatim}
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
+\end{verbatim}
   \end{enumerate}
 \item
+  Return to terminal/command prompt. Run the following command:
 \end{enumerate}
 
+\begin{verbatim}
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+\end{verbatim}
+
 \subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account\#adding-a-new-ssh-key-to-your-account}{Adding a new SSH key to your account}}{Adding a new SSH key to your account}}\label{adding-a-new-ssh-key-to-your-account}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Copy the SSH public key: Run the following command to copy the content of the \textasciitilde/.ssh/id\_ed25519.pub file to your clipboard:
+\end{enumerate}
+
+\begin{verbatim}
+pbcopy < ~/.ssh/id_ed25519.pub
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Go to your GitHub account on the \href{https://github.com/}{GitHub} website. Click on your profile picture (icon in the upper right). Then, select \textbf{Settings}.
+\item
+  Under the ``Access'' section, click \textbf{SSH and GPG keys}.
+\item
+  Click \textbf{New SSH key} or \textbf{Add SSH key}.
+\item
+  In the ``Title'' field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key:
+  ``Personal Laptop'').
+\item
+  Select the type of key between ``authentication'' or ``signing''. (For our purposes, selecting authentication is fine).
+\item
+  in the ``Key'' field, paste (we are pasting what we copied in step 1).
+\item
+  Click \textbf{Add SSH Key}.
+\item
+  If you are prompted, confirm access to your GitHub account.
+\end{enumerate}
+
+Finally, we're all done! We've created a SSH connection between your device and GitHub!
 
 Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps!
 

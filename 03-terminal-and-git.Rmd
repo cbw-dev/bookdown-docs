@@ -36,7 +36,7 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 
 ### [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
 
-1. Open Terminal/Command Prompt.
+1. Open Terminal/Command Prompt/preferred command line interpretter.
 
 > Note: You can do these commands anywhere in your file explorer.
 
@@ -70,21 +70,75 @@ If you have already created a SSH key and you are asked to rewrite another key, 
 
 ### [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
-1. In terminal, run the following command
-```
-eval "$(ssh-agent -s)"
-```
+1. In terminal/command prompt, run the following command
+  ```
+  eval "$(ssh-agent -s)"
+  ```
+  You will get this output:
+  ```
+  > Agent pid 59566
+  ```
 
 2. If you're using macOS Sierra 10.12.2 or later additions, you need to modify your `~/.ssh/config` file.
-    1. Check if you have a `~/.ssh/config` file.
-    2. dsfds
-    3. asdsa
+    1. Check if you have a `~/.ssh/config` file: Run the following command:
+    ```
+    open ~/.ssh/config
+    ```
+    2. If you get the following ouput:
+    ```
+    > The file /Users/YOU/.ssh/config does not exist.
+    ```
+      Create the file using the touch command: run the command given below
+      ```
+      touch ~/.ssh/config
+      ```
+      
+      
+    3. Edit your `~/.ssh/config` file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.
+       - Run `nano ~/.ssh/config`
+       - Add the following lines to this file. (You should be able to immediately edit.)
+       ```
+       Host github.com
+        AddKeysToAgent yes
+        UseKeychain yes
+        IdentityFile ~/.ssh/id_ed25519
+       ```
+       - Exit nano: `ctrl + X`
+       - Type "Y" and hit enter to save changes, when asked the following
+       ```
+       Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
+       ```
 
-
-
-3. 
+3. Return to terminal/command prompt. Run the following command:
+```
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
 
 ### [Adding a new SSH key to your account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account)
+
+1. Copy the SSH public key: Run the following command to copy the content of the ~/.ssh/id_ed25519.pub file to your clipboard:
+```
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+2. Go to your GitHub account on the [GitHub](https://github.com/) website. Click on your profile picture (icon in the upper right). Then, select **Settings**. 
+
+3. Under the "Access" section, click **SSH and GPG keys**.
+
+4. Click **New SSH key** or **Add SSH key**. 
+
+5. In the "Title" field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key: 
+"Personal Laptop").
+
+6. Select the type of key between "authentication" or "signing". (For our purposes, selecting authentication is fine).
+
+7. in the "Key" field, paste (we are pasting what we copied in step 1). 
+
+8. Click **Add SSH Key**. 
+
+9. If you are prompted, confirm access to your GitHub account.
+
+Finally, we're all done! We've created a SSH connection between your device and GitHub!
 
 Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps!
 

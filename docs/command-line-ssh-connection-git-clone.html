@@ -310,7 +310,7 @@ div.csl-indent {
 <div id="generating-a-new-ssh-key" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">Generating a new SSH key</a><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>Open Terminal/Command Prompt.</li>
+<li>Open Terminal/Command Prompt/preferred command line interpretter.</li>
 </ol>
 <blockquote>
 <p>Note: You can do these commands anywhere in your file explorer.</p>
@@ -337,21 +337,61 @@ div.csl-indent {
 <div id="adding-your-ssh-key-to-the-ssh-agent" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent">Adding your SSH key to the ssh-agent</a><a href="command-line-ssh-connection-git-clone.html#adding-your-ssh-key-to-the-ssh-agent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>In terminal, run the following command</li>
+<li>In terminal/command prompt, run the following command</li>
 </ol>
 <pre><code>eval &quot;$(ssh-agent -s)&quot;</code></pre>
+<p>You will get this output:
+<code>&gt; Agent pid 59566</code></p>
 <ol start="2" style="list-style-type: decimal">
-<li>If you’re using macOS Sierra 10.12.2 or later additions, you need to modify your <code>~/.ssh/config</code> file.
+<li><p>If you’re using macOS Sierra 10.12.2 or later additions, you need to modify your <code>~/.ssh/config</code> file.</p>
 <ol style="list-style-type: decimal">
-<li>Check if you have a <code>~/.ssh/config</code> file.</li>
-<li>dsfds</li>
-<li>asdsa</li>
-</ol></li>
-<li></li>
+<li>Check if you have a <code>~/.ssh/config</code> file: Run the following command:</li>
 </ol>
+<pre><code>open ~/.ssh/config</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>If you get the following ouput:</li>
+</ol>
+<pre><code>&gt; The file /Users/YOU/.ssh/config does not exist.</code></pre>
+<p>Create the file using the touch command: run the command given below
+<code>touch ~/.ssh/config</code></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Edit your <code>~/.ssh/config</code> file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.
+<ul>
+<li>Run <code>nano ~/.ssh/config</code></li>
+<li>Add the following lines to this file. (You should be able to immediately edit.)</li>
+</ul>
+<pre><code>Host github.com
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_ed25519</code></pre>
+<ul>
+<li>Exit nano: <code>ctrl + X</code></li>
+<li>Type “Y” and hit enter to save changes, when asked the following</li>
+</ul>
+<pre><code>Save modified buffer (ANSWERING &quot;No&quot; WILL DESTROY CHANGES) ?</code></pre></li>
+</ol></li>
+<li><p>Return to terminal/command prompt. Run the following command:</p></li>
+</ol>
+<pre><code>ssh-add --apple-use-keychain ~/.ssh/id_ed25519</code></pre>
 </div>
 <div id="adding-a-new-ssh-key-to-your-account" class="section level3 hasAnchor" number="4.2.3">
 <h3><span class="header-section-number">4.2.3</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account">Adding a new SSH key to your account</a><a href="command-line-ssh-connection-git-clone.html#adding-a-new-ssh-key-to-your-account" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Copy the SSH public key: Run the following command to copy the content of the ~/.ssh/id_ed25519.pub file to your clipboard:</li>
+</ol>
+<pre><code>pbcopy &lt; ~/.ssh/id_ed25519.pub</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Go to your GitHub account on the <a href="https://github.com/">GitHub</a> website. Click on your profile picture (icon in the upper right). Then, select <strong>Settings</strong>.</p></li>
+<li><p>Under the “Access” section, click <strong>SSH and GPG keys</strong>.</p></li>
+<li><p>Click <strong>New SSH key</strong> or <strong>Add SSH key</strong>.</p></li>
+<li><p>In the “Title” field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key:
+“Personal Laptop”).</p></li>
+<li><p>Select the type of key between “authentication” or “signing”. (For our purposes, selecting authentication is fine).</p></li>
+<li><p>in the “Key” field, paste (we are pasting what we copied in step 1).</p></li>
+<li><p>Click <strong>Add SSH Key</strong>.</p></li>
+<li><p>If you are prompted, confirm access to your GitHub account.</p></li>
+</ol>
+<p>Finally, we’re all done! We’ve created a SSH connection between your device and GitHub!</p>
 <p>Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps!</p>
 </div>
 </div>
