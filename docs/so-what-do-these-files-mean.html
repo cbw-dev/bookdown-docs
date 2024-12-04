@@ -348,6 +348,40 @@ div.csl-indent {
 </div>
 <div id="file-setup" class="section level2 hasAnchor" number="5.5">
 <h2><span class="header-section-number">5.5</span> File Setup Explanation<a href="so-what-do-these-files-mean.html#file-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here is a tree diagram of the bookdown template setup. (Note that this mimics how RStudio displays the files, if your RStudio shows these template files in a different order, right click your file window and press “Reload”)</p>
+<!-- PLEASE DO NOT DELETE THIS TREE DIAGRAM, I (Julia) FORMATTED some of IT MYSELF, PLEASE DO NOT DELETE UNLESS A BETTER TREE DIAGRAM THAT IS IN THE SAME ORDER AS HOW RSTUDIO ORDERS IT IS FOUND -->
+<pre><code>bookdown-template
+├── _404.md
+├── _bookdown.yml
+├── _bookdown_files
+├── _main_files # image and pdf output files
+├── _output.yml
+├── .gitignore
+├── .Rhistory
+├── 010-course-schedule.Rmd
+├── 011-content-files.Rmd
+├── 012-meet-your-fac.Rmd
+├── 020-module-1.Rmd
+├── 030-module-2.Rmd
+├── README.md
+├── book.bib
+├── bookdown-template.Rproj
+├── content-files
+    └── sample-pdf.pdf
+├── docs
+    └── [html files &amp; other generated content]
+├── img
+    ├── bioinformatics.ca-logo.svg
+    ├── faculty
+        ├── michelle-brazas.jpg
+        └── nia-hughes.jpeg
+    ├── favicon.ico
+    └── sponsors
+         └── Your-Sponsor-Here.svg
+├── index.Rmd
+├── packages.bib
+├── preamble.tex
+└── style.css</code></pre>
 <p>Look at all these .Rmd files! Recall that .Rmd -&gt; .md -&gt; .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.</p>
 <p>However, 2 other important files are the <code>_output.yml</code> files and the <code>_bookdown.yml</code> files. They help tell bookdown what we want and what to do, especially when making our website. Everything you need to edit here is made clear in the template, so do not worry too much about getting the ride code so that your project builds!</p>
 <p>The only .Rmd that must have some configuration details is the landing page: index.Rmd. This is what fills up the beginning of the index.Rmd file, before the ---, which tells bookdown to stop looking for configuration information.</p>

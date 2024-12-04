@@ -769,6 +769,43 @@ But which files do we edit? Well alas, it's time to discuss the file setup.
 
 \section{File Setup Explanation}\label{file-setup}
 
+Here is a tree diagram of the bookdown template setup. (Note that this mimics how RStudio displays the files, if your RStudio shows these template files in a different order, right click your file window and press ``Reload'')
+
+\begin{verbatim}
+bookdown-template
+├── _404.md
+├── _bookdown.yml
+├── _bookdown_files
+├── _main_files # image and pdf output files
+├── _output.yml
+├── .gitignore
+├── .Rhistory
+├── 010-course-schedule.Rmd
+├── 011-content-files.Rmd
+├── 012-meet-your-fac.Rmd
+├── 020-module-1.Rmd
+├── 030-module-2.Rmd
+├── README.md
+├── book.bib
+├── bookdown-template.Rproj
+├── content-files
+    └── sample-pdf.pdf
+├── docs
+    └── [html files & other generated content]
+├── img
+    ├── bioinformatics.ca-logo.svg
+    ├── faculty
+        ├── michelle-brazas.jpg
+        └── nia-hughes.jpeg
+    ├── favicon.ico
+    └── sponsors
+         └── Your-Sponsor-Here.svg
+├── index.Rmd
+├── packages.bib
+├── preamble.tex
+└── style.css
+\end{verbatim}
+
 Look at all these .Rmd files! Recall that .Rmd -\textgreater{} .md -\textgreater{} .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.
 
 However, 2 other important files are the \texttt{\_output.yml} files and the \texttt{\_bookdown.yml} files. They help tell bookdown what we want and what to do, especially when making our website. Everything you need to edit here is made clear in the template, so do not worry too much about getting the ride code so that your project builds!
