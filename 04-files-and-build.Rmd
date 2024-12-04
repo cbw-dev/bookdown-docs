@@ -8,7 +8,7 @@ Before we dive deep into what to do with these folders, let's explore how bookdo
 
 Here is a general summary of how Bookdown creates html websites from .Rmd files.
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=794&amp;h=147">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=792&amp;h=237">
 
 Essentially, knitr renders and runs all the code, and the outputs are converted into markdown. After knitr, we essentially have a bunch of only markdown files.
 
@@ -75,7 +75,9 @@ But which files do we edit? Well alas, it's time to discuss the file setup.
 ## File Setup Explanation {#file-setup}
 
 Recall:
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=794&amp;h=147">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=792&amp;h=237">
+
+Hence, all the .Rmd files create a page in the produced website! To create more pages, you will be creating more .Rmd files.
 
 Here is a tree diagram of the bookdown template setup. (Note that this mimics how RStudio displays the files, if your RStudio shows these template files in a different order, right click your file window and press "Reload")
 
@@ -120,17 +122,40 @@ bookdown-template
 ├── preamble.tex
 └── style.css # css styling options are defined here - feel free to add your own styling features
 ```
+###### _output.yml & _bookdown.yml {-}
+2  important files are the `_output.yml` files and the `_bookdown.yml` files. They help tell bookdown what we want and what to do, especially when making our website.
 
-Look at all these .Rmd files! Recall that .Rmd -> .md -> .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.
+You will only have to edit _output.yml a bit. The _output.yml file creates the table of contents/sidebar you see on the left of the workshop. It is written in HTML, which is why it looks so different. There are 3 things either the RC or the workshop team will need to do:
+1. Change the workshop name: [YOUR WORKSHOP NAME] on line 7
+2. Add your sponsors: Replace "Your-Sponsor-Here.svg" with the file name of your sponsors name/logo. Remeber to place these files inside the ./img/sponsors/ folder.
+3. Replace your workshop repo edit link.
+  - USERNAME = organization name = bioinformaticsdotca
+  - REPO = your workshop repo name
+  - BRANCH = main
+  
+  <!-- #3 THIS MAY NEED FIXING -->
 
-However, 2 other important files are the `_output.yml` files and the `_bookdown.yml` files. They help tell bookdown what we want and what to do, especially when making our website. Everything you need to edit here is made clear in the template, so do not worry too much about getting the ride code so that your project builds!
+###### Organizing the Table of Contents {-}
 
-The only .Rmd that must have some configuration details is the landing page: index.Rmd. This is what fills up the beginning of the index.Rmd file, before the \-\-\-, which tells bookdown to stop looking for configuration information.
+The order of the sidebar is completely dependent on the alphabetical order of the files (see your bottom right window pane! The order is generally the same as the order shown in the RStudio file window pane). Our template has numbering first, to help ease our understanding and organization of files. The only file without this is `index.Rmd`, since as the landing page we can not change the file name.
 
-Let's move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with #, each subheaders have increasingly more # symbols (##, ###, and more all create smaller subheaders). Try to have only 1 single # as a header on one page! (You may get warnings otherwise).
+###### index.Rmd {-}
 
-But then how does bookdown know which page goes next on our sidebar? The order of the sidebar is completely dependent on the alphaetical order of the files (see your bottom right!). Our template has numbering first, to help ease our understanding.
+The only .Rmd that must have some configuration details is the landing page: **index.Rmd**. This is what fills up the beginning of the index.Rmd file, before the \-\-\-, which tells bookdown to stop looking for configuration information.
 
+###### .Rmd Files {-}
+
+Let's move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with #, each subheader has increasingly more # symbols (##, ###, and more all create smaller subheaders). Try to have only 1 single # as a header on one page! (You may get warnings otherwise).
+
+###### How to Create a New File {-}
+
+You can create new files anywhere.
+
+###### CBW Organization Files {-}
+
+###### Bookdown's Wesbite Building Files {-}
+
+###### 404 Page {-}
 
 <!-- "By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a `_404.Rmd` or `_404.md` file to your project root and use code and/or Markdown syntax." -->
 
