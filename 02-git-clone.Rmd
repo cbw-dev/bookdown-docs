@@ -10,17 +10,17 @@ Regional Coordinators will be tasked with creating and slightly editing each new
 
 2. Click on the "Use this template" green button, which is to the left of the title of the repository "bookdown-template". Then, press the dropdown option: "Create a new repository", as seen below.
 
-![Image of the repo and how to find make a template](img/template/make-a-template.png)\
-<br> <!-- enforces a space after the image -->
+    ![Image of the repo and how to find make a template](img/template/make-a-template.png)\
+    <br> <!-- enforces a space after the image -->
 
 3. You will be brought to a "Create a new repository" page. Fill out the blanks as seen below. That is, change the owner to "bioinformatics.ca" [NOTE FOR TESTING PURPOSES: use cbw-dev], make it public, fill in the repository name and description according to [CBW Guidelines](). <br>"Include all branches" does not need to be selected.
+    
+    ![Image showing how to make a new repo from a template repo](img/template/make-new-repo.png)\
+    <br>
 
-![Image showing how to make a new repo from a template repo](img/template/make-new-repo.png)\
-<br>
-
-This may take a couple seconds to generate. After it loads, you will be brought to a new repository for the new workshop!
-
-Now, let's turn this into a website - let's deploy!
+    This may take a couple seconds to generate. After it loads, you will be brought to a new repository for the new workshop!
+    
+    Now, let's turn this into a website - let's deploy!
 
 ### Workshop Repo VS Workshop Website
 
@@ -43,9 +43,9 @@ Now, you have made a repository that holds what GitHub needs to make our website
 
 4. Then, change the folder from `/ root` to `/docs`. Then press save.
 ![Select /docs as the branch](img/git-instruct/github-deploy-docs.png)\
-
-Great! Now we're waiting on the page to build and deploy, which should take less than a minute.
-
+    
+    Great! Now we're waiting on the page to build and deploy, which should take less than a minute.
+    
 To see updates, go to the **Actions** page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.
 
 ![Image showing the different possibilities of deploy a github page](img/git-instruct/github-pages-actions-explained.png)\

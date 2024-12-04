@@ -32,6 +32,7 @@ formatting-your-content---markdown
 chapters
 subheader
 subheader-1
+text-formatting
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables
@@ -41,6 +42,7 @@ citations-not-sure-if-we-need-workshops-need-citations
 equations
 theorems-and-proofs
 callout-blocks-will-be-added-later
+use-html
 how-to-render-code
 brain-dump-faq
 danger-zones

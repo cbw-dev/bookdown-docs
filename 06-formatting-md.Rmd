@@ -1,6 +1,6 @@
 # Formatting Your Content - Markdown
 
-Now we know which files to edit, but how can we edit these files? How do we format 
+Now we know which files to edit, but how can we edit these files? How do we format our text, links, headers, ...?
 
 ## Chapters
 
@@ -31,6 +31,14 @@ Chapters and sections are numbered by default. To un-number a heading, add a `{.
 ```
 ### An unnumbered subheader {-}
 ```
+
+## Text Formatting
+Before we go ahead with much more formatting possibilities, let's get the basics of markdown formatting options for basic text.(Tip: There are many resources online that can help give more information!)
+
+
+> Warning: Bookdown currently can not render Markdown to-do lists properly. Alternatively, use [this tip](#use-html) instead!
+
+> TIP: For nesting inside a list, put 2 tabs (text should turn grey)
 
 ## Cross-references {#cross}
 
@@ -127,12 +135,32 @@ You can learn more about this [here](https://bookdown.org/yihui/bookdown/markdow
 
 The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html
 
+## TIP: Markdown Not Working/Not Enough? Use HTML! {#use-html}
 
-<!-- ## Metadata for sharing -->
+Recall from this diagram that all files are rendered into .html files for the final official website.
 
-<!-- Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the `index.Rmd` YAML. To setup, set the `url` for your book and the path to your `cover-image` file. Your book's `title` and `description` are also used. -->
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=792&amp;h=237">
 
-<!-- This `gitbook` uses the same social sharing data across all chapters in your book- all links shared will look the same. -->
+Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown;s formatting isn't working, or you're not satisfied with Markdown's formatting options, use HTML/CSS formatting instead!
 
-<!-- Specify your book's source repository on GitHub using the `edit` key under the configuration options in the `_output.yml` file, which allows users to suggest an edit by linking to a chapter's source file.  -->
+Here are some examples:
+
+1. Markdown has no formatting options for underlining. Hence, underline code in a .Rmd file as follows:
+
+    ```
+    <u> underlined text</u>
+    ```
+    <u> underlined text</u>
+
+2. Bookdown currently renders to-do lists incorrectly. Instead, you can use the following html code:
+
+    ```
+    <div style="list-style-type: none;">
+      <label><input type="checkbox"> check box</label><br>
+    </div>
+    ```
+    
+    <div style="list-style-type: none;">
+      <label><input type="checkbox"> check box</label><br>
+    </div>
 

@@ -169,23 +169,18 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Download and install R (You need R 3.6.0+ installed for RStudio) \href{https://cran.rstudio.com/}{here}. Follow the instructions for your operating system (Linux/macOS/Windows).
+
   {[}Maybe we should have more installation instructions - a video?{]}
-\end{enumerate}
 
-\begin{quote}
-Note: You can check if windows was installed properly on \emph{macOS} by running the command \texttt{R} in terminal. On \emph{windows}, --must test--.
-\end{quote}
+  \begin{quote}
+  Note: You can check if windows was installed properly on \emph{macOS} by running the command \texttt{R} in terminal. On \emph{windows}, --must test--.
+  \end{quote}
 
-\begin{quote}
-Note: We will not be using the R console, instead, we will be using RStudio!
-\end{quote}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
+  \begin{quote}
+  Note: We will not be using the R console, instead, we will be using RStudio!
+  \end{quote}
 \item
   Download and install RStudio \href{https://posit.co/download/rstudio-desktop/\#:~:text=AND\%20INSTALL\%20R-,2\%3A\%20Install\%20RStudio,-DOWNLOAD\%20RSTUDIO\%20DESKTOP}{here}. Scroll down to find downloads for non-macOS.
 \item
@@ -208,23 +203,17 @@ Regional Coordinators will be tasked with creating and slightly editing each new
   First, let's go to the \href{https://github.com/cbw-dev/bookdown-template}{bookdown template}.
 \item
   Click on the ``Use this template'' green button, which is to the left of the title of the repository ``bookdown-template''. Then, press the dropdown option: ``Create a new repository'', as seen below.
-\end{enumerate}
 
-\includegraphics{img/template/make-a-template.png}\\
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
+  \includegraphics{img/template/make-a-template.png}\\
 \item
   You will be brought to a ``Create a new repository'' page. Fill out the blanks as seen below. That is, change the owner to ``bioinformatics.ca'' {[}NOTE FOR TESTING PURPOSES: use cbw-dev{]}, make it public, fill in the repository name and description according to \href{}{CBW Guidelines}. ``Include all branches'' does not need to be selected.
+
+  \includegraphics{img/template/make-new-repo.png}\\
+
+  This may take a couple seconds to generate. After it loads, you will be brought to a new repository for the new workshop!
+
+  Now, let's turn this into a website - let's deploy!
 \end{enumerate}
-
-\includegraphics{img/template/make-new-repo.png}\\
-
-This may take a couple seconds to generate. After it loads, you will be brought to a new repository for the new workshop!
-
-Now, let's turn this into a website - let's deploy!
 
 \subsection{Workshop Repo VS Workshop Website}\label{workshop-repo-vs-workshop-website}
 
@@ -252,9 +241,9 @@ GitHub (ex. \url{https://github.com/cbw-dev/bookdown-template}) holds your repo,
 \item
   Then, change the folder from \texttt{/\ root} to \texttt{/docs}. Then press save.
   \includegraphics{img/git-instruct/github-deploy-docs.png}\\
-\end{enumerate}
 
-Great! Now we're waiting on the page to build and deploy, which should take less than a minute.
+  Great! Now we're waiting on the page to build and deploy, which should take less than a minute.
+\end{enumerate}
 
 To see updates, go to the \textbf{Actions} page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.
 
@@ -452,116 +441,83 @@ Essentially, we're doing these steps to update and receive updates from our GitH
 
 Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub and SSH connection, consider using the official docs.) The official docs may be more up-to-date.
 
+\begin{quote}
+Note: You can do these commands anywhere in your files. You do not need to be in your home directory.
+\end{quote}
+
 \subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key}{Generating a new SSH key}}{Generating a new SSH key}}\label{generating-a-new-ssh-key}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Open Terminal.
-\end{enumerate}
-
-\begin{quote}
-Note: You can do these commands anywhere in your file explorer.
-\end{quote}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
 \item
   Copy and paste this text into your terminal. \textbf{Replace the email given below with your GitHub email address} (the email address you used to sign up for Github). Press enter to run the command.
-\end{enumerate}
 
 \begin{verbatim}
 ssh-keygen -t ed25519 -C "your_email@example.com"
 \end{verbatim}
 
-You will get this output:
+  You will get this output:
+  \texttt{\textgreater{}\ Generating\ public/private\ ALGORITHM\ key\ pair.}
 
-\begin{verbatim}
-> Generating public/private ALGORITHM key pair.
-\end{verbatim}
+  \begin{quote}
+  Note: Output in your terminal begins with this ``\textgreater{}'' symbol, as seen above!
+  \end{quote}
 
-\begin{quote}
-Note: Output in your terminal begins with this ``\textgreater{}'' symbol, as seen above!
-\end{quote}
+  You will then be prompted with this message:
+  \texttt{\textgreater{}\ Enter\ a\ file\ in\ which\ to\ save\ the\ key\ (/Users/YOU/.ssh/id\_ALGORITHM):}
+  Press enter. (This uses a default file and default file location.)
 
-You will then be prompted with this message:
-
-\begin{verbatim}
-> Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):
-\end{verbatim}
-
-Press enter. (This uses a default file and default file location.)
-
-If you have already created a SSH key and you are asked to rewrite another key, look at the \href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key:~:text=Please\%20note\%20that\%20if\%20you\%20created\%20SSH\%20keys\%20previously\%2C\%20ssh\%2Dkeygen\%20may\%20ask\%20you\%20to\%20rewrite\%20another\%20key\%2C\%20in\%20which\%20case\%20we\%20recommend\%20creating\%20a\%20custom\%2Dnamed\%20SSH\%20key.\%20To\%20do\%20so\%2C\%20type\%20the\%20default\%20file\%20location\%20and\%20replace\%20id_ALGORITHM\%20with\%20your\%20custom\%20key\%20name.}{GitHub Docs} for specific steps.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
+  If you have already created a SSH key and you are asked to rewrite another key, look at the \href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key:~:text=Please\%20note\%20that\%20if\%20you\%20created\%20SSH\%20keys\%20previously\%2C\%20ssh\%2Dkeygen\%20may\%20ask\%20you\%20to\%20rewrite\%20another\%20key\%2C\%20in\%20which\%20case\%20we\%20recommend\%20creating\%20a\%20custom\%2Dnamed\%20SSH\%20key.\%20To\%20do\%20so\%2C\%20type\%20the\%20default\%20file\%20location\%20and\%20replace\%20id_ALGORITHM\%20with\%20your\%20custom\%20key\%20name.}{GitHub Docs} for specific steps.
 \item
   Type a secure passphrase (make up a password) when prompted with:
-\end{enumerate}
 
 \begin{verbatim}
 > Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
 > Enter same passphrase again: [TYPE THE SAME PASSPHRASE]
 \end{verbatim}
+\end{enumerate}
 
 \subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#adding-your-ssh-key-to-the-ssh-agent}{Adding your SSH key to the ssh-agent}}{Adding your SSH key to the ssh-agent}}\label{adding-your-ssh-key-to-the-ssh-agent}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   In terminal, run the following command
-\end{enumerate}
 
 \begin{verbatim}
 eval "$(ssh-agent -s)"
 \end{verbatim}
 
-You will get this output:
-\texttt{\textgreater{}\ Agent\ pid\ 59566}
+  You will get this output:
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
+\begin{verbatim}
+> Agent pid 59566
+\end{verbatim}
 \item
   If you're using macOS Sierra 10.12.2 or later additions, you need to modify your \texttt{\textasciitilde{}/.ssh/config} file.
 
   \begin{enumerate}
   \def\labelenumii{\arabic{enumii}.}
-  \tightlist
   \item
     Check if you have a \texttt{\textasciitilde{}/.ssh/config} file: Run the following command:
-  \end{enumerate}
 
 \begin{verbatim}
 open ~/.ssh/config
 \end{verbatim}
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{1}
-  \tightlist
   \item
-    If you get the following ouput:
-  \end{enumerate}
+    If you get the following output:
 
 \begin{verbatim}
 > The file /Users/YOU/.ssh/config does not exist.
 \end{verbatim}
 
-  Create the file using the touch command: run the command given below
-  \texttt{touch\ \textasciitilde{}/.ssh/config}
+    Create the file using the touch command: run the command given below
 
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{2}
-  \tightlist
+\begin{verbatim}
+touch ~/.ssh/config
+\end{verbatim}
   \item
     Edit your \texttt{\textasciitilde{}/.ssh/config} file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.
 
@@ -594,11 +550,11 @@ Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
   \end{enumerate}
 \item
   Return to terminal. Run the following command:
-\end{enumerate}
 
 \begin{verbatim}
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 \end{verbatim}
+\end{enumerate}
 
 \subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account\#adding-a-new-ssh-key-to-your-account}{Adding a new SSH key to your account}}{Adding a new SSH key to your account}}\label{adding-a-new-ssh-key-to-your-account}
 
@@ -628,7 +584,7 @@ pbcopy < ~/.ssh/id_ed25519.pub
 \item
   Select the type of key between ``authentication'' or ``signing''. (For our purposes, selecting authentication is fine).
 \item
-  in the ``Key'' field, paste (we are pasting what we copied in step 1).
+  In the ``Key'' field, paste (we are pasting what we copied in step 1).
 \item
   Click \textbf{Add SSH Key}.
 \item
@@ -647,22 +603,16 @@ Thankfully, we only need to do these steps once! Additionally, most security que
   Navigate to where in your local file system you want to have your workshop in (hint: cd + \texttt{enter}).
 \item
   Return to your workshop repository on GitHub. Find the ssh for your workshop repository: first, click the green button entitled \texttt{\textless{}\ \textgreater{}\ Code} ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
-\end{enumerate}
 
-\includegraphics{img/git-instruct/copy-ssh.png}\\
+  \includegraphics{img/git-instruct/copy-ssh.png}\\
 
-Then put this command into your command line, within the folder you want the workshop folder to be in.
+  Then put this command into your command line, within the folder you want the workshop folder to be in.
 
-For example, if my organization is named: jq-11 and my workshop name is ``workshop-name'', I would enter this into my terminal.
+  For example, if my organization is named: jq-11 and my workshop name is ``workshop-name'', I would enter this into my terminal.
 
 \begin{verbatim}
 git clone git@github.com:jq-11/workshop-name.git
 \end{verbatim}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
 \item
   You should be ready to go! With your given permissions, you should be able to git push and git pull fine!
 \end{enumerate}
@@ -823,12 +773,26 @@ Here is a tree diagram of the bookdown template setup. (Note that this mimics ho
 2 important files are the \texttt{\_output.yml} files and the \texttt{\_bookdown.yml} files. They help tell bookdown what we want and what to do, especially when making our website.
 
 You will only have to edit \_output.yml a bit. The \_output.yml file creates the table of contents/sidebar you see on the left of the workshop. It is written in HTML, which is why it looks so different. There are 3 things either the RC or the workshop team will need to do:
-1. Change the workshop name: {[}YOUR WORKSHOP NAME{]} on line 7
-2. Add your sponsors: Replace ``Your-Sponsor-Here.svg'' with the file name of your sponsors name/logo. Remeber to place these files inside the ./img/sponsors/ folder.
-3. Replace your workshop repo edit link.
-- USERNAME = organization name = bioinformaticsdotca
-- REPO = your workshop repo name
-- BRANCH = main
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Change the workshop name: {[}YOUR WORKSHOP NAME{]} on line 7.
+\item
+  Add your sponsors: Replace ``Your-Sponsor-Here.svg'' with the file name of your sponsors name/logo. Remeber to place these files inside the ./img/sponsors/ folder.
+\item
+  Replace your workshop repo edit link.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    USERNAME = organization name = bioinformaticsdotca
+  \item
+    REPO = your workshop repo name
+  \item
+    BRANCH = main
+  \end{itemize}
+\end{enumerate}
 
 \subparagraph*{Organizing the Table of Contents}\label{organizing-the-table-of-contents}
 \addcontentsline{toc}{subparagraph}{Organizing the Table of Contents}
@@ -904,44 +868,27 @@ Now, we know what our files mean and how to edit them. How do we get this onto G
 
 Now, we will be able to see a Git window in the top right. Click ``Git'' to open this window.
 
-\begin{figure}
-\centering
-\includegraphics{img/git-instruct/RStudio-with-git-window-open.png}
-\caption{RStudio with Git window open}
-\end{figure}
+\includegraphics{img/git-instruct/RStudio-with-git-window-open.png}\\
 
 Let's say we only edited \texttt{index.Rmd}, now we see the newly edited files. Changed files that need to be updated on GitHub will show up in this window, like how \texttt{index.Rmd} is seen above. (Do not worry too much about \texttt{.DS\_Store} and \texttt{.gitignore} do.) Let's try to push this change to GitHub.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{12}
-\tightlist
 \item
   Select all the edited files.
-\end{enumerate}
 
-\includegraphics{img/git-instruct/git-window-selected-items.png}\\
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{13}
-\tightlist
+  \includegraphics{img/git-instruct/git-window-selected-items.png}\\
 \item
   Then, click the Commit button, which appears above your selected items. A window pane will appear (shown below).
-\end{enumerate}
 
-\includegraphics{img/git-instruct/git-commit-window.png}\\
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{14}
+  \includegraphics{img/git-instruct/git-commit-window.png}\\
 \item
   Add a commit message in the corresponding box, and then press commit below it.
 \item
   A new window will show up, detailing your updates. Close this window and then press \textbf{Push} to push your updates to GitHub.
-\end{enumerate}
 
-\includegraphics{img/git-instruct/git-window-post-commit.png}\\
+  \includegraphics{img/git-instruct/git-window-post-commit.png}\\
+\end{enumerate}
 
 Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a \textbf{Pull} button in the Git window within RStudio!
 
@@ -951,7 +898,7 @@ Git pushing will automatically update the website, you can see the updates and p
 
 \chapter{Formatting Your Content - Markdown}\label{formatting-your-content---markdown}
 
-Now we know which files to edit, but how can we edit these files? How do we format
+Now we know which files to edit, but how can we edit these files? How do we format our text, links, headers, \ldots?
 
 \section{Chapters}\label{chapters}
 
@@ -987,6 +934,18 @@ Chapters and sections are numbered by default. To un-number a heading, add a \te
 \begin{verbatim}
 ### An unnumbered subheader {-}
 \end{verbatim}
+
+\section{Text Formatting}\label{text-formatting}
+
+Before we go ahead with much more formatting possibilities, let's get the basics of markdown formatting options for basic text.(Tip: There are many resources online that can help give more information!)
+
+\begin{quote}
+Warning: Bookdown currently can not render Markdown to-do lists properly. Alternatively, use \hyperref[use-html]{this tip} instead!
+\end{quote}
+
+\begin{quote}
+TIP: For nesting inside a list, put 2 tabs (text should turn grey)
+\end{quote}
 
 \section{Cross-references}\label{cross}
 
@@ -1028,7 +987,7 @@ See Figure \ref{fig:nice-fig}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{_main_files/figure-latex/nice-fig-1} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.}]{_main_files/figure-latex/nice-fig-1} 
 
 }
 
@@ -1128,6 +1087,36 @@ You can learn more about this \href{https://bookdown.org/yihui/bookdown/markdown
 \section{Callout blocks (will be added later)}\label{callout-blocks-will-be-added-later}
 
 The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
+
+\section{TIP: Markdown Not Working/Not Enough? Use HTML!}\label{use-html}
+
+Recall from this diagram that all files are rendered into .html files for the final official website.
+
+Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown;s formatting isn't working, or you're not satisfied with Markdown's formatting options, use HTML/CSS formatting instead!
+
+Here are some examples:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Markdown has no formatting options for underlining. Hence, underline code in a .Rmd file as follows:
+
+\begin{verbatim}
+<u> underlined text</u>
+\end{verbatim}
+
+  underlined text
+\item
+  Bookdown currently renders to-do lists incorrectly. Instead, you can use the following html code:
+
+\begin{verbatim}
+<div style="list-style-type: none;">
+  <label><input type="checkbox"> check box</label><br>
+</div>
+\end{verbatim}
+
+  check box
+\end{enumerate}
 
 \chapter{How to Render Code}\label{how-to-render-code}
 

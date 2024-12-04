@@ -12,12 +12,12 @@ First, let's explain installations.
 Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated development environment i.e. the platform we will be working in) is RStudio.
 
 1. Download and install R (You need R 3.6.0+ installed for RStudio) [here](https://cran.rstudio.com/). Follow the instructions for your operating system (Linux/macOS/Windows).
-<br>
-[Maybe we should have more installation instructions - a video?]
 
-> Note: You can check if windows was installed properly on *macOS* by running the command `R` in terminal. On *windows*, --must test--.
-
-> Note: We will not be using the R console, instead, we will be using RStudio!
+    [Maybe we should have more installation instructions - a video?]
+    
+    > Note: You can check if windows was installed properly on *macOS* by running the command `R` in terminal. On *windows*, --must test--.
+    
+    > Note: We will not be using the R console, instead, we will be using RStudio!
 
 2. Download and install RStudio [here](https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP). Scroll down to find downloads for non-macOS.
 

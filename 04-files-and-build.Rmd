@@ -126,13 +126,17 @@ bookdown-template
 2  important files are the `_output.yml` files and the `_bookdown.yml` files. They help tell bookdown what we want and what to do, especially when making our website.
 
 You will only have to edit _output.yml a bit. The _output.yml file creates the table of contents/sidebar you see on the left of the workshop. It is written in HTML, which is why it looks so different. There are 3 things either the RC or the workshop team will need to do:
-1. Change the workshop name: [YOUR WORKSHOP NAME] on line 7
+
+1. Change the workshop name: [YOUR WORKSHOP NAME] on line 7.
+
 2. Add your sponsors: Replace "Your-Sponsor-Here.svg" with the file name of your sponsors name/logo. Remeber to place these files inside the ./img/sponsors/ folder.
+
 3. Replace your workshop repo edit link.
-  - USERNAME = organization name = bioinformaticsdotca
-  - REPO = your workshop repo name
-  - BRANCH = main
-  
+
+    - USERNAME = organization name = bioinformaticsdotca
+    - REPO = your workshop repo name
+    - BRANCH = main
+    
   <!-- #3 MAY NEED FIXING -->
 
 ###### Organizing the Table of Contents {-}
@@ -183,23 +187,23 @@ Now, we know what our files mean and how to edit them. How do we get this onto G
 
 Now, we will be able to see a Git window in the top right. Click "Git" to open this window.
 
-![RStudio with Git window open](img/git-instruct/RStudio-with-git-window-open.png)
+![RStudio with Git window open](img/git-instruct/RStudio-with-git-window-open.png)\
 
 Let's say we only edited `index.Rmd`, now we see the newly edited files. Changed files that need to be updated on GitHub will show up in this window, like how `index.Rmd` is seen above. (Do not worry too much about `.DS_Store` and `.gitignore` do.) Let's try to push this change to GitHub.
 
-13. Select all the edited files.
+1. Select all the edited files.
 
-![selected files in the git window and the commit button highlighted](img/git-instruct/git-window-selected-items.png)\
+    ![selected files in the git window and the commit button highlighted](img/git-instruct/git-window-selected-items.png)\
 
-14. Then, click the Commit button, which appears above your selected items. A window pane will appear (shown below).
+2. Then, click the Commit button, which appears above your selected items. A window pane will appear (shown below).
 
-![git commit window pane](img/git-instruct/git-commit-window.png)\
+    ![git commit window pane](img/git-instruct/git-commit-window.png)\
 
-15. Add a commit message in the corresponding box, and then press commit below it.
+3. Add a commit message in the corresponding box, and then press commit below it.
 
-16. A new window will show up, detailing your updates. Close this window and then press **Push** to push your updates to GitHub.
+4. A new window will show up, detailing your updates. Close this window and then press **Push** to push your updates to GitHub.
 
-![post git commit window](img/git-instruct/git-window-post-commit.png)\
+    ![post git commit window](img/git-instruct/git-window-post-commit.png)\
 
 Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a **Pull** button in the Git window within RStudio! 
 

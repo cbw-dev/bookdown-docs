@@ -107,65 +107,72 @@ Essentially, we're doing these steps to update and receive updates from our GitH
 
 Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub and SSH connection, consider using the official docs.) The official docs may be more up-to-date.
 
+> Note: You can do these commands anywhere in your files. You do not need to be in your home directory.
+
 ### [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
 
 1. Open Terminal.
 
-> Note: You can do these commands anywhere in your file explorer.
-
 2. Copy and paste this text into your terminal. **Replace the email given below with your GitHub email address** (the email address you used to sign up for Github). Press enter to run the command.
 
-```
-ssh-keygen -t ed25519 -C "your_email@example.com"
-```
-
-You will get this output:
-```
-> Generating public/private ALGORITHM key pair.
-```
-
-> Note: Output in your terminal begins with this ">" symbol, as seen above!
-
-You will then be prompted with this message: 
-```
-> Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):
-```
-Press enter. (This uses a default file and default file location.)
-
-If you have already created a SSH key and you are asked to rewrite another key, look at the [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name.) for specific steps.
+    ```
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    ```
+    
+    You will get this output:
+    ```
+    > Generating public/private ALGORITHM key pair.
+    ```
+    
+    > Note: Output in your terminal begins with this ">" symbol, as seen above!
+    
+    You will then be prompted with this message: 
+    ```
+    > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):
+    ```
+    Press enter. (This uses a default file and default file location.)
+    
+    If you have already created a SSH key and you are asked to rewrite another key, look at the [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name.) for specific steps.
 
 3. Type a secure passphrase (make up a password) when prompted with:
-
-```
-> Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
-> Enter same passphrase again: [TYPE THE SAME PASSPHRASE]
-```
+    
+    ```
+    > Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
+    > Enter same passphrase again: [TYPE THE SAME PASSPHRASE]
+    ```
 
 ### [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 1. In terminal, run the following command
-  ```
-  eval "$(ssh-agent -s)"
-  ```
-  You will get this output:
-  ```
-  > Agent pid 59566
-  ```
+
+    ```
+    eval "$(ssh-agent -s)"
+    ```
+    
+    You will get this output:
+    
+    ```
+    > Agent pid 59566
+    ```
 
 2. If you're using macOS Sierra 10.12.2 or later additions, you need to modify your `~/.ssh/config` file.
     1. Check if you have a `~/.ssh/config` file: Run the following command:
-    ```
-    open ~/.ssh/config
-    ```
-    2. If you get the following ouput:
-    ```
-    > The file /Users/YOU/.ssh/config does not exist.
-    ```
-      Create the file using the touch command: run the command given below
-      ```
-      touch ~/.ssh/config
-      ```
-      
+    
+        ```
+        open ~/.ssh/config
+        ```
+    
+    2. If you get the following output:
+    
+        ```
+        > The file /Users/YOU/.ssh/config does not exist.
+        ```
+        
+        Create the file using the touch command: run the command given below
+        
+        ```
+        touch ~/.ssh/config
+        ```
       
     3. Edit your `~/.ssh/config` file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.
        - Run `nano ~/.ssh/config`
@@ -183,16 +190,18 @@ If you have already created a SSH key and you are asked to rewrite another key, 
        ```
 
 3. Return to terminal. Run the following command:
-```
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-```
+
+    ```
+    ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+    ```
 
 ### [Adding a new SSH key to your account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account)
 
 1. Copy the SSH public key: Run the following command to copy the content of the ~/.ssh/id_ed25519.pub file to your clipboard:
-```
-pbcopy < ~/.ssh/id_ed25519.pub
-```
+
+  ```
+  pbcopy < ~/.ssh/id_ed25519.pub
+  ```
 
 2. Go to your GitHub account on the [GitHub](https://github.com/) website. Click on your profile picture (icon in the upper right). Then, select **Settings**. 
 
@@ -205,7 +214,7 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 6. Select the type of key between "authentication" or "signing". (For our purposes, selecting authentication is fine).
 
-7. in the "Key" field, paste (we are pasting what we copied in step 1). 
+7. In the "Key" field, paste (we are pasting what we copied in step 1). 
 
 8. Click **Add SSH Key**. 
 
@@ -221,14 +230,15 @@ Thankfully, we only need to do these steps once! Additionally, most security que
 
 2. Return to your workshop repository on GitHub. <br>Find the ssh for your workshop repository: first, click the green button entitled `< > Code` ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like git@github.com:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
 
-![how to find the ssh for your repo](img/git-instruct/copy-ssh.png)\
-
-Then put this command into your command line, within the folder you want the workshop folder to be in.
-
-For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal.
-```
-git clone git@github.com:jq-11/workshop-name.git
-``` 
+    ![how to find the ssh for your repo](img/git-instruct/copy-ssh.png)\
+    
+    Then put this command into your command line, within the folder you want the workshop folder to be in.
+    
+    For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal.
+    
+    ```
+    git clone git@github.com:jq-11/workshop-name.git
+    ``` 
 
 4. You should be ready to go! With your given permissions, you should be able to git push and git pull fine!
 
