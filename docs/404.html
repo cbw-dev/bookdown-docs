@@ -28,7 +28,7 @@ set in the _output.yml file.</p>" />
 
 
 
-<meta name="date" content="2024-12-03" />
+<meta name="date" content="2024-12-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -128,6 +128,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -164,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#introduction-to-the-command-line"><i class="fa fa-check"></i><b>4.1</b> Introduction to the Command Line</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#terminal-linux-macos-command-prompt-and-windows-powershell-windows"><i class="fa fa-check"></i><b>4.1.1</b> Terminal (Linux, macOS), Command Prompt and Windows PowerShell (Windows)</a></li>
+<li class="chapter" data-level="4.1.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#terminal-command-prompt-and-windows-powershell"><i class="fa fa-check"></i><b>4.1.1</b> Terminal, Command Prompt and Windows PowerShell</a></li>
 <li class="chapter" data-level="4.1.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#common-commands-for-us"><i class="fa fa-check"></i><b>4.1.2</b> Common Commands (for us)</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection"><i class="fa fa-check"></i><b>4.2</b> Creating the SSH Connection</a>
@@ -325,6 +348,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

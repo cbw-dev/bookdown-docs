@@ -1,7 +1,6 @@
 fig:nice-fig
 tab:nice-tab
 eq:binom
-thm:tri
 cbws-bookdown-documentation
 getting-started
 installation
@@ -12,7 +11,8 @@ how-to-deploy-your-workshop-website
 setting-up-team-access-nia-will-fill-this-in
 command-line-ssh-connection-git-clone
 introduction-to-the-command-line
-terminal-command-prompt-anddows-powershell
+terminal-command-prompt-and-windows-powershell
+common-commands-for-us
 creating-the-ssh-connection
 generating-a-new-ssh-key
 adding-your-ssh-key-to-the-ssh-agent
@@ -58,6 +58,3 @@ how-to-make-a-git-repo-rc
 how-to-make-the-git-connection-adding-your-local-repo-to-github
 updating-github-via-rstudio
 how-to-deploy-your-workshop-website-1
-terminal-linux-macos-command-prompt-and-windows-powershell-windows
-common-commands-for-us
-hello

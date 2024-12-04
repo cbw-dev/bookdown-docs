@@ -28,7 +28,7 @@ set in the _output.yml file.</p>" />
 
 
 
-<meta name="date" content="2024-12-03" />
+<meta name="date" content="2024-12-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -128,6 +128,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -164,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#introduction-to-the-command-line"><i class="fa fa-check"></i><b>4.1</b> Introduction to the Command Line</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#terminal-linux-macos-command-prompt-and-windows-powershell-windows"><i class="fa fa-check"></i><b>4.1.1</b> Terminal (Linux, macOS), Command Prompt and Windows PowerShell (Windows)</a></li>
+<li class="chapter" data-level="4.1.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#terminal-command-prompt-and-windows-powershell"><i class="fa fa-check"></i><b>4.1.1</b> Terminal, Command Prompt and Windows PowerShell</a></li>
 <li class="chapter" data-level="4.1.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#common-commands-for-us"><i class="fa fa-check"></i><b>4.1.2</b> Common Commands (for us)</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection"><i class="fa fa-check"></i><b>4.2</b> Creating the SSH Connection</a>
@@ -271,8 +294,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>terminal (mac, unix based) vs command prompt (windows)</li>
 </ul>
-<div id="terminal-linux-macos-command-prompt-and-windows-powershell-windows" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Terminal (Linux, macOS), Command Prompt and Windows PowerShell (Windows)<a href="command-line-ssh-connection-git-clone.html#terminal-linux-macos-command-prompt-and-windows-powershell-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="terminal-command-prompt-and-windows-powershell" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Terminal, Command Prompt and Windows PowerShell<a href="command-line-ssh-connection-git-clone.html#terminal-command-prompt-and-windows-powershell" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.</p>
 <blockquote>
 <p>Note: Windows PowerShell tends to be more advanced than Command Prompt, and often can accept more commands that are accepted by Terminal than Command Prompt.</p>
@@ -281,6 +304,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="common-commands-for-us" class="section level3 hasAnchor" number="4.1.2">
 <h3><span class="header-section-number">4.1.2</span> Common Commands (for us)<a href="command-line-ssh-connection-git-clone.html#common-commands-for-us" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <!-- Consider making this explanation a video -->
+<p>We won’t need to know that many commands, but for easy navigation and understanding, here is what you (generally) need:</p>
 <div id="pwd" class="section level6 unnumbered hasAnchor">
 <h6>pwd<a href="command-line-ssh-connection-git-clone.html#pwd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <p>pwd stands for “print working directory”. For example, below our output is where in my folders the current .Rmd file that makes up this website is:</p>
@@ -298,17 +322,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 04-files-and-build.Rmd</code></pre>
 <p>A similar command in <strong>Command Prompt</strong> is <code>dir</code>, which also outputs the files and folders in your current directory (along with timestamps)!</p>
 </div>
-<div id="cd-tab" class="section level6 unnumbered hasAnchor">
-<h6>cd + <code>tab</code><a href="command-line-ssh-connection-git-clone.html#cd-tab" class="anchor-section" aria-label="Anchor link to header"></a></h6>
-<ul>
-<li>mkdir</li>
-<li>rmdir</li>
-<li>rmdir -r</li>
-<li>. = current folder</li>
-<li>.. = previous folder</li>
-<li>~ = home</li>
-<li>up and down arrows</li>
-</ul>
+<div id="cd" class="section level6 unnumbered hasAnchor">
+<h6>cd<a href="command-line-ssh-connection-git-clone.html#cd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“cd” stands for “change directory”. The command produces no output, but it allows you to go to a different directory than the one you’re currently in. For example,</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="command-line-ssh-connection-git-clone.html#cb5-1" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># recall: pwd tells us where we currently are</span></span>
+<span id="cb5-2"><a href="command-line-ssh-connection-git-clone.html#cb5-2" tabindex="-1"></a><span class="bu">cd</span> img <span class="co"># img is a folder in bookdown-docs</span></span>
+<span id="cb5-3"><a href="command-line-ssh-connection-git-clone.html#cb5-3" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;now switching directories&quot;</span> <span class="co"># outputs the following string</span></span>
+<span id="cb5-4"><a href="command-line-ssh-connection-git-clone.html#cb5-4" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+## now switching directories
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs/img</code></pre>
+<blockquote>
+<p><strong>Tip</strong>:<br>Typing “cd” and then hitting the <code>tab</code> key will give you the available directories you can go to from where you are, or what you have currently typed in. If there is only one option, hitting <code>tab</code> will fill in your command with that option. (This works when typing in any file location into your command line, not only using “cd”). On macOS, the terminal will give you a list if there are multiple options. On Windows, both Command Prompt and Windows Powershell will fill in potential options, and you can hit tab multiple times untill you find your desired file destination.</p>
+</blockquote>
+<p><strong>File Location Shorthands</strong>
+When referring to file addresses, there are helpful shorthands! Here’s a summary:
+- <code>.</code> = Current Directory
+- <code>..</code> = Parent Directory
+- <code>~</code> = Home Directory</p>
+<p>Here’s an example (recall, cd produces no output!):</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="command-line-ssh-connection-git-clone.html#cb7-1" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb7-2"><a href="command-line-ssh-connection-git-clone.html#cb7-2" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="co"># creates a line</span></span>
+<span id="cb7-3"><a href="command-line-ssh-connection-git-clone.html#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="command-line-ssh-connection-git-clone.html#cb7-4" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Current Directory Example&quot;</span></span>
+<span id="cb7-5"><a href="command-line-ssh-connection-git-clone.html#cb7-5" tabindex="-1"></a><span class="bu">cd</span> .</span>
+<span id="cb7-6"><a href="command-line-ssh-connection-git-clone.html#cb7-6" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb7-7"><a href="command-line-ssh-connection-git-clone.html#cb7-7" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
+<span id="cb7-8"><a href="command-line-ssh-connection-git-clone.html#cb7-8" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="command-line-ssh-connection-git-clone.html#cb7-9" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Parent Directory Example&quot;</span></span>
+<span id="cb7-10"><a href="command-line-ssh-connection-git-clone.html#cb7-10" tabindex="-1"></a><span class="bu">cd</span> ..</span>
+<span id="cb7-11"><a href="command-line-ssh-connection-git-clone.html#cb7-11" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb7-12"><a href="command-line-ssh-connection-git-clone.html#cb7-12" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
+<span id="cb7-13"><a href="command-line-ssh-connection-git-clone.html#cb7-13" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="command-line-ssh-connection-git-clone.html#cb7-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Home Directory Example&quot;</span></span>
+<span id="cb7-15"><a href="command-line-ssh-connection-git-clone.html#cb7-15" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb7-16"><a href="command-line-ssh-connection-git-clone.html#cb7-16" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+## 
+## Current Directory Example
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+## 
+## Parent Directory Example
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs
+## 
+## Home Directory Example
+## /Users/jqiu</code></pre>
+</div>
+<div id="mkdir" class="section level6 unnumbered hasAnchor">
+<h6>mkdir<a href="command-line-ssh-connection-git-clone.html#mkdir" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“mkdir [directory address]” stands for “make directory”. Essentially, mkdir will make an empty directory (folder) at a specified location. For example: <code>mkdir test</code> would create a folder named “test” in our current directory. The following commands do the same thing. Note: <code>mkdir ./test</code> does the same thing.</p>
+</div>
+<div id="rmdir" class="section level6 unnumbered hasAnchor">
+<h6>rmdir<a href="command-line-ssh-connection-git-clone.html#rmdir" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“rmdir [directory address]” removes an <em>empty</em> directory. For example, <code>rmdir test</code> would delete the directory we just made!</p>
+</div>
+<div id="rmdir--r-or-rmdir-s" class="section level6 unnumbered hasAnchor">
+<h6>rmdir -r OR rmdir /s<a href="command-line-ssh-connection-git-clone.html#rmdir--r-or-rmdir-s" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“rmdir -r [directory address]” (Terminal &amp; Windows PowerShell) and “rmdir /s [directory address]” removes a directory recursively, meaning it deletes all the contents of the folder as we all as the folder in itself. Be careful, you can not restore a directory you removed using “rmdir”!</p>
+</div>
+<div id="up-and-down-arrows" class="section level6 unnumbered hasAnchor">
+<h6>Up [⬆] and Down [⬇] Arrows<a href="command-line-ssh-connection-git-clone.html#up-and-down-arrows" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>One of the most useful tips for using the command line is to use your up [↑] and down [↓] arrow keys. Using the up [↑] key gives you the previous commands you typed, and the down [↓] arrow returns you to your earlier commands.</p>
 </div>
 </div>
 </div>
@@ -486,6 +560,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@ Using the command line, you can use text commands to interact with your computer
 
 - terminal (mac, unix based) vs command prompt (windows)
 
-### Terminal (Linux, macOS), Command Prompt and Windows PowerShell (Windows)
+### Terminal, Command Prompt and Windows PowerShell
 
 We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.
 
@@ -21,6 +21,8 @@ We can use the command line using certain tools and applications. Terminal is a 
 
 ### Common Commands (for us)
 <!-- Consider making this explanation a video -->
+
+We won't need to know that many commands, but for easy navigation and understanding, here is what you (generally) need:
 
 ###### pwd {-}
 
@@ -44,15 +46,58 @@ ls | head -n 4
 ```
 A similar command in **Command Prompt** is `dir`, which also outputs the files and folders in your current directory (along with timestamps)!
 
-###### cd + `tab` {-}
+###### cd {-}
 
-- mkdir
-- rmdir
-- rmdir -r
-- . = current folder
-- .. = previous folder
-- ~ = home
-- up and down arrows
+"cd" stands for "change directory". The command produces no output, but it allows you to go to a different directory than the one you're currently in. For example, 
+```{bash}
+pwd # recall: pwd tells us where we currently are
+cd img # img is a folder in bookdown-docs
+echo "now switching directories" # outputs the following string
+pwd
+```
+
+> **Tip**:<br>Typing "cd" and then hitting the `tab` key will give you the available directories you can go to from where you are, or what you have currently typed in. If there is only one option, hitting `tab` will fill in your command with that option. (This works when typing in any file location into your command line, not only using "cd"). On macOS, the terminal will give you a list if there are multiple options. On Windows, both Command Prompt and Windows Powershell will fill in potential options, and you can hit tab multiple times untill you find your desired file destination.
+
+**File Location Shorthands**
+When referring to file addresses, there are helpful shorthands! Here's a summary:
+- `.` = Current Directory
+- `..` = Parent Directory
+- `~` = Home Directory
+
+Here's an example (recall, cd produces no output!):
+```{bash}
+pwd
+echo -e # creates a line
+
+echo "Current Directory Example"
+cd .
+pwd
+echo -e
+
+echo "Parent Directory Example"
+cd ..
+pwd
+echo -e
+
+echo "Home Directory Example"
+cd ~
+pwd
+```
+###### mkdir {-}
+
+"mkdir [directory address]" stands for "make directory". Essentially, mkdir will make an empty directory (folder) at a specified location. For example: `mkdir test` would create a folder named "test" in our current directory. The following commands do the same thing. Note: `mkdir ./test` does the same thing.
+
+###### rmdir {-}
+
+"rmdir [directory address]" removes an *empty* directory. For example, `rmdir test` would delete the directory we just made!
+
+###### rmdir -r OR rmdir /s {-}
+
+"rmdir -r [directory address]" (Terminal & Windows PowerShell) and "rmdir /s [directory address]" removes a directory recursively, meaning it deletes all the contents of the folder as we all as the folder in itself. Be careful, you can not restore a directory you removed using "rmdir"!
+
+###### Up [⬆] and Down [⬇] Arrows {-}
+
+One of the most useful tips for using the command line is to use your up [↑] and down [↓] arrow keys. Using the up [↑] key gives you the previous commands you typed, and the down [↓] arrow returns you to your earlier commands.
 
 ## Creating the SSH Connection
 

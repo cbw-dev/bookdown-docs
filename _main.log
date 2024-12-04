@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.13)  3 DEC 2024 14:31
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.13)  4 DEC 2024 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,65 +1003,99 @@ Overfull \hbox (22.39343pt too wide) has occurred while \output is active
 ]
 Chapter 4.
 [17]
-Overfull \hbox (27.75pt too wide) in paragraph at lines 382--382
+Overfull \hbox (27.75pt too wide) in paragraph at lines 339--339
+[]\TU/lmtt/m/n/10 ## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/boo
+kdown-docs[] 
+ []
+
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 348.
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 379--379
+[]\TU/lmtt/m/n/10 ## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/boo
+kdown-docs[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 379--379
+[]\TU/lmtt/m/n/10 ## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/boo
+kdown-docs/img[] 
+ []
+
+[18]
+Overfull \hbox (27.75pt too wide) in paragraph at lines 425--425
+[]\TU/lmtt/m/n/10 ## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/boo
+kdown-docs[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 425--425
+[]\TU/lmtt/m/n/10 ## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/boo
+kdown-docs[] 
+ []
+
+[19]
+Missing character: There is no ⬆ (U+2B06) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no ⬇ (U+2B07) in font [lmroman10-bold]:mapping=tex-
+text;!
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 494--494
 []\TU/lmtt/m/n/10 > Enter a file in which to save the key (/Users/YOU/.ssh/id_A
 LGORITHM):[] 
  []
 
-[18]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 399--399
+[20]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 511--511
 []\TU/lmtt/m/n/10 > Enter passphrase (empty for no passphrase): [TYPE YOUR PASS
 PHRASE][] 
  []
 
 
-Overfull \hbox (16.99997pt too wide) in paragraph at lines 481--481
+Overfull \hbox (16.99997pt too wide) in paragraph at lines 593--593
  []\TU/lmtt/m/n/10 Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
 [] 
  []
 
-[19]
+[21]
 File: img/git-instruct/copy-ssh.png Graphic file (type bmp)
 <img/git-instruct/copy-ssh.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
+Underfull \hbox (badness 10000) in paragraph at lines 652--653
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2556) has occurred while \output is active []
 
-[20]
+[22]
 Overfull \hbox (34.01123pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 4.3.  GETTING THE TEMPLATE ON YOUR LOCAL COMPUTER - GIT CLONE! 
-\TU/lmr/m/n/10 21
+\TU/lmr/m/n/10 23
  []
 
-[21] [22
+[23] [24
 
 ]
 Chapter 5.
 
-LaTeX Warning: Hyper reference `file-setup' on page 23 undefined on input line 
-578.
+LaTeX Warning: Hyper reference `file-setup' on page 25 undefined on input line 
+690.
 
 File: img/files-and-build/newly-opened-RStudio.png Graphic file (type bmp)
 <img/files-and-build/newly-opened-RStudio.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--586
+Underfull \hbox (badness 10000) in paragraph at lines 696--698
 
  []
 
-[23]
-
-LaTeX Warning: Hyper reference `file-setup' on page 24 undefined on input line 
-591.
-
-[24]
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 620.
 [25]
-Underfull \hbox (badness 2781) in paragraph at lines 662--663
+
+LaTeX Warning: Hyper reference `file-setup' on page 26 undefined on input line 
+703.
+
+[26] [27]
+Underfull \hbox (badness 2781) in paragraph at lines 774--775
 []\TU/lmr/m/n/10 However, 2 other important files are the \TU/lmtt/m/n/10 _outp
 ut.yml \TU/lmr/m/n/10 files and the
  []
@@ -1072,40 +1106,40 @@ File: img/git-instruct/RStudio-with-git-window-open.png Graphic file (type bmp)
 File: img/git-instruct/git-window-selected-items.png Graphic file (type bmp)
 <img/git-instruct/git-window-selected-items.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--693
+Underfull \hbox (badness 10000) in paragraph at lines 804--805
 
  []
 
-[26] [27]
+[28] [29]
 File: img/git-instruct/git-commit-window.png Graphic file (type bmp)
 <img/git-instruct/git-commit-window.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--703
+Underfull \hbox (badness 10000) in paragraph at lines 814--815
 
  []
 
 File: img/git-instruct/git-window-post-commit.png Graphic file (type bmp)
 <img/git-instruct/git-window-post-commit.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 713--714
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[28] [29] [30
+[30] [31] [32
 
 ]
 Chapter 6.
-[31]
-Overfull \hbox (17.577pt too wide) in paragraph at lines 779--780
+[33]
+Overfull \hbox (17.577pt too wide) in paragraph at lines 891--892
 []\TU/lmr/m/n/10 To label an un-numbered heading, use: \TU/lmtt/m/n/10 # Hello 
 world {-#nice-label}
  []
 
 
-Underfull \hbox (badness 5417) in paragraph at lines 782--783
+Underfull \hbox (badness 5417) in paragraph at lines 894--895
 []\TU/lmr/m/n/10 The reference your text as follows \TU/lmtt/m/n/10 [any text y
 ou want can go
  []
@@ -1113,59 +1147,59 @@ ou want can go
 File: _main_files/figure-latex/nice-fig-1.pdf Graphic file (type pdf)
 <use _main_files/figure-latex/nice-fig-1.pdf>
 
-Underfull \hbox (badness 1152) in paragraph at lines 843--844
+Underfull \hbox (badness 1152) in paragraph at lines 955--956
 \TU/lmr/m/n/10 Notice how index.Rmd in our CBW Bookdown template has \TU/lmtt/m
 /n/10 # (PART)
  []
 
-[32] [33]
-Underfull \hbox (badness 2941) in paragraph at lines 853--853
+[34] [35]
+Underfull \hbox (badness 2941) in paragraph at lines 965--965
 []\TU/lmr/bx/n/14.4 Citations (NOT SURE IF WE NEED
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 883--883
+Overfull \hbox (6.75pt too wide) in paragraph at lines 995--995
 []\TU/lmtt/m/n/10 For a right triangle, if $c$ denotes the *length* of the hypo
 tenuse[] 
  []
 
-[34]
-Overfull \hbox (22.5pt too wide) in paragraph at lines 883--883
+[36]
+Overfull \hbox (22.5pt too wide) in paragraph at lines 995--995
 []\TU/lmtt/m/n/10 and $a$ and $b$ denote the lengths of the **other** two sides
 , we have[] 
  []
 
-[35] [36
+[37] [38
 
 ]
 Chapter 7.
-[37] [38
+[39] [40
 
 ]
 Chapter 8.
 
-Underfull \hbox (badness 1383) in paragraph at lines 937--938
+Underfull \hbox (badness 1383) in paragraph at lines 1049--1050
 \TU/lmr/m/n/10 this command in your console (the bottom left window in RStu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 937--938
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1050
 \TU/lmr/m/n/10 dio) \TU/lmtt/m/n/10 install.packages("missing package name, inc
 lude these
  []
 
-[39] [40] [41
+[41] [42] [43
 
-] [42]
+] [44]
 Chapter 9.
 
-Underfull \hbox (badness 2057) in paragraph at lines 985--986
+Underfull \hbox (badness 2057) in paragraph at lines 1097--1098
 []\TU/lmr/m/n/10 Preview the book: - updates on saves in viewer window book-
  []
 
-[43
+[45
 
-] [44]
+] [46]
 Chapter 10.
 Missing character: There is no 🚧 (U+1F6A7) in font [lmroman10-regular]:mapping=
 tex-text;!
@@ -1176,7 +1210,7 @@ File: img/git-instruct/create-git-repo.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[45
+[47
 
 ]
 File: img/git-instruct/git-connection.png Graphic file (type bmp)
@@ -1184,24 +1218,24 @@ File: img/git-instruct/git-connection.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[46]
-Underfull \hbox (badness 3199) in paragraph at lines 1073--1075
+[48]
+Underfull \hbox (badness 3199) in paragraph at lines 1185--1187
 []\TU/lmr/bx/n/10 Important: \TU/lmr/m/n/10 This step is why I highlighted that
  specific text
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 1073--1075
+Underfull \hbox (badness 2027) in paragraph at lines 1185--1187
 \TU/lmr/m/n/10 above. Copy that command, and put it into terminal. Gen-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 1073--1075
+Underfull \hbox (badness 2495) in paragraph at lines 1185--1187
 \TU/lmr/m/n/10 erally, it will look something like this: \TU/lmtt/m/n/10 git re
 mote add origin
  []
 
-[47]
+[49]
 File: img/git-instruct/git-instructions-in-terminal.png Graphic file (type bmp)
 
 <img/git-instruct/git-instructions-in-terminal.png>
@@ -1214,32 +1248,32 @@ File: img/git-instruct/git-commit-window.png Graphic file (type bmp)
 <img/git-instruct/git-commit-window.png>
 File: img/git-instruct/git-window-post-commit.png Graphic file (type bmp)
 <img/git-instruct/git-window-post-commit.png>
-[48] [49] [50] [51] [52
+[50] [51] [52] [53] [54
 
 ]
 Chapter 11.
 File: img/git-instruct/github-settings.png Graphic file (type bmp)
 <img/git-instruct/github-settings.png>
 
-Overfull \hbox (178.10144pt too wide) in paragraph at lines 1160--1163
+Overfull \hbox (178.10144pt too wide) in paragraph at lines 1272--1275
 []\TU/lmr/m/n/10 In the top navigation bar, select settings. [] 
  []
 
 File: img/git-instruct/github-select-pages.png Graphic file (type bmp)
 <img/git-instruct/github-select-pages.png>
 
-Overfull \hbox (131.2858pt too wide) in paragraph at lines 1163--1166
+Overfull \hbox (131.2858pt too wide) in paragraph at lines 1275--1278
 []\TU/lmr/m/n/10 Then, go to the pages sidebar. [] 
  []
 
 
 Underfull \vbox (badness 1466) has occurred while \output is active []
 
-[53]
+[55]
 File: img/git-instruct/github-deploy-main.png Graphic file (type bmp)
 <img/git-instruct/github-deploy-main.png>
 
-Overfull \hbox (198.06654pt too wide) in paragraph at lines 1166--1169
+Overfull \hbox (198.06654pt too wide) in paragraph at lines 1278--1281
 \TU/lmr/m/n/10 must change the branch from “none” to main. [] 
  []
 
@@ -1248,7 +1282,7 @@ File: img/git-instruct/github-deploy-docs.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[54]
+[56]
 File: img/git-instruct/github-pages-actions-explained.png Graphic file (type bm
 p)
 <img/git-instruct/github-pages-actions-explained.png>
@@ -1257,19 +1291,19 @@ File: img/git-instruct/successful-deploy.png Graphic file (type bmp)
 File: img/git-instruct/failed-deploy.png Graphic file (type bmp)
 <img/git-instruct/failed-deploy.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1187
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1299
 [][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[55]
+[57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[56] (./_main.bbl [57] [58
+[58] (./_main.bbl [59] [60
 
-]) [59] (./_main.aux)
+]) [61] (./_main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1279,12 +1313,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 19778 strings out of 474773
- 365548 string characters out of 5757724
- 1930839 words of memory out of 5000000
- 41620 multiletter control sequences out of 15000+600000
- 564576 words of font info for 96 fonts, out of 8000000 for 9000
+ 19791 strings out of 474773
+ 365770 string characters out of 5757724
+ 1931839 words of memory out of 5000000
+ 41631 multiletter control sequences out of 15000+600000
+ 564584 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,8n,121p,1002b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on _main.pdf (59 pages).
+Output written on _main.pdf (61 pages).

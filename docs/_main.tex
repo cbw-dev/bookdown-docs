@@ -119,7 +119,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}2024-12-03}
+\date{\vspace{-2.5em}2024-12-04}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -305,32 +305,144 @@ Note:
 Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!
 \end{quote}
 
-{[}FILL IN LATER - JULIA CAN GUIDE NEHA{]}
-
 \begin{itemize}
+\tightlist
 \item
   terminal (mac, unix based) vs command prompt (windows)
-\item
-  pwd
-\item
-  ls
-\item
-  cd + \texttt{tab}
-\item
-  mkdir
-\item
-  rmdir
-\item
-  rmdir -r
-\item
-  . = current folder
-\item
-  .. = previous folder
-\item
-  \textasciitilde{} = home
-\item
-  up and down arrows
 \end{itemize}
+
+\subsection{Terminal, Command Prompt and Windows PowerShell}\label{terminal-command-prompt-and-windows-powershell}
+
+We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.
+
+\begin{quote}
+Note: Windows PowerShell tends to be more advanced than Command Prompt, and often can accept more commands that are accepted by Terminal than Command Prompt.
+\end{quote}
+
+\subsection{Common Commands (for us)}\label{common-commands-for-us}
+
+We won't need to know that many commands, but for easy navigation and understanding, here is what you (generally) need:
+
+\subparagraph*{pwd}\label{pwd}
+\addcontentsline{toc}{subparagraph}{pwd}
+
+pwd stands for ``print working directory''. For example, below our output is where in my folders the current .Rmd file that makes up this website is:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{pwd}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+\end{verbatim}
+
+\subparagraph*{ls OR dir}\label{ls-or-dir}
+\addcontentsline{toc}{subparagraph}{ls OR dir}
+
+``ls'' is a \textbf{Terminal} command that also works in \textbf{Windows PowerShell}. It short for ``list'' and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ls}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 01-getting-started.Rmd
+## 02-git-clone.Rmd
+## 03-terminal-and-git.Rmd
+## 04-files-and-build.Rmd
+\end{verbatim}
+
+A similar command in \textbf{Command Prompt} is \texttt{dir}, which also outputs the files and folders in your current directory (along with timestamps)!
+
+\subparagraph*{cd}\label{cd}
+\addcontentsline{toc}{subparagraph}{cd}
+
+``cd'' stands for ``change directory''. The command produces no output, but it allows you to go to a different directory than the one you're currently in. For example,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{pwd} \CommentTok{\# recall: pwd tells us where we currently are}
+\BuiltInTok{cd}\NormalTok{ img }\CommentTok{\# img is a folder in bookdown{-}docs}
+\BuiltInTok{echo} \StringTok{"now switching directories"} \CommentTok{\# outputs the following string}
+\BuiltInTok{pwd}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+## now switching directories
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs/img
+\end{verbatim}
+
+\begin{quote}
+\textbf{Tip}:Typing ``cd'' and then hitting the \texttt{tab} key will give you the available directories you can go to from where you are, or what you have currently typed in. If there is only one option, hitting \texttt{tab} will fill in your command with that option. (This works when typing in any file location into your command line, not only using ``cd''). On macOS, the terminal will give you a list if there are multiple options. On Windows, both Command Prompt and Windows Powershell will fill in potential options, and you can hit tab multiple times untill you find your desired file destination.
+\end{quote}
+
+\textbf{File Location Shorthands}
+When referring to file addresses, there are helpful shorthands! Here's a summary:
+- \texttt{.} = Current Directory
+- \texttt{..} = Parent Directory
+- \texttt{\textasciitilde{}} = Home Directory
+
+Here's an example (recall, cd produces no output!):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{pwd}
+\BuiltInTok{echo} \AttributeTok{{-}e} \CommentTok{\# creates a line}
+
+\BuiltInTok{echo} \StringTok{"Current Directory Example"}
+\BuiltInTok{cd}\NormalTok{ .}
+\BuiltInTok{pwd}
+\BuiltInTok{echo} \AttributeTok{{-}e}
+
+\BuiltInTok{echo} \StringTok{"Parent Directory Example"}
+\BuiltInTok{cd}\NormalTok{ ..}
+\BuiltInTok{pwd}
+\BuiltInTok{echo} \AttributeTok{{-}e}
+
+\BuiltInTok{echo} \StringTok{"Home Directory Example"}
+\BuiltInTok{cd}\NormalTok{ \textasciitilde{}}
+\BuiltInTok{pwd}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+## 
+## Current Directory Example
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+## 
+## Parent Directory Example
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs
+## 
+## Home Directory Example
+## /Users/jqiu
+\end{verbatim}
+
+\subparagraph*{mkdir}\label{mkdir}
+\addcontentsline{toc}{subparagraph}{mkdir}
+
+``mkdir {[}directory address{]}'' stands for ``make directory''. Essentially, mkdir will make an empty directory (folder) at a specified location. For example: \texttt{mkdir\ test} would create a folder named ``test'' in our current directory. The following commands do the same thing. Note: \texttt{mkdir\ ./test} does the same thing.
+
+\subparagraph*{rmdir}\label{rmdir}
+\addcontentsline{toc}{subparagraph}{rmdir}
+
+``rmdir {[}directory address{]}'' removes an \emph{empty} directory. For example, \texttt{rmdir\ test} would delete the directory we just made!
+
+\subparagraph*{rmdir -r OR rmdir /s}\label{rmdir--r-or-rmdir-s}
+\addcontentsline{toc}{subparagraph}{rmdir -r OR rmdir /s}
+
+``rmdir -r {[}directory address{]}'' (Terminal \& Windows PowerShell) and ``rmdir /s {[}directory address{]}'' removes a directory recursively, meaning it deletes all the contents of the folder as we all as the folder in itself. Be careful, you can not restore a directory you removed using ``rmdir''!
+
+\subparagraph*{Up {[}⬆{]} and Down {[}⬇{]} Arrows}\label{up-and-down-arrows}
+\addcontentsline{toc}{subparagraph}{Up {[}⬆{]} and Down {[}⬇{]} Arrows}
+
+One of the most useful tips for using the command line is to use your up {[}↑{]} and down {[}↓{]} arrow keys. Using the up {[}↑{]} key gives you the previous commands you typed, and the down {[}↓{]} arrow returns you to your earlier commands.
 
 \section{Creating the SSH Connection}\label{creating-the-ssh-connection}
 
@@ -346,7 +458,7 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Open Terminal/Command Prompt/preferred command line interpretter.
+  Open Terminal.
 \end{enumerate}
 
 \begin{quote}
@@ -358,7 +470,7 @@ Note: You can do these commands anywhere in your file explorer.
 \setcounter{enumi}{1}
 \tightlist
 \item
-  Copy and paste this text into your terminal/command prompt. \textbf{Replace the email given below with your GitHub email address} (the email address you used to sign up for Github). Press enter to run the command.
+  Copy and paste this text into your terminal. \textbf{Replace the email given below with your GitHub email address} (the email address you used to sign up for Github). Press enter to run the command.
 \end{enumerate}
 
 \begin{verbatim}
@@ -404,7 +516,7 @@ If you have already created a SSH key and you are asked to rewrite another key, 
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  In terminal/command prompt, run the following command
+  In terminal, run the following command
 \end{enumerate}
 
 \begin{verbatim}
@@ -481,7 +593,7 @@ Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
 \end{verbatim}
   \end{enumerate}
 \item
-  Return to terminal/command prompt. Run the following command:
+  Return to terminal. Run the following command:
 \end{enumerate}
 
 \begin{verbatim}
@@ -541,7 +653,7 @@ Thankfully, we only need to do these steps once! Additionally, most security que
 
 Then put this command into your command line, within the folder you want the workshop folder to be in.
 
-For example, if my organization is named: jq-11 and my workshop name is ``workshop-name'', I would enter this into my terminal/command prompt.
+For example, if my organization is named: jq-11 and my workshop name is ``workshop-name'', I would enter this into my terminal.
 
 \begin{verbatim}
 git clone git@github.com:jq-11/workshop-name.git
@@ -626,7 +738,7 @@ By building the book, all of these files were compiled and converted to .html fi
 \setcounter{enumi}{1}
 \tightlist
 \item
-  Press the keyboard buttons: \texttt{cmd\ OR\ ctrl\ +\ shift\ +\ B}
+  Press the keyboard buttons: \texttt{cmd\ +\ shift\ +\ B} (macOS) OR \texttt{ctrl\ +\ shift\ +\ B} (windows)
 \end{enumerate}
 
 \subsection{Knit Your Book}\label{knit-your-book}
@@ -640,7 +752,7 @@ Note: Other pages in your website will not update.
 \begin{quote}
 A quicker way to knit is using the keboard controls
 
-\texttt{cmd\ OR\ ctrl\ +\ shift\ +\ K}
+\texttt{cmd\ +\ shift\ +\ K} (macOS) OR \texttt{ctrl\ +\ shift\ +\ K} (Windows)
 \end{quote}
 
 \subsection{Preview Your Book}\label{preview-your-book}
