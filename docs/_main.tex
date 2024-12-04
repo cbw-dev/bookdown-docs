@@ -769,42 +769,51 @@ But which files do we edit? Well alas, it's time to discuss the file setup.
 
 \section{File Setup Explanation}\label{file-setup}
 
+Recall:
+
 Here is a tree diagram of the bookdown template setup. (Note that this mimics how RStudio displays the files, if your RStudio shows these template files in a different order, right click your file window and press ``Reload'')
 
-\begin{verbatim}
-bookdown-template
-├── _404.md
-├── _bookdown.yml
-├── _bookdown_files
-├── _main_files # image and pdf output files
-├── _output.yml
-├── .gitignore
-├── .Rhistory
-├── 010-course-schedule.Rmd
-├── 011-content-files.Rmd
-├── 012-meet-your-fac.Rmd
-├── 020-module-1.Rmd
-├── 030-module-2.Rmd
-├── README.md
-├── book.bib
-├── bookdown-template.Rproj
-├── content-files
-    └── sample-pdf.pdf
-├── docs
-    └── [html files & other generated content]
-├── img
-    ├── bioinformatics.ca-logo.svg
-    ├── faculty
-        ├── michelle-brazas.jpg
-        └── nia-hughes.jpeg
-    ├── favicon.ico
-    └── sponsors
-         └── Your-Sponsor-Here.svg
-├── index.Rmd
-├── packages.bib
-├── preamble.tex
-└── style.css
-\end{verbatim}
+\begin{quote}
+\textbf{Note:} only relevant files or files you might be concerned about are explained in blue. If there is no explanation, you can safely assume you do not have to worry about it.
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{bookdown{-}template}
+\ExtensionTok{├──}\NormalTok{ \_404.md }\CommentTok{\# This becomes your 404 page. This is the only file that can become a page that can also be either a .md or .Rmd file!}
+\ExtensionTok{├──}\NormalTok{ \_bookdown.yml }\CommentTok{\# a config file, you most likely won\textquotesingle{}t have to edit it unless you want additional configuration settings}
+\ExtensionTok{├──}\NormalTok{ \_bookdown\_files}
+\ExtensionTok{├──}\NormalTok{ \_main\_files}
+    \ExtensionTok{└──}\NormalTok{ ... }\CommentTok{\# [in case of confusion: image and pdf output files]}
+\ExtensionTok{├──}\NormalTok{ \_output.yml }\CommentTok{\# a config file, RC/workshop team will have to edit a few things (the workshop name, sponsor images, repo link)}
+\ExtensionTok{├──}\NormalTok{ .gitignore}
+\ExtensionTok{├──}\NormalTok{ .Rhistory}
+\ExtensionTok{├──}\NormalTok{ 010{-}course{-}schedule.Rmd }\CommentTok{\# {-}{-}\textgreater{} "Course Schedule" section}
+\ExtensionTok{├──}\NormalTok{ 011{-}content{-}files.Rmd }\CommentTok{\# {-}{-}\textgreater{} "Pre{-}workshop Materials" and "Computing Setup \& Downloads" section}
+\ExtensionTok{├──}\NormalTok{ 012{-}meet{-}your{-}fac.Rmd }\CommentTok{\# {-}{-}\textgreater{} "Meet Your Faculty" section}
+\ExtensionTok{├──}\NormalTok{ 020{-}module{-}1.Rmd }\CommentTok{\#{-}{-}\textgreater{} "Module 1", "Lecture, and "Lab" section}
+\ExtensionTok{├──}\NormalTok{ 030{-}module{-}2.Rmd}
+\ExtensionTok{├──}\NormalTok{ README.md }\CommentTok{\# README file that has some helpful explanations, consider reading this before starting to edit (along with this documentation!)}
+\ExtensionTok{├──}\NormalTok{ book.bib}
+\ExtensionTok{├──}\NormalTok{ bookdown{-}template.Rproj }\CommentTok{\# always open this file in RStudio, opening this helps bookdown understand what to build}
+\ExtensionTok{├──}\NormalTok{ content{-}files }\CommentTok{\# store all files from your modules here (ex. data sets, empty code worksheets)}
+    \ExtensionTok{└──}\NormalTok{ sample{-}pdf.pdf}
+\ExtensionTok{├──}\NormalTok{ docs}
+    \ExtensionTok{└──}\NormalTok{ ... }\CommentTok{\# html files \& other generated content}
+\ExtensionTok{├──}\NormalTok{ img }\CommentTok{\# folder where you should store all your images}
+    \ExtensionTok{├──}\NormalTok{ bioinformatics.ca{-}logo.svg }
+    \ExtensionTok{├──}\NormalTok{ faculty }\CommentTok{\# store all images of faculty in this folder}
+        \ExtensionTok{├──}\NormalTok{ michelle{-}brazas.jpg}
+        \ExtensionTok{└──}\NormalTok{ nia{-}hughes.jpeg}
+    \ExtensionTok{├──}\NormalTok{ favicon.ico}
+    \ExtensionTok{└──}\NormalTok{ sponsors }\CommentTok{\# store all sponsor logos/titles in this folder}
+         \ExtensionTok{└──}\NormalTok{ Your{-}Sponsor{-}Here.svg}
+\ExtensionTok{├──}\NormalTok{ index.Rmd }\CommentTok{\# landing page {-}{-}\textgreater{} "Welcome" section}
+\ExtensionTok{├──}\NormalTok{ packages.bib}
+\ExtensionTok{├──}\NormalTok{ preamble.tex}
+\ExtensionTok{└──}\NormalTok{ style.css }\CommentTok{\# css styling options are defined here {-} feel free to add your own styling features}
+\end{Highlighting}
+\end{Shaded}
 
 Look at all these .Rmd files! Recall that .Rmd -\textgreater{} .md -\textgreater{} .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.
 

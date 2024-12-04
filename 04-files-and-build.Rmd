@@ -74,43 +74,51 @@ But which files do we edit? Well alas, it's time to discuss the file setup.
 
 ## File Setup Explanation {#file-setup}
 
+Recall:
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=794&amp;h=147">
+
 Here is a tree diagram of the bookdown template setup. (Note that this mimics how RStudio displays the files, if your RStudio shows these template files in a different order, right click your file window and press "Reload")
 
 <!-- PLEASE DO NOT DELETE THIS TREE DIAGRAM, I (Julia) FORMATTED some of IT MYSELF, PLEASE DO NOT DELETE UNLESS A BETTER TREE DIAGRAM THAT IS IN THE SAME ORDER AS HOW RSTUDIO ORDERS IT IS FOUND -->
 
-```
+<!-- Potential Improvement: Find a way to format a tree such that the lines aren't disconnected, like what it would look like if it was just output by the tree command. There is some stack overflow suggestions to use ASCII, but this just created weird lines and characters for me when it was outputted. -->
+
+> **Note:** only relevant files or files you might be concerned about are explained in blue. If there is no explanation, you can safely assume you do not have to worry about it.
+
+```bash
 bookdown-template
-├── _404.md
-├── _bookdown.yml
+├── _404.md # This becomes your 404 page. This is the only file that can become a page that can also be either a .md or .Rmd file!
+├── _bookdown.yml # a config file, you most likely won't have to edit it unless you want additional configuration settings
 ├── _bookdown_files
-├── _main_files # image and pdf output files
-├── _output.yml
+├── _main_files
+    └── ... # [in case of confusion: image and pdf output files]
+├── _output.yml # a config file, RC/workshop team will have to edit a few things (the workshop name, sponsor images, repo link)
 ├── .gitignore
 ├── .Rhistory
-├── 010-course-schedule.Rmd
-├── 011-content-files.Rmd
-├── 012-meet-your-fac.Rmd
-├── 020-module-1.Rmd
+├── 010-course-schedule.Rmd # --> "Course Schedule" section
+├── 011-content-files.Rmd # --> "Pre-workshop Materials" and "Computing Setup & Downloads" section
+├── 012-meet-your-fac.Rmd # --> "Meet Your Faculty" section
+├── 020-module-1.Rmd #--> "Module 1", "Lecture, and "Lab" section
 ├── 030-module-2.Rmd
-├── README.md
+├── README.md # README file that has some helpful explanations, consider reading this before starting to edit (along with this documentation!)
 ├── book.bib
-├── bookdown-template.Rproj
-├── content-files
+├── bookdown-template.Rproj # always open this file in RStudio, opening this helps bookdown understand what to build
+├── content-files # store all files from your modules here (ex. data sets, empty code worksheets)
     └── sample-pdf.pdf
 ├── docs
-    └── [html files & other generated content]
-├── img
-    ├── bioinformatics.ca-logo.svg
-    ├── faculty
+    └── ... # html files & other generated content
+├── img # folder where you should store all your images
+    ├── bioinformatics.ca-logo.svg 
+    ├── faculty # store all images of faculty in this folder
         ├── michelle-brazas.jpg
         └── nia-hughes.jpeg
     ├── favicon.ico
-    └── sponsors
+    └── sponsors # store all sponsor logos/titles in this folder
          └── Your-Sponsor-Here.svg
-├── index.Rmd
+├── index.Rmd # landing page --> "Welcome" section
 ├── packages.bib
 ├── preamble.tex
-└── style.css
+└── style.css # css styling options are defined here - feel free to add your own styling features
 ```
 
 Look at all these .Rmd files! Recall that .Rmd -> .md -> .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.
