@@ -771,6 +771,8 @@ But which files do we edit? Well alas, it's time to discuss the file setup.
 
 Recall:
 
+Hence, all the .Rmd files create a page in the produced website! To create more pages, you will be creating more .Rmd files.
+
 Here is a tree diagram of the bookdown template setup. (Note that this mimics how RStudio displays the files, if your RStudio shows these template files in a different order, right click your file window and press ``Reload'')
 
 \begin{quote}
@@ -815,15 +817,86 @@ Here is a tree diagram of the bookdown template setup. (Note that this mimics ho
 \end{Highlighting}
 \end{Shaded}
 
-Look at all these .Rmd files! Recall that .Rmd -\textgreater{} .md -\textgreater{} .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.
+\subparagraph*{\_output.yml \& \_bookdown.yml}\label{output.yml-_bookdown.yml}
+\addcontentsline{toc}{subparagraph}{\_output.yml \& \_bookdown.yml}
 
-However, 2 other important files are the \texttt{\_output.yml} files and the \texttt{\_bookdown.yml} files. They help tell bookdown what we want and what to do, especially when making our website. Everything you need to edit here is made clear in the template, so do not worry too much about getting the ride code so that your project builds!
+2 important files are the \texttt{\_output.yml} files and the \texttt{\_bookdown.yml} files. They help tell bookdown what we want and what to do, especially when making our website.
 
-The only .Rmd that must have some configuration details is the landing page: index.Rmd. This is what fills up the beginning of the index.Rmd file, before the -\/-\/-, which tells bookdown to stop looking for configuration information.
+You will only have to edit \_output.yml a bit. The \_output.yml file creates the table of contents/sidebar you see on the left of the workshop. It is written in HTML, which is why it looks so different. There are 3 things either the RC or the workshop team will need to do:
+1. Change the workshop name: {[}YOUR WORKSHOP NAME{]} on line 7
+2. Add your sponsors: Replace ``Your-Sponsor-Here.svg'' with the file name of your sponsors name/logo. Remeber to place these files inside the ./img/sponsors/ folder.
+3. Replace your workshop repo edit link.
+- USERNAME = organization name = bioinformaticsdotca
+- REPO = your workshop repo name
+- BRANCH = main
 
-Let's move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with \#, each subheaders have increasingly more \# symbols (\#\#, \#\#\#, and more all create smaller subheaders). Try to have only 1 single \# as a header on one page! (You may get warnings otherwise).
+\subparagraph*{Organizing the Table of Contents}\label{organizing-the-table-of-contents}
+\addcontentsline{toc}{subparagraph}{Organizing the Table of Contents}
 
-But then how does bookdown know which page goes next on our sidebar? The order of the sidebar is completely dependent on the alphaetical order of the files (see your bottom right!). Our template has numbering first, to help ease our understanding.
+The order of the sidebar is completely dependent on the alphabetical order of the files (see your bottom right window pane! The order is generally the same as the order shown in the RStudio file window pane). Our template has numbering first, to help ease our understanding and organization of files. The only file without this is \texttt{index.Rmd}, since as the landing page we can not change the file name.
+
+\subparagraph*{index.Rmd}\label{index.rmd}
+\addcontentsline{toc}{subparagraph}{index.Rmd}
+
+The only .Rmd that must have some configuration details is the landing page: \textbf{index.Rmd}. This is what fills up the beginning of the index.Rmd file, before the -\/-\/-, which tells bookdown to stop looking for configuration information.
+
+\subparagraph*{.Rmd Files}\label{rmd-files}
+\addcontentsline{toc}{subparagraph}{.Rmd Files}
+
+Let's move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with \#, each subheader has increasingly more \# symbols (\#\#, \#\#\#, and more all create smaller subheaders). Try to have only 1 single \# as a header on one page! (You may get warnings otherwise).
+
+\subparagraph*{How to Create a New File}\label{how-to-create-a-new-file}
+\addcontentsline{toc}{subparagraph}{How to Create a New File}
+
+You can create new files anywhere. You should only be making new website pages, so you should also only be making .Rmd files. (Creating new .md files in hopes of making a new page usually ends up with weird bugs, stick to .Rmd files).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Under the ``Files'' tab of the lower right window pane, there are many options to modify your files. You can use these buttons instead of your File Explorer. Click ``New Blank File''.
+\item
+  Click the second dropdown option: R Markdown
+\item
+  Give your file a unique name that matches CBW's Bookdown template file naming convention. That is, ``0XX-{[}description{]}.Rmd''. Decide what X should be depending on where you want the page to show up on your sidebar. Name your file a short but descriptive name, with hyphens (-) to split up words.
+\item
+  Start editing your new file in the upper left window!
+\end{enumerate}
+
+\subparagraph*{404 Page}\label{page}
+\addcontentsline{toc}{subparagraph}{404 Page}
+
+That being said, there is one file that can be a markdown (.md) file: the \_404.(R)md file. If website user goes to a webpage that belongs to our website but no longer exists, they will get this 404 page instead. You could put links to your landing page or the bioinformatics.ca homepage here!
+
+\subparagraph*{CBW Organization Folders}\label{cbw-organization-folders}
+\addcontentsline{toc}{subparagraph}{CBW Organization Folders}
+
+We want our workshops to be easy to navigate and understand. Hence, images or files that are required for your lessons should be placed in \texttt{./img/} and \texttt{./content-files/.} respectively. Within these files, try creating sub-folders within these folders to help organize groups of files. For example, if you have a bunch of data sets, try creating a ``datasets'' folder within \texttt{./content-files/}.
+
+Subfolders already exist in \texttt{./img}: \texttt{./img/faculty/} and \texttt{./img/sponsors/}. Fill these with photos of your faculty and images of the names'/logos' of your sponsors, respectfully!
+
+\subparagraph*{Bookdown's Wesbite Building Folders}\label{bookdowns-wesbite-building-folders}
+\addcontentsline{toc}{subparagraph}{Bookdown's Wesbite Building Folders}
+
+Bookdown makes some folders to store .html files, among other files that help create the website. Hence, you should not (need to) touch:
+
+\begin{itemize}
+\tightlist
+\item
+  \_bookdown\_files
+\item
+  \_main\_files
+\item
+  docs
+\end{itemize}
+
+\begin{quote}
+\textbf{Debugging Tip}: If you do get an error that seems like it's coming from one of these files, there was probably an error that resulted from bookdown not being able to process something. Double check that your syntax, formatting, file names and related files are correct.
+\end{quote}
+
+\begin{quote}
+\textbf{Debugging Tip 2}: Each time we build, we produce a ``docs'' folder. If we have already built once, we just add new files to it. HTML files that were produced from .Rmd that were deleted are not removed. Hence, if you see errors from files that no longer exist in your root project folder, try deleting the whole docs folder, and rebuilding.
+\end{quote}
 
 \section{Push to GitHub via RStudio}\label{push-to-github-via-rstudio}
 

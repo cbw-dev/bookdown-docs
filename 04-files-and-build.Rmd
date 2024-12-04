@@ -122,7 +122,7 @@ bookdown-template
 ├── preamble.tex
 └── style.css # css styling options are defined here - feel free to add your own styling features
 ```
-###### _output.yml & _bookdown.yml {-}
+###### \_output.yml & \_bookdown.yml {-}
 2  important files are the `_output.yml` files and the `_bookdown.yml` files. They help tell bookdown what we want and what to do, especially when making our website.
 
 You will only have to edit _output.yml a bit. The _output.yml file creates the table of contents/sidebar you see on the left of the workshop. It is written in HTML, which is why it looks so different. There are 3 things either the RC or the workshop team will need to do:
@@ -149,15 +149,33 @@ Let's move on to discussing the breakdown of the .Rmd files. Each new page is de
 
 ###### How to Create a New File {-}
 
-You can create new files anywhere.
+You can create new files anywhere. You should only be making new website pages, so you should also only be making .Rmd files. (Creating new .md files in hopes of making a new page usually ends up with weird bugs, stick to .Rmd files). 
 
-###### CBW Organization Files {-}
-
-###### Bookdown's Wesbite Building Files {-}
+1. Under the "Files" tab of the lower right window pane, there are many options to modify your files. You can use these buttons instead of your File Explorer. Click "New Blank File". 
+2. Click the second dropdown option: R Markdown
+3. Give your file a unique name that matches CBW's Bookdown template file naming convention. That is, "0XX-[description].Rmd". Decide what X should be depending on where you want the page to show up on your sidebar. Name your file a short but descriptive name, with hyphens (-) to split up words.
+4. Start editing your new file in the upper left window!
 
 ###### 404 Page {-}
 
-<!-- "By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a `_404.Rmd` or `_404.md` file to your project root and use code and/or Markdown syntax." -->
+That being said, there is one file that can be a markdown (.md) file: the _404.(R)md file. If website user goes to a webpage that belongs to our website but no longer exists, they will get this 404 page instead. You could put links to your landing page or the bioinformatics.ca homepage here!
+
+###### CBW Organization Folders {-}
+We want our workshops to be easy to navigate and understand. Hence, images or files that are required for your lessons should be placed in `./img/` and `./content-files/.` respectively. Within these files, try creating sub-folders within these folders to help organize groups of files. For example, if you have a bunch of data sets, try creating a "datasets" folder within `./content-files/`. 
+
+Subfolders already exist in `./img`: `./img/faculty/` and `./img/sponsors/`. Fill these with photos of your faculty and images of the names'/logos' of your sponsors, respectfully!
+
+###### Bookdown's Wesbite Building Folders {-}
+
+Bookdown makes some folders to store .html files, among other files that help create the website. Hence, you should not (need to) touch:
+
+- \_bookdown\_files
+- \_main\_files
+- docs
+
+> **Debugging Tip**: If you do get an error that seems like it's coming from one of these files, there was probably an error that resulted from bookdown not being able to process something. Double check that your syntax, formatting, file names and related files are correct.
+
+> **Debugging Tip 2**: Each time we build, we produce a "docs" folder. If we have already built once, we just add new files to it. HTML files that were produced from .Rmd that were deleted are not removed. Hence, if you see errors from files that no longer exist in your root project folder, try deleting the whole docs folder, and rebuilding.
 
 ## Push to GitHub via RStudio
 
