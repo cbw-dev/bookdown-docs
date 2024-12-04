@@ -10,7 +10,7 @@ Here is a general summary of how Bookdown creates html websites from .Rmd files.
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=794&amp;h=147">
 
-Essentially, knitr renders and runs all the code, and the outpus are converted into markdown. After knitr, we eseentially have a bunch of only markdown files.
+Essentially, knitr renders and runs all the code, and the outputs are converted into markdown. After knitr, we essentially have a bunch of only markdown files.
 
 Pandoc translates this markdown into html, so that we get a website! It can be helpful to know when and how these packages work, to help debug later on!
 
@@ -72,9 +72,8 @@ bookdown::serve_book()
 
 But which files do we edit? Well alas, it's time to discuss the file setup.
 
-## File Setup Explanation {#file-setup} (this section is in review, Neha can try looking at the files in the bottom right and read along to what we currently have)
+## File Setup Explanation {#file-setup}
 
-<!-- [INSERT TREE ASCII] - asked IT whether I can install homebrew -->
 
 Look at all these .Rmd files! Recall that .Rmd -> .md -> .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.
 

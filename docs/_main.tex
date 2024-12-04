@@ -683,7 +683,7 @@ Before we dive deep into what to do with these folders, let's explore how bookdo
 
 Here is a general summary of how Bookdown creates html websites from .Rmd files.
 
-Essentially, knitr renders and runs all the code, and the outpus are converted into markdown. After knitr, we eseentially have a bunch of only markdown files.
+Essentially, knitr renders and runs all the code, and the outputs are converted into markdown. After knitr, we essentially have a bunch of only markdown files.
 
 Pandoc translates this markdown into html, so that we get a website! It can be helpful to know when and how these packages work, to help debug later on!
 
@@ -767,7 +767,7 @@ If you want live updates to your changes, you can preview the page as you edit t
 
 But which files do we edit? Well alas, it's time to discuss the file setup.
 
-\section{File Setup Explanation \{\#file-setup\} (this section is in review, Neha can try looking at the files in the bottom right and read along to what we currently have)}\label{file-setup-explanation-file-setup-this-section-is-in-review-neha-can-try-looking-at-the-files-in-the-bottom-right-and-read-along-to-what-we-currently-have}
+\section{File Setup Explanation}\label{file-setup}
 
 Look at all these .Rmd files! Recall that .Rmd -\textgreater{} .md -\textgreater{} .html files (from the diagram earlier). Hence, most of the files we really need to edit or create more of are .Rmd files.
 
@@ -1049,7 +1049,15 @@ Ex. Forgot to pull before editing?
   A very common bug is \textbf{``missing X package''}, just install it using this command in your console (the bottom left window in RStudio) \texttt{install.packages("missing\ package\ name,\ include\ these\ surrouding\ quotations")}
 \end{itemize}
 
-\section{FAQ}\label{faq}
+\section{Ease of Use}\label{ease-of-use}
+
+\subsection{Wrapping Your Code}\label{wrapping-your-code}
+
+Sometimes, RStudio defaults so that there is no text wrapping when viewing your files. If you notice that you have to scroll horizontally to see the long lines in your files, turn on ``Soft-Wrap Long Lines''.
+1. In your upper left corner of your RStudio Window, you will see options ``File'', ``Edit'', ``Code''. (If you are in full-screen on a mac, you will have to bring your cursor to the upper left corner before seeing these options). Click ``Code''.
+2. Go to the 5th option ``Soft-Wrap Long Lines'' and select it.
+
+\section{FAQs}\label{faqs}
 
 \part{DEVELOPERS GUIDE}\label{part-developers-guide}
 

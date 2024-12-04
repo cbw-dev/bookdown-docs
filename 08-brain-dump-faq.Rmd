@@ -27,4 +27,11 @@ Ex. Forgot to pull before editing?
 
 - A very common bug is **"missing X package"**, just install it using this command in your console (the bottom left window in RStudio) ```install.packages("missing package name, include these surrouding quotations") ```
 
-## FAQ
+## Ease of Use
+
+### Wrapping Your Code
+Sometimes, RStudio defaults so that there is no text wrapping when viewing your files. If you notice that you have to scroll horizontally to see the long lines in your files, turn on "Soft-Wrap Long Lines".
+1. In your upper left corner of your RStudio Window, you will see options "File", "Edit", "Code". (If you are in full-screen on a mac, you will have to bring your cursor to the upper left corner before seeing these options). Click "Code".
+2. Go to the 5th option "Soft-Wrap Long Lines" and select it.
+
+## FAQs

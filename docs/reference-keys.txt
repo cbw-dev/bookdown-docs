@@ -26,7 +26,7 @@ build-the-book
 other-ways-to-build-your-book
 knit-your-book
 preview-your-book
-file-setup-explanation-file-setup-this-section-is-in-review-neha-can-try-looking-at-the-files-in-the-bottom-right-and-read-along-to-what-we-currently-have
+file-setup
 push-to-github-via-rstudio
 formatting-your-content---markdown
 chapters
@@ -45,7 +45,9 @@ how-to-render-code
 brain-dump-faq
 danger-zones
 potential-errors-bugs
-faq
+ease-of-use
+wrapping-your-code
+faqs
 build-site
 how-to-edit-_bookdown.yml
 how-to-edit-_output.yml-rc
