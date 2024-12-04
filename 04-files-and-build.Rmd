@@ -51,7 +51,7 @@ By building the book, all of these files were compiled and converted to .html fi
 bookdown::render_book()
 ```
 
-2. Press the keyboard buttons: `cmd OR ctrl + shift + B`
+2. Press the keyboard buttons: `cmd + shift + B` (macOS) OR `ctrl + shift + B` (windows)
 
 ### Knit Your Book
 Building can take a long time. If you are editing just one file, you can press the "Knit" button that is at the top of the window with your file. This will run the code in the page, and show you what that page would look like in the website (as well as saving that file).
@@ -60,7 +60,7 @@ Building can take a long time. If you are editing just one file, you can press t
 
 > A quicker way to knit is using the keboard controls
 >
-> `cmd OR ctrl + shift + K`
+> `cmd + shift + K` (macOS) OR `ctrl + shift + K` (Windows)
 
 ### Preview Your Book
 

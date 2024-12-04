@@ -11,13 +11,41 @@ Using the command line, you can use text commands to interact with your computer
 >
 > Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!
 
-[FILL IN LATER - JULIA CAN GUIDE NEHA]
-
 - terminal (mac, unix based) vs command prompt (windows)
 
-- pwd
-- ls
-- cd + `tab`
+### Terminal (Linux, macOS), Command Prompt and Windows PowerShell (Windows)
+
+We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.
+
+> Note: Windows PowerShell tends to be more advanced than Command Prompt, and often can accept more commands that are accepted by Terminal than Command Prompt.
+
+### Common Commands (for us)
+<!-- Consider making this explanation a video -->
+
+###### pwd {-}
+
+pwd stands for "print working directory". For example, below our output is where in my folders the current .Rmd file that makes up this website is:
+
+```{bash}
+pwd
+```
+
+###### ls OR dir {-}
+
+"ls" is a **Terminal** command that also works in **Windows PowerShell**. It short for "list" and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)
+```{bash, results='hide'}
+ls
+```
+
+<!-- to save space, only output the first 4 lines -->
+
+```{bash, echo=FALSE}
+ls | head -n 4
+```
+A similar command in **Command Prompt** is `dir`, which also outputs the files and folders in your current directory (along with timestamps)!
+
+###### cd + `tab` {-}
+
 - mkdir
 - rmdir
 - rmdir -r
@@ -36,11 +64,11 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 
 ### [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
 
-1. Open Terminal/Command Prompt/preferred command line interpretter.
+1. Open Terminal.
 
 > Note: You can do these commands anywhere in your file explorer.
 
-2. Copy and paste this text into your terminal/command prompt. **Replace the email given below with your GitHub email address** (the email address you used to sign up for Github). Press enter to run the command.
+2. Copy and paste this text into your terminal. **Replace the email given below with your GitHub email address** (the email address you used to sign up for Github). Press enter to run the command.
 
 ```
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -70,7 +98,7 @@ If you have already created a SSH key and you are asked to rewrite another key, 
 
 ### [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
-1. In terminal/command prompt, run the following command
+1. In terminal, run the following command
   ```
   eval "$(ssh-agent -s)"
   ```
@@ -109,7 +137,7 @@ If you have already created a SSH key and you are asked to rewrite another key, 
        Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
        ```
 
-3. Return to terminal/command prompt. Run the following command:
+3. Return to terminal. Run the following command:
 ```
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
@@ -152,7 +180,7 @@ Thankfully, we only need to do these steps once! Additionally, most security que
 
 Then put this command into your command line, within the folder you want the workshop folder to be in.
 
-For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal/command prompt.
+For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal.
 ```
 git clone git@github.com:jq-11/workshop-name.git
 ``` 

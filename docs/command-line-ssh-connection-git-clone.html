@@ -128,29 +128,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -185,7 +162,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html"><i class="fa fa-check"></i><b>4</b> Command Line, SSH Connection &amp; Git Clone</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#introduction-to-the-command-line"><i class="fa fa-check"></i><b>4.1</b> Introduction to the Command Line</a></li>
+<li class="chapter" data-level="4.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#introduction-to-the-command-line"><i class="fa fa-check"></i><b>4.1</b> Introduction to the Command Line</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#terminal-linux-macos-command-prompt-and-windows-powershell-windows"><i class="fa fa-check"></i><b>4.1.1</b> Terminal (Linux, macOS), Command Prompt and Windows PowerShell (Windows)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#common-commands-for-us"><i class="fa fa-check"></i><b>4.1.2</b> Common Commands (for us)</a></li>
+</ul></li>
 <li class="chapter" data-level="4.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection"><i class="fa fa-check"></i><b>4.2</b> Creating the SSH Connection</a>
 <ul>
 <li class="chapter" data-level="4.2.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key"><i class="fa fa-check"></i><b>4.2.1</b> Generating a new SSH key</a></li>
@@ -287,20 +268,49 @@ div.csl-indent {
 <p>Note:</p>
 <p>Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!</p>
 </blockquote>
-<p>[FILL IN LATER - JULIA CAN GUIDE NEHA]</p>
 <ul>
-<li><p>terminal (mac, unix based) vs command prompt (windows)</p></li>
-<li><p>pwd</p></li>
-<li><p>ls</p></li>
-<li><p>cd + <code>tab</code></p></li>
-<li><p>mkdir</p></li>
-<li><p>rmdir</p></li>
-<li><p>rmdir -r</p></li>
-<li><p>. = current folder</p></li>
-<li><p>.. = previous folder</p></li>
-<li><p>~ = home</p></li>
-<li><p>up and down arrows</p></li>
+<li>terminal (mac, unix based) vs command prompt (windows)</li>
 </ul>
+<div id="terminal-linux-macos-command-prompt-and-windows-powershell-windows" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Terminal (Linux, macOS), Command Prompt and Windows PowerShell (Windows)<a href="command-line-ssh-connection-git-clone.html#terminal-linux-macos-command-prompt-and-windows-powershell-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.</p>
+<blockquote>
+<p>Note: Windows PowerShell tends to be more advanced than Command Prompt, and often can accept more commands that are accepted by Terminal than Command Prompt.</p>
+</blockquote>
+</div>
+<div id="common-commands-for-us" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Common Commands (for us)<a href="command-line-ssh-connection-git-clone.html#common-commands-for-us" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<!-- Consider making this explanation a video -->
+<div id="pwd" class="section level6 unnumbered hasAnchor">
+<h6>pwd<a href="command-line-ssh-connection-git-clone.html#pwd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>pwd stands for “print working directory”. For example, below our output is where in my folders the current .Rmd file that makes up this website is:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="command-line-ssh-connection-git-clone.html#cb1-1" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs</code></pre>
+</div>
+<div id="ls-or-dir" class="section level6 unnumbered hasAnchor">
+<h6>ls OR dir<a href="command-line-ssh-connection-git-clone.html#ls-or-dir" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“ls” is a <strong>Terminal</strong> command that also works in <strong>Windows PowerShell</strong>. It short for “list” and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="command-line-ssh-connection-git-clone.html#cb3-1" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<!-- to save space, only output the first 4 lines -->
+<pre><code>## 01-getting-started.Rmd
+## 02-git-clone.Rmd
+## 03-terminal-and-git.Rmd
+## 04-files-and-build.Rmd</code></pre>
+<p>A similar command in <strong>Command Prompt</strong> is <code>dir</code>, which also outputs the files and folders in your current directory (along with timestamps)!</p>
+</div>
+<div id="cd-tab" class="section level6 unnumbered hasAnchor">
+<h6>cd + <code>tab</code><a href="command-line-ssh-connection-git-clone.html#cd-tab" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<ul>
+<li>mkdir</li>
+<li>rmdir</li>
+<li>rmdir -r</li>
+<li>. = current folder</li>
+<li>.. = previous folder</li>
+<li>~ = home</li>
+<li>up and down arrows</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="creating-the-ssh-connection" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Creating the SSH Connection<a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -310,13 +320,13 @@ div.csl-indent {
 <div id="generating-a-new-ssh-key" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">Generating a new SSH key</a><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>Open Terminal/Command Prompt/preferred command line interpretter.</li>
+<li>Open Terminal.</li>
 </ol>
 <blockquote>
 <p>Note: You can do these commands anywhere in your file explorer.</p>
 </blockquote>
 <ol start="2" style="list-style-type: decimal">
-<li>Copy and paste this text into your terminal/command prompt. <strong>Replace the email given below with your GitHub email address</strong> (the email address you used to sign up for Github). Press enter to run the command.</li>
+<li>Copy and paste this text into your terminal. <strong>Replace the email given below with your GitHub email address</strong> (the email address you used to sign up for Github). Press enter to run the command.</li>
 </ol>
 <pre><code>ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;</code></pre>
 <p>You will get this output:</p>
@@ -337,7 +347,7 @@ div.csl-indent {
 <div id="adding-your-ssh-key-to-the-ssh-agent" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent">Adding your SSH key to the ssh-agent</a><a href="command-line-ssh-connection-git-clone.html#adding-your-ssh-key-to-the-ssh-agent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>In terminal/command prompt, run the following command</li>
+<li>In terminal, run the following command</li>
 </ol>
 <pre><code>eval &quot;$(ssh-agent -s)&quot;</code></pre>
 <p>You will get this output:
@@ -370,7 +380,7 @@ div.csl-indent {
 </ul>
 <pre><code>Save modified buffer (ANSWERING &quot;No&quot; WILL DESTROY CHANGES) ?</code></pre></li>
 </ol></li>
-<li><p>Return to terminal/command prompt. Run the following command:</p></li>
+<li><p>Return to terminal. Run the following command:</p></li>
 </ol>
 <pre><code>ssh-add --apple-use-keychain ~/.ssh/id_ed25519</code></pre>
 </div>
@@ -404,7 +414,7 @@ div.csl-indent {
 <p><img src="img/git-instruct/copy-ssh.png" alt="how to find the ssh for your repo" /><br />
 </p>
 <p>Then put this command into your command line, within the folder you want the workshop folder to be in.</p>
-<p>For example, if my organization is named: jq-11 and my workshop name is “workshop-name”, I would enter this into my terminal/command prompt.</p>
+<p>For example, if my organization is named: jq-11 and my workshop name is “workshop-name”, I would enter this into my terminal.</p>
 <pre><code>git clone git@github.com:jq-11/workshop-name.git</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>You should be ready to go! With your given permissions, you should be able to git push and git pull fine!</li>
@@ -476,20 +486,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
