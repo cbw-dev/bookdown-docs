@@ -3,7 +3,9 @@
 Now we know which files to edit, but how can we edit these files? How do we format our text, links, headers, ...?
 
 ## Visaul R Markdown {#visual-r-md}
+All our files are made up of code and markdown syntax, that becomes formatted into our website. However, if you do not feel comfortable using Markdown (or you just want an easier way to write your pages), see this guide on using [Visual R Markdown](https://rstudio.github.io/visual-markdown-editing/#/citations)!
 
+If you want to use Markdown, the syntax guide is provided below!
 
 ## Chapters
 
