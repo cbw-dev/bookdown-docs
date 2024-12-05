@@ -2,7 +2,7 @@
 
 Now we know which files to edit, but how can we edit these files? How do we format our text, links, headers, ...?
 
-## Visaul R Markdown
+## Visaul R Markdown {#visual-r-md}
 
 
 ## Chapters

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.13)  5 DEC 2024 18:35
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.13)  5 DEC 2024 18:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1317,12 +1317,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1357--1359
 lude these
  []
 
+
+Overfull \hbox (961.0pt too wide) in paragraph at lines 1373--1373
+ []  \TU/lmtt/m/n/10 - **"File []..._svg-tex.pdf[] is missing."** is a bug that
+ only occurs when producing bookdown::pdf_book. It occurs since you are calling
+ a svg image in regular markdown, which is not allowed. If you want to display 
+a .svg image, use HTML code.[] 
+ []
+
 [44] [45] [46
 
 ] [47] [48]
 Chapter 8.
 
-Underfull \hbox (badness 2057) in paragraph at lines 1435--1436
+Underfull \hbox (badness 2057) in paragraph at lines 1439--1440
 []\TU/lmr/m/n/10 Preview the book: - updates on saves in viewer window book-
  []
 
@@ -1348,18 +1356,18 @@ File: img/git-instruct/git-connection.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [52]
-Underfull \hbox (badness 3199) in paragraph at lines 1523--1525
+Underfull \hbox (badness 3199) in paragraph at lines 1527--1529
 []\TU/lmr/bx/n/10 Important: \TU/lmr/m/n/10 This step is why I highlighted that
  specific text
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 1523--1525
+Underfull \hbox (badness 2027) in paragraph at lines 1527--1529
 \TU/lmr/m/n/10 above. Copy that command, and put it into terminal. Gen-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 1523--1525
+Underfull \hbox (badness 2495) in paragraph at lines 1527--1529
 \TU/lmr/m/n/10 erally, it will look something like this: \TU/lmtt/m/n/10 git re
 mote add origin
  []
@@ -1384,14 +1392,14 @@ Chapter 10.
 File: img/git-instruct/github-settings.png Graphic file (type bmp)
 <img/git-instruct/github-settings.png>
 
-Overfull \hbox (178.10144pt too wide) in paragraph at lines 1610--1613
+Overfull \hbox (178.10144pt too wide) in paragraph at lines 1614--1617
 []\TU/lmr/m/n/10 In the top navigation bar, select settings. [] 
  []
 
 File: img/git-instruct/github-select-pages.png Graphic file (type bmp)
 <img/git-instruct/github-select-pages.png>
 
-Overfull \hbox (131.2858pt too wide) in paragraph at lines 1613--1616
+Overfull \hbox (131.2858pt too wide) in paragraph at lines 1617--1620
 []\TU/lmr/m/n/10 Then, go to the pages sidebar. [] 
  []
 
@@ -1402,7 +1410,7 @@ Underfull \vbox (badness 1466) has occurred while \output is active []
 File: img/git-instruct/github-deploy-main.png Graphic file (type bmp)
 <img/git-instruct/github-deploy-main.png>
 
-Overfull \hbox (198.06654pt too wide) in paragraph at lines 1616--1619
+Overfull \hbox (198.06654pt too wide) in paragraph at lines 1620--1623
 \TU/lmr/m/n/10 must change the branch from “none” to main. [] 
  []
 
@@ -1420,7 +1428,7 @@ File: img/git-instruct/successful-deploy.png Graphic file (type bmp)
 File: img/git-instruct/failed-deploy.png Graphic file (type bmp)
 <img/git-instruct/failed-deploy.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1635--1637
+Underfull \hbox (badness 10000) in paragraph at lines 1639--1641
 [][]
  []
 
@@ -1446,10 +1454,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 19824 strings out of 474773
- 366225 string characters out of 5757724
+ 19825 strings out of 474773
+ 366238 string characters out of 5757724
  1934839 words of memory out of 5000000
- 41662 multiletter control sequences out of 15000+600000
+ 41663 multiletter control sequences out of 15000+600000
  564584 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,8n,121p,1002b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s

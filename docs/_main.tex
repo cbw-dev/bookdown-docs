@@ -915,7 +915,7 @@ Git pushing will automatically update the website, you can see the updates and p
 
 Now we know which files to edit, but how can we edit these files? How do we format our text, links, headers, \ldots?
 
-\section{Visaul R Markdown}\label{visaul-r-markdown}
+\section{Visaul R Markdown}\label{visual-r-md}
 
 \section{Chapters}\label{chapters}
 
@@ -1369,7 +1369,7 @@ Trying to build and getting \textbf{``Exited with status 1.''}? Bad news: Your b
   There is an easy fix! Press the dropdown options in the ``Build Book'' button and select ``bookdown::gitbook''. We only need to produce the gitbook (the html pages!) so it's ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format. For example:
 
 \begin{verbatim}
-  - **"File '..._svg-tex.pdf' is missing."** is a bug that
+  - **"File '..._svg-tex.pdf' is missing."** is a bug that only occurs when producing bookdown::pdf_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code. 
 \end{verbatim}
 \end{itemize}
 
@@ -1386,6 +1386,10 @@ Sometimes, RStudio defaults so that there is no text wrapping when viewing your 
 \item
   Go to the 5th option ``Soft-Wrap Long Lines'' and select it.
 \end{enumerate}
+
+\subsection{Visual R Markdown}\label{visual-r-markdown}
+
+If you are having difficulties using Markdown Syntax, RStudio has a work around! See \hyperref[visual-r-md]{Visaul R Markdown} for more information.
 
 \section{FAQs}\label{faqs}
 

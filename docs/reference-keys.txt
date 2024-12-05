@@ -28,7 +28,7 @@ preview-your-book
 file-setup
 push-to-github-via-rstudio
 formatting-your-content---markdown
-visaul-r-markdown
+visual-r-md
 chapters
 subheader
 subheader-1
@@ -44,6 +44,7 @@ danger-zones
 potential-errors-bugs
 ease-of-use
 wrapping-your-code
+visual-r-markdown
 faqs
 build-site
 how-to-edit-_bookdown.yml

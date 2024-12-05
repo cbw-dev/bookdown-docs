@@ -40,7 +40,7 @@ Trying to build and getting **"Exited with status 1."**? Bad news: Your book is 
     
     There is an easy fix! Press the dropdown options in the "Build Book" button and select "bookdown::gitbook". We only need to produce the gitbook (the html pages!) so it's ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format. For example: 
 
-        - **"File '..._svg-tex.pdf' is missing."** is a bug that
+        - **"File '..._svg-tex.pdf' is missing."** is a bug that only occurs when producing bookdown::pdf_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code. 
 
 ## Ease of Use
 
@@ -50,5 +50,8 @@ Sometimes, RStudio defaults so that there is no text wrapping when viewing your 
 1. In your upper left corner of your RStudio Window, you will see options "File", "Edit", "Code". (If you are in full-screen on a mac, you will have to bring your cursor to the upper left corner before seeing these options). Click "Code".
 
 2. Go to the 5th option "Soft-Wrap Long Lines" and select it.
+
+### Visual R Markdown
+If you are having difficulties using Markdown Syntax, RStudio has a work around! See [Visaul R Markdown](#visual-r-md) for more information.
 
 ## FAQs
