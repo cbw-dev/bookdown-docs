@@ -141,13 +141,12 @@ You will only have to edit _output.yml a bit. The _output.yml file creates the t
 
 2. Add your sponsors: Replace "Your-Sponsor-Here.svg" with the file name of your sponsors name/logo. Remeber to place these files inside the ./img/sponsors/ folder.
 
-3. Replace your workshop repo edit link.
+3. Replace your workshop repo edit link. This allows users to suggest edits to your work on GitHub. Follow these instructions (they are also provided in the template).
 
-    - USERNAME = organization name = bioinformaticsdotca
-    - REPO = your workshop repo name
-    - BRANCH = main
-    
-  <!-- #3 MAY NEED FIXING -->
+    1. Go to your index.Rmd page on GitHub, Copy and paste the link to it
+    2. Copy and paste the link to it, excluding the "index.Rmd" ending
+    3. Add "/%s" to the ending
+    4. Replace the above link.
 
 ###### Organizing the Table of Contents {-}
 

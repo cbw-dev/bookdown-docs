@@ -793,17 +793,20 @@ You will only have to edit \_output.yml a bit. The \_output.yml file creates the
 \item
   Add your sponsors: Replace ``Your-Sponsor-Here.svg'' with the file name of your sponsors name/logo. Remeber to place these files inside the ./img/sponsors/ folder.
 \item
-  Replace your workshop repo edit link.
+  Replace your workshop repo edit link. This allows users to suggest edits to your work on GitHub. Follow these instructions (they are also provided in the template).
 
-  \begin{itemize}
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
   \tightlist
   \item
-    USERNAME = organization name = bioinformaticsdotca
+    Go to your index.Rmd page on GitHub, Copy and paste the link to it
   \item
-    REPO = your workshop repo name
+    Copy and paste the link to it, excluding the ``index.Rmd'' ending
   \item
-    BRANCH = main
-  \end{itemize}
+    Add ``/\%s'' to the ending
+  \item
+    Replace the above link.
+  \end{enumerate}
 \end{enumerate}
 
 \subparagraph*{Organizing the Table of Contents}\label{organizing-the-table-of-contents}
