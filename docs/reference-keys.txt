@@ -62,3 +62,7 @@ how-to-make-a-git-repo-rc
 how-to-make-the-git-connection-adding-your-local-repo-to-github
 updating-github-via-rstudio
 how-to-deploy-your-workshop-website-1
+appendix-links-for-developers
+github-repo
+diagram-links
+how-to-edit-a-google-drawing

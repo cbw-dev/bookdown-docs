@@ -33,12 +33,88 @@ Chapters and sections are numbered by default. To un-number a heading, add a `{.
 ```
 
 ## Text Formatting
-Before we go ahead with much more formatting possibilities, let's get the basics of markdown formatting options for basic text.(Tip: There are many resources online that can help give more information!)
+Before we go ahead with much more formatting possibilities, let's get the basics of markdown formatting options for basic text. (Tip: There are many resources online that can help give more information!)
 
+#### <font color="6495ED">Bold</font> {-}
+
+```markdown
+**bolded text**
+```
+**bolded text**
+
+#### <font color="6495ED">Italics</font> {-}
+
+```markdown
+*italicized text*
+```
+*italicized text*
+
+#### <font color="6495ED">Blockquote</font> {-}
+
+```markdown
+> blockquote
+```
+
+> blockquote
+
+You can put emojis to help these standout! For example:
+
+> ⚠️ **Warning:** Do not push the big red button.
+
+#### <font color="6495ED">Unordered List</font> {-}
+
+```markdown
+- unordered
+  - list
+    - element
+- cool!
+```
+- unordered
+  - list
+    - element
+- cool!
 
 > Warning: Bookdown currently can not render Markdown to-do lists properly. Alternatively, use [this tip](#use-html) instead!
 
-> TIP: For nesting inside a list, put 2 tabs (text should turn grey)
+#### <font color="6495ED">Ordered List</font> {-}
+
+```markdown
+1. First item
+    1. a <!-- For nesting inside a list, put 2 tabs before the element -->
+    2. b
+2. Second item
+3. Third item
+```
+
+1. First 
+    1. a
+        1. c
+        2. d
+    2. b
+2. Second
+3. Third
+
+#### <font color="6495ED">Code</font> {-}
+
+There are 2 ways to write code:
+
+1.
+    ```
+    `code`
+    ```
+    which looks like this:
+    `code`
+
+2. Or long pieces of code
+``````
+```
+code
+```
+`````
+
+```
+code
+```
 
 ## Cross-references {#cross}
 
@@ -145,14 +221,14 @@ Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown;s 
 
 Here are some examples:
 
-1. Markdown has no formatting options for underlining. Hence, underline code in a .Rmd file as follows:
+1. Markdown has no formatting options for underlining. Hence, underline text in a .Rmd file with the following HTML syntax:
 
     ```
     <u> underlined text</u>
     ```
     <u> underlined text</u>
 
-2. Bookdown currently renders to-do lists incorrectly. Instead, you can use the following html code:
+2. Bookdown currently renders to-do lists incorrectly. Instead, you can use the following HTML code:
 
     ```
     <div style="list-style-type: none;">
