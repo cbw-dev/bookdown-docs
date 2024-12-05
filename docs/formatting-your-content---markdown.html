@@ -36,7 +36,7 @@ set in the _output.yml file.</p>" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="so-what-do-these-files-mean.html"/>
-<link rel="next" href="how-to-render-code.html"/>
+<link rel="next" href="render-code.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -234,7 +234,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.11" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#callout-blocks-will-be-added-later"><i class="fa fa-check"></i><b>6.11</b> Callout blocks (will be added later)</a></li>
 <li class="chapter" data-level="6.12" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#use-html"><i class="fa fa-check"></i><b>6.12</b> TIP: Markdown Not Working/Not Enough? Use HTML!</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="how-to-render-code.html"><a href="how-to-render-code.html"><i class="fa fa-check"></i><b>7</b> How to Render Code</a></li>
+<li class="chapter" data-level="7" data-path="render-code.html"><a href="render-code.html"><i class="fa fa-check"></i><b>7</b> How to Render Code</a></li>
 <li class="chapter" data-level="8" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html"><i class="fa fa-check"></i><b>8</b> Brain Dump / FAQ</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html#danger-zones"><i class="fa fa-check"></i><b>8.1</b> Danger Zones</a></li>
@@ -333,9 +333,12 @@ div.csl-indent {
 </div>
 <div id="blockquote" class="section level4 unnumbered hasAnchor">
 <h4><font color="6495ED">Blockquote</font><a href="formatting-your-content---markdown.html#blockquote" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb30"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb30-1"><a href="formatting-your-content---markdown.html#cb30-1" tabindex="-1"></a><span class="at">&gt; blockquote</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb30-1"><a href="formatting-your-content---markdown.html#cb30-1" tabindex="-1"></a><span class="at">&gt; blockquote</span></span>
+<span id="cb30-2"><a href="formatting-your-content---markdown.html#cb30-2" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb30-3"><a href="formatting-your-content---markdown.html#cb30-3" tabindex="-1"></a><span class="at">&gt; --- someone who blockquotes</span></span></code></pre></div>
 <blockquote>
 <p>blockquote</p>
+<p>— someone who blockquotes</p>
 </blockquote>
 <p>You can put emojis to help these standout! For example:</p>
 <blockquote>
@@ -390,10 +393,14 @@ div.csl-indent {
 <li><p><code>`code`</code>
 which looks like this:
 <code>code</code></p></li>
-<li><p>Or long pieces of code
-`<code>``` code ```</code></p></li>
+<li><p>Or long pieces of code</p>
+<pre><code>```
+1 + 1  # a line of code
+```</code></pre>
+<p>which would render into the following on your website</p>
+<pre><code>1 + 1  # a line of code</code></pre></li>
 </ol>
-<pre><code>code</code></pre>
+<p>Find more code options in the <a href="render-code.html#render-code">How to Render Code</a> section</p>
 </div>
 </div>
 <div id="cross" class="section level2 hasAnchor" number="6.4">
@@ -416,8 +423,8 @@ which looks like this:
 <h2><span class="header-section-number">6.5</span> Captioned figures and tables<a href="formatting-your-content---markdown.html#captioned-figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Figures and tables <em>with captions</em> can also be cross-referenced from elsewhere in your book using <code>\@ref(fig:chunk-label)</code> and <code>\@ref(tab:chunk-label)</code>, respectively.</p>
 <p>See Figure <a href="formatting-your-content---markdown.html#fig:nice-fig">6.1</a>.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="formatting-your-content---markdown.html#cb34-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb34-2"><a href="formatting-your-content---markdown.html#cb34-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="formatting-your-content---markdown.html#cb35-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
+<span id="cb35-2"><a href="formatting-your-content---markdown.html#cb35-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
 <img src="_main_files/figure-html/nice-fig-1.png" alt="Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases." width="80%" />
 <p class="caption">
@@ -425,10 +432,10 @@ Figure 6.1: Here is a nice figure!
 </p>
 </div>
 <p>Don’t miss Table <a href="formatting-your-content---markdown.html#tab:nice-tab">6.1</a>.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="formatting-your-content---markdown.html#cb35-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb35-2"><a href="formatting-your-content---markdown.html#cb35-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb35-3"><a href="formatting-your-content---markdown.html#cb35-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb35-4"><a href="formatting-your-content---markdown.html#cb35-4" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="formatting-your-content---markdown.html#cb36-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb36-2"><a href="formatting-your-content---markdown.html#cb36-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
+<span id="cb36-3"><a href="formatting-your-content---markdown.html#cb36-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb36-4"><a href="formatting-your-content---markdown.html#cb36-4" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <caption><span id="tab:nice-tab">Table 6.1: </span>Here is a nice table!</caption>
 <thead>
@@ -570,7 +577,7 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
         </div>
       </div>
 <a href="so-what-do-these-files-mean.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="how-to-render-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="render-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

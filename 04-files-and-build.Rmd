@@ -41,7 +41,7 @@ In your top right, we have a different window with more different views. The mos
 
 Try pressing "Build Book" within the "Build" window. Your build window is going to fill up with text, and soon, a website is going to pop-up as your new window. This is the website you will be editing to create your workshop!
 
-By building the book, all of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don't have to save before building!). 
+By building the book, **all** of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don't have to save before building!). 
 
 ### Other Ways to Build Your Book
 
@@ -61,6 +61,12 @@ Building can take a long time. If you are editing just one file, you can press t
 > A quicker way to knit is using the keboard controls
 >
 > `cmd + shift + K` (macOS) OR `ctrl + shift + K` (Windows)
+
+#### Knit VS Build
+
+Building creates the website using **ALL** the .Rmd (and other) files. This is why it takes so long. Knitting creates/updates **only** the .Rmd file you're currently working in and reruns your code. (Note: You can't knit a non-.Rmd file!)
+
+Before pushing to GitHub, it is a good idea to build, in case of faulty links or small bugs that occur if you only knit or preview.
 
 ### Preview Your Book
 

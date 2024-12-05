@@ -25,6 +25,7 @@ explaining-rstudio
 build-the-book
 other-ways-to-build-your-book
 knit-your-book
+knit-vs-build
 preview-your-book
 file-setup
 push-to-github-via-rstudio
@@ -43,7 +44,7 @@ equations
 theorems-and-proofs
 callout-blocks-will-be-added-later
 use-html
-how-to-render-code
+render-code
 brain-dump-faq
 danger-zones
 potential-errors-bugs

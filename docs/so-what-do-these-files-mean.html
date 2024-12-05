@@ -234,7 +234,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.11" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#callout-blocks-will-be-added-later"><i class="fa fa-check"></i><b>6.11</b> Callout blocks (will be added later)</a></li>
 <li class="chapter" data-level="6.12" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#use-html"><i class="fa fa-check"></i><b>6.12</b> TIP: Markdown Not Working/Not Enough? Use HTML!</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="how-to-render-code.html"><a href="how-to-render-code.html"><i class="fa fa-check"></i><b>7</b> How to Render Code</a></li>
+<li class="chapter" data-level="7" data-path="render-code.html"><a href="render-code.html"><i class="fa fa-check"></i><b>7</b> How to Render Code</a></li>
 <li class="chapter" data-level="8" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html"><i class="fa fa-check"></i><b>8</b> Brain Dump / FAQ</a>
 <ul>
 <li class="chapter" data-level="8.1" data-path="brain-dump-faq.html"><a href="brain-dump-faq.html#danger-zones"><i class="fa fa-check"></i><b>8.1</b> Danger Zones</a></li>
@@ -327,7 +327,7 @@ div.csl-indent {
 <div id="build-the-book" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Build the book<a href="so-what-do-these-files-mean.html#build-the-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Try pressing “Build Book” within the “Build” window. Your build window is going to fill up with text, and soon, a website is going to pop-up as your new window. This is the website you will be editing to create your workshop!</p>
-<p>By building the book, all of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don’t have to save before building!).</p>
+<p>By building the book, <strong>all</strong> of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don’t have to save before building!).</p>
 <div id="other-ways-to-build-your-book" class="section level3 hasAnchor" number="5.4.1">
 <h3><span class="header-section-number">5.4.1</span> Other Ways to Build Your Book<a href="so-what-do-these-files-mean.html#other-ways-to-build-your-book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
@@ -348,6 +348,11 @@ div.csl-indent {
 <p>A quicker way to knit is using the keboard controls</p>
 <p><code>cmd + shift + K</code> (macOS) OR <code>ctrl + shift + K</code> (Windows)</p>
 </blockquote>
+<div id="knit-vs-build" class="section level4 hasAnchor" number="5.4.2.1">
+<h4><span class="header-section-number">5.4.2.1</span> Knit VS Build<a href="so-what-do-these-files-mean.html#knit-vs-build" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Building creates the website using <strong>ALL</strong> the .Rmd (and other) files. This is why it takes so long. Knitting creates/updates <strong>only</strong> the .Rmd file you’re currently working in and reruns your code. (Note: You can’t knit a non-.Rmd file!)</p>
+<p>Before pushing to GitHub, it is a good idea to build, in case of faulty links or small bugs that occur if you only knit or preview.</p>
+</div>
 </div>
 <div id="preview-your-book" class="section level3 hasAnchor" number="5.4.3">
 <h3><span class="header-section-number">5.4.3</span> Preview Your Book<a href="so-what-do-these-files-mean.html#preview-your-book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
