@@ -37,11 +37,15 @@ In your top right, we have a different window with more different views. The mos
 >
 > Try closing (and maybe even restarting RStudio) and then reopening it. A "Git" tab should appear to the right of the "Build" tab and to the left of the "Tutorial" tab.
 
-## Build the book
+## Build the Book
 
 Try pressing "Build Book" within the "Build" window. Your build window is going to fill up with text, and soon, a website is going to pop-up as your new window. This is the website you will be editing to create your workshop!
 
 By building the book, **all** of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don't have to save before building!). 
+
+> Note: By default, RStudio will choose to build "All Formats":
+> ![newly opened RStudio window](img/files-and-build/build-book-options.png)\
+> You can choose to only produce a gitbook (the first option). This can be helpful if you are encountering errors claiming that "bookdown::render_book() failed to render the output format 'bookdown::pdf_book'/bookdown::epub_book'". Additionally, not producing all output formats can decrease your build time significantly! (However, not being able to produce the other ouputs may suggest there is an underlying bug. It is ideal to be abble to produce all outputs.)
 
 ### Other Ways to Build Your Book
 
@@ -168,10 +172,10 @@ You can create new files anywhere. You should only be making new website pages, 
 
 ###### 404 Page {-}
 
-That being said, there is one file that can be a markdown (.md) file: the _404.(R)md file. If website user goes to a webpage that belongs to our website but no longer exists, they will get this 404 page instead. You could put links to your landing page or the bioinformatics.ca homepage here!
+That being said, there is one file that can be a markdown (.md) file: the _404.(R)md file. If website user goes to a webpage that belongs to our website but no longer exists, they will get this 404 page instead. Put links to your landing page for your workshop or the bioinformatics.ca homepage here!
 
 ###### CBW Organization Folders {-}
-We want our workshops to be easy to navigate and understand. Hence, images or files that are required for your lessons should be placed in `./img/` and `./content-files/.` respectively. Within these files, try creating sub-folders within these folders to help organize groups of files. For example, if you have a bunch of data sets, try creating a "datasets" folder within `./content-files/`. 
+We want our workshops to be easy to navigate and understand. Hence, images or files that are required for your lessons should be placed in `./img/` and `./content-files/` respectively. Within these files, try creating sub-folders within these folders to help organize groups of files. For example, if you have a bunch of data sets, try creating a "datasets" folder within `./content-files/`. 
 
 Subfolders already exist in `./img`: `./img/faculty/` and `./img/sponsors/`. Fill these with photos of your faculty and images of the names'/logos' of your sponsors, respectfully!
 

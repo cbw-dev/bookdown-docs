@@ -21,17 +21,34 @@ Ex. Forgot to pull before editing?
 
 ## Potential Errors & Bugs
 
+Trying to build and getting **"Exited with status 1."**? Bad news: Your book is not building properly. Good news: here are some *(hopefully)* helpful debugging tricks.
+
+- **"Error: LaTeX failed to compile _main.tex."** - Essentially, something in your code is not allowing the output to be produced properly. Something in your code is producing incorrect output that is not allowing output to be produced. 
+    
+    > TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug. 
+
 - If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see **"Permission denied"** in your warning messages, trying running this command ```chmod -R u+w docs``` in terminal, in the folder containing your docs folder [CLARIFY ?]
 
 - **"Could not produce X output"** - by default, bookdown builds all possible formats: gitbook, pdf, epub versions. We only need the gitbook, so if you're having issues, change your build settings to only creating the gitbook [CLARIFY + INCLUDE IMAGES]
 
 - A very common bug is **"missing X package"**, just install it using this command in your console (the bottom left window in RStudio) ```install.packages("missing package name, include these surrouding quotations") ```
 
+- Not being able to produce a specific format - If you're getting one of the following errors:
+
+    - bookdown::render_book() **failed to render the output format** 'bookdown::pdf_book'
+    - bookdown::render_book() failed to render the output format 'bookdown::epub_book'
+    
+    There is an easy fix! Press the dropdown options in the "Build Book" button and select "bookdown::gitbook". We only need to produce the gitbook (the html pages!) so it's ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format. For example: 
+
+        - **"File '..._svg-tex.pdf' is missing."** is a bug that
+
 ## Ease of Use
 
 ### Wrapping Your Code
 Sometimes, RStudio defaults so that there is no text wrapping when viewing your files. If you notice that you have to scroll horizontally to see the long lines in your files, turn on "Soft-Wrap Long Lines".
+
 1. In your upper left corner of your RStudio Window, you will see options "File", "Edit", "Code". (If you are in full-screen on a mac, you will have to bring your cursor to the upper left corner before seeing these options). Click "Code".
+
 2. Go to the 5th option "Soft-Wrap Long Lines" and select it.
 
 ## FAQs

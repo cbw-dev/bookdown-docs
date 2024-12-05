@@ -662,11 +662,17 @@ No ``Git'' Window?
 Try closing (and maybe even restarting RStudio) and then reopening it. A ``Git'' tab should appear to the right of the ``Build'' tab and to the left of the ``Tutorial'' tab.
 \end{quote}
 
-\section{Build the book}\label{build-the-book}
+\section{Build the Book}\label{build-the-book}
 
 Try pressing ``Build Book'' within the ``Build'' window. Your build window is going to fill up with text, and soon, a website is going to pop-up as your new window. This is the website you will be editing to create your workshop!
 
 By building the book, \textbf{all} of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don't have to save before building!).
+
+\begin{quote}
+Note: By default, RStudio will choose to build ``All Formats'':
+\includegraphics{img/files-and-build/build-book-options.png}\\
+You can choose to only produce a gitbook (the first option). This can be helpful if you are encountering errors claiming that ``bookdown::render\_book() failed to render the output format `bookdown::pdf\_book'/bookdown::epub\_book'''. Additionally, not producing all output formats can decrease your build time significantly! (However, not being able to produce the other ouputs may suggest there is an underlying bug. It is ideal to be abble to produce all outputs.)
+\end{quote}
 
 \subsection{Other Ways to Build Your Book}\label{other-ways-to-build-your-book}
 
@@ -836,12 +842,12 @@ You can create new files anywhere. You should only be making new website pages, 
 \subparagraph*{404 Page}\label{page}
 \addcontentsline{toc}{subparagraph}{404 Page}
 
-That being said, there is one file that can be a markdown (.md) file: the \_404.(R)md file. If website user goes to a webpage that belongs to our website but no longer exists, they will get this 404 page instead. You could put links to your landing page or the bioinformatics.ca homepage here!
+That being said, there is one file that can be a markdown (.md) file: the \_404.(R)md file. If website user goes to a webpage that belongs to our website but no longer exists, they will get this 404 page instead. Put links to your landing page for your workshop or the bioinformatics.ca homepage here!
 
 \subparagraph*{CBW Organization Folders}\label{cbw-organization-folders}
 \addcontentsline{toc}{subparagraph}{CBW Organization Folders}
 
-We want our workshops to be easy to navigate and understand. Hence, images or files that are required for your lessons should be placed in \texttt{./img/} and \texttt{./content-files/.} respectively. Within these files, try creating sub-folders within these folders to help organize groups of files. For example, if you have a bunch of data sets, try creating a ``datasets'' folder within \texttt{./content-files/}.
+We want our workshops to be easy to navigate and understand. Hence, images or files that are required for your lessons should be placed in \texttt{./img/} and \texttt{./content-files/} respectively. Within these files, try creating sub-folders within these folders to help organize groups of files. For example, if you have a bunch of data sets, try creating a ``datasets'' folder within \texttt{./content-files/}.
 
 Subfolders already exist in \texttt{./img}: \texttt{./img/faculty/} and \texttt{./img/sponsors/}. Fill these with photos of your faculty and images of the names'/logos' of your sponsors, respectfully!
 
@@ -906,9 +912,11 @@ Git pushing will automatically update the website, you can see the updates and p
 
 Now we know which files to edit, but how can we edit these files? How do we format our text, links, headers, \ldots?
 
+\section{Visaul R Markdown}\label{visaul-r-markdown}
+
 \section{Chapters}\label{chapters}
 
-As mentioned earlier, headers are defined by a \texttt{\#} before the title. Subheaders get increasingly more nested as add more \texttt{\#} symbols before it. For example,
+As mentioned earlier, headers are defined by a \# before the title. Subheaders get increasingly more nested as add more \# symbols before it. For example,
 
 \begin{verbatim}
 # Hello
@@ -941,12 +949,20 @@ Chapters and sections are numbered by default. To un-number a heading, add a \te
 ### An unnumbered subheader {-}
 \end{verbatim}
 
+\section{Parts}\label{parts}
+
+Notice how index.Rmd in our CBW Bookdown template has \texttt{\#\ (PART)\ Introduction\ \{-\}} (followed by \texttt{\#\ Welcome}). This creates the ``Introduction'' section on the sidebar.
+
+There are already 2 main parts in the template: the introduction and modules sections.
+
+If you want to add more parts, simply paste this: \texttt{\#\ (PART)\ Introduction\ \{-\}} into a new .Rmd file, at the top of the file, before the main \texttt{\#\ header} for that page/file.
+
 \section{Text Formatting}\label{text-formatting}
 
 Before we go ahead with much more formatting possibilities, let's get the basics of markdown formatting options for basic text. (Tip: There are many resources online that can help give more information!)
 
-\subsubsection*{Bold}\label{bold}
-\addcontentsline{toc}{subsubsection}{Bold}
+\subsection*{Bold}\label{bold}
+\addcontentsline{toc}{subsection}{Bold}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -956,8 +972,8 @@ Before we go ahead with much more formatting possibilities, let's get the basics
 
 \textbf{bolded text}
 
-\subsubsection*{Italics}\label{italics}
-\addcontentsline{toc}{subsubsection}{Italics}
+\subsection*{Italics}\label{italics}
+\addcontentsline{toc}{subsection}{Italics}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -967,8 +983,48 @@ Before we go ahead with much more formatting possibilities, let's get the basics
 
 \emph{italicized text}
 
-\subsubsection*{Blockquote}\label{blockquote}
-\addcontentsline{toc}{subsubsection}{Blockquote}
+\subsection*{Subscript}\label{subscript}
+\addcontentsline{toc}{subsection}{Subscript}
+
+\begin{verbatim}
+H~2~O
+\end{verbatim}
+
+H\textsubscript{2}O
+
+\subsection*{Superscript}\label{superscript}
+\addcontentsline{toc}{subsection}{Superscript}
+
+\begin{verbatim}
+Na^+^
+\end{verbatim}
+
+Na\textsuperscript{+}
+
+\subsection*{Footnotes}\label{footnotes}
+\addcontentsline{toc}{subsection}{Footnotes}
+
+\texttt{\^{}{[}{]}} is the formatting for a footnote. For example
+
+\begin{verbatim}
+Here is a footnote: ^[This is a footnote.].
+\end{verbatim}
+
+Here is a footnote: \footnote{This is a footnote.}.
+
+(Scroll to the bottom of this page to see it.)
+
+\subsection*{Horizontal Line}\label{horizontal-line}
+\addcontentsline{toc}{subsection}{Horizontal Line}
+
+\begin{verbatim}
+---
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection*{Blockquote}\label{blockquote}
+\addcontentsline{toc}{subsection}{Blockquote}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -990,8 +1046,8 @@ You can put emojis to help these standout! For example:
 ⚠️ \textbf{Warning:} Do not push the big red button.
 \end{quote}
 
-\subsubsection*{Unordered List}\label{unordered-list}
-\addcontentsline{toc}{subsubsection}{Unordered List}
+\subsection*{Unordered List}\label{unordered-list}
+\addcontentsline{toc}{subsection}{Unordered List}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1026,8 +1082,8 @@ You can put emojis to help these standout! For example:
 Warning: Bookdown currently can not render Markdown to-do lists properly. Alternatively, use \hyperref[use-html]{this tip} instead!
 \end{quote}
 
-\subsubsection*{Ordered List}\label{ordered-list}
-\addcontentsline{toc}{subsubsection}{Ordered List}
+\subsection*{Ordered List}\label{ordered-list}
+\addcontentsline{toc}{subsection}{Ordered List}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1068,17 +1124,15 @@ Warning: Bookdown currently can not render Markdown to-do lists properly. Altern
   Third
 \end{enumerate}
 
-\subsubsection*{Code}\label{code}
-\addcontentsline{toc}{subsubsection}{Code}
+\subsection*{Code}\label{code}
+\addcontentsline{toc}{subsection}{Code}
 
 There are 2 ways to write code:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \texttt{\textasciigrave{}code\textasciigrave{}}
-  which looks like this:
-  \texttt{code}
+  \texttt{\textasciigrave{}code\textasciigrave{}} which looks like this: \texttt{code}
 \item
   Or long pieces of code
 
@@ -1097,28 +1151,50 @@ There are 2 ways to write code:
 
 Find more code options and information in the \hyperref[render-code]{How to Render Code} section.
 
-\subsubsection*{Horizontal Line}\label{horizontal-line}
-\addcontentsline{toc}{subsubsection}{Horizontal Line}
+\subsection*{Images}\label{images}
+\addcontentsline{toc}{subsection}{Images}
+
+The basic notation for a file is:
 
 \begin{verbatim}
----
+![Alt Text](img/.../...)\
 \end{verbatim}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+For example:
 
-\subsubsection*{Link}\label{link}
-\addcontentsline{toc}{subsubsection}{Link}
+\begin{verbatim}
+![bioinformatics.ca logo](img/bioinformatics.ca-logo.jpg)\
+\end{verbatim}
 
-\subsubsection*{Image}\label{image}
-\addcontentsline{toc}{subsubsection}{Image}
+\includegraphics{img/bioinformatics.ca-logo.jpg}\\
 
-\section{Cross-references}\label{cross}
+Note: Markdown does not actually require the backslash ``\textbackslash{}''. However, since Bookdown uses Pandoc, we should add a backslash so that the alternative text does not become a caption for the image. This occurs when the image is not directly following or followed by text. \href{https://pandoc.org/MANUAL.html\#extension-implicit_figures}{Here} is where it's discussed in the Pandoc documentation!
 
-Cross-references are ways to link to different to different parts of your workshop website.
+\begin{quote}
+Note: Before adding the ``\textbackslash{}'', Bookdown will show you the image that you are referring to (double-click the file address link) and it will remain on screen, within your .Rmd file. \emph{You can use this to double check the file address is correct.} After adding the ``\textbackslash{}'', you can double-click to check the file address is pointing to the right image (and it should hover below), but it will not remain on screen.
+\end{quote}
 
-\subsection{Chapters and sub-chapters}\label{chapters-and-sub-chapters}
+\subsection*{Links}\label{links}
+\addcontentsline{toc}{subsection}{Links}
 
-There are two steps to cross-reference any heading:
+Links to a webpage are as follows:
+
+\begin{verbatim}
+[Text you want to hyperlink](website link)
+\end{verbatim}
+
+For example,
+
+\begin{verbatim}
+Click [here](https://bioinformatics.ca/) to see the bioinformatics.ca main page!
+\end{verbatim}
+
+Click \href{https://bioinformatics.ca/}{here} to see the bioinformatics.ca main page!
+
+\subsection*{Links to Other Pages/Sections within your Workshop Wesbite}\label{links-to-other-pagessections-within-your-workshop-wesbite}
+\addcontentsline{toc}{subsection}{Links to Other Pages/Sections within your Workshop Wesbite}
+
+Note these steps work for all headers, not just main (1 \texttt{\#}) headers:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1129,88 +1205,40 @@ There are two steps to cross-reference any heading:
   \begin{itemize}
   \tightlist
   \item
-    Leave the label off if you like the automated heading generated based on your heading title: for example, \texttt{\#\ Hello\ world} = \texttt{\#\ Hello\ world\ \{\#hello-world\}}.
+    If you do not want to include a label, an automatic label is made: \texttt{\#\ Hello\ world} = \texttt{\#\ Hello\ world\ \{\#hello-world\}}.
   \item
     To label an un-numbered heading, use: \texttt{\#\ Hello\ world\ \{-\#nice-label\}} or \texttt{\{\#\ Hello\ world\ .unnumbered\}}.
   \end{itemize}
 \item
-  The reference your text as follows \texttt{{[}any\ text\ you\ want\ can\ go\ here{]}(\#cross)}. This will end up looking like: \hyperref[cross]{any text you want can go here}.
+  Next, reference the header in either 2 ways:
+
+  \begin{itemize}
+  \item
+    If you want the number referring to your header, use: \texttt{\textbackslash{}@ref(label-name)}. For example:
+
+    \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+    \texttt{Please\ see\ Citations\ \textbackslash{}@ref(citations).}
+
+    Please see Citations \ref{citations}.
+
+    \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+  \item
+    If you want a hyperlink, use the following:
+
+\begin{verbatim}
+See the [Citations](#citations)!
+\end{verbatim}
+
+    See the \hyperref[citations]{Citations}!
+  \end{itemize}
 \end{enumerate}
 
-\section{Captioned figures and tables}\label{captioned-figures-and-tables}
+\section{Citations}\label{citations}
 
-Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
+\textbf{\emph{Reference}} items in your bibliography file(s) using \texttt{@key}.
 
-See Figure \ref{fig:nice-fig}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth,alt={Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.}]{_main_files/figure-latex/nice-fig-1} 
-
-}
-
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
-
-Don't miss Table \ref{tab:nice-tab}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
-  \FunctionTok{head}\NormalTok{(pressure, }\DecValTok{10}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
-  \AttributeTok{booktabs =} \ConstantTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{table}
-
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rr}
-\toprule
-temperature & pressure\\
-\midrule
-0 & 0.0002\\
-20 & 0.0012\\
-40 & 0.0060\\
-60 & 0.0300\\
-80 & 0.0900\\
-\addlinespace
-100 & 0.2700\\
-120 & 0.7500\\
-140 & 1.8500\\
-160 & 4.2000\\
-180 & 8.8000\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Parts}\label{parts}
-
-Notice how index.Rmd in our CBW Bookdown template has \texttt{\#\ (PART)\ Introduction\ \{-\}} (followed by \texttt{\#\ Welcome}). This creates the ``Introduction'' section on the sidebar.
-
-There are already 2 main parts in the template: the introduction and modules sections.
-
-If you want to add more parts, simply paste this: \texttt{\#\ (PART)\ Introduction\ \{-\}} into a new .Rmd file, at the top of the file, before the main \texttt{\#\ header}.
-
-\section{Footnotes}\label{footnotes}
-
-Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
-
-\section{Citations (NOT SURE IF WE NEED WORKSHOPS NEED CITATIONS?)}\label{citations-not-sure-if-we-need-workshops-need-citations}
-
-Reference items in your bibliography file(s) using \texttt{@key}.
-
-For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib).
-Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
+For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib). Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
 
 The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
 
@@ -1218,7 +1246,7 @@ The RStudio Visual Markdown Editor can also make it easier to insert citations: 
 
 Here is an equation. Equations are written in latex.
 
-\begin{equation} 
+\begin{equation}
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
   \label{eq:binom}
 \end{equation}
@@ -1240,9 +1268,7 @@ $$a^2 + b^2 = c^2$$
 produces
 
 \begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
+\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have \[a^2 + b^2 = c^2\]
 \end{theorem}
 
 Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
@@ -1283,8 +1309,6 @@ Here are some examples:
   check box
 \end{enumerate}
 
-\chapter{How to Render Code}\label{render-code}
-
 \chapter{Brain Dump / FAQ}\label{brain-dump-faq}
 
 \section{Danger Zones}\label{danger-zones}
@@ -1313,13 +1337,37 @@ Ex. Forgot to pull before editing?
 
 \section{Potential Errors \& Bugs}\label{potential-errors-bugs}
 
+Trying to build and getting \textbf{``Exited with status 1.''}? Bad news: Your book is not building properly. Good news: here are some \emph{(hopefully)} helpful debugging tricks.
+
 \begin{itemize}
+\item
+  **``Error: LaTeX failed to compile \_main.tex.''** - Essentially, something in your code is not allowing the output to be produced properly. Something in your code is producing incorrect output that is not allowing output to be produced.
+
+  \begin{quote}
+  TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug.
+  \end{quote}
 \item
   If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see \textbf{``Permission denied''} in your warning messages, trying running this command \texttt{chmod\ -R\ u+w\ docs} in terminal, in the folder containing your docs folder {[}CLARIFY ?{]}
 \item
   \textbf{``Could not produce X output''} - by default, bookdown builds all possible formats: gitbook, pdf, epub versions. We only need the gitbook, so if you're having issues, change your build settings to only creating the gitbook {[}CLARIFY + INCLUDE IMAGES{]}
 \item
   A very common bug is \textbf{``missing X package''}, just install it using this command in your console (the bottom left window in RStudio) \texttt{install.packages("missing\ package\ name,\ include\ these\ surrouding\ quotations")}
+\item
+  Not being able to produce a specific format - If you're getting one of the following errors:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    bookdown::render\_book() \textbf{failed to render the output format} `bookdown::pdf\_book'
+  \item
+    bookdown::render\_book() failed to render the output format `bookdown::epub\_book'
+  \end{itemize}
+
+  There is an easy fix! Press the dropdown options in the ``Build Book'' button and select ``bookdown::gitbook''. We only need to produce the gitbook (the html pages!) so it's ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format. For example:
+
+\begin{verbatim}
+  - **"File '..._svg-tex.pdf' is missing."** is a bug that
+\end{verbatim}
 \end{itemize}
 
 \section{Ease of Use}\label{ease-of-use}
@@ -1327,8 +1375,14 @@ Ex. Forgot to pull before editing?
 \subsection{Wrapping Your Code}\label{wrapping-your-code}
 
 Sometimes, RStudio defaults so that there is no text wrapping when viewing your files. If you notice that you have to scroll horizontally to see the long lines in your files, turn on ``Soft-Wrap Long Lines''.
-1. In your upper left corner of your RStudio Window, you will see options ``File'', ``Edit'', ``Code''. (If you are in full-screen on a mac, you will have to bring your cursor to the upper left corner before seeing these options). Click ``Code''.
-2. Go to the 5th option ``Soft-Wrap Long Lines'' and select it.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  In your upper left corner of your RStudio Window, you will see options ``File'', ``Edit'', ``Code''. (If you are in full-screen on a mac, you will have to bring your cursor to the upper left corner before seeing these options). Click ``Code''.
+\item
+  Go to the 5th option ``Soft-Wrap Long Lines'' and select it.
+\end{enumerate}
 
 \section{FAQs}\label{faqs}
 

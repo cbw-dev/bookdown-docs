@@ -2,56 +2,112 @@
 
 Now we know which files to edit, but how can we edit these files? How do we format our text, links, headers, ...?
 
+## Visaul R Markdown
+
+
 ## Chapters
 
-As mentioned earlier, headers are defined by a `#` before the title. Subheaders get increasingly more nested as add more `#` symbols before it. For example,
+As mentioned earlier, headers are defined by a \# before the title. Subheaders get increasingly more nested as add more \# symbols before it. For example,
 
-```
+```         
 # Hello
 ```
+
 would create a chapter title. Since there is only one `#` symbol, this would also create a new page. Again, try to keep only one chapter title per .Rmd file.
 
-```
+```         
 ## Subheader
 ```
+
 ## Subheader
 
 This is what a subheader would look like.
 
-```
+```         
 ### Subheader
 ```
+
 ### Subheader
 
-This is what a subheader with 3 `#` symbols would look like. You can add as many `#` symbols as you would like! There is also no limit to the the number of subheaders you can have. 
+This is what a subheader with 3 `#` symbols would look like. You can add as many `#` symbols as you would like! There is also no limit to the the number of subheaders you can have.
 
-### An unnumbered subheader {-}
+### An unnumbered subheader {.unnumbered}
 
 Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the `{-}` at the end of the heading. For example, the above subheader was written like this:
-```
+
+```         
 ### An unnumbered subheader {-}
 ```
 
+## Parts
+
+Notice how index.Rmd in our CBW Bookdown template has `# (PART) Introduction {-}` (followed by `# Welcome`). This creates the "Introduction" section on the sidebar.
+
+There are already 2 main parts in the template: the introduction and modules sections.
+
+If you want to add more parts, simply paste this: `# (PART) Introduction {-}` into a new .Rmd file, at the top of the file, before the main `# header` for that page/file.
+
 ## Text Formatting
+
 Before we go ahead with much more formatting possibilities, let's get the basics of markdown formatting options for basic text. (Tip: There are many resources online that can help give more information!)
 
-#### <font color="6495ED">Bold</font> {-}
+### <font color="6495ED">Bold</font> {.unnumbered}
 
-```markdown
+``` markdown
 **bolded text**
 ```
+
 **bolded text**
 
-#### <font color="6495ED">Italics</font> {-}
+### <font color="6495ED">Italics</font> {.unnumbered}
 
-```markdown
+``` markdown
 *italicized text*
 ```
+
 *italicized text*
 
-#### <font color="6495ED">Blockquote</font> {-}
+### <font color="6495ED">Subscript</font> {.unnumbered}
 
-```markdown
+```         
+H~2~O
+```
+
+H~2~O
+
+### <font color="6495ED">Superscript</font> {.unnumbered}
+
+```         
+Na^+^
+```
+
+Na^+^
+
+### <font color="6495ED">Footnotes</font> {.unnumbered}
+
+`^[]` is the formatting for a footnote. For example
+
+```         
+Here is a footnote: ^[This is a footnote.].
+```
+
+Here is a footnote: [^06-formatting-md-1].
+
+[^06-formatting-md-1]: This is a footnote.
+
+(Scroll to the bottom of this page to see it.)
+
+### <font color="6495ED">Horizontal Line</font> {.unnumbered}
+
+```         
+---
+```
+
+------------------------------------------------------------------------
+
+### <font color="6495ED">Blockquote</font> {.unnumbered}
+
+``` markdown
 > blockquote
 >
 > --- someone who blockquotes
@@ -65,24 +121,25 @@ You can put emojis to help these standout! For example:
 
 > ⚠️ **Warning:** Do not push the big red button.
 
-#### <font color="6495ED">Unordered List</font> {-}
+### <font color="6495ED">Unordered List</font> {.unnumbered}
 
-```markdown
+``` markdown
 - unordered
   - list
     - element
 - cool!
 ```
-- unordered
-  - list
-    - element
-- cool!
+
+-   unordered
+    -   list
+        -   element
+-   cool!
 
 > Warning: Bookdown currently can not render Markdown to-do lists properly. Alternatively, use [this tip](#use-html) instead!
 
-#### <font color="6495ED">Ordered List</font> {-}
+### <font color="6495ED">Ordered List</font> {.unnumbered}
 
-```markdown
+``` markdown
 1. First item
     1. a <!-- For nesting inside a list, put 2 tabs before the element -->
     2. b
@@ -90,105 +147,103 @@ You can put emojis to help these standout! For example:
 3. Third item
 ```
 
-1. First 
-    1. a
-        1. c
-        2. d
-    2. b
-2. Second
-3. Third
+1.  First
+    1.  a
+        1.  c
+        2.  d
+    2.  b
+2.  Second
+3.  Third
 
-#### <font color="6495ED">Code</font> {-}
+### <font color="6495ED">Code</font> {.unnumbered}
 
 There are 2 ways to write code:
 
-1.
-    ```
-    `code`
-    ```
-    which looks like this:
-    `code`
+1.  `` `code` `` which looks like this: `code`
 
-2. Or long pieces of code
+2.  Or long pieces of code
 
-    ````
+    ````         
     ```
     1 + 1  # a line of code
     ```
     ````
-    
+
     which would render into the following on your website
-    
-    ```
+
+    ```         
     1 + 1  # a line of code
     ```
 
 Find more code options and information in the [How to Render Code](#render-code) section.
 
-#### <font color="6495ED">Horizontal Line</font> {-}
+### <font color="6495ED">Images</font> {.unnumbered}
 
-```
----
-```
----
+The basic notation for a file is:
 
-#### <font color="6495ED">Link</font> {-}
-
-#### <font color="6495ED">Image</font> {-}
-
-## Cross-references {#cross}
-
-Cross-references are ways to link to different to different parts of your workshop website.
-
-### Chapters and sub-chapters
-
-There are two steps to cross-reference any heading:
-
-1. Label the heading: `# Hello world {#nice-label}`. 
-    - Leave the label off if you like the automated heading generated based on your heading title: for example, `# Hello world` = `# Hello world {#hello-world}`.
-    - To label an un-numbered heading, use: `# Hello world {-#nice-label}` or `{# Hello world .unnumbered}`.
-
-2. The reference your text as follows `[any text you want can go here](#cross)`. This will end up looking like: [any text you want can go here](#cross).
-
-## Captioned figures and tables
-
-Figures and tables *with captions* can also be cross-referenced from elsewhere in your book using `\@ref(fig:chunk-label)` and `\@ref(tab:chunk-label)`, respectively.
-
-See Figure \@ref(fig:nice-fig).
-
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center', fig.alt='Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
+```         
+![Alt Text](img/.../...)\
 ```
 
-Don't miss Table \@ref(tab:nice-tab).
+For example:
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(pressure, 10), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
+```         
+![bioinformatics.ca logo](img/bioinformatics.ca-logo.jpg)\
 ```
 
-## Parts
+![bioinformatics.ca logo](img/bioinformatics.ca-logo.jpg)\
 
-Notice how index.Rmd in our CBW Bookdown template has `# (PART) Introduction {-}` (followed by `# Welcome`). This creates the "Introduction" section on the sidebar. 
+Note: Markdown does not actually require the backslash "\\". However, since Bookdown uses Pandoc, we should add a backslash so that the alternative text does not become a caption for the image. This occurs when the image is not directly following or followed by text. [Here](https://pandoc.org/MANUAL.html#extension-implicit_figures) is where it's discussed in the Pandoc documentation!
 
-There are already 2 main parts in the template: the introduction and modules sections.
+> Note: Before adding the "\\", Bookdown will show you the image that you are referring to (double-click the file address link) and it will remain on screen, within your .Rmd file. *You can use this to double check the file address is correct.* After adding the "\\", you can double-click to check the file address is pointing to the right image (and it should hover below), but it will not remain on screen.
 
-If you want to add more parts, simply paste this: `# (PART) Introduction {-}` into a new .Rmd file, at the top of the file, before the main `# header`. 
+### <font color="6495ED">Links</font> {.unnumbered}
 
-## Footnotes
+Links to a webpage are as follows:
 
-Footnotes are put inside the square brackets after a caret `^[]`. Like this one ^[This is a footnote.]. 
+```         
+[Text you want to hyperlink](website link)
+```
 
-## Citations (NOT SURE IF WE NEED WORKSHOPS NEED CITATIONS?)
+For example,
 
-Reference items in your bibliography file(s) using `@key`.
+```         
+Click [here](https://bioinformatics.ca/) to see the bioinformatics.ca main page!
+```
 
-For example, we are using the **bookdown** package [@R-bookdown] (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and **knitr** [@xie2015] (this citation was added manually in an external file book.bib). 
-Note that the `.bib` files need to be listed in the index.Rmd with the YAML `bibliography` key.
+Click [here](https://bioinformatics.ca/) to see the bioinformatics.ca main page!
 
+### <font color="6495ED">Links to Other Pages/Sections within your Workshop Wesbite</font> {.unnumbered}
+
+Note these steps work for all headers, not just main (1 `#`) headers:
+
+1.  Label the heading: `# Hello world {#nice-label}`.
+    -   If you do not want to include a label, an automatic label is made: `# Hello world` = `# Hello world {#hello-world}`.
+    -   To label an un-numbered heading, use: `# Hello world {-#nice-label}` or `{# Hello world .unnumbered}`.
+2.  Next, reference the header in either 2 ways:
+    -   If you want the number referring to your header, use: `\@ref(label-name)`. For example:
+
+        ------------------------------------------------------------------------
+
+        `Please see Citations \@ref(citations).`
+
+        Please see Citations \@ref(citations).
+
+        ------------------------------------------------------------------------
+
+    -   If you want a hyperlink, use the following:
+
+        ```         
+        See the [Citations](#citations)!
+        ```
+
+        See the [Citations](#citations)!
+
+## Citations {#citations}
+
+***Reference*** items in your bibliography file(s) using `@key`.
+
+For example, we are using the **bookdown** package [@R-bookdown] (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and **knitr** [@xie2015] (this citation was added manually in an external file book.bib). Note that the `.bib` files need to be listed in the index.Rmd with the YAML `bibliography` key.
 
 The RStudio Visual Markdown Editor can also make it easier to insert citations: <https://rstudio.github.io/visual-markdown-editing/#/citations>
 
@@ -196,10 +251,10 @@ The RStudio Visual Markdown Editor can also make it easier to insert citations: 
 
 Here is an equation. Equations are written in latex.
 
-\begin{equation} 
+\begin{equation}
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
   (\#eq:binom)
-\end{equation} 
+\end{equation}
 
 You may refer to using `\@ref(eq:binom)`, like see Equation \@ref(eq:binom).
 
@@ -207,7 +262,7 @@ You may refer to using `\@ref(eq:binom)`, like see Equation \@ref(eq:binom).
 
 We also have specific syntax for theorems and proofs, for example, this code:
 
-```
+```         
 ::: {.theorem #tri}
 For a right triangle, if $c$ denotes the *length* of the hypotenuse
 and $a$ and $b$ denote the lengths of the **other** two sides, we have
@@ -217,10 +272,8 @@ $$a^2 + b^2 = c^2$$
 
 produces
 
-::: {.theorem #tri}
-For a right triangle, if $c$ denotes the *length* of the hypotenuse
-and $a$ and $b$ denote the lengths of the **other** two sides, we have
-$$a^2 + b^2 = c^2$$
+::: {#tri .theorem}
+For a right triangle, if $c$ denotes the *length* of the hypotenuse and $a$ and $b$ denote the lengths of the **other** two sides, we have $$a^2 + b^2 = c^2$$
 :::
 
 Labeled theorems can be referenced in text using `\@ref(thm:tri)`, for example, check out this smart theorem \@ref(thm:tri).
@@ -229,34 +282,34 @@ You can learn more about this [here](https://bookdown.org/yihui/bookdown/markdow
 
 ## Callout blocks (will be added later)
 
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html
+The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: <https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html>
 
 ## TIP: Markdown Not Working/Not Enough? Use HTML! {#use-html}
 
 Recall from this diagram that all files are rendered into .html files for the final official website.
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=792&amp;h=237">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=792&amp;h=237"/>
 
 Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown;s formatting isn't working, or you're not satisfied with Markdown's formatting options, use HTML/CSS formatting instead!
 
 Here are some examples:
 
-1. Markdown has no formatting options for underlining. Hence, underline text in a .Rmd file with the following HTML syntax:
+1.  Markdown has no formatting options for underlining. Hence, underline text in a .Rmd file with the following HTML syntax:
 
-    ```
+    ```         
     <u> underlined text</u>
     ```
+
     <u> underlined text</u>
 
-2. Bookdown currently renders to-do lists incorrectly. Instead, you can use the following HTML code:
+2.  Bookdown currently renders to-do lists incorrectly. Instead, you can use the following HTML code:
 
-    ```
+    ```         
     <div style="list-style-type: none;">
       <label><input type="checkbox"> check box</label><br>
     </div>
     ```
-    
-    <div style="list-style-type: none;">
-      <label><input type="checkbox"> check box</label><br>
-    </div>
 
+    ::: {style="list-style-type: none;"}
+    <label><input type="checkbox"> check box</label><br>
+    :::
