@@ -123,7 +123,7 @@ There are 2 ways to write code:
     1 + 1  # a line of code
     ```
 
-Find more code options in the [How to Render Code](#render-code) section
+Find more code options and information in the [How to Render Code](#render-code) section.
 
 ## Cross-references {#cross}
 
