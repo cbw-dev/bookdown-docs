@@ -125,6 +125,17 @@ There are 2 ways to write code:
 
 Find more code options and information in the [How to Render Code](#render-code) section.
 
+#### <font color="6495ED">Horizontal Line</font> {-}
+
+```
+---
+```
+---
+
+#### <font color="6495ED">Link</font> {-}
+
+#### <font color="6495ED">Image</font> {-}
+
 ## Cross-references {#cross}
 
 Cross-references are ways to link to different to different parts of your workshop website.

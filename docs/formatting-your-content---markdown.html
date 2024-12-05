@@ -402,6 +402,17 @@ which looks like this:
 </ol>
 <p>Find more code options and information in the <a href="render-code.html#render-code">How to Render Code</a> section.</p>
 </div>
+<div id="horizontal-line" class="section level4 unnumbered hasAnchor">
+<h4><font color="6495ED">Horizontal Line</font><a href="formatting-your-content---markdown.html#horizontal-line" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>---</code></pre>
+<hr />
+</div>
+<div id="link" class="section level4 unnumbered hasAnchor">
+<h4><font color="6495ED">Link</font><a href="formatting-your-content---markdown.html#link" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="image" class="section level4 unnumbered hasAnchor">
+<h4><font color="6495ED">Image</font><a href="formatting-your-content---markdown.html#image" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
 </div>
 <div id="cross" class="section level2 hasAnchor" number="6.4">
 <h2><span class="header-section-number">6.4</span> Cross-references<a href="formatting-your-content---markdown.html#cross" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -423,8 +434,8 @@ which looks like this:
 <h2><span class="header-section-number">6.5</span> Captioned figures and tables<a href="formatting-your-content---markdown.html#captioned-figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Figures and tables <em>with captions</em> can also be cross-referenced from elsewhere in your book using <code>\@ref(fig:chunk-label)</code> and <code>\@ref(tab:chunk-label)</code>, respectively.</p>
 <p>See Figure <a href="formatting-your-content---markdown.html#fig:nice-fig">6.1</a>.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="formatting-your-content---markdown.html#cb35-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb35-2"><a href="formatting-your-content---markdown.html#cb35-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="formatting-your-content---markdown.html#cb36-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
+<span id="cb36-2"><a href="formatting-your-content---markdown.html#cb36-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
 <img src="_main_files/figure-html/nice-fig-1.png" alt="Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases." width="80%" />
 <p class="caption">
@@ -432,10 +443,10 @@ Figure 6.1: Here is a nice figure!
 </p>
 </div>
 <p>Don’t miss Table <a href="formatting-your-content---markdown.html#tab:nice-tab">6.1</a>.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="formatting-your-content---markdown.html#cb36-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb36-2"><a href="formatting-your-content---markdown.html#cb36-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb36-3"><a href="formatting-your-content---markdown.html#cb36-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb36-4"><a href="formatting-your-content---markdown.html#cb36-4" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="formatting-your-content---markdown.html#cb37-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb37-2"><a href="formatting-your-content---markdown.html#cb37-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
+<span id="cb37-3"><a href="formatting-your-content---markdown.html#cb37-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb37-4"><a href="formatting-your-content---markdown.html#cb37-4" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <caption><span id="tab:nice-tab">Table 6.1: </span>Here is a nice table!</caption>
 <thead>
