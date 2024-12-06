@@ -19,3 +19,6 @@ This `gitbook` uses the same social sharing data across all chapters in your boo
 
 Specify your book's source repository on GitHub using the `edit` key under the configuration options in the `_output.yml` file, which allows users to suggest an edit by linking to a chapter's source file.
 ```
+
+Suggestions:
+- add timing of downloads/installations (R/RStudio, developper tools, reticulate)
