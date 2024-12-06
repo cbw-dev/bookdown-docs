@@ -161,6 +161,10 @@ The order of the sidebar is completely dependent on the alphabetical order of th
 
 The only .Rmd that must have some configuration details is the landing page: **index.Rmd**. This is what fills up the beginning of the index.Rmd file, surrounded by the \-\-\-, which tells bookdown the configuration information.
 
+**Follow the instructions in the template's index.Rmd file - use must fill in the title, author, date and url.** The description, cover-image and github-repo can be changed, but aren't mandatory.
+
+<!-- double check with Nia what we want to enforce -->
+
 ###### .Rmd Files {-}
 
 Let's move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with `#`, each sub-header has increasingly more `#` symbols (##, ###, and more all create smaller sub-headers). A "main" header only has 1 `#` symbol. These headers define new pages, as well as the title in the sidebar referring to that page.
