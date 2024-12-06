@@ -791,7 +791,7 @@ You will only have to edit \_output.yml a bit. The \_output.yml file creates the
 \item
   Change the workshop name: {[}YOUR WORKSHOP NAME{]} on line 7.
 \item
-  Add your sponsors: Replace ``Your-Sponsor-Here.svg'' with the file name of your sponsors name/logo. Remeber to place these files inside the ./img/sponsors/ folder.
+  Add your sponsors: Replace ``Your-Sponsor-Here.svg'' with the file name of your sponsors name/logo. Remember to place these files inside the ./img/sponsors/ folder.
 \item
   Replace your workshop repo edit link. This allows users to suggest edits to your work on GitHub. Follow these instructions (they are also provided in the template).
 
@@ -809,20 +809,28 @@ You will only have to edit \_output.yml a bit. The \_output.yml file creates the
   \end{enumerate}
 \end{enumerate}
 
+\subparagraph{REXPLAIN FOR TEMPLATE}\label{rexplain-for-template}
+
 \subparagraph*{Organizing the Table of Contents}\label{organizing-the-table-of-contents}
 \addcontentsline{toc}{subparagraph}{Organizing the Table of Contents}
 
-The order of the sidebar is completely dependent on the alphabetical order of the files (see your bottom right window pane! The order is generally the same as the order shown in the RStudio file window pane). Our template has numbering first, to help ease our understanding and organization of files. The only file without this is \texttt{index.Rmd}, since as the landing page we can not change the file name.
+The order of the sidebar is completely dependent on the alphabetical order of the files (see your bottom right window pane! The order is generally the same as the order shown in the RStudio file window pane. If not, right click the window and press ``Reload''). Our template has numbering first, to help ease our understanding and organization of files. The only file without this is \texttt{index.Rmd}, since as the landing page we can not change the file name.
 
 \subparagraph*{index.Rmd}\label{index.rmd}
 \addcontentsline{toc}{subparagraph}{index.Rmd}
 
-The only .Rmd that must have some configuration details is the landing page: \textbf{index.Rmd}. This is what fills up the beginning of the index.Rmd file, before the -\/-\/-, which tells bookdown to stop looking for configuration information.
+The only .Rmd that must have some configuration details is the landing page: \textbf{index.Rmd}. This is what fills up the beginning of the index.Rmd file, surrounded by the -\/-\/-, which tells bookdown the configuration information.
 
 \subparagraph*{.Rmd Files}\label{rmd-files}
 \addcontentsline{toc}{subparagraph}{.Rmd Files}
 
-Let's move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with \#, each subheader has increasingly more \# symbols (\#\#, \#\#\#, and more all create smaller subheaders). Try to have only 1 single \# as a header on one page! (You may get warnings otherwise).
+Let's move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with \texttt{\#}, each sub-header has increasingly more \texttt{\#} symbols (\#\#, \#\#\#, and more all create smaller sub-headers). A ``main'' header only has 1 \texttt{\#} symbol. These headers define new pages, as well as the title in the sidebar referring to that page.
+
+Hence, if we have multiple ``main'' headers in 1 .Rmd file, 1 .Rmd file will encode multiple pages. Try to have only 1 single \# as a header on one page! (You may get warnings otherwise).
+
+However, if a new file only has sub-headers (2 \texttt{\#} or more), the sub-header will appear on the page that was defined by the previous .Rmd file (in alphabetical order - see the order of the ``File'' window pane).
+
+In our template, we want the introduction material to appear on the same page. Hence, the introduction files (other than 020-course-schedule.Rmd, which starts the page) all only have sub-headers.
 
 \subparagraph*{How to Create a New File}\label{how-to-create-a-new-file}
 \addcontentsline{toc}{subparagraph}{How to Create a New File}

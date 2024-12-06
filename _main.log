@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.13)  6 DEC 2024 11:07
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.13)  6 DEC 2024 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1197,47 +1197,49 @@ Missing character: There is no ─ (U+2500) in font [lmmono10-regular]:!
 Missing character: There is no └ (U+2514) in font [lmmono10-regular]:!
 Missing character: There is no ─ (U+2500) in font [lmmono10-regular]:!
 Missing character: There is no ─ (U+2500) in font [lmmono10-regular]:!
-[28] [29] [30]
+[28] [29] [30] [31]
 File: img/git-instruct/RStudio-with-git-window-open.png Graphic file (type bmp)
 
 <img/git-instruct/RStudio-with-git-window-open.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
+Underfull \hbox (badness 10000) in paragraph at lines 894--895
 
  []
 
-
-Underfull \vbox (badness 3657) has occurred while \output is active []
-
-[31]
 File: img/git-instruct/git-window-selected-items.png Graphic file (type bmp)
 <img/git-instruct/git-window-selected-items.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--897
+Underfull \hbox (badness 10000) in paragraph at lines 903--905
 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[32]
 File: img/git-instruct/git-commit-window.png Graphic file (type bmp)
 <img/git-instruct/git-commit-window.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 899--901
+Underfull \hbox (badness 10000) in paragraph at lines 907--909
 
  []
 
-[32]
 File: img/git-instruct/git-window-post-commit.png Graphic file (type bmp)
 <img/git-instruct/git-window-post-commit.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 905--906
+Underfull \hbox (badness 10000) in paragraph at lines 913--914
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [33] [34]
 Chapter 6.
 [35
 
 ]
-Underfull \hbox (badness 1152) in paragraph at lines 961--962
+Underfull \hbox (badness 1152) in paragraph at lines 969--970
 \TU/lmr/m/n/10 Notice how index.Rmd in our CBW Bookdown template has \TU/lmtt/m
 /n/10 # (PART)
  []
@@ -1258,47 +1260,47 @@ ex-text;!
 [37]
 
 LaTeX Warning: Hyper reference `render-code' on page 38 undefined on input line
- 1159.
+ 1167.
 
 File: img/bioinformatics.ca-logo.jpg Graphic file (type bmp)
 <img/bioinformatics.ca-logo.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1176--1177
+Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
 
  []
 
 [38]
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1197--1197
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1205--1205
 []\TU/lmtt/m/n/10 Click [here](https://bioinformatics.ca/) to see the bioinform
 atics.ca main page![] 
  []
 
 
-Overfull \hbox (17.577pt too wide) in paragraph at lines 1217--1218
+Overfull \hbox (17.577pt too wide) in paragraph at lines 1225--1226
 []\TU/lmr/m/n/10 To label an un-numbered heading, use: \TU/lmtt/m/n/10 # Hello 
 world {-#nice-label}
  []
 
 [39]
-Overfull \hbox (20.31699pt too wide) in paragraph at lines 1224--1225
+Overfull \hbox (20.31699pt too wide) in paragraph at lines 1232--1233
 []\TU/lmr/m/n/10 If you want the number referring to your header, use: \TU/lmtt
 /m/n/10 \@ref(label-name)\TU/lmr/m/n/10 .
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1279--1279
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1287--1287
 []\TU/lmtt/m/n/10 For a right triangle, if $c$ denotes the *length* of the hypo
 tenuse[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 1279--1279
+Overfull \hbox (22.5pt too wide) in paragraph at lines 1287--1287
 []\TU/lmtt/m/n/10 and $a$ and $b$ denote the lengths of the **other** two sides
 , we have[] 
  []
 
 [40]
-Overfull \hbox (5.3375pt too wide) in paragraph at lines 1295--1295
+Overfull \hbox (5.3375pt too wide) in paragraph at lines 1303--1303
 []\TU/lmr/bx/n/14.4 TIP: Markdown Not Working/Not Enough?
  []
 
@@ -1307,18 +1309,18 @@ Overfull \hbox (5.3375pt too wide) in paragraph at lines 1295--1295
 ]
 Chapter 7.
 [43]
-Underfull \hbox (badness 1383) in paragraph at lines 1367--1369
+Underfull \hbox (badness 1383) in paragraph at lines 1375--1377
 \TU/lmr/m/n/10 this command in your console (the bottom left window in RStu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1369
+Underfull \hbox (badness 10000) in paragraph at lines 1375--1377
 \TU/lmr/m/n/10 dio) \TU/lmtt/m/n/10 install.packages("missing package name, inc
 lude these
  []
 
 
-Overfull \hbox (961.0pt too wide) in paragraph at lines 1383--1383
+Overfull \hbox (961.0pt too wide) in paragraph at lines 1391--1391
  []  \TU/lmtt/m/n/10 - **"File []..._svg-tex.pdf[] is missing."** is a bug that
  only occurs when producing bookdown::pdf_book. It occurs since you are calling
  a svg image in regular markdown, which is not allowed. If you want to display 
@@ -1330,7 +1332,7 @@ a .svg image, use HTML code.[]
 ] [47] [48]
 Chapter 8.
 
-Underfull \hbox (badness 2057) in paragraph at lines 1449--1450
+Underfull \hbox (badness 2057) in paragraph at lines 1457--1458
 []\TU/lmr/m/n/10 Preview the book: - updates on saves in viewer window book-
  []
 
@@ -1356,18 +1358,18 @@ File: img/git-instruct/git-connection.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [52]
-Underfull \hbox (badness 3199) in paragraph at lines 1537--1539
+Underfull \hbox (badness 3199) in paragraph at lines 1545--1547
 []\TU/lmr/bx/n/10 Important: \TU/lmr/m/n/10 This step is why I highlighted that
  specific text
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 1537--1539
+Underfull \hbox (badness 2027) in paragraph at lines 1545--1547
 \TU/lmr/m/n/10 above. Copy that command, and put it into terminal. Gen-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 1537--1539
+Underfull \hbox (badness 2495) in paragraph at lines 1545--1547
 \TU/lmr/m/n/10 erally, it will look something like this: \TU/lmtt/m/n/10 git re
 mote add origin
  []
@@ -1392,14 +1394,14 @@ Chapter 10.
 File: img/git-instruct/github-settings.png Graphic file (type bmp)
 <img/git-instruct/github-settings.png>
 
-Overfull \hbox (178.10144pt too wide) in paragraph at lines 1624--1627
+Overfull \hbox (178.10144pt too wide) in paragraph at lines 1632--1635
 []\TU/lmr/m/n/10 In the top navigation bar, select settings. [] 
  []
 
 File: img/git-instruct/github-select-pages.png Graphic file (type bmp)
 <img/git-instruct/github-select-pages.png>
 
-Overfull \hbox (131.2858pt too wide) in paragraph at lines 1627--1630
+Overfull \hbox (131.2858pt too wide) in paragraph at lines 1635--1638
 []\TU/lmr/m/n/10 Then, go to the pages sidebar. [] 
  []
 
@@ -1410,7 +1412,7 @@ Underfull \vbox (badness 1466) has occurred while \output is active []
 File: img/git-instruct/github-deploy-main.png Graphic file (type bmp)
 <img/git-instruct/github-deploy-main.png>
 
-Overfull \hbox (198.06654pt too wide) in paragraph at lines 1630--1633
+Overfull \hbox (198.06654pt too wide) in paragraph at lines 1638--1641
 \TU/lmr/m/n/10 must change the branch from “none” to main. [] 
  []
 
@@ -1428,7 +1430,7 @@ File: img/git-instruct/successful-deploy.png Graphic file (type bmp)
 File: img/git-instruct/failed-deploy.png Graphic file (type bmp)
 <img/git-instruct/failed-deploy.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1649--1651
+Underfull \hbox (badness 10000) in paragraph at lines 1657--1659
 [][]
  []
 
@@ -1454,10 +1456,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 19825 strings out of 474773
- 366238 string characters out of 5757724
+ 19826 strings out of 474773
+ 366261 string characters out of 5757724
  1934839 words of memory out of 5000000
- 41663 multiletter control sequences out of 15000+600000
+ 41664 multiletter control sequences out of 15000+600000
  564584 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,8n,121p,1002b,519s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -26,6 +26,7 @@ knit-your-book
 knit-vs-build
 preview-your-book
 file-setup
+rexplain-for-template
 push-to-github-via-rstudio
 formatting-your-content---markdown
 visual-r-md

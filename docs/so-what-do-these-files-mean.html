@@ -426,7 +426,7 @@ You can choose to only produce a gitbook (the first option). This can be helpful
 <p>You will only have to edit _output.yml a bit. The _output.yml file creates the table of contents/sidebar you see on the left of the workshop. It is written in HTML, which is why it looks so different. There are 3 things either the RC or the workshop team will need to do:</p>
 <ol style="list-style-type: decimal">
 <li><p>Change the workshop name: [YOUR WORKSHOP NAME] on line 7.</p></li>
-<li><p>Add your sponsors: Replace “Your-Sponsor-Here.svg” with the file name of your sponsors name/logo. Remeber to place these files inside the ./img/sponsors/ folder.</p></li>
+<li><p>Add your sponsors: Replace “Your-Sponsor-Here.svg” with the file name of your sponsors name/logo. Remember to place these files inside the ./img/sponsors/ folder.</p></li>
 <li><p>Replace your workshop repo edit link. This allows users to suggest edits to your work on GitHub. Follow these instructions (they are also provided in the template).</p>
 <ol style="list-style-type: decimal">
 <li>Go to your index.Rmd page on GitHub, Copy and paste the link to it.</li>
@@ -436,17 +436,23 @@ You can choose to only produce a gitbook (the first option). This can be helpful
 </ol></li>
 </ol>
 </div>
+<div id="rexplain-for-template" class="section level6 hasAnchor" number="5.5.0.0.0.1">
+<h6><span class="header-section-number">5.5.0.0.0.1</span> REXPLAIN FOR TEMPLATE<a href="so-what-do-these-files-mean.html#rexplain-for-template" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+</div>
 <div id="organizing-the-table-of-contents" class="section level6 unnumbered hasAnchor">
 <h6>Organizing the Table of Contents<a href="so-what-do-these-files-mean.html#organizing-the-table-of-contents" class="anchor-section" aria-label="Anchor link to header"></a></h6>
-<p>The order of the sidebar is completely dependent on the alphabetical order of the files (see your bottom right window pane! The order is generally the same as the order shown in the RStudio file window pane). Our template has numbering first, to help ease our understanding and organization of files. The only file without this is <code>index.Rmd</code>, since as the landing page we can not change the file name.</p>
+<p>The order of the sidebar is completely dependent on the alphabetical order of the files (see your bottom right window pane! The order is generally the same as the order shown in the RStudio file window pane. If not, right click the window and press “Reload”). Our template has numbering first, to help ease our understanding and organization of files. The only file without this is <code>index.Rmd</code>, since as the landing page we can not change the file name.</p>
 </div>
 <div id="index.rmd" class="section level6 unnumbered hasAnchor">
 <h6>index.Rmd<a href="so-what-do-these-files-mean.html#index.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
-<p>The only .Rmd that must have some configuration details is the landing page: <strong>index.Rmd</strong>. This is what fills up the beginning of the index.Rmd file, before the ---, which tells bookdown to stop looking for configuration information.</p>
+<p>The only .Rmd that must have some configuration details is the landing page: <strong>index.Rmd</strong>. This is what fills up the beginning of the index.Rmd file, surrounded by the ---, which tells bookdown the configuration information.</p>
 </div>
 <div id="rmd-files" class="section level6 unnumbered hasAnchor">
 <h6>.Rmd Files<a href="so-what-do-these-files-mean.html#rmd-files" class="anchor-section" aria-label="Anchor link to header"></a></h6>
-<p>Let’s move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with #, each subheader has increasingly more # symbols (##, ###, and more all create smaller subheaders). Try to have only 1 single # as a header on one page! (You may get warnings otherwise).</p>
+<p>Let’s move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with <code>#</code>, each sub-header has increasingly more <code>#</code> symbols (##, ###, and more all create smaller sub-headers). A “main” header only has 1 <code>#</code> symbol. These headers define new pages, as well as the title in the sidebar referring to that page.</p>
+<p>Hence, if we have multiple “main” headers in 1 .Rmd file, 1 .Rmd file will encode multiple pages. Try to have only 1 single # as a header on one page! (You may get warnings otherwise).</p>
+<p>However, if a new file only has sub-headers (2 <code>#</code> or more), the sub-header will appear on the page that was defined by the previous .Rmd file (in alphabetical order - see the order of the “File” window pane).</p>
+<p>In our template, we want the introduction material to appear on the same page. Hence, the introduction files (other than 020-course-schedule.Rmd, which starts the page) all only have sub-headers.</p>
 </div>
 <div id="how-to-create-a-new-file" class="section level6 unnumbered hasAnchor">
 <h6>How to Create a New File<a href="so-what-do-these-files-mean.html#how-to-create-a-new-file" class="anchor-section" aria-label="Anchor link to header"></a></h6>
