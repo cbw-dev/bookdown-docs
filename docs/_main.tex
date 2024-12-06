@@ -119,7 +119,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}2024-12-06}
+\date{\vspace{-2.5em}Last Updated: 2024-12-06}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -371,11 +371,7 @@ A similar command in \textbf{Command Prompt} is \texttt{dir}, which also outputs
 \textbf{Tip}:Typing ``cd'' and then hitting the \texttt{tab} key will give you the available directories you can go to from where you are, or what you have currently typed in. If there is only one option, hitting \texttt{tab} will fill in your command with that option. (This works when typing in any file location into your command line, not only using ``cd''). On macOS, the terminal will give you a list if there are multiple options. On Windows, both Command Prompt and Windows Powershell will fill in potential options, and you can hit tab multiple times untill you find your desired file destination.
 \end{quote}
 
-\textbf{File Location Shorthands}
-When referring to file addresses, there are helpful shorthands! Here's a summary:
-- \texttt{.} = Current Directory
-- \texttt{..} = Parent Directory
-- \texttt{\textasciitilde{}} = Home Directory
+\textbf{File Location Shorthands} When referring to file addresses, there are helpful shorthands! Here's a summary: - \texttt{.} = Current Directory - \texttt{..} = Parent Directory - \texttt{\textasciitilde{}} = Home Directory
 
 Here's an example (recall, cd produces no output!):
 
@@ -458,16 +454,13 @@ Note: You can do these commands anywhere in your files. You do not need to be in
 ssh-keygen -t ed25519 -C "your_email@example.com"
 \end{verbatim}
 
-  You will get this output:
-  \texttt{\textgreater{}\ Generating\ public/private\ ALGORITHM\ key\ pair.}
+  You will get this output: \texttt{\textgreater{}\ Generating\ public/private\ ALGORITHM\ key\ pair.}
 
   \begin{quote}
   Note: Output in your terminal begins with this ``\textgreater{}'' symbol, as seen above!
   \end{quote}
 
-  You will then be prompted with this message:
-  \texttt{\textgreater{}\ Enter\ a\ file\ in\ which\ to\ save\ the\ key\ (/Users/YOU/.ssh/id\_ALGORITHM):}
-  Press enter. (This uses a default file and default file location.)
+  You will then be prompted with this message: \texttt{\textgreater{}\ Enter\ a\ file\ in\ which\ to\ save\ the\ key\ (/Users/YOU/.ssh/id\_ALGORITHM):} Press enter. (This uses a default file and default file location.)
 
   If you have already created a SSH key and you are asked to rewrite another key, look at the \href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key:~:text=Please\%20note\%20that\%20if\%20you\%20created\%20SSH\%20keys\%20previously\%2C\%20ssh\%2Dkeygen\%20may\%20ask\%20you\%20to\%20rewrite\%20another\%20key\%2C\%20in\%20which\%20case\%20we\%20recommend\%20creating\%20a\%20custom\%2Dnamed\%20SSH\%20key.\%20To\%20do\%20so\%2C\%20type\%20the\%20default\%20file\%20location\%20and\%20replace\%20id_ALGORITHM\%20with\%20your\%20custom\%20key\%20name.}{GitHub Docs} for specific steps.
 \item
@@ -579,8 +572,7 @@ pbcopy < ~/.ssh/id_ed25519.pub
 \item
   Click \textbf{New SSH key} or \textbf{Add SSH key}.
 \item
-  In the ``Title'' field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key:
-  ``Personal Laptop'').
+  In the ``Title'' field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key: ``Personal Laptop'').
 \item
   Select the type of key between ``authentication'' or ``signing''. (For our purposes, selecting authentication is fine).
 \item
@@ -927,7 +919,19 @@ Now we know which files to edit, but how can we edit these files? How do we form
 
 All our files are made up of code and markdown syntax, that becomes formatted into our website. However, if you do not feel comfortable using Markdown (or you just want an easier way to write your pages), see this guide on using \href{https://rstudio.github.io/visual-markdown-editing/\#/citations}{Visual R Markdown}!
 
-If you want to use Markdown, the syntax guide is provided below!
+It can be significantly easier to use Visual R Markdown, especially for those who are used to working in Google Docs!
+
+If you want to use Markdown, a basic syntax guide is provided below!
+
+\begin{quote}
+Is this not enough for you?
+
+Bookdown has thorough documentation for specific elements, customizations, and further explanations. For simple elements, everything is provided below. However, there are many more possibilities with Bookdown! Click \href{https://bookdown.org/yihui/bookdown/components.html}{here} to read more!
+\end{quote}
+
+\begin{quote}
+Another Note: Now that you're straying away from CBW's Bookdown template, there's a chance you may run into errors. See \hyperref[help]{this page} for help!
+\end{quote}
 
 \section{Chapters}\label{chapters}
 
@@ -1330,7 +1334,11 @@ Here are some examples:
   check box
 \end{enumerate}
 
-\chapter{Brain Dump / FAQ}\label{brain-dump-faq}
+\chapter{How to Render Code}\label{render-code}
+
+\chapter{Brain Dump / FAQ}\label{help}
+
+Congrats you got through most of CBW's Bookdown Documentation!
 
 \section{Danger Zones}\label{danger-zones}
 

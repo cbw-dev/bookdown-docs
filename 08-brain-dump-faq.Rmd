@@ -1,4 +1,7 @@
-# Brain Dump / FAQ
+# Brain Dump / FAQ {#help}
+
+Congrats you got through most of CBW's Bookdown Documentation!
+
 
 
 ## Danger Zones

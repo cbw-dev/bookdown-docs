@@ -1,4 +1,4 @@
-<!-- # How to Render Code {#render-code} -->
+# How to Render Code {#render-code}
 
 <!-- ## Captioned figures and tables -->
 

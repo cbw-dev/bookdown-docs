@@ -97,7 +97,7 @@ Here is a tree diagram of the bookdown template setup. (Note that this mimics ho
 
 > **Note:** only relevant files or files you might be concerned about are explained in blue. If there is no explanation, you can safely assume you do not have to worry about it.
 
-```bash
+```{bash, eval=FALSE}
 bookdown-template
 ├── _404.md # This becomes your 404 page. This is the only file that can become a page that can also be either a .md or .Rmd file!
 ├── _bookdown.yml # a config file, you most likely won't have to edit it unless you want additional configuration settings
@@ -132,6 +132,9 @@ bookdown-template
 ├── preamble.tex
 └── style.css # css styling options are defined here - feel free to add your own styling features
 ```
+
+<!-- Dev Suggestion: add code chunk option so that this takes up the width of the entire page? -->
+
 ###### \_output.yml & \_bookdown.yml {-}
 2  important files are the `_output.yml` files and the `_bookdown.yml` files. They help tell bookdown what we want and what to do, especially when making our website.
 

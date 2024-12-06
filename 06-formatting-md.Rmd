@@ -5,7 +5,15 @@ Now we know which files to edit, but how can we edit these files? How do we form
 ## Visaul R Markdown {#visual-r-md}
 All our files are made up of code and markdown syntax, that becomes formatted into our website. However, if you do not feel comfortable using Markdown (or you just want an easier way to write your pages), see this guide on using [Visual R Markdown](https://rstudio.github.io/visual-markdown-editing/#/citations)!
 
-If you want to use Markdown, the syntax guide is provided below!
+It can be significantly easier to use Visual R Markdown, especially for those who are used to working in Google Docs!
+
+If you want to use Markdown, a basic syntax guide is provided below!
+
+> Is this not enough for you?
+>
+> Bookdown has thorough documentation for specific elements, customizations, and further explanations. For simple elements, everything is provided below. However, there are many more possibilities with Bookdown! Click [here](https://bookdown.org/yihui/bookdown/components.html) to read more!
+
+> Another Note: Now that you're straying away from CBW's Bookdown template, there's a chance you may run into errors. See [this page](#help) for help!
 
 ## Chapters
 

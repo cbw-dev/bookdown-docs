@@ -40,7 +40,8 @@ equations
 theorems-and-proofs
 callout-blocks-will-be-added-later
 use-html
-brain-dump-faq
+render-code
+help
 danger-zones
 potential-errors-bugs
 ease-of-use
