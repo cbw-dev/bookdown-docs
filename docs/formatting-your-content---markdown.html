@@ -317,7 +317,7 @@ div.csl-indent {
 <p>Bookdown has thorough documentation for specific elements, customizations, and further explanations. For simple elements, everything is provided below. However, there are many more possibilities with Bookdown! Click <a href="https://bookdown.org/yihui/bookdown/components.html">here</a> to read more!</p>
 </blockquote>
 <blockquote>
-<p>Another Note: Now that you’re straying away from CBW’s Bookdown template, there’s a chance you may run into errors. See <a href="help.html#help">this page</a> for help!</p>
+<p><strong>IMPORTANT NOTE</strong>: Now that you’re straying away from CBW’s Bookdown template, there’s a chance you may run into errors. See <a href="help.html#help">this page</a> for help!</p>
 </blockquote>
 </div>
 <div id="chapters" class="section level2 hasAnchor" number="6.2">
@@ -345,7 +345,9 @@ div.csl-indent {
 <h2><span class="header-section-number">6.4</span> Parts<a href="formatting-your-content---markdown.html#parts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Notice how index.Rmd in our CBW Bookdown template has <code># (PART) Introduction {-}</code> (followed by <code># Welcome</code>). This creates the “Introduction” section on the sidebar.</p>
 <p>There are already 2 main parts in the template: the introduction and modules sections.</p>
-<p>If you want to add more parts, simply paste this: <code># (PART) Introduction {-}</code> into a new .Rmd file, at the top of the file, before the main <code># header</code> for that page/file.</p>
+<p>If you want to add more parts, simply paste this: <code># (PART) [Part Title] {-}</code> into a new .Rmd file, at the top of the file, before the main <code># header</code> for that page/file.</p>
+<p><strong>Note</strong>: If you would like to have a un-numbered part: Use this syntax: <code># (PART\*) [Part Title] {-}</code></p>
+<p><strong>Another Note</strong>: A similar un-numbered part is called an “Appendix” and Bookdown. Like a part, paste <code># (APPENDIX) [Appendix Name] {-}</code> it above the “main” header you would like it to be before. All subsequent headers will be described via letters rather than numbers. (If your following headers are un-numbered, an Appendix looks the same as an un-numbered part).</p>
 </div>
 <div id="text-formatting" class="section level2 hasAnchor" number="6.5">
 <h2><span class="header-section-number">6.5</span> Text Formatting<a href="formatting-your-content---markdown.html#text-formatting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -500,9 +502,11 @@ div.csl-indent {
 </div>
 <div id="citations" class="section level2 hasAnchor" number="6.6">
 <h2><span class="header-section-number">6.6</span> Citations<a href="formatting-your-content---markdown.html#citations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong><em>Reference</em></strong> items in your bibliography file(s) using <code>@key</code>.</p>
+<p>Bookdown can help us create citations!</p>
+<p>First, tell bookdown your sources</p>
 <p>For example, we are using the <strong>bookdown</strong> package <span class="citation">(<a href="#ref-R-bookdown">Xie 2024</a>)</span> (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(<a href="#ref-xie2015">Xie 2015</a>)</span> (this citation was added manually in an external file book.bib). Note that the <code>.bib</code> files need to be listed in the index.Rmd with the YAML <code>bibliography</code> key.</p>
 <p><strong>Note:</strong> The <a href="formatting-your-content---markdown.html#visual-r-md">RStudio Visual Markdown Editor</a> can also make it easier to insert citations!</p>
+<p><strong>Note:</strong> When you cite, Bookdown also generates a citation list that it adds at the end of the last page of your website. However, Bookdown does not create a title, so on your very last page, add a <code># Reference</code> main header. (To avoid having a “2 main headers in the same file” error, you can create a new .Rmd file with only <code># Reference</code>).</p>
 </div>
 <div id="equations" class="section level2 hasAnchor" number="6.7">
 <h2><span class="header-section-number">6.7</span> Equations<a href="formatting-your-content---markdown.html#equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -536,7 +540,7 @@ $$a^2 + b^2 = c^2$$
 <h2><span class="header-section-number">6.10</span> TIP: Markdown Not Working/Not Enough? Use HTML!<a href="formatting-your-content---markdown.html#use-html" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Recall from this diagram that all files are rendered into .html files for the final official website.</p>
 <p><img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=792&amp;h=237"/></p>
-<p>Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown;s formatting isn’t working, or you’re not satisfied with Markdown’s formatting options, use HTML/CSS formatting instead!</p>
+<p>Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown’s formatting isn’t working, or you’re not satisfied with Markdown’s formatting options, use HTML/CSS formatting instead!</p>
 <p>Here are some examples:</p>
 <ol style="list-style-type: decimal">
 <li><p>Markdown has no formatting options for underlining. Hence, underline text in a .Rmd file with the following HTML syntax:</p>

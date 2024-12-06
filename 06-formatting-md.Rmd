@@ -13,7 +13,7 @@ If you want to use Markdown, a basic syntax guide is provided below!
 >
 > Bookdown has thorough documentation for specific elements, customizations, and further explanations. For simple elements, everything is provided below. However, there are many more possibilities with Bookdown! Click [here](https://bookdown.org/yihui/bookdown/components.html) to read more!
 
-> Another Note: Now that you're straying away from CBW's Bookdown template, there's a chance you may run into errors. See [this page](#help) for help!
+> **IMPORTANT NOTE**: Now that you're straying away from CBW's Bookdown template, there's a chance you may run into errors. See [this page](#help) for help!
 
 ## Chapters
 
@@ -55,7 +55,11 @@ Notice how index.Rmd in our CBW Bookdown template has `# (PART) Introduction {-}
 
 There are already 2 main parts in the template: the introduction and modules sections.
 
-If you want to add more parts, simply paste this: `# (PART) Introduction {-}` into a new .Rmd file, at the top of the file, before the main `# header` for that page/file.
+If you want to add more parts, simply paste this: `# (PART) [Part Title] {-}` into a new .Rmd file, at the top of the file, before the main `# header` for that page/file.
+
+**Note**: If you would like to have a un-numbered part: Use this syntax:  `# (PART\*) [Part Title] {-}`
+
+**Another Note**: A similar un-numbered part is called an "Appendix" and Bookdown. Like a part, paste `# (APPENDIX) [Appendix Name] {-}` it above the "main" header you would like it to be before. All subsequent headers will be described via letters rather than numbers. (If your following headers are un-numbered, an Appendix looks the same as an un-numbered part).
 
 ## Text Formatting
 
@@ -255,6 +259,10 @@ Note these steps work for all headers, not just main (1 `#`) headers:
 
 ## Citations {#citations}
 
+Bookdown can help us create citations!
+
+First, tell bookdown your sources 
+
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
@@ -262,11 +270,18 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-***Reference*** items in your bibliography file(s) using `@key`.
-
 For example, we are using the **bookdown** package [@R-bookdown] (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and **knitr** [@xie2015] (this citation was added manually in an external file book.bib). Note that the `.bib` files need to be listed in the index.Rmd with the YAML `bibliography` key.
 
 **Note:** The [RStudio Visual Markdown Editor](#visual-r-md) can also make it easier to insert citations!
+
+
+
+
+
+
+
+**Note:** When you cite, Bookdown also generates a citation list that it adds at the end of the last page of your website. However, Bookdown does not create a title, so on your very last page, add a `# Reference` main header. (To avoid having a "2 main headers in the same file" error, you can create a new .Rmd file with only `# Reference`). 
+
 
 ## Equations
 
@@ -311,7 +326,7 @@ Recall from this diagram that all files are rendered into .html files for the fi
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=792&amp;h=237"/>
 
-Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown;s formatting isn't working, or you're not satisfied with Markdown's formatting options, use HTML/CSS formatting instead!
+Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown's formatting isn't working, or you're not satisfied with Markdown's formatting options, use HTML/CSS formatting instead!
 
 Here are some examples:
 

@@ -184,7 +184,7 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 \item
   Download and install RStudio \href{https://posit.co/download/rstudio-desktop/\#:~:text=AND\%20INSTALL\%20R-,2\%3A\%20Install\%20RStudio,-DOWNLOAD\%20RSTUDIO\%20DESKTOP}{here}. Scroll down to find downloads for non-macOS.
 \item
-  Installl the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: \texttt{install.packages("bookdown")}.
+  Install the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: \texttt{install.packages("bookdown")}.
 \end{enumerate}
 
 We're ready to start working with CBW's bookdown workshop template now!
@@ -771,8 +771,8 @@ Here is a tree diagram of the bookdown template setup. (Note that this mimics ho
 \end{Highlighting}
 \end{Shaded}
 
-\subparagraph*{\_output.yml \& \_bookdown.yml}\label{output.yml-_bookdown.yml}
-\addcontentsline{toc}{subparagraph}{\_output.yml \& \_bookdown.yml}
+\subparagraph*{\texorpdfstring{ \_output.yml \& \_bookdown.yml }{ \_output.yml \& \_bookdown.yml }}\label{output.yml-_bookdown.yml}
+\addcontentsline{toc}{subparagraph}{ \_output.yml \& \_bookdown.yml }
 
 2 important files are the \texttt{\_output.yml} files and the \texttt{\_bookdown.yml} files. They help tell bookdown what we want and what to do, especially when making our website.
 
@@ -795,28 +795,26 @@ You will only have to edit \_output.yml a bit. The \_output.yml file creates the
   \item
     Copy and paste the link to it, excluding the ``index.Rmd'' ending.
   \item
-    Add ``/\%s'' to the ending.
+    Add \texttt{/\%s} to the ending.
   \item
     Replace the above link.
   \end{enumerate}
 \end{enumerate}
 
-\subparagraph{REXPLAIN FOR TEMPLATE}\label{rexplain-for-template}
-
-\subparagraph*{Organizing the Table of Contents}\label{organizing-the-table-of-contents}
-\addcontentsline{toc}{subparagraph}{Organizing the Table of Contents}
+\subparagraph*{\texorpdfstring{ Organizing the Table of Contents }{ Organizing the Table of Contents }}\label{organizing-the-table-of-contents}
+\addcontentsline{toc}{subparagraph}{ Organizing the Table of Contents }
 
 The order of the sidebar is completely dependent on the alphabetical order of the files (see your bottom right window pane! The order is generally the same as the order shown in the RStudio file window pane. If not, right click the window and press ``Reload''). Our template has numbering first, to help ease our understanding and organization of files. The only file without this is \texttt{index.Rmd}, since as the landing page we can not change the file name.
 
-\subparagraph*{index.Rmd}\label{index.rmd}
-\addcontentsline{toc}{subparagraph}{index.Rmd}
+\subparagraph*{\texorpdfstring{ index.Rmd }{ index.Rmd }}\label{index.rmd}
+\addcontentsline{toc}{subparagraph}{ index.Rmd }
 
 The only .Rmd that must have some configuration details is the landing page: \textbf{index.Rmd}. This is what fills up the beginning of the index.Rmd file, surrounded by the -\/-\/-, which tells bookdown the configuration information.
 
-\textbf{Follow the instructions in the template's index.Rmd file - use must fill in the title, author, date and url.} The description, cover-image and github-repo can be changed, but aren't mandatory.
+\textbf{Follow the instructions in the template's index.Rmd file - you must fill in the title, author, date and url.} The description, cover-image and github-repo can be changed, but aren't mandatory.
 
-\subparagraph*{.Rmd Files}\label{rmd-files}
-\addcontentsline{toc}{subparagraph}{.Rmd Files}
+\subparagraph*{\texorpdfstring{ .Rmd Files }{ .Rmd Files }}\label{rmd-files}
+\addcontentsline{toc}{subparagraph}{ .Rmd Files }
 
 Let's move on to discussing the breakdown of the .Rmd files. Each new page is defined by a new header, which starts with \texttt{\#}, each sub-header has increasingly more \texttt{\#} symbols (\#\#, \#\#\#, and more all create smaller sub-headers). A ``main'' header only has 1 \texttt{\#} symbol. These headers define new pages, as well as the title in the sidebar referring to that page.
 
@@ -826,8 +824,18 @@ However, if a new file only has sub-headers (2 \texttt{\#} or more), the sub-hea
 
 In our template, we want the introduction material to appear on the same page. Hence, the introduction files (other than 020-course-schedule.Rmd, which starts the page) all only have sub-headers.
 
-\subparagraph*{How to Create a New File}\label{how-to-create-a-new-file}
-\addcontentsline{toc}{subparagraph}{How to Create a New File}
+\emph{Note:} Due to this, you may receive this warning:
+
+\begin{quote}
+Warning message:
+In split\_chapters(output, gitbook\_page, global\_numbering, split\_by, :
+You have 6 Rmd input file(s) but only 4 first-level heading(s). Did you forget first-level headings in certain Rmd files?
+\end{quote}
+
+You can ignore this warning message!
+
+\subparagraph*{\texorpdfstring{ How to Create a New File }{ How to Create a New File }}\label{how-to-create-a-new-file}
+\addcontentsline{toc}{subparagraph}{ How to Create a New File }
 
 You can create new files anywhere. You should only be making new website pages, so you should also only be making .Rmd files. (Creating new .md files in hopes of making a new page usually ends up with weird bugs, stick to .Rmd files).
 
@@ -844,20 +852,20 @@ You can create new files anywhere. You should only be making new website pages, 
   Start editing your new file in the upper left window!
 \end{enumerate}
 
-\subparagraph*{404 Page}\label{page}
-\addcontentsline{toc}{subparagraph}{404 Page}
+\subparagraph*{\texorpdfstring{ 404 Page }{ 404 Page }}\label{page}
+\addcontentsline{toc}{subparagraph}{ 404 Page }
 
 That being said, there is one file that can be a markdown (.md) file: the \_404.(R)md file. If website user goes to a webpage that belongs to our website but no longer exists, they will get this 404 page instead. Put links to your landing page for your workshop or the bioinformatics.ca homepage here!
 
-\subparagraph*{CBW Organization Folders}\label{cbw-organization-folders}
-\addcontentsline{toc}{subparagraph}{CBW Organization Folders}
+\subparagraph*{\texorpdfstring{ CBW Organization Folders }{ CBW Organization Folders }}\label{cbw-organization-folders}
+\addcontentsline{toc}{subparagraph}{ CBW Organization Folders }
 
 We want our workshops to be easy to navigate and understand. Hence, images or files that are required for your lessons should be placed in \texttt{./img/} and \texttt{./content-files/} respectively. Within these files, try creating sub-folders within these folders to help organize groups of files. For example, if you have a bunch of data sets, try creating a ``datasets'' folder within \texttt{./content-files/}.
 
 Subfolders already exist in \texttt{./img}: \texttt{./img/faculty/} and \texttt{./img/sponsors/}. Fill these with photos of your faculty and images of the names'/logos' of your sponsors, respectfully!
 
-\subparagraph*{Bookdown's Wesbite Building Folders}\label{bookdowns-wesbite-building-folders}
-\addcontentsline{toc}{subparagraph}{Bookdown's Wesbite Building Folders}
+\subparagraph*{\texorpdfstring{ Bookdown's Wesbite Building Folders }{ Bookdown's Wesbite Building Folders }}\label{bookdowns-wesbite-building-folders}
+\addcontentsline{toc}{subparagraph}{ Bookdown's Wesbite Building Folders }
 
 Bookdown makes some folders to store .html files, among other files that help create the website. Hence, you should not (need to) touch:
 
@@ -932,7 +940,7 @@ Bookdown has thorough documentation for specific elements, customizations, and f
 \end{quote}
 
 \begin{quote}
-Another Note: Now that you're straying away from CBW's Bookdown template, there's a chance you may run into errors. See \hyperref[help]{this page} for help!
+\textbf{IMPORTANT NOTE}: Now that you're straying away from CBW's Bookdown template, there's a chance you may run into errors. See \hyperref[help]{this page} for help!
 \end{quote}
 
 \section{Chapters}\label{chapters}
@@ -976,7 +984,11 @@ Notice how index.Rmd in our CBW Bookdown template has \texttt{\#\ (PART)\ Introd
 
 There are already 2 main parts in the template: the introduction and modules sections.
 
-If you want to add more parts, simply paste this: \texttt{\#\ (PART)\ Introduction\ \{-\}} into a new .Rmd file, at the top of the file, before the main \texttt{\#\ header} for that page/file.
+If you want to add more parts, simply paste this: \texttt{\#\ (PART)\ {[}Part\ Title{]}\ \{-\}} into a new .Rmd file, at the top of the file, before the main \texttt{\#\ header} for that page/file.
+
+\textbf{Note}: If you would like to have a un-numbered part: Use this syntax: \texttt{\#\ (PART\textbackslash{}*)\ {[}Part\ Title{]}\ \{-\}}
+
+\textbf{Another Note}: A similar un-numbered part is called an ``Appendix'' and Bookdown. Like a part, paste \texttt{\#\ (APPENDIX)\ {[}Appendix\ Name{]}\ \{-\}} it above the ``main'' header you would like it to be before. All subsequent headers will be described via letters rather than numbers. (If your following headers are un-numbered, an Appendix looks the same as an un-numbered part).
 
 \section{Text Formatting}\label{text-formatting}
 
@@ -1263,11 +1275,15 @@ See the [Citations](#citations)!
 
 \section{Citations}\label{citations}
 
-\textbf{\emph{Reference}} items in your bibliography file(s) using \texttt{@key}.
+Bookdown can help us create citations!
+
+First, tell bookdown your sources
 
 For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib). Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
 
 \textbf{Note:} The \hyperref[visual-r-md]{RStudio Visual Markdown Editor} can also make it easier to insert citations!
+
+\textbf{Note:} When you cite, Bookdown also generates a citation list that it adds at the end of the last page of your website. However, Bookdown does not create a title, so on your very last page, add a \texttt{\#\ Reference} main header. (To avoid having a ``2 main headers in the same file'' error, you can create a new .Rmd file with only \texttt{\#\ Reference}).
 
 \section{Equations}\label{equations}
 
@@ -1310,7 +1326,7 @@ The R Markdown Cookbook provides more help on how to use custom blocks to design
 
 Recall from this diagram that all files are rendered into .html files for the final official website.
 
-Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown;s formatting isn't working, or you're not satisfied with Markdown's formatting options, use HTML/CSS formatting instead!
+Both Knitr and Pandoc will ignore HTML code, so if a certain part of Markdown's formatting isn't working, or you're not satisfied with Markdown's formatting options, use HTML/CSS formatting instead!
 
 Here are some examples:
 
@@ -1696,10 +1712,12 @@ Most diagrams shown on these docs \textbf{should} be in this \href{https://drive
 \item
   To publish, go to ``File \textgreater{} Share \textgreater{} Publish to Web \textgreater{} Embed''. Copy the ``Medium'' \emph{(optional)} image size HTML code. Paste where you want it to appear in your .Rmd file.
 \item
-  Add alt text to the img embed code: Add \texttt{alt="Alt\ R=Text"} after \texttt{src\ =\ ...} and before \texttt{\textgreater{}}.
+  Add alt text to the img embed code: Add \texttt{alt="Alt\ Text"} after \texttt{src\ =\ ...} and before \texttt{\textgreater{}}.
 \end{enumerate}
 
 Note: Lots of the GitHub clone/deploy/RStudio explaining images are currently locally in the repository, and not on the Google drive.
+
+\textbf{References} (the below citation list is auto-generated since we showed examples of citations)
 
   \bibliography{book.bib,packages.bib}
 
