@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.13)  5 DEC 2024 18:46
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.13)  6 DEC 2024 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1286,19 +1286,19 @@ Overfull \hbox (20.31699pt too wide) in paragraph at lines 1224--1225
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1273--1273
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1279--1279
 []\TU/lmtt/m/n/10 For a right triangle, if $c$ denotes the *length* of the hypo
 tenuse[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 1273--1273
+Overfull \hbox (22.5pt too wide) in paragraph at lines 1279--1279
 []\TU/lmtt/m/n/10 and $a$ and $b$ denote the lengths of the **other** two sides
 , we have[] 
  []
 
 [40]
-Overfull \hbox (5.3375pt too wide) in paragraph at lines 1289--1289
+Overfull \hbox (5.3375pt too wide) in paragraph at lines 1295--1295
 []\TU/lmr/bx/n/14.4 TIP: Markdown Not Working/Not Enough?
  []
 
@@ -1307,18 +1307,18 @@ Overfull \hbox (5.3375pt too wide) in paragraph at lines 1289--1289
 ]
 Chapter 7.
 [43]
-Underfull \hbox (badness 1383) in paragraph at lines 1361--1363
+Underfull \hbox (badness 1383) in paragraph at lines 1367--1369
 \TU/lmr/m/n/10 this command in your console (the bottom left window in RStu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1363
+Underfull \hbox (badness 10000) in paragraph at lines 1367--1369
 \TU/lmr/m/n/10 dio) \TU/lmtt/m/n/10 install.packages("missing package name, inc
 lude these
  []
 
 
-Overfull \hbox (961.0pt too wide) in paragraph at lines 1377--1377
+Overfull \hbox (961.0pt too wide) in paragraph at lines 1383--1383
  []  \TU/lmtt/m/n/10 - **"File []..._svg-tex.pdf[] is missing."** is a bug that
  only occurs when producing bookdown::pdf_book. It occurs since you are calling
  a svg image in regular markdown, which is not allowed. If you want to display 
@@ -1330,7 +1330,7 @@ a .svg image, use HTML code.[]
 ] [47] [48]
 Chapter 8.
 
-Underfull \hbox (badness 2057) in paragraph at lines 1443--1444
+Underfull \hbox (badness 2057) in paragraph at lines 1449--1450
 []\TU/lmr/m/n/10 Preview the book: - updates on saves in viewer window book-
  []
 
@@ -1356,18 +1356,18 @@ File: img/git-instruct/git-connection.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [52]
-Underfull \hbox (badness 3199) in paragraph at lines 1531--1533
+Underfull \hbox (badness 3199) in paragraph at lines 1537--1539
 []\TU/lmr/bx/n/10 Important: \TU/lmr/m/n/10 This step is why I highlighted that
  specific text
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 1531--1533
+Underfull \hbox (badness 2027) in paragraph at lines 1537--1539
 \TU/lmr/m/n/10 above. Copy that command, and put it into terminal. Gen-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 1531--1533
+Underfull \hbox (badness 2495) in paragraph at lines 1537--1539
 \TU/lmr/m/n/10 erally, it will look something like this: \TU/lmtt/m/n/10 git re
 mote add origin
  []
@@ -1392,14 +1392,14 @@ Chapter 10.
 File: img/git-instruct/github-settings.png Graphic file (type bmp)
 <img/git-instruct/github-settings.png>
 
-Overfull \hbox (178.10144pt too wide) in paragraph at lines 1618--1621
+Overfull \hbox (178.10144pt too wide) in paragraph at lines 1624--1627
 []\TU/lmr/m/n/10 In the top navigation bar, select settings. [] 
  []
 
 File: img/git-instruct/github-select-pages.png Graphic file (type bmp)
 <img/git-instruct/github-select-pages.png>
 
-Overfull \hbox (131.2858pt too wide) in paragraph at lines 1621--1624
+Overfull \hbox (131.2858pt too wide) in paragraph at lines 1627--1630
 []\TU/lmr/m/n/10 Then, go to the pages sidebar. [] 
  []
 
@@ -1410,7 +1410,7 @@ Underfull \vbox (badness 1466) has occurred while \output is active []
 File: img/git-instruct/github-deploy-main.png Graphic file (type bmp)
 <img/git-instruct/github-deploy-main.png>
 
-Overfull \hbox (198.06654pt too wide) in paragraph at lines 1624--1627
+Overfull \hbox (198.06654pt too wide) in paragraph at lines 1630--1633
 \TU/lmr/m/n/10 must change the branch from “none” to main. [] 
  []
 
@@ -1428,7 +1428,7 @@ File: img/git-instruct/successful-deploy.png Graphic file (type bmp)
 File: img/git-instruct/failed-deploy.png Graphic file (type bmp)
 <img/git-instruct/failed-deploy.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1643--1645
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1651
 [][]
  []
 

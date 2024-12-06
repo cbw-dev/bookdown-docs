@@ -119,7 +119,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}2024-12-05}
+\date{\vspace{-2.5em}2024-12-06}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1225,13 +1225,19 @@ Note these steps work for all headers, not just main (1 \texttt{\#}) headers:
 
     \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-    \texttt{Please\ see\ Citations\ \textbackslash{}@ref(citations).}
+\begin{verbatim}
+Please see Citations \\ref{citations}.
+\end{verbatim}
 
     Please see Citations \ref{citations}.
 
+    \begin{quote}
+    Note: If you use this reference style for an unnumbered header, ``\textbf{??}'' will be used as the hyperlinked text.
+    \end{quote}
+
     \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
   \item
-    If you want a hyperlink, use the following:
+    If you want a customizable text hyperlink, use the following:
 
 \begin{verbatim}
 See the [Citations](#citations)!

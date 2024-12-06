@@ -227,13 +227,17 @@ Note these steps work for all headers, not just main (1 `#`) headers:
 
         ------------------------------------------------------------------------
 
-        `Please see Citations \@ref(citations).`
+        ```
+        Please see Citations \@ref(citations).
+        ```
 
         Please see Citations \@ref(citations).
-
+        
+        > Note: If you use this reference style for an unnumbered header, "**??**" will be used as the hyperlinked text.
+        
         ------------------------------------------------------------------------
 
-    -   If you want a hyperlink, use the following:
+    -   If you want a customizable text hyperlink, use the following:
 
         ```         
         See the [Citations](#citations)!
