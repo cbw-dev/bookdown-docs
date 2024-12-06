@@ -239,7 +239,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#citations"><i class="fa fa-check"></i><b>6.6</b> Citations</a></li>
 <li class="chapter" data-level="6.7" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#equations"><i class="fa fa-check"></i><b>6.7</b> Equations</a></li>
-<li class="chapter" data-level="6.8" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.8</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="6.8" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.8</b> Theorems and Proofs</a></li>
 <li class="chapter" data-level="6.9" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#callout-blocks-will-be-added-later"><i class="fa fa-check"></i><b>6.9</b> Callout blocks (will be added later)</a></li>
 <li class="chapter" data-level="6.10" data-path="formatting-your-content---markdown.html"><a href="formatting-your-content---markdown.html#use-html"><i class="fa fa-check"></i><b>6.10</b> TIP: Markdown Not Working/Not Enough? Use HTML!</a></li>
 </ul></li>
@@ -503,34 +503,52 @@ div.csl-indent {
 <div id="citations" class="section level2 hasAnchor" number="6.6">
 <h2><span class="header-section-number">6.6</span> Citations<a href="formatting-your-content---markdown.html#citations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Bookdown can help us create citations!</p>
-<p>First, tell bookdown your sources</p>
-<p>For example, we are using the <strong>bookdown</strong> package <span class="citation">(<a href="#ref-R-bookdown">Xie 2024</a>)</span> (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(<a href="#ref-xie2015">Xie 2015</a>)</span> (this citation was added manually in an external file book.bib). Note that the <code>.bib</code> files need to be listed in the index.Rmd with the YAML <code>bibliography</code> key.</p>
+<p>First, tell bookdown your sources!</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="formatting-your-content---markdown.html#cb45-1" tabindex="-1"></a><span class="co"># automatically create a bib database for R packages</span></span>
+<span id="cb45-2"><a href="formatting-your-content---markdown.html#cb45-2" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">write_bib</span>(<span class="fu">c</span>(</span>
+<span id="cb45-3"><a href="formatting-your-content---markdown.html#cb45-3" tabindex="-1"></a>  <span class="fu">.packages</span>(), <span class="st">&#39;bookdown&#39;</span>, <span class="st">&#39;knitr&#39;</span>, <span class="st">&#39;rmarkdown&#39;</span></span>
+<span id="cb45-4"><a href="formatting-your-content---markdown.html#cb45-4" tabindex="-1"></a>), <span class="st">&#39;packages.bib&#39;</span>)</span></code></pre></div>
+<p>This R code created a file called ‘packages.bib’ (which is in the bookdown template) which is now filled with a bunch of bibliography entries. ‘book.bib’ also has a manually entered bibliography entry. We must tell bookdown the files with bibliography information via the YAML <code>bibliography</code> key in index.Rmd. A bibliography entry essentially looks like:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="formatting-your-content---markdown.html#cb46-1" tabindex="-1"></a><span class="sc">@</span>type{key,</span>
+<span id="cb46-2"><a href="formatting-your-content---markdown.html#cb46-2" tabindex="-1"></a>  title <span class="ot">=</span> {...},</span>
+<span id="cb46-3"><a href="formatting-your-content---markdown.html#cb46-3" tabindex="-1"></a>  author <span class="ot">=</span> {...},</span>
+<span id="cb46-4"><a href="formatting-your-content---markdown.html#cb46-4" tabindex="-1"></a>  organization <span class="ot">=</span> {...},</span>
+<span id="cb46-5"><a href="formatting-your-content---markdown.html#cb46-5" tabindex="-1"></a>  year <span class="ot">=</span> {...},</span>
+<span id="cb46-6"><a href="formatting-your-content---markdown.html#cb46-6" tabindex="-1"></a>  url <span class="ot">=</span> {...},</span>
+<span id="cb46-7"><a href="formatting-your-content---markdown.html#cb46-7" tabindex="-1"></a>  ... <span class="co"># see more possible fields at https://en.wikipedia.org/wiki/BibTeX</span></span>
+<span id="cb46-8"><a href="formatting-your-content---markdown.html#cb46-8" tabindex="-1"></a>}</span></code></pre></div>
+<p><code>@type</code> refers to what type of source it is (ex. an article, book, manual, …). <code>@key</code> refers to the name we refer to it by in in-text citations.</p>
+<p>For example, <code>@R-bookdown</code> renders to <span class="citation">Xie (<a href="#ref-R-bookdown">2024</a>)</span>. Adding square brackets also adds parentheses once it’s rendered: so <code>[@R-bookdown]</code> becomes <span class="citation">(<a href="#ref-R-bookdown">Xie 2024</a>)</span>.</p>
 <p><strong>Note:</strong> The <a href="formatting-your-content---markdown.html#visual-r-md">RStudio Visual Markdown Editor</a> can also make it easier to insert citations!</p>
+<p>On any page that you cite, a <strong>References</strong> section will be autogenerated at the bottom of that page (scroll down)!</p>
 <p><strong>Note:</strong> When you cite, Bookdown also generates a citation list that it adds at the end of the last page of your website. However, Bookdown does not create a title, so on your very last page, add a <code># Reference</code> main header. (To avoid having a “2 main headers in the same file” error, you can create a new .Rmd file with only <code># Reference</code>).</p>
 </div>
 <div id="equations" class="section level2 hasAnchor" number="6.7">
 <h2><span class="header-section-number">6.7</span> Equations<a href="formatting-your-content---markdown.html#equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here is an equation. Equations are written in latex.</p>
+<p>Equations are written in latex. You can refer to them with a label you specify after writing it out!</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb47-1"><a href="formatting-your-content---markdown.html#cb47-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb47-2"><a href="formatting-your-content---markdown.html#cb47-2" tabindex="-1"></a><span class="ss">  f</span><span class="sc">\left</span><span class="ss">(k</span><span class="sc">\right</span><span class="ss">) = </span><span class="sc">\binom</span><span class="ss">{n}{k} p^k</span><span class="sc">\left</span><span class="ss">(1-p</span><span class="sc">\right</span><span class="ss">)^{n-k}</span></span>
+<span id="cb47-3"><a href="formatting-your-content---markdown.html#cb47-3" tabindex="-1"></a><span class="ss">  (</span><span class="sc">\#</span><span class="ss">eq:binom) # the label!</span></span>
+<span id="cb47-4"><a href="formatting-your-content---markdown.html#cb47-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span></code></pre></div>
 <p><span class="math display" id="eq:binom">\[\begin{equation}
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
   \tag{6.1}
 \end{equation}\]</span></p>
-<p>You may refer to using <code>\@ref(eq:binom)</code>, like see Equation <a href="formatting-your-content---markdown.html#eq:binom">(6.1)</a>.</p>
+<p>You may refer to using <code>\@ref(eq:binom)</code>, for example: <code>see Equation \@ref(eq:binom)</code> becomes “see Equation <a href="formatting-your-content---markdown.html#eq:binom">(6.1)</a>”. The number <a href="formatting-your-content---markdown.html#eq:binom">(6.1)</a> depends on the chapter and the number of equations already in said chapter (the first equation will be numbered <code>[chapter number].1</code>).</p>
 </div>
 <div id="theorems-and-proofs" class="section level2 hasAnchor" number="6.8">
-<h2><span class="header-section-number">6.8</span> Theorems and proofs<a href="formatting-your-content---markdown.html#theorems-and-proofs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">6.8</span> Theorems and Proofs<a href="formatting-your-content---markdown.html#theorems-and-proofs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We also have specific syntax for theorems and proofs, for example, this code:</p>
 <pre><code>::: {.theorem #tri}
 For a right triangle, if $c$ denotes the *length* of the hypotenuse
 and $a$ and $b$ denote the lengths of the **other** two sides, we have
 $$a^2 + b^2 = c^2$$
 :::</code></pre>
-<p>produces</p>
 <div class="theorem">
 <p><span id="thm:tri" class="theorem"><strong>Theorem 6.1  </strong></span>For a right triangle, if <span class="math inline">\(c\)</span> denotes the <em>length</em> of the hypotenuse and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the <strong>other</strong> two sides, we have <span class="math display">\[a^2 + b^2 = c^2\]</span></p>
 </div>
 <p>Labeled theorems can be referenced in text using <code>\@ref(thm:tri)</code>, for example, check out this smart theorem <a href="formatting-your-content---markdown.html#thm:tri">6.1</a>.</p>
-<p>You can learn more about this <a href="https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html">here</a>!</p>
+<p>Learn more about styling and syntax for theorems and proofs <a href="https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html">here</a>!</p>
 </div>
 <div id="callout-blocks-will-be-added-later" class="section level2 hasAnchor" number="6.9">
 <h2><span class="header-section-number">6.9</span> Callout blocks (will be added later)<a href="formatting-your-content---markdown.html#callout-blocks-will-be-added-later" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -559,11 +577,8 @@ $$a^2 + b^2 = c^2$$
 </div>
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div id="ref-xie2015" class="csl-entry">
-Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
-</div>
 <div id="ref-R-bookdown" class="csl-entry">
-———. 2024. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
+Xie, Yihui. 2024. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
 </div>
 </div>
 <div class="footnotes">

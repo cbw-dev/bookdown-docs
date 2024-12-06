@@ -113,7 +113,7 @@ bookdown-template
 ├── 020-module-1.Rmd #--> "Module 1", "Lecture, and "Lab" section
 ├── 030-module-2.Rmd
 ├── README.md # README file that has some helpful explanations, consider reading this before starting to edit (along with this documentation!)
-├── book.bib
+├── book.bib # citation file
 ├── bookdown-template.Rproj # always open this file in RStudio, opening this helps bookdown understand what to build
 ├── content-files # store all files from your modules here (ex. data sets, empty code worksheets)
     └── sample-pdf.pdf
@@ -128,7 +128,7 @@ bookdown-template
     └── sponsors # store all sponsor logos/titles in this folder
          └── Your-Sponsor-Here.svg
 ├── index.Rmd # landing page --> "Welcome" section
-├── packages.bib
+├── packages.bib # R generated citation file
 ├── preamble.tex
 └── style.css # css styling options are defined here - feel free to add your own styling features
 ```
