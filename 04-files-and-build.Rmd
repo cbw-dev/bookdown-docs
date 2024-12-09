@@ -18,7 +18,7 @@ Now, let's figure out RStudio. Skip to [file setup](#file-setup) if you already 
 
 ## Opening Your Bookdown Project RStudio
 
-Enter the folder you just git cloned using Findr/File Command, it should be titled "[workshop-name]". Right click on [workshop-name].Rproj and press "Open in RStudio". There is only one file with this file extension. The .Rproj file is what you will open each time you want to work on this workshop! You must explicitly **open the .Rproj** file to build properly!
+Enter the folder you just git cloned using Findr/File Explorer, it should be titled "[workshop-name]". Right click on [workshop-name].Rproj and press "Open in RStudio". There is only one file with this file extension. The .Rproj file is what you will open each time you want to work on this workshop! You must explicitly **open the .Rproj** file to build properly!
 
 A RStudio window should open up and look something like the image below. 
 ![newly opened RStudio window](img/files-and-build/newly-opened-RStudio.png)\
@@ -40,6 +40,8 @@ In your top right, we have a different window with more different views. The mos
 ## Build the Book
 
 Try pressing "Build Book" within the "Build" window. Your build window is going to fill up with text, and soon, a website is going to pop-up as your new window. This is the website you will be editing to create your workshop!
+
+> Note: If it's your first time building, you may have to approve some downloads and installations, like we did in [Getting Started](#get-started)!
 
 By building the book, **all** of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don't have to save before building!). 
 

@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started {#get-started}
 
 <!-- Maybe a more gradual introduction ? -->
 
@@ -22,5 +22,18 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 2. Download and install RStudio [here](https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP). Scroll down to find downloads for non-macOS.
 
 3. Install the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: ```install.packages("bookdown")```.
+
+    - To prepare for creating our workshop, also run this command. This downloads all the packages you will need!
+      ```r
+      install.packages(c("magrittr", "stringi", "stringr", "reticulate", "tinytex","servr"))
+      ```
+
+      You may have to approve some downloads. Say "yes" and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.
+      
+      Then, run
+      
+      ```r
+      tinytex::install_tinytex()
+      ```
 
 We're ready to start working with CBW's bookdown workshop template now!

@@ -127,6 +127,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -146,9 +169,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> CBW’s Bookdown Documentation</a></li>
-<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a>
+<li class="chapter" data-level="2" data-path="get-started.html"><a href="get-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#installation"><i class="fa fa-check"></i><b>2.1</b> Installation</a></li>
+<li class="chapter" data-level="2.1" data-path="get-started.html"><a href="get-started.html#installation"><i class="fa fa-check"></i><b>2.1</b> Installation</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html"><i class="fa fa-check"></i><b>3</b> Creating [RC] and Deploying Your <strong>New</strong> Workshop</a>
 <ul>
@@ -281,14 +304,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="getting-started" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Getting Started<a href="getting-started.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="get-started" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Getting Started<a href="get-started.html#get-started" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <!-- Maybe a more gradual introduction ? -->
 <p>Bookdown is an open-source R package that helps write books and articles. We will be building our bookdown-based workshop websites using this, specifically the gitbook template. (This is just the name of the specific template style, you will be working in a workshop template that CBW has prepared for you!)</p>
 <p>If you’re ready to start making a workshop website in bookdown, let’s setup your device (PC, laptop)!</p>
 <p>First, let’s explain installations.</p>
 <div id="installation" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Installation<a href="getting-started.html#installation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">2.1</span> Installation<a href="get-started.html#installation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated development environment i.e. the platform we will be working in) is RStudio.</p>
 <ol style="list-style-type: decimal">
 <li><p>Download and install R (You need R 3.6.0+ installed for RStudio) <a href="https://cran.rstudio.com/">here</a>. Follow the instructions for your operating system (Linux/macOS/Windows).</p>
@@ -303,10 +326,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Install the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: <code>install.packages("bookdown")</code>.</p>
 <ul>
 <li><p>To prepare for creating our workshop, also run this command. This downloads all the packages you will need!</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="getting-started.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;magrittr&quot;</span>, <span class="st">&quot;stringi&quot;</span>, <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;reticulate&quot;</span>, <span class="st">&quot;tinytex&quot;</span>))</span></code></pre></div>
-<p>You may have to approve some downloads. Say “yes” and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.
-Then, run</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="getting-started.html#cb2-1" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div></li>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="get-started.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;magrittr&quot;</span>, <span class="st">&quot;stringi&quot;</span>, <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;reticulate&quot;</span>, <span class="st">&quot;tinytex&quot;</span>,<span class="st">&quot;servr&quot;</span>))</span></code></pre></div>
+<p>You may have to approve some downloads. Say “yes” and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.</p>
+<p>Then, run</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="get-started.html#cb2-1" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div></li>
 </ul></li>
 </ol>
 <p>We’re ready to start working with CBW’s bookdown workshop template now!</p>
@@ -373,6 +396,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

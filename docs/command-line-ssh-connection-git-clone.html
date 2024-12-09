@@ -169,9 +169,9 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> CBW’s Bookdown Documentation</a></li>
-<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a>
+<li class="chapter" data-level="2" data-path="get-started.html"><a href="get-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#installation"><i class="fa fa-check"></i><b>2.1</b> Installation</a></li>
+<li class="chapter" data-level="2.1" data-path="get-started.html"><a href="get-started.html#installation"><i class="fa fa-check"></i><b>2.1</b> Installation</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html"><i class="fa fa-check"></i><b>3</b> Creating [RC] and Deploying Your <strong>New</strong> Workshop</a>
 <ul>
@@ -315,9 +315,6 @@ div.csl-indent {
 <p>Note:</p>
 <p>Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!</p>
 </blockquote>
-<ul>
-<li>terminal (mac, unix based) vs command prompt (windows)</li>
-</ul>
 <div id="terminal-command-prompt-and-windows-powershell" class="section level3 hasAnchor" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> Terminal, Command Prompt and Windows PowerShell<a href="command-line-ssh-connection-git-clone.html#terminal-command-prompt-and-windows-powershell" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.</p>
@@ -332,13 +329,13 @@ div.csl-indent {
 <div id="pwd" class="section level6 unnumbered hasAnchor">
 <h6>pwd<a href="command-line-ssh-connection-git-clone.html#pwd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <p>pwd stands for “print working directory”. For example, below our output is where in my folders the current .Rmd file that makes up this website is:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="command-line-ssh-connection-git-clone.html#cb1-1" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="command-line-ssh-connection-git-clone.html#cb3-1" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
 <pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs</code></pre>
 </div>
 <div id="ls-or-dir" class="section level6 unnumbered hasAnchor">
 <h6>ls OR dir<a href="command-line-ssh-connection-git-clone.html#ls-or-dir" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <p>“ls” is a <strong>Terminal</strong> command that also works in <strong>Windows PowerShell</strong>. It short for “list” and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="command-line-ssh-connection-git-clone.html#cb3-1" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="command-line-ssh-connection-git-clone.html#cb5-1" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
 <!-- to save space, only output the first 4 lines -->
 <pre><code>## 01-getting-started.Rmd
 ## 02-git-clone.Rmd
@@ -349,10 +346,10 @@ div.csl-indent {
 <div id="cd" class="section level6 unnumbered hasAnchor">
 <h6>cd<a href="command-line-ssh-connection-git-clone.html#cd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <p>“cd” stands for “change directory”. The command produces no output, but it allows you to go to a different directory than the one you’re currently in. For example,</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="command-line-ssh-connection-git-clone.html#cb5-1" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># recall: pwd tells us where we currently are</span></span>
-<span id="cb5-2"><a href="command-line-ssh-connection-git-clone.html#cb5-2" tabindex="-1"></a><span class="bu">cd</span> img <span class="co"># img is a folder in bookdown-docs</span></span>
-<span id="cb5-3"><a href="command-line-ssh-connection-git-clone.html#cb5-3" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;now switching directories&quot;</span> <span class="co"># outputs the following string</span></span>
-<span id="cb5-4"><a href="command-line-ssh-connection-git-clone.html#cb5-4" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="command-line-ssh-connection-git-clone.html#cb7-1" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># recall: pwd tells us where we currently are</span></span>
+<span id="cb7-2"><a href="command-line-ssh-connection-git-clone.html#cb7-2" tabindex="-1"></a><span class="bu">cd</span> img <span class="co"># img is a folder in bookdown-docs</span></span>
+<span id="cb7-3"><a href="command-line-ssh-connection-git-clone.html#cb7-3" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;now switching directories&quot;</span> <span class="co"># outputs the following string</span></span>
+<span id="cb7-4"><a href="command-line-ssh-connection-git-clone.html#cb7-4" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
 <pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
 ## now switching directories
 ## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs/img</code></pre>
@@ -361,22 +358,22 @@ div.csl-indent {
 </blockquote>
 <p><strong>File Location Shorthands</strong> When referring to file addresses, there are helpful shorthands! Here’s a summary: - <code>.</code> = Current Directory - <code>..</code> = Parent Directory - <code>~</code> = Home Directory</p>
 <p>Here’s an example (recall, cd produces no output!):</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="command-line-ssh-connection-git-clone.html#cb7-1" tabindex="-1"></a><span class="bu">pwd</span></span>
-<span id="cb7-2"><a href="command-line-ssh-connection-git-clone.html#cb7-2" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="co"># creates a line</span></span>
-<span id="cb7-3"><a href="command-line-ssh-connection-git-clone.html#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="command-line-ssh-connection-git-clone.html#cb7-4" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Current Directory Example&quot;</span></span>
-<span id="cb7-5"><a href="command-line-ssh-connection-git-clone.html#cb7-5" tabindex="-1"></a><span class="bu">cd</span> .</span>
-<span id="cb7-6"><a href="command-line-ssh-connection-git-clone.html#cb7-6" tabindex="-1"></a><span class="bu">pwd</span></span>
-<span id="cb7-7"><a href="command-line-ssh-connection-git-clone.html#cb7-7" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
-<span id="cb7-8"><a href="command-line-ssh-connection-git-clone.html#cb7-8" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="command-line-ssh-connection-git-clone.html#cb7-9" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Parent Directory Example&quot;</span></span>
-<span id="cb7-10"><a href="command-line-ssh-connection-git-clone.html#cb7-10" tabindex="-1"></a><span class="bu">cd</span> ..</span>
-<span id="cb7-11"><a href="command-line-ssh-connection-git-clone.html#cb7-11" tabindex="-1"></a><span class="bu">pwd</span></span>
-<span id="cb7-12"><a href="command-line-ssh-connection-git-clone.html#cb7-12" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
-<span id="cb7-13"><a href="command-line-ssh-connection-git-clone.html#cb7-13" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="command-line-ssh-connection-git-clone.html#cb7-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Home Directory Example&quot;</span></span>
-<span id="cb7-15"><a href="command-line-ssh-connection-git-clone.html#cb7-15" tabindex="-1"></a><span class="bu">cd</span> ~</span>
-<span id="cb7-16"><a href="command-line-ssh-connection-git-clone.html#cb7-16" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="command-line-ssh-connection-git-clone.html#cb9-1" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb9-2"><a href="command-line-ssh-connection-git-clone.html#cb9-2" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="co"># creates a line</span></span>
+<span id="cb9-3"><a href="command-line-ssh-connection-git-clone.html#cb9-3" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="command-line-ssh-connection-git-clone.html#cb9-4" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Current Directory Example&quot;</span></span>
+<span id="cb9-5"><a href="command-line-ssh-connection-git-clone.html#cb9-5" tabindex="-1"></a><span class="bu">cd</span> .</span>
+<span id="cb9-6"><a href="command-line-ssh-connection-git-clone.html#cb9-6" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb9-7"><a href="command-line-ssh-connection-git-clone.html#cb9-7" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
+<span id="cb9-8"><a href="command-line-ssh-connection-git-clone.html#cb9-8" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="command-line-ssh-connection-git-clone.html#cb9-9" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Parent Directory Example&quot;</span></span>
+<span id="cb9-10"><a href="command-line-ssh-connection-git-clone.html#cb9-10" tabindex="-1"></a><span class="bu">cd</span> ..</span>
+<span id="cb9-11"><a href="command-line-ssh-connection-git-clone.html#cb9-11" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb9-12"><a href="command-line-ssh-connection-git-clone.html#cb9-12" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
+<span id="cb9-13"><a href="command-line-ssh-connection-git-clone.html#cb9-13" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="command-line-ssh-connection-git-clone.html#cb9-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Home Directory Example&quot;</span></span>
+<span id="cb9-15"><a href="command-line-ssh-connection-git-clone.html#cb9-15" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb9-16"><a href="command-line-ssh-connection-git-clone.html#cb9-16" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
 <pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
 ## 
 ## Current Directory Example
@@ -410,7 +407,7 @@ div.csl-indent {
 <h2><span class="header-section-number">4.2</span> Creating the SSH Connection<a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We need to create an SSH connection. You have already set this up if you have been git cloning, pulling from and pushing to GitHub. If you have, continue to <a href="command-line-ssh-connection-git-clone.html#git-clone">git cloning</a>. If you haven’t, keep reading!</p>
 <p>Essentially, we’re doing these steps to update and receive updates from our GitHub repository, with security!</p>
-<p>Follow the following 3 main steps. Each of these subheaders links to GitHub’s official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you’ve already been working with GitHub and SSH connection, consider using the official docs.) The official docs may be more up-to-date.</p>
+<p>Follow the following 3 main steps. Each of these subheaders links to GitHub’s official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you’ve already been working with GitHub/SSH connection and want to make a new one, consider using the official docs.) The official docs may be more up-to-date.</p>
 <blockquote>
 <p>Note: You can do these commands anywhere in your files. You do not need to be in your home directory.</p>
 </blockquote>
@@ -418,26 +415,33 @@ div.csl-indent {
 <h3><span class="header-section-number">4.2.1</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">Generating a new SSH key</a><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>Open Terminal.</p></li>
-<li><p>Copy and paste this text into your terminal. <strong>Replace the email given below with your GitHub email address</strong> (the email address you used to sign up for Github). Press enter to run the command.</p>
+<li><p>Copy and paste this text into your terminal. <strong>Replace the email given below with your GitHub email address</strong> (the email address you used to sign up for Github). <em>Keep the quotations in your command.</em> Press enter to run the command.</p>
 <pre><code>ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;</code></pre>
-<p>You will get this output: <code>&gt; Generating public/private ALGORITHM key pair.</code></p>
+<p>You will get this output:</p>
+<pre><code>&gt; Generating public/private ALGORITHM key pair.
+&gt; Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):</code></pre>
+<p>Press enter. (This uses a default file and default file location.)</p>
 <blockquote>
 <p>Note: Output in your terminal begins with this “&gt;” symbol, as seen above!</p>
 </blockquote>
-<p>You will then be prompted with this message: <code>&gt; Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):</code> Press enter. (This uses a default file and default file location.)</p>
 <p>If you have already created a SSH key and you are asked to rewrite another key, look at the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name.">GitHub Docs</a> for specific steps.</p></li>
 <li><p>Type a secure passphrase (make up a password) when prompted with:</p>
-<pre><code>&gt; Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
-&gt; Enter same passphrase again: [TYPE THE SAME PASSPHRASE]</code></pre></li>
+<pre><code>&gt; Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]</code></pre>
+<pre><code>&gt; Enter same passphrase again: [TYPE THE SAME PASSPHRASE]</code></pre>
+<blockquote>
+<p>You should keep note of this passphrase for your own use. We (should) never have to use it again after finishing these steps.</p>
+</blockquote>
+<p>You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!</p></li>
 </ol>
 </div>
 <div id="adding-your-ssh-key-to-the-ssh-agent" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent">Adding your SSH key to the ssh-agent</a><a href="command-line-ssh-connection-git-clone.html#adding-your-ssh-key-to-the-ssh-agent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li><p>In terminal, run the following command</p>
+<li><p>In terminal, run the following command:</p>
 <pre><code>eval &quot;$(ssh-agent -s)&quot;</code></pre>
 <p>You will get this output:</p>
-<pre><code>&gt; Agent pid 59566</code></pre></li>
+<pre><code>&gt; Agent pid 59566</code></pre>
+<p><em>(Your number will most likely be different than the one above.)</em></p></li>
 <li><p>If you’re using macOS Sierra 10.12.2 or later additions, you need to modify your <code>~/.ssh/config</code> file.</p>
 <ol style="list-style-type: decimal">
 <li><p>Check if you have a <code>~/.ssh/config</code> file: Run the following command:</p>
@@ -449,7 +453,7 @@ div.csl-indent {
 <li><p>Edit your <code>~/.ssh/config</code> file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.</p>
 <ul>
 <li>Run <code>nano ~/.ssh/config</code></li>
-<li>Add the following lines to this file. (You should be able to immediately edit.)</li>
+<li>Add the following lines to this file.</li>
 </ul>
 <pre><code>Host github.com
  AddKeysToAgent yes
@@ -462,7 +466,8 @@ div.csl-indent {
 <pre><code>Save modified buffer (ANSWERING &quot;No&quot; WILL DESTROY CHANGES) ?</code></pre></li>
 </ol></li>
 <li><p>Return to terminal. Run the following command:</p>
-<pre><code>ssh-add --apple-use-keychain ~/.ssh/id_ed25519</code></pre></li>
+<pre><code>ssh-add --apple-use-keychain ~/.ssh/id_ed25519</code></pre>
+<p>(You may be asked to enter your passphrase again. This is the same passphrase as before.)</p></li>
 </ol>
 </div>
 <div id="adding-a-new-ssh-key-to-your-account" class="section level3 hasAnchor" number="4.2.3">
@@ -476,26 +481,30 @@ div.csl-indent {
 <li><p>Under the “Access” section, click <strong>SSH and GPG keys</strong>.</p></li>
 <li><p>Click <strong>New SSH key</strong> or <strong>Add SSH key</strong>.</p></li>
 <li><p>In the “Title” field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key: “Personal Laptop”).</p></li>
-<li><p>Select the type of key between “authentication” or “signing”. (For our purposes, selecting authentication is fine).</p></li>
+<li><p>Leave the type of key as “authentication” (rather than “signing”). For our purposes, selecting authentication is fine.</p></li>
 <li><p>In the “Key” field, paste (we are pasting what we copied in step 1).</p></li>
 <li><p>Click <strong>Add SSH Key</strong>.</p></li>
 <li><p>If you are prompted, confirm access to your GitHub account.</p></li>
 </ol>
 <p>Finally, we’re all done! We’ve created a SSH connection between your device and GitHub!</p>
-<p>Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps!</p>
+<p>Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps or confirm authentication.</p>
 </div>
 </div>
 <div id="git-clone" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Getting the Template on Your Local Computer - Git Clone!<a href="command-line-ssh-connection-git-clone.html#git-clone" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li><p>Navigate to where in your local file system you want to have your workshop in (hint: cd + <code>enter</code>).</p></li>
-<li><p>Return to your workshop repository on GitHub. <br>Find the ssh for your workshop repository: first, click the green button entitled <code>&lt; &gt; Code</code> ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like <a href="mailto:git@github.com" class="email">git@github.com</a>:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.</p>
+<li><p>Navigate to where in your local file system you want to have your workshop in (hint: cd + <code>tab</code>).</p></li>
+<li><p>Return to your workshop repository on GitHub.</p>
+<p>Find the ssh for your workshop repository:</p>
+<ul>
+<li>First, click the green button entitled <code>&lt; &gt; Code</code> ands see the drop down options.</li>
+<li>Click the SSH tab, as seen below, and then copy the text below it. The text should be something like <a href="mailto:git@github.com" class="email">git@github.com</a>:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.</li>
+</ul>
 <p><img src="img/git-instruct/copy-ssh.png" alt="how to find the ssh for your repo" /><br />
 </p>
-<p>Then put this command into your command line, within the folder you want the workshop folder to be in.</p>
-<p>For example, if my organization is named: jq-11 and my workshop name is “workshop-name”, I would enter this into my terminal.</p>
+<p>Then put the following command into your command line, within the folder you want the workshop folder to be in. (For example, if my organization is named: jq-11 and my workshop name is “workshop-name”, I would enter this into my terminal.)</p>
 <pre><code>git clone git@github.com:jq-11/workshop-name.git</code></pre></li>
-<li><p>You should be ready to go! With your given permissions, you should be able to git push and git pull fine!</p></li>
+<li><p>You should be ready to go! With your given permissions, you should be able to git push (put your local edits on GitHub) and git pull (pull edits on GitHub to your local computer) fine!</p></li>
 </ol>
 <blockquote>
 <p>NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.</p>

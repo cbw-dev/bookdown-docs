@@ -155,7 +155,7 @@ Note, this is the documentation to create a workshop using \emph{bookdown}. If \
 
 If you don't know which one to use, click \href{}{here} to learn more!
 
-\chapter{Getting Started}\label{getting-started}
+\chapter{Getting Started}\label{get-started}
 
 Bookdown is an open-source R package that helps write books and articles. We will be building our bookdown-based workshop websites using this, specifically the gitbook template. (This is just the name of the specific template style, you will be working in a workshop template that CBW has prepared for you!)
 
@@ -185,6 +185,27 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
   Download and install RStudio \href{https://posit.co/download/rstudio-desktop/\#:~:text=AND\%20INSTALL\%20R-,2\%3A\%20Install\%20RStudio,-DOWNLOAD\%20RSTUDIO\%20DESKTOP}{here}. Scroll down to find downloads for non-macOS.
 \item
   Install the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: \texttt{install.packages("bookdown")}.
+
+  \begin{itemize}
+  \item
+    To prepare for creating our workshop, also run this command. This downloads all the packages you will need!
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"magrittr"}\NormalTok{, }\StringTok{"stringi"}\NormalTok{, }\StringTok{"stringr"}\NormalTok{, }\StringTok{"reticulate"}\NormalTok{, }\StringTok{"tinytex"}\NormalTok{,}\StringTok{"servr"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+    You may have to approve some downloads. Say ``yes'' and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.
+
+    Then, run
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tinytex}\SpecialCharTok{::}\FunctionTok{install\_tinytex}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+  \end{itemize}
 \end{enumerate}
 
 We're ready to start working with CBW's bookdown workshop template now!
@@ -195,7 +216,7 @@ Certain aspects of the setup for workshops will be different depending on your r
 
 \section{Workshop Setup {[}RC{]}}\label{workshop-setup-rc}
 
-Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop.
+Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop. \textbf{Start these instructions with a GitHub account and being logged in}.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -293,12 +314,6 @@ Note:
 
 Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!
 \end{quote}
-
-\begin{itemize}
-\tightlist
-\item
-  terminal (mac, unix based) vs command prompt (windows)
-\end{itemize}
 
 \subsection{Terminal, Command Prompt and Windows PowerShell}\label{terminal-command-prompt-and-windows-powershell}
 
@@ -435,7 +450,7 @@ We need to create an SSH connection. You have already set this up if you have be
 
 Essentially, we're doing these steps to update and receive updates from our GitHub repository, with security!
 
-Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub and SSH connection, consider using the official docs.) The official docs may be more up-to-date.
+Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub/SSH connection and want to make a new one, consider using the official docs.) The official docs may be more up-to-date.
 
 \begin{quote}
 Note: You can do these commands anywhere in your files. You do not need to be in your home directory.
@@ -448,19 +463,24 @@ Note: You can do these commands anywhere in your files. You do not need to be in
 \item
   Open Terminal.
 \item
-  Copy and paste this text into your terminal. \textbf{Replace the email given below with your GitHub email address} (the email address you used to sign up for Github). Press enter to run the command.
+  Copy and paste this text into your terminal. \textbf{Replace the email given below with your GitHub email address} (the email address you used to sign up for Github). \emph{Keep the quotations in your command.} Press enter to run the command.
 
 \begin{verbatim}
 ssh-keygen -t ed25519 -C "your_email@example.com"
 \end{verbatim}
 
-  You will get this output: \texttt{\textgreater{}\ Generating\ public/private\ ALGORITHM\ key\ pair.}
+  You will get this output:
+
+\begin{verbatim}
+> Generating public/private ALGORITHM key pair.
+> Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):
+\end{verbatim}
+
+  Press enter. (This uses a default file and default file location.)
 
   \begin{quote}
   Note: Output in your terminal begins with this ``\textgreater{}'' symbol, as seen above!
   \end{quote}
-
-  You will then be prompted with this message: \texttt{\textgreater{}\ Enter\ a\ file\ in\ which\ to\ save\ the\ key\ (/Users/YOU/.ssh/id\_ALGORITHM):} Press enter. (This uses a default file and default file location.)
 
   If you have already created a SSH key and you are asked to rewrite another key, look at the \href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key:~:text=Please\%20note\%20that\%20if\%20you\%20created\%20SSH\%20keys\%20previously\%2C\%20ssh\%2Dkeygen\%20may\%20ask\%20you\%20to\%20rewrite\%20another\%20key\%2C\%20in\%20which\%20case\%20we\%20recommend\%20creating\%20a\%20custom\%2Dnamed\%20SSH\%20key.\%20To\%20do\%20so\%2C\%20type\%20the\%20default\%20file\%20location\%20and\%20replace\%20id_ALGORITHM\%20with\%20your\%20custom\%20key\%20name.}{GitHub Docs} for specific steps.
 \item
@@ -468,8 +488,17 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 \begin{verbatim}
 > Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
+\end{verbatim}
+
+\begin{verbatim}
 > Enter same passphrase again: [TYPE THE SAME PASSPHRASE]
 \end{verbatim}
+
+  \begin{quote}
+  You should keep note of this passphrase for your own use. We (should) never have to use it again after finishing these steps.
+  \end{quote}
+
+  You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!
 \end{enumerate}
 
 \subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#adding-your-ssh-key-to-the-ssh-agent}{Adding your SSH key to the ssh-agent}}{Adding your SSH key to the ssh-agent}}\label{adding-your-ssh-key-to-the-ssh-agent}
@@ -477,7 +506,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  In terminal, run the following command
+  In terminal, run the following command:
 
 \begin{verbatim}
 eval "$(ssh-agent -s)"
@@ -488,6 +517,8 @@ eval "$(ssh-agent -s)"
 \begin{verbatim}
 > Agent pid 59566
 \end{verbatim}
+
+  \emph{(Your number will most likely be different than the one above.)}
 \item
   If you're using macOS Sierra 10.12.2 or later additions, you need to modify your \texttt{\textasciitilde{}/.ssh/config} file.
 
@@ -519,7 +550,7 @@ touch ~/.ssh/config
     \item
       Run \texttt{nano\ \textasciitilde{}/.ssh/config}
     \item
-      Add the following lines to this file. (You should be able to immediately edit.)
+      Add the following lines to this file.
     \end{itemize}
 
 \begin{verbatim}
@@ -547,6 +578,8 @@ Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
 \begin{verbatim}
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 \end{verbatim}
+
+  (You may be asked to enter your passphrase again. This is the same passphrase as before.)
 \end{enumerate}
 
 \subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account\#adding-a-new-ssh-key-to-your-account}{Adding a new SSH key to your account}}{Adding a new SSH key to your account}}\label{adding-a-new-ssh-key-to-your-account}
@@ -574,7 +607,7 @@ pbcopy < ~/.ssh/id_ed25519.pub
 \item
   In the ``Title'' field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key: ``Personal Laptop'').
 \item
-  Select the type of key between ``authentication'' or ``signing''. (For our purposes, selecting authentication is fine).
+  Leave the type of key as ``authentication'' (rather than ``signing''). For our purposes, selecting authentication is fine.
 \item
   In the ``Key'' field, paste (we are pasting what we copied in step 1).
 \item
@@ -585,28 +618,36 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 Finally, we're all done! We've created a SSH connection between your device and GitHub!
 
-Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps!
+Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps or confirm authentication.
 
 \section{Getting the Template on Your Local Computer - Git Clone!}\label{git-clone}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Navigate to where in your local file system you want to have your workshop in (hint: cd + \texttt{enter}).
+  Navigate to where in your local file system you want to have your workshop in (hint: cd + \texttt{tab}).
 \item
-  Return to your workshop repository on GitHub. Find the ssh for your workshop repository: first, click the green button entitled \texttt{\textless{}\ \textgreater{}\ Code} ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
+  Return to your workshop repository on GitHub.
+
+  Find the ssh for your workshop repository:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    First, click the green button entitled \texttt{\textless{}\ \textgreater{}\ Code} ands see the drop down options.
+  \item
+    Click the SSH tab, as seen below, and then copy the text below it. The text should be something like \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
+  \end{itemize}
 
   \includegraphics{img/git-instruct/copy-ssh.png}\\
 
-  Then put this command into your command line, within the folder you want the workshop folder to be in.
-
-  For example, if my organization is named: jq-11 and my workshop name is ``workshop-name'', I would enter this into my terminal.
+  Then put the following command into your command line, within the folder you want the workshop folder to be in. (For example, if my organization is named: jq-11 and my workshop name is ``workshop-name'', I would enter this into my terminal.)
 
 \begin{verbatim}
 git clone git@github.com:jq-11/workshop-name.git
 \end{verbatim}
 \item
-  You should be ready to go! With your given permissions, you should be able to git push and git pull fine!
+  You should be ready to go! With your given permissions, you should be able to git push (put your local edits on GitHub) and git pull (pull edits on GitHub to your local computer) fine!
 \end{enumerate}
 
 \begin{quote}
@@ -633,7 +674,7 @@ Now, let's figure out RStudio. Skip to \hyperref[file-setup]{file setup} if you 
 
 \section{Opening Your Bookdown Project RStudio}\label{opening-your-bookdown-project-rstudio}
 
-Enter the folder you just git cloned using Findr/File Command, it should be titled ``{[}workshop-name{]}''. Right click on {[}workshop-name{]}.Rproj and press ``Open in RStudio''. There is only one file with this file extension. The .Rproj file is what you will open each time you want to work on this workshop! You must explicitly \textbf{open the .Rproj} file to build properly!
+Enter the folder you just git cloned using Findr/File Explorer, it should be titled ``{[}workshop-name{]}''. Right click on {[}workshop-name{]}.Rproj and press ``Open in RStudio''. There is only one file with this file extension. The .Rproj file is what you will open each time you want to work on this workshop! You must explicitly \textbf{open the .Rproj} file to build properly!
 
 A RStudio window should open up and look something like the image below.
 \includegraphics{img/files-and-build/newly-opened-RStudio.png}\\
@@ -657,6 +698,10 @@ Try closing (and maybe even restarting RStudio) and then reopening it. A ``Git''
 \section{Build the Book}\label{build-the-book}
 
 Try pressing ``Build Book'' within the ``Build'' window. Your build window is going to fill up with text, and soon, a website is going to pop-up as your new window. This is the website you will be editing to create your workshop!
+
+\begin{quote}
+Note: If it's your first time building, you may have to approve some downloads and installations, like we did in \hyperref[get-started]{Getting Started}!
+\end{quote}
 
 By building the book, \textbf{all} of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don't have to save before building!).
 

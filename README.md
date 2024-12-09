@@ -8,6 +8,7 @@ NOTE:
 
 
 Bugs:
+- SUPER WEIRD CALLOUT LATEX BUG ??? https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html
 
 Figure this out:
 ```
@@ -25,3 +26,10 @@ Suggestions:
 - add code chunk option to the file setup explanation code chunk, so that this takes up the width of the entire page?
 - add border (css styling) to instruction pictures
 - change callout colours ??
+
+
+Potential Colour Template? (see the blue, green and red)
+https://coolors.co/45b69c-d46d63-202030-6495ed-fff9ec
+https://coolors.co/8db580-4d4730-301a4b-f39a9d-acd2ed
+https://coolors.co/303a2b-d84444-9cc0fa-7cbf73-615d6c
+

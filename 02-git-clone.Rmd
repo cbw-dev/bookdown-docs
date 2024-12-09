@@ -4,7 +4,7 @@ Certain aspects of the setup for workshops will be different depending on your r
 
 ## Workshop Setup [RC]
 
-Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop.
+Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop. **Start these instructions with a GitHub account and being logged in**.
 
 1. First, let's go to the [bookdown template](https://github.com/cbw-dev/bookdown-template). 
 

@@ -169,9 +169,9 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> CBW’s Bookdown Documentation</a></li>
-<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a>
+<li class="chapter" data-level="2" data-path="get-started.html"><a href="get-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#installation"><i class="fa fa-check"></i><b>2.1</b> Installation</a></li>
+<li class="chapter" data-level="2.1" data-path="get-started.html"><a href="get-started.html#installation"><i class="fa fa-check"></i><b>2.1</b> Installation</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html"><i class="fa fa-check"></i><b>3</b> Creating [RC] and Deploying Your <strong>New</strong> Workshop</a>
 <ul>
@@ -318,7 +318,7 @@ div.csl-indent {
 </div>
 <div id="opening-your-bookdown-project-rstudio" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Opening Your Bookdown Project RStudio<a href="so-what-do-these-files-mean.html#opening-your-bookdown-project-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Enter the folder you just git cloned using Findr/File Command, it should be titled “[workshop-name]”. Right click on [workshop-name].Rproj and press “Open in RStudio”. There is only one file with this file extension. The .Rproj file is what you will open each time you want to work on this workshop! You must explicitly <strong>open the .Rproj</strong> file to build properly!</p>
+<p>Enter the folder you just git cloned using Findr/File Explorer, it should be titled “[workshop-name]”. Right click on [workshop-name].Rproj and press “Open in RStudio”. There is only one file with this file extension. The .Rproj file is what you will open each time you want to work on this workshop! You must explicitly <strong>open the .Rproj</strong> file to build properly!</p>
 <p>A RStudio window should open up and look something like the image below.
 <img src="img/files-and-build/newly-opened-RStudio.png" alt="newly opened RStudio window" /><br />
 </p>
@@ -337,6 +337,9 @@ div.csl-indent {
 <div id="build-the-book" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Build the Book<a href="so-what-do-these-files-mean.html#build-the-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Try pressing “Build Book” within the “Build” window. Your build window is going to fill up with text, and soon, a website is going to pop-up as your new window. This is the website you will be editing to create your workshop!</p>
+<blockquote>
+<p>Note: If it’s your first time building, you may have to approve some downloads and installations, like we did in <a href="get-started.html#get-started">Getting Started</a>!</p>
+</blockquote>
 <p>By building the book, <strong>all</strong> of these files were compiled and converted to .html files, that create a website. Each time we make local changes to our files and we want them to appear in our website, we need to rebuild the book. Note that each time we build our book, the files we edited will be saved first (we don’t have to save before building!).</p>
 <blockquote>
 <p>Note: By default, RStudio will choose to build “All Formats”:
@@ -348,7 +351,7 @@ You can choose to only produce a gitbook (the first option). This can be helpful
 <ol style="list-style-type: decimal">
 <li>Build the book from the R console:</li>
 </ol>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="so-what-do-these-files-mean.html#cb21-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="so-what-do-these-files-mean.html#cb25-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>()</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Press the keyboard buttons: <code>cmd + shift + B</code> (macOS) OR <code>ctrl + shift + B</code> (windows)</li>
 </ol>
@@ -372,7 +375,7 @@ You can choose to only produce a gitbook (the first option). This can be helpful
 <div id="preview-your-book" class="section level3 hasAnchor" number="5.4.3">
 <h3><span class="header-section-number">5.4.3</span> Preview Your Book<a href="so-what-do-these-files-mean.html#preview-your-book" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you want live updates to your changes, you can preview the page as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in “Preview book”, or from the R console (in the bottom left window):</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="so-what-do-these-files-mean.html#cb22-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="so-what-do-these-files-mean.html#cb26-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
 <p>But which files do we edit? Well alas, it’s time to discuss the file setup.</p>
 </div>
 </div>
@@ -387,39 +390,39 @@ You can choose to only produce a gitbook (the first option). This can be helpful
 <blockquote>
 <p><strong>Note:</strong> only relevant files or files you might be concerned about are explained in blue. If there is no explanation, you can safely assume you do not have to worry about it.</p>
 </blockquote>
-<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="so-what-do-these-files-mean.html#cb23-1" tabindex="-1"></a><span class="ex">bookdown-template</span></span>
-<span id="cb23-2"><a href="so-what-do-these-files-mean.html#cb23-2" tabindex="-1"></a><span class="ex">├──</span> _404.md <span class="co"># This becomes your 404 page. This is the only file that can become a page that can also be either a .md or .Rmd file!</span></span>
-<span id="cb23-3"><a href="so-what-do-these-files-mean.html#cb23-3" tabindex="-1"></a><span class="ex">├──</span> _bookdown.yml <span class="co"># a config file, you most likely won&#39;t have to edit it unless you want additional configuration settings</span></span>
-<span id="cb23-4"><a href="so-what-do-these-files-mean.html#cb23-4" tabindex="-1"></a><span class="ex">├──</span> _bookdown_files</span>
-<span id="cb23-5"><a href="so-what-do-these-files-mean.html#cb23-5" tabindex="-1"></a><span class="ex">├──</span> _main_files</span>
-<span id="cb23-6"><a href="so-what-do-these-files-mean.html#cb23-6" tabindex="-1"></a>    <span class="ex">└──</span> ... <span class="co"># [in case of confusion: image and pdf output files]</span></span>
-<span id="cb23-7"><a href="so-what-do-these-files-mean.html#cb23-7" tabindex="-1"></a><span class="ex">├──</span> _output.yml <span class="co"># a config file, RC/workshop team will have to edit a few things (the workshop name, sponsor images, repo link)</span></span>
-<span id="cb23-8"><a href="so-what-do-these-files-mean.html#cb23-8" tabindex="-1"></a><span class="ex">├──</span> .gitignore</span>
-<span id="cb23-9"><a href="so-what-do-these-files-mean.html#cb23-9" tabindex="-1"></a><span class="ex">├──</span> .Rhistory</span>
-<span id="cb23-10"><a href="so-what-do-these-files-mean.html#cb23-10" tabindex="-1"></a><span class="ex">├──</span> 010-course-schedule.Rmd <span class="co"># --&gt; &quot;Course Schedule&quot; section</span></span>
-<span id="cb23-11"><a href="so-what-do-these-files-mean.html#cb23-11" tabindex="-1"></a><span class="ex">├──</span> 011-content-files.Rmd <span class="co"># --&gt; &quot;Pre-workshop Materials&quot; and &quot;Computing Setup &amp; Downloads&quot; section</span></span>
-<span id="cb23-12"><a href="so-what-do-these-files-mean.html#cb23-12" tabindex="-1"></a><span class="ex">├──</span> 012-meet-your-fac.Rmd <span class="co"># --&gt; &quot;Meet Your Faculty&quot; section</span></span>
-<span id="cb23-13"><a href="so-what-do-these-files-mean.html#cb23-13" tabindex="-1"></a><span class="ex">├──</span> 020-module-1.Rmd <span class="co">#--&gt; &quot;Module 1&quot;, &quot;Lecture, and &quot;Lab&quot; section</span></span>
-<span id="cb23-14"><a href="so-what-do-these-files-mean.html#cb23-14" tabindex="-1"></a><span class="ex">├──</span> 030-module-2.Rmd</span>
-<span id="cb23-15"><a href="so-what-do-these-files-mean.html#cb23-15" tabindex="-1"></a><span class="ex">├──</span> README.md <span class="co"># README file that has some helpful explanations, consider reading this before starting to edit (along with this documentation!)</span></span>
-<span id="cb23-16"><a href="so-what-do-these-files-mean.html#cb23-16" tabindex="-1"></a><span class="ex">├──</span> book.bib <span class="co"># citation file</span></span>
-<span id="cb23-17"><a href="so-what-do-these-files-mean.html#cb23-17" tabindex="-1"></a><span class="ex">├──</span> bookdown-template.Rproj <span class="co"># always open this file in RStudio, opening this helps bookdown understand what to build</span></span>
-<span id="cb23-18"><a href="so-what-do-these-files-mean.html#cb23-18" tabindex="-1"></a><span class="ex">├──</span> content-files <span class="co"># store all files from your modules here (ex. data sets, empty code worksheets)</span></span>
-<span id="cb23-19"><a href="so-what-do-these-files-mean.html#cb23-19" tabindex="-1"></a>    <span class="ex">└──</span> sample-pdf.pdf</span>
-<span id="cb23-20"><a href="so-what-do-these-files-mean.html#cb23-20" tabindex="-1"></a><span class="ex">├──</span> docs</span>
-<span id="cb23-21"><a href="so-what-do-these-files-mean.html#cb23-21" tabindex="-1"></a>    <span class="ex">└──</span> ... <span class="co"># html files &amp; other generated content</span></span>
-<span id="cb23-22"><a href="so-what-do-these-files-mean.html#cb23-22" tabindex="-1"></a><span class="ex">├──</span> img <span class="co"># folder where you should store all your images</span></span>
-<span id="cb23-23"><a href="so-what-do-these-files-mean.html#cb23-23" tabindex="-1"></a>    <span class="ex">├──</span> bioinformatics.ca-logo.svg </span>
-<span id="cb23-24"><a href="so-what-do-these-files-mean.html#cb23-24" tabindex="-1"></a>    <span class="ex">├──</span> faculty <span class="co"># store all images of faculty in this folder</span></span>
-<span id="cb23-25"><a href="so-what-do-these-files-mean.html#cb23-25" tabindex="-1"></a>        <span class="ex">├──</span> michelle-brazas.jpg</span>
-<span id="cb23-26"><a href="so-what-do-these-files-mean.html#cb23-26" tabindex="-1"></a>        <span class="ex">└──</span> nia-hughes.jpeg</span>
-<span id="cb23-27"><a href="so-what-do-these-files-mean.html#cb23-27" tabindex="-1"></a>    <span class="ex">├──</span> favicon.ico</span>
-<span id="cb23-28"><a href="so-what-do-these-files-mean.html#cb23-28" tabindex="-1"></a>    <span class="ex">└──</span> sponsors <span class="co"># store all sponsor logos/titles in this folder</span></span>
-<span id="cb23-29"><a href="so-what-do-these-files-mean.html#cb23-29" tabindex="-1"></a>         <span class="ex">└──</span> Your-Sponsor-Here.svg</span>
-<span id="cb23-30"><a href="so-what-do-these-files-mean.html#cb23-30" tabindex="-1"></a><span class="ex">├──</span> index.Rmd <span class="co"># landing page --&gt; &quot;Welcome&quot; section</span></span>
-<span id="cb23-31"><a href="so-what-do-these-files-mean.html#cb23-31" tabindex="-1"></a><span class="ex">├──</span> packages.bib <span class="co"># R generated citation file</span></span>
-<span id="cb23-32"><a href="so-what-do-these-files-mean.html#cb23-32" tabindex="-1"></a><span class="ex">├──</span> preamble.tex</span>
-<span id="cb23-33"><a href="so-what-do-these-files-mean.html#cb23-33" tabindex="-1"></a><span class="ex">└──</span> style.css <span class="co"># css styling options are defined here - feel free to add your own styling features</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="so-what-do-these-files-mean.html#cb27-1" tabindex="-1"></a><span class="ex">bookdown-template</span></span>
+<span id="cb27-2"><a href="so-what-do-these-files-mean.html#cb27-2" tabindex="-1"></a><span class="ex">├──</span> _404.md <span class="co"># This becomes your 404 page. This is the only file that can become a page that can also be either a .md or .Rmd file!</span></span>
+<span id="cb27-3"><a href="so-what-do-these-files-mean.html#cb27-3" tabindex="-1"></a><span class="ex">├──</span> _bookdown.yml <span class="co"># a config file, you most likely won&#39;t have to edit it unless you want additional configuration settings</span></span>
+<span id="cb27-4"><a href="so-what-do-these-files-mean.html#cb27-4" tabindex="-1"></a><span class="ex">├──</span> _bookdown_files</span>
+<span id="cb27-5"><a href="so-what-do-these-files-mean.html#cb27-5" tabindex="-1"></a><span class="ex">├──</span> _main_files</span>
+<span id="cb27-6"><a href="so-what-do-these-files-mean.html#cb27-6" tabindex="-1"></a>    <span class="ex">└──</span> ... <span class="co"># [in case of confusion: image and pdf output files]</span></span>
+<span id="cb27-7"><a href="so-what-do-these-files-mean.html#cb27-7" tabindex="-1"></a><span class="ex">├──</span> _output.yml <span class="co"># a config file, RC/workshop team will have to edit a few things (the workshop name, sponsor images, repo link)</span></span>
+<span id="cb27-8"><a href="so-what-do-these-files-mean.html#cb27-8" tabindex="-1"></a><span class="ex">├──</span> .gitignore</span>
+<span id="cb27-9"><a href="so-what-do-these-files-mean.html#cb27-9" tabindex="-1"></a><span class="ex">├──</span> .Rhistory</span>
+<span id="cb27-10"><a href="so-what-do-these-files-mean.html#cb27-10" tabindex="-1"></a><span class="ex">├──</span> 010-course-schedule.Rmd <span class="co"># --&gt; &quot;Course Schedule&quot; section</span></span>
+<span id="cb27-11"><a href="so-what-do-these-files-mean.html#cb27-11" tabindex="-1"></a><span class="ex">├──</span> 011-content-files.Rmd <span class="co"># --&gt; &quot;Pre-workshop Materials&quot; and &quot;Computing Setup &amp; Downloads&quot; section</span></span>
+<span id="cb27-12"><a href="so-what-do-these-files-mean.html#cb27-12" tabindex="-1"></a><span class="ex">├──</span> 012-meet-your-fac.Rmd <span class="co"># --&gt; &quot;Meet Your Faculty&quot; section</span></span>
+<span id="cb27-13"><a href="so-what-do-these-files-mean.html#cb27-13" tabindex="-1"></a><span class="ex">├──</span> 020-module-1.Rmd <span class="co">#--&gt; &quot;Module 1&quot;, &quot;Lecture, and &quot;Lab&quot; section</span></span>
+<span id="cb27-14"><a href="so-what-do-these-files-mean.html#cb27-14" tabindex="-1"></a><span class="ex">├──</span> 030-module-2.Rmd</span>
+<span id="cb27-15"><a href="so-what-do-these-files-mean.html#cb27-15" tabindex="-1"></a><span class="ex">├──</span> README.md <span class="co"># README file that has some helpful explanations, consider reading this before starting to edit (along with this documentation!)</span></span>
+<span id="cb27-16"><a href="so-what-do-these-files-mean.html#cb27-16" tabindex="-1"></a><span class="ex">├──</span> book.bib <span class="co"># citation file</span></span>
+<span id="cb27-17"><a href="so-what-do-these-files-mean.html#cb27-17" tabindex="-1"></a><span class="ex">├──</span> bookdown-template.Rproj <span class="co"># always open this file in RStudio, opening this helps bookdown understand what to build</span></span>
+<span id="cb27-18"><a href="so-what-do-these-files-mean.html#cb27-18" tabindex="-1"></a><span class="ex">├──</span> content-files <span class="co"># store all files from your modules here (ex. data sets, empty code worksheets)</span></span>
+<span id="cb27-19"><a href="so-what-do-these-files-mean.html#cb27-19" tabindex="-1"></a>    <span class="ex">└──</span> sample-pdf.pdf</span>
+<span id="cb27-20"><a href="so-what-do-these-files-mean.html#cb27-20" tabindex="-1"></a><span class="ex">├──</span> docs</span>
+<span id="cb27-21"><a href="so-what-do-these-files-mean.html#cb27-21" tabindex="-1"></a>    <span class="ex">└──</span> ... <span class="co"># html files &amp; other generated content</span></span>
+<span id="cb27-22"><a href="so-what-do-these-files-mean.html#cb27-22" tabindex="-1"></a><span class="ex">├──</span> img <span class="co"># folder where you should store all your images</span></span>
+<span id="cb27-23"><a href="so-what-do-these-files-mean.html#cb27-23" tabindex="-1"></a>    <span class="ex">├──</span> bioinformatics.ca-logo.svg </span>
+<span id="cb27-24"><a href="so-what-do-these-files-mean.html#cb27-24" tabindex="-1"></a>    <span class="ex">├──</span> faculty <span class="co"># store all images of faculty in this folder</span></span>
+<span id="cb27-25"><a href="so-what-do-these-files-mean.html#cb27-25" tabindex="-1"></a>        <span class="ex">├──</span> michelle-brazas.jpg</span>
+<span id="cb27-26"><a href="so-what-do-these-files-mean.html#cb27-26" tabindex="-1"></a>        <span class="ex">└──</span> nia-hughes.jpeg</span>
+<span id="cb27-27"><a href="so-what-do-these-files-mean.html#cb27-27" tabindex="-1"></a>    <span class="ex">├──</span> favicon.ico</span>
+<span id="cb27-28"><a href="so-what-do-these-files-mean.html#cb27-28" tabindex="-1"></a>    <span class="ex">└──</span> sponsors <span class="co"># store all sponsor logos/titles in this folder</span></span>
+<span id="cb27-29"><a href="so-what-do-these-files-mean.html#cb27-29" tabindex="-1"></a>         <span class="ex">└──</span> Your-Sponsor-Here.svg</span>
+<span id="cb27-30"><a href="so-what-do-these-files-mean.html#cb27-30" tabindex="-1"></a><span class="ex">├──</span> index.Rmd <span class="co"># landing page --&gt; &quot;Welcome&quot; section</span></span>
+<span id="cb27-31"><a href="so-what-do-these-files-mean.html#cb27-31" tabindex="-1"></a><span class="ex">├──</span> packages.bib <span class="co"># R generated citation file</span></span>
+<span id="cb27-32"><a href="so-what-do-these-files-mean.html#cb27-32" tabindex="-1"></a><span class="ex">├──</span> preamble.tex</span>
+<span id="cb27-33"><a href="so-what-do-these-files-mean.html#cb27-33" tabindex="-1"></a><span class="ex">└──</span> style.css <span class="co"># css styling options are defined here - feel free to add your own styling features</span></span></code></pre></div>
 <!-- Dev Suggestion: add code chunk option so that this takes up the width of the entire page? -->
 <div id="output.yml-_bookdown.yml" class="section level6 unnumbered hasAnchor">
 <h6><font color="d46d63"> _output.yml &amp; _bookdown.yml </font><a href="so-what-do-these-files-mean.html#output.yml-_bookdown.yml" class="anchor-section" aria-label="Anchor link to header"></a></h6>

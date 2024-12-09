@@ -1,6 +1,6 @@
 eq:binom
 cbws-bookdown-documentation
-getting-started
+get-started
 installation
 creating-rc-and-deploying-your-new-workshop
 workshop-setup-rc

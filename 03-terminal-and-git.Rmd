@@ -12,8 +12,6 @@ Using the command line, you can use text commands to interact with your computer
 >
 > Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!
 
--   terminal (mac, unix based) vs command prompt (windows)
-
 ### Terminal, Command Prompt and Windows PowerShell
 
 We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.
@@ -108,7 +106,7 @@ We need to create an SSH connection. You have already set this up if you have be
 
 Essentially, we're doing these steps to update and receive updates from our GitHub repository, with security!
 
-Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub and SSH connection, consider using the official docs.) The official docs may be more up-to-date.
+Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub/SSH connection and want to make a new one, consider using the official docs.) The official docs may be more up-to-date.
 
 > Note: You can do these commands anywhere in your files. You do not need to be in your home directory.
 
@@ -116,17 +114,22 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 
 1.  Open Terminal.
 
-2.  Copy and paste this text into your terminal. **Replace the email given below with your GitHub email address** (the email address you used to sign up for Github). Press enter to run the command.
+2.  Copy and paste this text into your terminal. **Replace the email given below with your GitHub email address** (the email address you used to sign up for Github). *Keep the quotations in your command.* Press enter to run the command.
 
     ```         
     ssh-keygen -t ed25519 -C "your_email@example.com"
     ```
 
-    You will get this output: `> Generating public/private ALGORITHM key pair.`
-
+    You will get this output:
+    
+    ```
+    > Generating public/private ALGORITHM key pair.
+    > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):
+    ```
+    
+    Press enter. (This uses a default file and default file location.)
+    
     > Note: Output in your terminal begins with this "\>" symbol, as seen above!
-
-    You will then be prompted with this message: `> Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):` Press enter. (This uses a default file and default file location.)
 
     If you have already created a SSH key and you are asked to rewrite another key, look at the [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name.) for specific steps.
 
@@ -134,12 +137,18 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 
     ```         
     > Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
+    ```
+    ```
     > Enter same passphrase again: [TYPE THE SAME PASSPHRASE]
     ```
-
+    
+    > You should keep note of this passphrase for your own use. We (should) never have to use it again after finishing these steps.
+    
+    You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!
+    
 ### [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
-1.  In terminal, run the following command
+1.  In terminal, run the following command:
 
     ```         
     eval "$(ssh-agent -s)"
@@ -150,6 +159,8 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
     ```         
     > Agent pid 59566
     ```
+    
+    *(Your number will most likely be different than the one above.)*
 
 2.  If you're using macOS Sierra 10.12.2 or later additions, you need to modify your `~/.ssh/config` file.
 
@@ -174,7 +185,7 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
     3.  Edit your `~/.ssh/config` file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.
 
         -   Run `nano ~/.ssh/config`
-        -   Add the following lines to this file. (You should be able to immediately edit.)
+        -   Add the following lines to this file.
 
         ```         
         Host github.com
@@ -195,6 +206,8 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
     ```         
     ssh-add --apple-use-keychain ~/.ssh/id_ed25519
     ```
+    
+    (You may be asked to enter your passphrase again. This is the same passphrase as before.)
 
 ### [Adding a new SSH key to your account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account)
 
@@ -212,7 +225,7 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 5.  In the "Title" field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key: "Personal Laptop").
 
-6.  Select the type of key between "authentication" or "signing". (For our purposes, selecting authentication is fine).
+6.  Leave the type of key as "authentication" (rather than "signing"). For our purposes, selecting authentication is fine.
 
 7.  In the "Key" field, paste (we are pasting what we copied in step 1).
 
@@ -222,25 +235,28 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 Finally, we're all done! We've created a SSH connection between your device and GitHub!
 
-Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps!
+Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps or confirm authentication.
 
 ## Getting the Template on Your Local Computer - Git Clone! {#git-clone}
 
-1.  Navigate to where in your local file system you want to have your workshop in (hint: cd + `enter`).
+1.  Navigate to where in your local file system you want to have your workshop in (hint: cd + `tab`).
 
-2.  Return to your workshop repository on GitHub. <br>Find the ssh for your workshop repository: first, click the green button entitled `< > Code` ands see the drop down options. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like [git\@github.com](mailto:git@github.com){.email}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
+2.  Return to your workshop repository on GitHub.
+
+    Find the ssh for your workshop repository:
+    
+      - First, click the green button entitled `< > Code` ands see the drop down options.
+      - Click the SSH tab, as seen below, and then copy the text below it. The text should be something like [git\@github.com](mailto:git@github.com){.email}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
 
     ![how to find the ssh for your repo](img/git-instruct/copy-ssh.png)\
 
-    Then put this command into your command line, within the folder you want the workshop folder to be in.
-
-    For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal.
+    Then put the following command into your command line, within the folder you want the workshop folder to be in. (For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal.)
 
     ```         
     git clone git@github.com:jq-11/workshop-name.git
     ```
 
-3.  You should be ready to go! With your given permissions, you should be able to git push and git pull fine!
+3.  You should be ready to go! With your given permissions, you should be able to git push (put your local edits on GitHub) and git pull (pull edits on GitHub to your local computer) fine!
 
 > NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
 
