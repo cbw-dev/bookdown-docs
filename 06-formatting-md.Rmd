@@ -333,11 +333,13 @@ Learn more about styling and syntax for theorems and proofs [here](https://bookd
 
 ## Callout blocks 
 
-CBW's Bookdown template comes equipped with some callout blocks!
+CBW's Bookdown template comes equipped with a "warning", "tip" and "note: callout blocks!
 
 Here are the code you will use to add them to your template and the rendered output.
 
-
+> **Known Error:**
+>
+> If you do not end your div, all following code will not render (as if your book ends with the unfinished div)!
 
 <!-- UPDATE THE TEMPLATE AFTER ASKING NIA ABOUT THIS (ex. colours) -->
 
