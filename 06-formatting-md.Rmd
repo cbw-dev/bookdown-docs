@@ -337,6 +337,8 @@ CBW's Bookdown template comes equipped with a "warning", "tip" and "note: callou
 
 Here are the code you will use to add them to your template and the rendered output.
 
+[WORK IN PROGRESS, HAVE ERIC TEST IT OUT - SEE 030-module-2.Rmd]
+
 > **Known Error:**
 >
 > If you do not end your div, all following code will not render (as if your book ends with the unfinished div)!
