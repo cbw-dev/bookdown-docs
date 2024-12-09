@@ -1,4 +1,6 @@
 eq:binom
+fig:nice-fig
+tab:nice-tab
 cbws-bookdown-documentation
 get-started
 installation
@@ -40,6 +42,10 @@ theorems-and-proofs
 callout-blocks
 use-html
 render-code
+page-under-construction
+rendering-code
+rendering-code-with-highlights
+captioned-figures-and-tables
 help
 danger-zones
 potential-errors-bugs

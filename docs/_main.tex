@@ -1444,7 +1444,97 @@ Here are some examples:
   check box
 \end{enumerate}
 
-\chapter{How to Render Code}\label{render-code}
+\chapter{How to Render/Compile Code}\label{render-code}
+
+\section{{[}PAGE UNDER CONSTRUCTION{]}}\label{page-under-construction}
+
+There are many ways to render and compile code using Bookdown!
+
+Here are most of the ``language engines'' (programming languages) available to render, run and compile in Bookdown!
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{names}\NormalTok{(knitr}\SpecialCharTok{::}\NormalTok{knit\_engines}\SpecialCharTok{$}\FunctionTok{get}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "awk"         "bash"        "coffee"      "gawk"        "groovy"     
+##  [6] "haskell"     "lein"        "mysql"       "node"        "octave"     
+## [11] "perl"        "php"         "psql"        "Rscript"     "ruby"       
+## [16] "sas"         "scala"       "sed"         "sh"          "stata"      
+## [21] "zsh"         "asis"        "asy"         "block"       "block2"     
+## [26] "bslib"       "c"           "cat"         "cc"          "comment"    
+## [31] "css"         "ditaa"       "dot"         "embed"       "eviews"     
+## [36] "exec"        "fortran"     "fortran95"   "go"          "highlight"  
+## [41] "js"          "julia"       "python"      "R"           "Rcpp"       
+## [46] "sass"        "scss"        "sql"         "stan"        "targets"    
+## [51] "tikz"        "verbatim"    "theorem"     "lemma"       "corollary"  
+## [56] "proposition" "conjecture"  "definition"  "example"     "exercise"   
+## [61] "hypothesis"  "proof"       "remark"      "solution"
+\end{verbatim}
+
+\section{Rendering Code}\label{rendering-code}
+
+Just rendering code refers to Bookdown formatting code so that our users can view it. The code does not run or compile. This is very similar to what is shown in 020-module-1.Rmd of the bookdown template.
+
+\section{Rendering Code with Highlights}\label{rendering-code-with-highlights}
+
+\section{Captioned figures and tables}\label{captioned-figures-and-tables}
+
+Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
+
+See Figure \ref{fig:nice-fig}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
+\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth,alt={Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.}]{_main_files/figure-latex/nice-fig-1} 
+
+}
+
+\caption{Here is a nice figure!}\label{fig:nice-fig}
+\end{figure}
+
+Don't miss Table \ref{tab:nice-tab}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
+  \FunctionTok{head}\NormalTok{(pressure, }\DecValTok{10}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
+  \AttributeTok{booktabs =} \ConstantTok{TRUE}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+
+\caption{\label{tab:nice-tab}Here is a nice table!}
+\centering
+\begin{tabular}[t]{rr}
+\toprule
+temperature & pressure\\
+\midrule
+0 & 0.0002\\
+20 & 0.0012\\
+40 & 0.0060\\
+60 & 0.0300\\
+80 & 0.0900\\
+\addlinespace
+100 & 0.2700\\
+120 & 0.7500\\
+140 & 1.8500\\
+160 & 4.2000\\
+180 & 8.8000\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \chapter{Brain Dump / FAQ}\label{help}
 
