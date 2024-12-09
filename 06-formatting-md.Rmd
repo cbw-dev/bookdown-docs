@@ -331,7 +331,15 @@ Labeled theorems can be referenced in text using `\@ref(thm:tri)`, for example, 
 
 Learn more about styling and syntax for theorems and proofs [here](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html)!
 
-## Callout blocks (will be added later)
+## Callout blocks 
+
+CBW's Bookdown template comes equipped with some callout blocks!
+
+Here are the code you will use to add them to your template and the rendered output.
+
+
+
+<!-- UPDATE THE TEMPLATE AFTER ASKING NIA ABOUT THIS (ex. colours) -->
 
 The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: <https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html>
 

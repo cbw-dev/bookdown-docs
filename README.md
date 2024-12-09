@@ -23,3 +23,5 @@ Specify your book's source repository on GitHub using the `edit` key under the c
 Suggestions:
 - add timing of downloads/installations (R/RStudio, developer tools, reticulate)
 - add code chunk option to the file setup explanation code chunk, so that this takes up the width of the entire page?
+- add border (css styling) to instruction pictures
+- change callout colours ??

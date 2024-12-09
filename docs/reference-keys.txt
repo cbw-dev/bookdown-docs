@@ -37,7 +37,7 @@ text-formatting
 citations
 equations
 theorems-and-proofs
-callout-blocks-will-be-added-later
+callout-blocks
 use-html
 render-code
 help
