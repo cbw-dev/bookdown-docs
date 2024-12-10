@@ -41,7 +41,7 @@ Now, you have made a repository that holds what GitHub needs to make our website
 3. "Deploy from a branch" is already selected, which is what we want. We must change the branch from "none" to "main". Select the "None" dropdown button and select "main".
 ![Select main as the branc](img/git-instruct/github-deploy-main.png)\
 
-4. Then, change the folder from `/ root` to `/docs`. Then press save.
+4. Then, change the folder from `/ root` to `/docs`. Then **press save**.
 ![Select /docs as the branch](img/git-instruct/github-deploy-docs.png)\
     
     Great! Now we're waiting on the page to build and deploy, which should take less than a minute.

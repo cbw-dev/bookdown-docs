@@ -119,7 +119,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}Last Updated: 2024-12-09}
+\date{\vspace{-2.5em}Last Updated: 2024-12-10}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -260,7 +260,7 @@ GitHub (ex. \url{https://github.com/cbw-dev/bookdown-template}) holds your repo,
   ``Deploy from a branch'' is already selected, which is what we want. We must change the branch from ``none'' to ``main''. Select the ``None'' dropdown button and select ``main''.
   \includegraphics{img/git-instruct/github-deploy-main.png}\\
 \item
-  Then, change the folder from \texttt{/\ root} to \texttt{/docs}. Then press save.
+  Then, change the folder from \texttt{/\ root} to \texttt{/docs}. Then \textbf{press save}.
   \includegraphics{img/git-instruct/github-deploy-docs.png}\\
 
   Great! Now we're waiting on the page to build and deploy, which should take less than a minute.
@@ -672,20 +672,20 @@ Pandoc translates this markdown into html, so that we get a website! It can be h
 
 Now, let's figure out RStudio. Skip to \hyperref[file-setup]{file setup} if you already know how to use RStudio (and it's built in git control window).
 
-\section{Opening Your Bookdown Project RStudio}\label{opening-your-bookdown-project-rstudio}
+\section{Opening Your Bookdown Project in RStudio}\label{opening-your-bookdown-project-in-rstudio}
 
-Enter the folder you just git cloned using Findr/File Explorer, it should be titled ``{[}workshop-name{]}''. Right click on {[}workshop-name{]}.Rproj and press ``Open in RStudio''. There is only one file with this file extension. The .Rproj file is what you will open each time you want to work on this workshop! You must explicitly \textbf{open the .Rproj} file to build properly!
+Enter the folder you just git cloned using Finder/File Explorer, it should be titled ``{[}workshop-name{]}''. Right click on {[}workshop-name{]}.Rproj and press ``Open in RStudio''. There is only one file with this file extension. The .Rproj file is what you will open each time you want to work on this workshop! You must explicitly \textbf{open the .Rproj} file to build properly!
 
 A RStudio window should open up and look something like the image below.
 \includegraphics{img/files-and-build/newly-opened-RStudio.png}\\
 
 \section{Explaining RStudio}\label{explaining-rstudio}
 
-In the bottom left, have our console and other debug related windows (such as terminal!). Any code we run will appear in the console. We can access the terminal (just like editing in the Terminal app) under the ``Terminal'' tab.
-
 In the bottom right, we have all of our files and subfolders. These files will be explained \hyperref[file-setup]{below}. This window also contains helpful views, like ``Viewer'' and ``Plots''. We will touch on these later.
 
 Try opening \texttt{index.Rmd}: a new pane will open in the top left that shows the contents of \texttt{index.Rmd}. This is where we will be editing our files! Notice, the ``Knit'' button.
+
+In the bottom left, we have our console and other debug related windows (such as terminal!). Any code we run will appear in the console. We can access the terminal (just like editing in the Terminal app) under the ``Terminal'' tab.
 
 In your top right, we have a different window with more different views. The most relevant windows to us are the ``Build'' and the ``Git'' windows.
 

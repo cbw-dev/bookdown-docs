@@ -20,7 +20,7 @@ adding-a-new-ssh-key-to-your-account
 git-clone
 so-what-do-these-files-mean
 bookdown-simple-explanation
-opening-your-bookdown-project-rstudio
+opening-your-bookdown-project-in-rstudio
 explaining-rstudio
 build-the-book
 other-ways-to-build-your-book
