@@ -104,6 +104,29 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+
+% These colours were manually entered, they shouldn't matter unless you want pdf output
+
+\newenvironment{redbox}{
+  \definecolor{shadecolor}{RGB}{243, 154, 157}
+  \color{white}
+  \begin{shaded}}
+ {\end{shaded}}
+
+\newenvironment{bluebox}{
+  \definecolor{shadecolor}{RGB}{172, 210, 237}
+  \color{white}
+  \begin{shaded}}
+ {\end{shaded}}
+
+\newenvironment{greenbox}{
+  \definecolor{shadecolor}{RGB}{141, 181, 128}
+  \color{white}
+  \begin{shaded}}
+ {\end{shaded}}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -1404,7 +1427,72 @@ CBW's Bookdown template comes equipped with a ``warning'', ``tip'' and ``note: c
 
 Here are the code you will use to add them to your template and the rendered output.
 
-{[}WORK IN PROGRESS, HAVE ERIC TEST IT OUT - SEE 030-module-2.Rmd{]}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{:::: \{.redbox data{-}latex=""\}}
+\NormalTok{::: \{.center data{-}latex=""\}}
+\NormalTok{**WARNING!**}
+\NormalTok{:::}
+
+\NormalTok{Write your warning text here.}
+\NormalTok{::::}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{redbox}
+
+\begin{center}
+\textbf{WARNING!}
+
+\end{center}
+
+Write your warning text here.
+
+\end{redbox}
+
+\begin{verbatim}
+:::: {.bluebox data-latex=""}
+::: {.center data-latex=""}
+**NOTE!**
+:::
+
+Write your note here.
+::::
+\end{verbatim}
+
+\begin{bluebox}
+
+\begin{center}
+\textbf{NOTE!}
+
+\end{center}
+
+Write your note here.
+
+\end{bluebox}
+
+\begin{verbatim}
+:::: {.greenbox data-latex=""}
+::: {.center data-latex=""}
+**TIP!**
+:::
+
+Write your tip here.
+::::
+\end{verbatim}
+
+\begin{greenbox}
+
+\begin{center}
+\textbf{TIP!}
+
+\end{center}
+
+Write your tip here.
+
+\end{greenbox}
+
+This formatting is a div that is specified in Pandoc (recall: a library Bookdown uses to create our .html website pages). Bookdown will help colour your divs so that you hopefully won't forget to include the proper amount of colons. This ends your div properly. If you stick to our callouts, you will need 4 colons at the end (\texttt{::::}).
 
 \begin{quote}
 \textbf{Known Error:}
@@ -1412,7 +1500,9 @@ Here are the code you will use to add them to your template and the rendered out
 If you do not end your div, all following code will not render (as if your book ends with the unfinished div)!
 \end{quote}
 
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
+Creating your own callouts can be difficult, and you should account for making sure both the wesbite and pdf (which uses LaTeX, so you will likely have to edit \texttt{preamble.tex}) generate properly.
+
+The R Markdown Cookbook provides more help on how to use custom div blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}.
 
 \section{TIP: Markdown Not Working/Not Enough? Use HTML!}\label{use-html}
 
