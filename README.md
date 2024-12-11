@@ -3,8 +3,14 @@
 This is the repo that hosts the CBW's bookdown documentation website.
 
 DEV RULES:
-- all links to the web should create a new tab for it: use html code: <a href="placeholder.com" target="_blank">Opens in new tab</a>
+- all links to the web should create a new tab for it: use html code:
+```
+<a href="placeholder.com" target="_blank">Opens in new tab</a>
+```
 
+
+BUGS:
+- enforcing links to create a new tab, when they are headers, makes a weird sidebar issue, see sidebar for GitHub Instructions
 
 NOTE:
 

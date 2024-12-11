@@ -19,7 +19,7 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
     
     > Note: We will not be using the R console, instead, we will be using RStudio!
 
-2. **Download and install RStudio** [here](https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP). Scroll down to find downloads for non-macOS.
+2. **Download and install RStudio** <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">here</a>. Scroll down to find downloads for non-macOS.
 
     > Note: While installing, you may be asked whether to install the 32-bit or 62-bit RStudio version. Download the version that matches your PC.
 

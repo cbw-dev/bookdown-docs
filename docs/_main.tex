@@ -203,7 +203,7 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
   Note: We will not be using the R console, instead, we will be using RStudio!
   \end{quote}
 \item
-  \textbf{Download and install RStudio} \href{https://posit.co/download/rstudio-desktop/\#:~:text=AND\%20INSTALL\%20R-,2\%3A\%20Install\%20RStudio,-DOWNLOAD\%20RSTUDIO\%20DESKTOP}{here}. Scroll down to find downloads for non-macOS.
+  \textbf{Download and install RStudio} here. Scroll down to find downloads for non-macOS.
 
   \begin{quote}
   Note: While installing, you may be asked whether to install the 32-bit or 62-bit RStudio version. Download the version that matches your PC.
@@ -257,7 +257,7 @@ Regional Coordinators will be tasked with creating and slightly editing each new
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  First, let's go to the \href{https://github.com/cbw-dev/bookdown-template}{bookdown template}.
+  First, let's go to the bookdown template.
 \item
   Click on the ``Use this template'' green button, which is to the left of the title of the repository ``bookdown-template''. Then, press the dropdown option: ``Create a new repository'', as seen below.
 
@@ -494,7 +494,7 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 Note: You can do these commands anywhere in your files. You do not need to be in your home directory.
 \end{quote}
 
-\subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key}{Generating a new SSH key}}{Generating a new SSH key}}\label{generating-a-new-ssh-key}
+\subsection{Generating a new SSH key}\label{generating-a-new-ssh-key}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -520,7 +520,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
   Note: Output in your terminal begins with this ``\textgreater{}'' symbol, as seen above!
   \end{quote}
 
-  If you have already created a SSH key and you are asked to rewrite another key, look at the \href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#generating-a-new-ssh-key:~:text=Please\%20note\%20that\%20if\%20you\%20created\%20SSH\%20keys\%20previously\%2C\%20ssh\%2Dkeygen\%20may\%20ask\%20you\%20to\%20rewrite\%20another\%20key\%2C\%20in\%20which\%20case\%20we\%20recommend\%20creating\%20a\%20custom\%2Dnamed\%20SSH\%20key.\%20To\%20do\%20so\%2C\%20type\%20the\%20default\%20file\%20location\%20and\%20replace\%20id_ALGORITHM\%20with\%20your\%20custom\%20key\%20name.}{GitHub Docs} for specific steps.
+  If you have already created a SSH key and you are asked to rewrite another key, look at the GitHub Docs for specific steps.
 \item
   Type a secure passphrase (make up a password) when prompted with:
 
@@ -539,7 +539,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
   You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!
 \end{enumerate}
 
-\subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\#adding-your-ssh-key-to-the-ssh-agent}{Adding your SSH key to the ssh-agent}}{Adding your SSH key to the ssh-agent}}\label{adding-your-ssh-key-to-the-ssh-agent}
+\subsection{Adding your SSH key to the ssh-agent}\label{adding-your-ssh-key-to-the-ssh-agent}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -620,7 +620,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
   (You may be asked to enter your passphrase again. This is the same passphrase as before.)
 \end{enumerate}
 
-\subsection{\texorpdfstring{\href{https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account\#adding-a-new-ssh-key-to-your-account}{Adding a new SSH key to your account}}{Adding a new SSH key to your account}}\label{adding-a-new-ssh-key-to-your-account}
+\subsection{Adding a new SSH key to your account}\label{adding-a-new-ssh-key-to-your-account}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -637,7 +637,7 @@ pbcopy < ~/.ssh/id_ed25519.pub
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
 \item
-  Go to your GitHub account on the \href{https://github.com/}{GitHub} website. Click on your profile picture (icon in the upper right). Then, select \textbf{Settings}.
+  Go to your GitHub account on the GitHub website. Click on your profile picture (icon in the upper right). Then, select \textbf{Settings}.
 \item
   Under the ``Access'' section, click \textbf{SSH and GPG keys}.
 \item
@@ -1010,7 +1010,7 @@ Now we know which files to edit, but how can we edit these files? How do we form
 
 \section{Visaul R Markdown}\label{visual-r-md}
 
-All our files are made up of code and markdown syntax, that becomes formatted into our website. However, if you do not feel comfortable using Markdown (or you just want an easier way to write your pages), see this guide on using \href{https://rstudio.github.io/visual-markdown-editing/\#/citations}{Visual R Markdown}!
+All our files are made up of code and markdown syntax, that becomes formatted into our website. However, if you do not feel comfortable using Markdown (or you just want an easier way to write your pages), see this guide on using Visual R Markdown.
 
 It can be significantly easier to use Visual R Markdown, especially for those who are used to working in Google Docs!
 
@@ -1019,7 +1019,7 @@ If you want to use Markdown, a basic syntax guide is provided below!
 \begin{quote}
 Is this not enough for you?
 
-Bookdown has thorough documentation for specific elements, customizations, and further explanations. For simple elements, everything is provided below. However, there are many more possibilities with Bookdown! Click \href{https://bookdown.org/yihui/bookdown/components.html}{here} to read more!
+Bookdown has thorough documentation for specific elements, customizations, and further explanations. For simple elements, everything is provided below. However, there are many more possibilities with Bookdown! Click here to read more!
 \end{quote}
 
 \begin{quote}

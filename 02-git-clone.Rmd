@@ -6,7 +6,7 @@ Certain aspects of the setup for workshops will be different depending on your r
 
 Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop. **Start these instructions with a GitHub account and being logged in**.
 
-1. First, let's go to the [bookdown template](https://github.com/cbw-dev/bookdown-template). 
+1. First, let's go to the <a href="https://github.com/cbw-dev/bookdown-template" target="_blank">bookdown template</a>.
 
 2. Click on the "Use this template" green button, which is to the left of the title of the repository "bookdown-template". Then, press the dropdown option: "Create a new repository", as seen below.
 
