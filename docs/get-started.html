@@ -164,7 +164,9 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<a href="https://bioinformaticsdotca.github.io/">
 <img src="img/bioinformatics.ca-logo.svg" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+</a>
 <li><a href="./">CBW's Bookdown Template Documentation</a></li>
 
 <li class="divider"></li>
@@ -175,12 +177,13 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html"><i class="fa fa-check"></i><b>3</b> Creating [RC] and Deploying Your <strong>New</strong> Workshop</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#workshop-setup-rc"><i class="fa fa-check"></i><b>3.1</b> Workshop Setup [RC]</a>
+<li class="chapter" data-level="3.1" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#rc-workshop-setup"><i class="fa fa-check"></i><b>3.1</b> Workshop Setup [RC]</a>
 <ul>
 <li class="chapter" data-level="3.1.1" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#workshop-repo-vs-workshop-website"><i class="fa fa-check"></i><b>3.1.1</b> Workshop Repo VS Workshop Website</a></li>
-<li class="chapter" data-level="3.1.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#how-to-deploy-your-workshop-website"><i class="fa fa-check"></i><b>3.1.2</b> How to Deploy Your Workshop Website</a></li>
+<li class="chapter" data-level="3.1.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#deploy-website"><i class="fa fa-check"></i><b>3.1.2</b> How to Deploy Your Workshop Website</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#setting-up-team-access-nia-will-fill-this-in"><i class="fa fa-check"></i><b>3.2</b> Setting Up Team Access (Nia will fill this in)</a></li>
+<li class="chapter" data-level="3.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#check-deploy"><i class="fa fa-check"></i><b>3.2</b> Check Your Deploy and See your Website!</a></li>
+<li class="chapter" data-level="3.3" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#setting-up-team-access-rc-nia-will-fill-this-in"><i class="fa fa-check"></i><b>3.3</b> Setting Up Team Access [RC?] (Nia will fill this in)</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html"><i class="fa fa-check"></i><b>4</b> Command Line, SSH Connection &amp; Git Clone</a>
 <ul>
@@ -281,7 +284,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="10.2" data-path="git-instructions.html"><a href="git-instructions.html#updating-github-via-rstudio"><i class="fa fa-check"></i><b>10.2</b> Updating GitHub via RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="how-to-deploy-your-workshop-website-1.html"><a href="how-to-deploy-your-workshop-website-1.html"><i class="fa fa-check"></i><b>11</b> How to Deploy Your Workshop Website</a></li>
+<li class="chapter" data-level="11" data-path="how-to-deploy-your-workshop-website.html"><a href="how-to-deploy-your-workshop-website.html"><i class="fa fa-check"></i><b>11</b> How to Deploy Your Workshop Website</a></li>
 <li class="chapter" data-level="12" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html"><i class="fa fa-check"></i><b>12</b> Appendix [Links for Developers]</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#github-repo"><i class="fa fa-check"></i><b>12.1</b> GitHub Repo</a></li>
@@ -319,26 +322,35 @@ div.csl-indent {
 <div id="installation" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Installation<a href="get-started.html#installation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated development environment i.e. the platform we will be working in) is RStudio.</p>
+<!-- [Maybe we should have more installation instructions - a video?] -->
 <ol style="list-style-type: decimal">
-<li><p>Download and install R (You need R 3.6.0+ installed for RStudio) <a href="https://cran.rstudio.com/">here</a>. Follow the instructions for your operating system (Linux/macOS/Windows).</p>
-<p>[Maybe we should have more installation instructions - a video?]</p>
+<li><p><strong>Download and install R</strong> <a href="https://cran.rstudio.com/" target="_blank">here</a>. (You need R 3.6.0+ installed for RStudio.) Follow the instructions for your operating system (Linux/macOS/Windows).</p>
 <blockquote>
 <p>Note: You can check if windows was installed properly on <em>macOS</em> by running the command <code>R</code> in terminal. On <em>windows</em>, –must test–.</p>
 </blockquote>
 <blockquote>
 <p>Note: We will not be using the R console, instead, we will be using RStudio!</p>
 </blockquote></li>
-<li><p>Download and install RStudio <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP">here</a>. Scroll down to find downloads for non-macOS.</p></li>
-<li><p>Install the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: <code>install.packages("bookdown")</code>.</p>
+<li><p><strong>Download and install RStudio</strong> <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP">here</a>. Scroll down to find downloads for non-macOS.</p>
+<blockquote>
+<p>Note: While installing, you may be asked whether to install the 32-bit or 62-bit RStudio version. Download the version that matches your PC.</p>
+</blockquote></li>
+<li><p><strong>Install the bookdown R package</strong>: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: <code>install.packages("bookdown")</code>.</p>
 <ul>
-<li><p>To prepare for creating our workshop, also run this command. This downloads all the packages you will need!</p>
+<li><p><strong>Download all the packages you will need!</strong> Do this by running the following command:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="get-started.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;magrittr&quot;</span>, <span class="st">&quot;stringi&quot;</span>, <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;reticulate&quot;</span>, <span class="st">&quot;tinytex&quot;</span>,<span class="st">&quot;servr&quot;</span>))</span></code></pre></div>
 <p>You may have to approve some downloads. Say “yes” and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.</p>
-<p>Then, run</p>
+<p>Finally, <strong>run the following command</strong></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="get-started.html#cb2-1" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div></li>
 </ul></li>
 </ol>
 <p>We’re ready to start working with CBW’s bookdown workshop template now!</p>
+<div class="bluebox">
+<div class="center">
+<p><strong>Go to the next step</strong></p>
+</div>
+<p>Now that you’re done the installations, it’s time to go to the next step: <a href="creating-rc-and-deploying-your-new-workshop.html#rc-workshop-setup">creating a <strong>new</strong> workshop</a>, if you’re a RC, or <a href="creating-rc-and-deploying-your-new-workshop.html#check-deploy">seeing your deployed website</a> (skip to step 4), if you’re on the workshop team. The order of this documentation is provided in the sidebar on the left. You can also click the arrows below, to go to the previous or subsequent page!</p>
+</div>
 
 </div>
 </div>

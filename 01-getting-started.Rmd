@@ -11,29 +11,39 @@ First, let's explain installations.
 ## Installation
 Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated development environment i.e. the platform we will be working in) is RStudio.
 
-1. Download and install R (You need R 3.6.0+ installed for RStudio) [here](https://cran.rstudio.com/). Follow the instructions for your operating system (Linux/macOS/Windows).
+<!-- [Maybe we should have more installation instructions - a video?] -->
 
-    [Maybe we should have more installation instructions - a video?]
+1. **Download and install R** <a href="https://cran.rstudio.com/" target="_blank">here</a>. (You need R 3.6.0+ installed for RStudio.) Follow the instructions for your operating system (Linux/macOS/Windows).
     
     > Note: You can check if windows was installed properly on *macOS* by running the command `R` in terminal. On *windows*, --must test--.
     
     > Note: We will not be using the R console, instead, we will be using RStudio!
 
-2. Download and install RStudio [here](https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP). Scroll down to find downloads for non-macOS.
+2. **Download and install RStudio** [here](https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP). Scroll down to find downloads for non-macOS.
 
-3. Install the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: ```install.packages("bookdown")```.
+    > Note: While installing, you may be asked whether to install the 32-bit or 62-bit RStudio version. Download the version that matches your PC.
 
-    - To prepare for creating our workshop, also run this command. This downloads all the packages you will need!
+3. **Install the bookdown R package**: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: ```install.packages("bookdown")```.
+
+    - **Download all the packages you will need!** Do this by running the following command:
       ```r
       install.packages(c("magrittr", "stringi", "stringr", "reticulate", "tinytex","servr"))
       ```
 
       You may have to approve some downloads. Say "yes" and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.
       
-      Then, run
+      Finally, **run the following command**
       
       ```r
       tinytex::install_tinytex()
       ```
 
 We're ready to start working with CBW's bookdown workshop template now!
+
+:::: {.bluebox data-latex=""}
+::: {.center data-latex=""}
+**Go to the next step**
+:::
+
+Now that you're done the installations, it's time to go to the next step: [creating a **new** workshop](#rc-workshop-setup), if you're a RC, or [seeing your deployed website](#check-deploy) (skip to step 4), if you're on the workshop team. The order of this documentation is provided in the sidebar on the left. You can also click the arrows below, to go to the previous or subsequent page!
+::::

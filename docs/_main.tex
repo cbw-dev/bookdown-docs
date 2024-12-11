@@ -142,7 +142,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}Last Updated: 2024-12-10}
+\date{\vspace{-2.5em}Last Updated: 2024-12-11}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -193,9 +193,7 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Download and install R (You need R 3.6.0+ installed for RStudio) \href{https://cran.rstudio.com/}{here}. Follow the instructions for your operating system (Linux/macOS/Windows).
-
-  {[}Maybe we should have more installation instructions - a video?{]}
+  \textbf{Download and install R} here. (You need R 3.6.0+ installed for RStudio.) Follow the instructions for your operating system (Linux/macOS/Windows).
 
   \begin{quote}
   Note: You can check if windows was installed properly on \emph{macOS} by running the command \texttt{R} in terminal. On \emph{windows}, --must test--.
@@ -205,13 +203,17 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
   Note: We will not be using the R console, instead, we will be using RStudio!
   \end{quote}
 \item
-  Download and install RStudio \href{https://posit.co/download/rstudio-desktop/\#:~:text=AND\%20INSTALL\%20R-,2\%3A\%20Install\%20RStudio,-DOWNLOAD\%20RSTUDIO\%20DESKTOP}{here}. Scroll down to find downloads for non-macOS.
+  \textbf{Download and install RStudio} \href{https://posit.co/download/rstudio-desktop/\#:~:text=AND\%20INSTALL\%20R-,2\%3A\%20Install\%20RStudio,-DOWNLOAD\%20RSTUDIO\%20DESKTOP}{here}. Scroll down to find downloads for non-macOS.
+
+  \begin{quote}
+  Note: While installing, you may be asked whether to install the 32-bit or 62-bit RStudio version. Download the version that matches your PC.
+  \end{quote}
 \item
-  Install the bookdown R package: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: \texttt{install.packages("bookdown")}.
+  \textbf{Install the bookdown R package}: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: \texttt{install.packages("bookdown")}.
 
   \begin{itemize}
   \item
-    To prepare for creating our workshop, also run this command. This downloads all the packages you will need!
+    \textbf{Download all the packages you will need!} Do this by running the following command:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -221,7 +223,7 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 
     You may have to approve some downloads. Say ``yes'' and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.
 
-    Then, run
+    Finally, \textbf{run the following command}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -233,11 +235,22 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 
 We're ready to start working with CBW's bookdown workshop template now!
 
+\begin{bluebox}
+
+\begin{center}
+\textbf{Go to the next step}
+
+\end{center}
+
+Now that you're done the installations, it's time to go to the next step: \hyperref[rc-workshop-setup]{creating a \textbf{new} workshop}, if you're a RC, or \hyperref[check-deploy]{seeing your deployed website} (skip to step 4), if you're on the workshop team. The order of this documentation is provided in the sidebar on the left. You can also click the arrows below, to go to the previous or subsequent page!
+
+\end{bluebox}
+
 \chapter{\texorpdfstring{Creating {[}RC{]} and Deploying Your \textbf{New} Workshop}{Creating {[}RC{]} and Deploying Your New Workshop}}\label{creating-rc-and-deploying-your-new-workshop}
 
 Certain aspects of the setup for workshops will be different depending on your role. Headers ending in ``{[}RC{]}'' are for Regional Coordinators. Headers without ``{[}RC{]}'' are assumed to be relevant to both RC and workshop teams.
 
-\section{Workshop Setup {[}RC{]}}\label{workshop-setup-rc}
+\section{Workshop Setup {[}RC{]}}\label{rc-workshop-setup}
 
 Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop. \textbf{Start these instructions with a GitHub account and being logged in}.
 
@@ -269,7 +282,7 @@ Distinction:
 GitHub (ex. \url{https://github.com/cbw-dev/bookdown-template}) holds your repo, which has version control for all your files! The deployed website (ex. \url{https://cbw-dev.github.io/bookdown-template/}) has the workshop online.
 \end{quote}
 
-\subsection{How to Deploy Your Workshop Website}\label{how-to-deploy-your-workshop-website}
+\subsection{How to Deploy Your Workshop Website}\label{deploy-website}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -288,6 +301,8 @@ GitHub (ex. \url{https://github.com/cbw-dev/bookdown-template}) holds your repo,
 
   Great! Now we're waiting on the page to build and deploy, which should take less than a minute.
 \end{enumerate}
+
+\section{Check Your Deploy and See your Website!}\label{check-deploy}
 
 To see updates, go to the \textbf{Actions} page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.
 
@@ -320,7 +335,7 @@ Warning: A website can build properly, but may not deploy properly! It is a good
 
 This is a very specific (and unlikely) warning. It occurs when 1 deploy hasn't finished, but another deploy began. THIS IS NOT A CONCERN. This is a warning message you do not have to worry about!
 
-\section{Setting Up Team Access (Nia will fill this in)}\label{setting-up-team-access-nia-will-fill-this-in}
+\section{Setting Up Team Access {[}RC?{]} (Nia will fill this in)}\label{setting-up-team-access-rc-nia-will-fill-this-in}
 
 \chapter{Command Line, SSH Connection \& Git Clone}\label{command-line-ssh-connection-git-clone}
 
@@ -1912,7 +1927,7 @@ Let's say we only edited \texttt{index.Rmd}, now we see the newly edited files. 
 
 Now, we're done! We should see the updates on GitHub now. Also note, if we ever want to pull updates from GitHub, there is also a \textbf{Pull} button in the Git window within RStudio!
 
-\chapter{How to Deploy Your Workshop Website}\label{how-to-deploy-your-workshop-website-1}
+\chapter{How to Deploy Your Workshop Website}\label{how-to-deploy-your-workshop-website}
 
 Let's recap.
 

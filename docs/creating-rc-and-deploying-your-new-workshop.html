@@ -164,7 +164,9 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
+<a href="https://bioinformaticsdotca.github.io/">
 <img src="img/bioinformatics.ca-logo.svg" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+</a>
 <li><a href="./">CBW's Bookdown Template Documentation</a></li>
 
 <li class="divider"></li>
@@ -175,12 +177,13 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html"><i class="fa fa-check"></i><b>3</b> Creating [RC] and Deploying Your <strong>New</strong> Workshop</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#workshop-setup-rc"><i class="fa fa-check"></i><b>3.1</b> Workshop Setup [RC]</a>
+<li class="chapter" data-level="3.1" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#rc-workshop-setup"><i class="fa fa-check"></i><b>3.1</b> Workshop Setup [RC]</a>
 <ul>
 <li class="chapter" data-level="3.1.1" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#workshop-repo-vs-workshop-website"><i class="fa fa-check"></i><b>3.1.1</b> Workshop Repo VS Workshop Website</a></li>
-<li class="chapter" data-level="3.1.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#how-to-deploy-your-workshop-website"><i class="fa fa-check"></i><b>3.1.2</b> How to Deploy Your Workshop Website</a></li>
+<li class="chapter" data-level="3.1.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#deploy-website"><i class="fa fa-check"></i><b>3.1.2</b> How to Deploy Your Workshop Website</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#setting-up-team-access-nia-will-fill-this-in"><i class="fa fa-check"></i><b>3.2</b> Setting Up Team Access (Nia will fill this in)</a></li>
+<li class="chapter" data-level="3.2" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#check-deploy"><i class="fa fa-check"></i><b>3.2</b> Check Your Deploy and See your Website!</a></li>
+<li class="chapter" data-level="3.3" data-path="creating-rc-and-deploying-your-new-workshop.html"><a href="creating-rc-and-deploying-your-new-workshop.html#setting-up-team-access-rc-nia-will-fill-this-in"><i class="fa fa-check"></i><b>3.3</b> Setting Up Team Access [RC?] (Nia will fill this in)</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html"><i class="fa fa-check"></i><b>4</b> Command Line, SSH Connection &amp; Git Clone</a>
 <ul>
@@ -281,7 +284,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="10.2" data-path="git-instructions.html"><a href="git-instructions.html#updating-github-via-rstudio"><i class="fa fa-check"></i><b>10.2</b> Updating GitHub via RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="how-to-deploy-your-workshop-website-1.html"><a href="how-to-deploy-your-workshop-website-1.html"><i class="fa fa-check"></i><b>11</b> How to Deploy Your Workshop Website</a></li>
+<li class="chapter" data-level="11" data-path="how-to-deploy-your-workshop-website.html"><a href="how-to-deploy-your-workshop-website.html"><i class="fa fa-check"></i><b>11</b> How to Deploy Your Workshop Website</a></li>
 <li class="chapter" data-level="12" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html"><i class="fa fa-check"></i><b>12</b> Appendix [Links for Developers]</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#github-repo"><i class="fa fa-check"></i><b>12.1</b> GitHub Repo</a></li>
@@ -313,8 +316,8 @@ div.csl-indent {
 <div id="creating-rc-and-deploying-your-new-workshop" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> Creating [RC] and Deploying Your <strong>New</strong> Workshop<a href="creating-rc-and-deploying-your-new-workshop.html#creating-rc-and-deploying-your-new-workshop" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Certain aspects of the setup for workshops will be different depending on your role. Headers ending in “[RC]” are for Regional Coordinators. Headers without “[RC]” are assumed to be relevant to both RC and workshop teams.</p>
-<div id="workshop-setup-rc" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Workshop Setup [RC]<a href="creating-rc-and-deploying-your-new-workshop.html#workshop-setup-rc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="rc-workshop-setup" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Workshop Setup [RC]<a href="creating-rc-and-deploying-your-new-workshop.html#rc-workshop-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop. <strong>Start these instructions with a GitHub account and being logged in</strong>.</p>
 <ol style="list-style-type: decimal">
 <li><p>First, let’s go to the <a href="https://github.com/cbw-dev/bookdown-template">bookdown template</a>.</p></li>
@@ -335,8 +338,8 @@ div.csl-indent {
 <p>GitHub (ex. <a href="https://github.com/cbw-dev/bookdown-template" class="uri">https://github.com/cbw-dev/bookdown-template</a>) holds your repo, which has version control for all your files! <br> The deployed website (ex. <a href="https://cbw-dev.github.io/bookdown-template/" class="uri">https://cbw-dev.github.io/bookdown-template/</a>) has the workshop online.</p>
 </blockquote>
 </div>
-<div id="how-to-deploy-your-workshop-website" class="section level3 hasAnchor" number="3.1.2">
-<h3><span class="header-section-number">3.1.2</span> How to Deploy Your Workshop Website<a href="creating-rc-and-deploying-your-new-workshop.html#how-to-deploy-your-workshop-website" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="deploy-website" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> How to Deploy Your Workshop Website<a href="creating-rc-and-deploying-your-new-workshop.html#deploy-website" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>In the top navigation bar, select settings.
 <img src="img/git-instruct/github-settings.png" alt="Base repo, pointing at settings" /></p></li>
@@ -350,6 +353,10 @@ div.csl-indent {
 </p>
 <p>Great! Now we’re waiting on the page to build and deploy, which should take less than a minute.</p></li>
 </ol>
+</div>
+</div>
+<div id="check-deploy" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Check Your Deploy and See your Website!<a href="creating-rc-and-deploying-your-new-workshop.html#check-deploy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To see updates, go to the <strong>Actions</strong> page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.</p>
 <p><img src="img/git-instruct/github-pages-actions-explained.png" alt="Image showing the different possibilities of deploy a github page" /><br />
 </p>
@@ -374,9 +381,8 @@ div.csl-indent {
 <p>This is a very specific (and unlikely) warning. It occurs when 1 deploy hasn’t finished, but another deploy began. THIS IS NOT A CONCERN. This is a warning message you do not have to worry about!</p>
 </div>
 </div>
-</div>
-<div id="setting-up-team-access-nia-will-fill-this-in" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Setting Up Team Access (Nia will fill this in)<a href="creating-rc-and-deploying-your-new-workshop.html#setting-up-team-access-nia-will-fill-this-in" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="setting-up-team-access-rc-nia-will-fill-this-in" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Setting Up Team Access [RC?] (Nia will fill this in)<a href="creating-rc-and-deploying-your-new-workshop.html#setting-up-team-access-rc-nia-will-fill-this-in" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>

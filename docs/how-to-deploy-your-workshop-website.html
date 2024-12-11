@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Appendix [Links for Developers] | CBW’s Bookdown Template Documentation</title>
+  <title>11 How to Deploy Your Workshop Website | CBW’s Bookdown Template Documentation</title>
   <meta name="description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Appendix [Links for Developers] | CBW’s Bookdown Template Documentation" />
+  <meta property="og:title" content="11 How to Deploy Your Workshop Website | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics.ca-logo.svg" />
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="cbw-dev/bookdown-docs" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Appendix [Links for Developers] | CBW’s Bookdown Template Documentation" />
+  <meta name="twitter:title" content="11 How to Deploy Your Workshop Website | CBW’s Bookdown Template Documentation" />
   
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
@@ -34,8 +34,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="how-to-deploy-your-workshop-website.html"/>
-
+<link rel="prev" href="git-instructions.html"/>
+<link rel="next" href="appendix-links-for-developers.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -313,51 +313,42 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="appendix-links-for-developers" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">12</span> Appendix [Links for Developers]<a href="appendix-links-for-developers.html#appendix-links-for-developers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>For the developers of this guide, here are helpful sources.</p>
-<div id="github-repo" class="section level2 hasAnchor" number="12.1">
-<h2><span class="header-section-number">12.1</span> GitHub Repo<a href="appendix-links-for-developers.html#github-repo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Bookdown Docs are hosted from the <a href="https://github.com/cbw-dev/bookdown-docs">cbw-dev/bookdown-docs</a> public repository.</p>
-</div>
-<div id="diagram-links" class="section level2 hasAnchor" number="12.2">
-<h2><span class="header-section-number">12.2</span> Diagram Links<a href="appendix-links-for-developers.html#diagram-links" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Most diagrams shown on these docs <strong>should</strong> be in this <a href="https://drive.google.com/drive/folders/136sy6WIiSG3tBFVpHt8yQwLakB4TFJvn?usp=sharing">Google folder</a>.</p>
-<div id="how-to-edit-a-google-drawing" class="section level3 hasAnchor" number="12.2.1">
-<h3><span class="header-section-number">12.2.1</span> How to Edit a Google Drawing<a href="appendix-links-for-developers.html#how-to-edit-a-google-drawing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="how-to-deploy-your-workshop-website" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> How to Deploy Your Workshop Website<a href="how-to-deploy-your-workshop-website.html#how-to-deploy-your-workshop-website" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Let’s recap.</p>
+<p>We’ve made a bookdown project that builds into a website. We’ve reconfigured the output to go to a folder called “docs” (output_dir: “docs”). We’ve pushed our content onto github, and also made a “.nojekyll” file, which we placed into docs.</p>
+<p>Now in our ./docs folder, we have a bunch of html files that make up our website. We want GitHub to look at these files in the docs folder and host the website for us!</p>
+<p>We deploy our website using GitHub pages. GitHub pages uses jekyll, so the .nojekyll file tells it to no longer rely on jekyll. Now, all we need to do is tell GitHub pages to deploy (create/update the website) from our docs folder.</p>
 <ol style="list-style-type: decimal">
-<li><p>Open the drawing.</p></li>
-<li><p>Edit.</p>
-<blockquote>
-<p>Tip: Editing size of the Google Drawing is very easy when you drag the diagonal lines in the bottom right corner.</p>
-</blockquote></li>
-<li><p>To publish, go to “File &gt; Share &gt; Publish to Web &gt; Embed”. Copy the “Medium” <em>(optional)</em> image size HTML code. Paste where you want it to appear in your .Rmd file.</p></li>
-<li><p>Add alt text to the img embed code: Add <code>alt="Alt Text"</code> after <code>src = ...</code> and before <code>&gt;</code>.</p></li>
+<li><p>Go to your repo on GitHub.</p></li>
+<li><p>In the top navigation bar, select settings.
+<img src="img/git-instruct/github-settings.png" alt="Base repo, pointing at settings" /></p></li>
+<li><p>Then, go to the pages sidebar.
+<img src="img/git-instruct/github-select-pages.png" alt="Selecting pages from the settings page" /></p></li>
+<li><p>“Deploy from a branch” is already selected, which is what we want. We must change the branch from “none” to main.
+<img src="img/git-instruct/github-deploy-main.png" alt="Select main as the branc" /></p></li>
+<li><p>Then, change the folder from <code>/ root</code> to <code>/docs</code>. Then press save.
+<img src="img/git-instruct/github-deploy-docs.png" alt="Select /docs as the branch" /></p></li>
 </ol>
-<p>Note: Lots of the GitHub clone/deploy/RStudio explaining images are currently locally in the repository, and not on the Google drive.</p>
-<p><strong>References</strong> (the below citation list is auto-generated since we showed examples of citations)</p>
-
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div class="csl-entry">
-Xie, Yihui. 2024. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
+<p>Great! Now we’re waiting on the page to build and deploy, which should take less than a minute.</p>
+<p>To see updates, go to the <strong>Actions</strong> page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.</p>
+<div class="float">
+<img src="img/git-instruct/github-pages-actions-explained.png" alt="Image showing the different possibilities of deploy a github page" />
+<div class="figcaption">Image showing the different possibilities of deploy a github page</div>
 </div>
+<p>You can click <u><strong>pages build and deployment</strong></u> for updates. It will give you errors (which may not be very clear) or the link of your deployed page!</p>
+<p><img src="img/git-instruct/successful-deploy.png" alt="successful deploy" />
+<img src="img/git-instruct/failed-deploy.png" alt="failed deploy" /></p>
+<p>Click around to explore more!</p>
+
 </div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="how-to-deploy-your-workshop-website.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="git-instructions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix-links-for-developers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -388,7 +379,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cbw-dev/bookdown-docs/blob/main/93-appendix.Rmd",
+"link": "https://github.com/cbw-dev/bookdown-docs/blob/main/92-deploy.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -3,7 +3,9 @@ bookdown::gitbook:
   config:
     toc:
       before: |
+        <a href="https://bioinformaticsdotca.github.io/">
         <img src="img/bioinformatics.ca-logo.svg" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+        </a>
         <li><a href="./">CBW's Bookdown Template Documentation</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>

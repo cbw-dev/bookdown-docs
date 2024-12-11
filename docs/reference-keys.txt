@@ -5,10 +5,11 @@ cbws-bookdown-documentation
 get-started
 installation
 creating-rc-and-deploying-your-new-workshop
-workshop-setup-rc
+rc-workshop-setup
 workshop-repo-vs-workshop-website
-how-to-deploy-your-workshop-website
-setting-up-team-access-nia-will-fill-this-in
+deploy-website
+check-deploy
+setting-up-team-access-rc-nia-will-fill-this-in
 command-line-ssh-connection-git-clone
 introduction-to-the-command-line
 terminal-command-prompt-and-windows-powershell
@@ -64,7 +65,7 @@ git-instructions
 how-to-make-a-git-repo-rc
 how-to-make-the-git-connection-adding-your-local-repo-to-github
 updating-github-via-rstudio
-how-to-deploy-your-workshop-website-1
+how-to-deploy-your-workshop-website
 appendix-links-for-developers
 github-repo
 diagram-links
