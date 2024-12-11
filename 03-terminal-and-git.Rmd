@@ -24,6 +24,8 @@ We can use the command line using certain tools and applications. Terminal is a 
 
 We won't need to know that many commands, but for easy navigation and understanding, here is what you (generally) need:
 
+> Note: Command headers below tend to follow the format: "[Linux Command] OR "[Windows Command]"
+
 ###### pwd {.unnumbered}
 
 pwd stands for "print working directory". For example, below our output is where in my folders the current .Rmd file that makes up this website is:
