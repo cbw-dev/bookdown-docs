@@ -869,21 +869,31 @@ Thankfully, we only need to do these steps once! Additionally, most security que
 
   \end{greenbox}
 \item
-  Return to your workshop repository on GitHub.
+  Return to your workshop repository on GitHub. Press \texttt{\textless{}\ \textgreater{}\ Code}, which is the leftmost tab in the header bar on GitHub.
 
   Find the ssh for your workshop repository:
 
-  \begin{itemize}
-  \tightlist
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii})}
   \item
-    First, click the green button entitled \texttt{\textless{}\ \textgreater{}\ Code} ands see the drop down options.
+    Click the green button entitled \texttt{\textless{}\ \textgreater{}\ Code} ands see the drop down options.
   \item
     Click the SSH tab, as seen below, and then copy the text below it. The text should be something like \href{mailto:git@github.com}{\nolinkurl{git@github.com}}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
-  \end{itemize}
+    \includegraphics{img/git-instruct/copy-ssh.png}\\
+  \item
+    \textbf{Edit} and \textbf{run the following command} in Terminal/PowerShell/Command Prompt, within the folder you want the workshop folder to be in. (Recall that we navigated there in step 1.)
+  \end{enumerate}
 
-  \includegraphics{img/git-instruct/copy-ssh.png}\\
+  \begin{redbox}
 
-  Then put the following command into your command line, within the folder you want the workshop folder to be in. (For example, if my organization is named: jq-11 and my workshop name is ``workshop-name'', I would enter this into my terminal.)
+  \begin{center}
+  \textbf{EDIT THE FOLLOWING COMMAND!}
+
+  \end{center}
+
+  You can essentially type ``git clone'' and then paste the SSH url, and then hit enter. Below, you must delete the entire ``{git@}github.com:bioinformaticsdotca/{[}YOUR WORKSHOP NAME{]}.git'' text, and replace it with the text you copied.
+
+  \end{redbox}
 
 \begin{verbatim}
 git clone git@github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git
@@ -892,13 +902,28 @@ git clone git@github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git
   You should be ready to go! With your given permissions, you should be able to git push (put your local edits on GitHub) and git pull (pull edits on GitHub to your local computer) fine!
 \end{enumerate}
 
-\begin{quote}
-NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
-\end{quote}
+\begin{bluebox}
+
+\begin{center}
+\textbf{Git Version Control Tip!}
+
+\end{center}
+
+Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
+
+\end{bluebox}
 
 But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? And how exactly is a page made from all these files??? It's time for you to go to the next page :D
 
-\section{Oops, I Git Cloned the Wrong Repository and I Want to Delete It!}\label{oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it}
+\subsection{Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer!}\label{oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer}
+
+That's ok! Follow these steps to delete the git connection, as well as the entire folder from your local computer.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+\end{enumerate}
 
 \chapter{So What Do These Files Mean?}\label{so-what-do-these-files-mean}
 
@@ -1946,6 +1971,8 @@ Sometimes, RStudio defaults so that there is no text wrapping when viewing your 
 If you are having difficulties using Markdown Syntax, RStudio has a work around! See \hyperref[visual-r-md]{Visaul R Markdown} for more information.
 
 \section{FAQs}\label{faqs}
+
+\chapter{Test}\label{test}
 
 \part{DEVELOPERS GUIDE}\label{part-developers-guide}
 

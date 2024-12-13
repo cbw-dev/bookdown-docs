@@ -337,25 +337,47 @@ Thankfully, we only need to do these steps once! Additionally, most security que
     ::::
     <br>
 
-2.  Return to your workshop repository on GitHub.
+2.  Return to your workshop repository on GitHub. Press `< > Code`, which is the leftmost tab in the header bar on GitHub.
 
     Find the ssh for your workshop repository:
+      a) Click the green button entitled `< > Code` ands see the drop down options.
+      
+      b) Click the SSH tab, as seen below, and then copy the text below it. The text should be something like [git\@github.com](mailto:git@github.com){.email}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
+          ![how to find the ssh for your repo](img/git-instruct/copy-ssh.png)\
+      
+      c) **Edit** and **run the following command** in Terminal/PowerShell/Command Prompt, within the folder you want the workshop folder to be in. (Recall that we navigated there in step 1.)
+          
+    :::: {.redbox data-latex=""}
+    ::: {.center data-latex=""}
+    **EDIT THE FOLLOWING COMMAND!**
+    :::
     
-      - First, click the green button entitled `< > Code` ands see the drop down options.
-      - Click the SSH tab, as seen below, and then copy the text below it. The text should be something like [git\@github.com](mailto:git@github.com){.email}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
-
-    ![how to find the ssh for your repo](img/git-instruct/copy-ssh.png)\
-
-    Then put the following command into your command line, within the folder you want the workshop folder to be in. (For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal.)
-
-    ```         
+    You can essentially type "git clone " and then paste the SSH url, and then hit enter. Below, you must delete the entire "<span>git@</span>github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git" text, and replace it with the text you copied.
+    ::::
+    
+    <!-- The <span></span> html code is to stop git@github.com from turning into a link -->
+    
+    <p style="font-size: 8px;"></p>
+    
+    ```
     git clone git@github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git
     ```
 
 3.  You should be ready to go! With your given permissions, you should be able to git push (put your local edits on GitHub) and git pull (pull edits on GitHub to your local computer) fine!
-
-> NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
+    
+:::: {.bluebox data-latex=""}
+::: {.center data-latex=""}
+**Git Version Control Tip!**
+:::
+    
+Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
+::::
+<br>
 
 But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? And how exactly is a page made from all these files??? It's time for you to go to the next page :D
 
-## Oops, I Git Cloned the Wrong Repository and I Want to Delete It!
+### Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer!
+
+That's ok! Follow these steps to delete the git connection, as well as the entire folder from your local computer.
+
+1. 

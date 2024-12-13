@@ -20,7 +20,7 @@ linuxmac-adding-your-ssh-key-to-the-ssh-agent
 windows-add-ssh-key
 adding-a-new-ssh-key-to-your-account
 git-clone
-oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it
+oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer
 so-what-do-these-files-mean
 bookdown-simple-explanation
 opening-your-bookdown-project-in-rstudio
@@ -56,6 +56,7 @@ ease-of-use
 wrapping-your-code
 visual-r-markdown
 faqs
+test
 build-site
 how-to-edit-_bookdown.yml
 how-to-edit-_output.yml-rc
