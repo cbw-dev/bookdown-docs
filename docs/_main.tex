@@ -561,8 +561,6 @@ Note: You can do these commands anywhere in your files. You do not need to be in
 
 \subsection{Generating a new SSH key}\label{generating-a-new-ssh-key}
 
-These are the instructions if you have a Linux or macOS computer. Go \hyperref[windows-add-ssh-key]{here} for the Windows instructions.
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
@@ -570,9 +568,11 @@ These are the instructions if you have a Linux or macOS computer. Go \hyperref[w
 \item
   Copy and paste this text into your terminal. \textbf{Replace the email given below with your GitHub email address} (the email address you used to sign up for Github). \emph{Keep the quotations in your command.} Press enter to run the command.
 
-\begin{verbatim}
-ssh-keygen -t ed25519 -C "your_email@example.com"
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ssh{-}keygen} \AttributeTok{{-}t}\NormalTok{ ed25519 }\AttributeTok{{-}C} \StringTok{"your\_email@example.com"}
+\end{Highlighting}
+\end{Shaded}
 
   You will get this output:
 
@@ -619,16 +619,20 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
   You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!
 \end{enumerate}
 
-\subsection{{[}Linux/Mac{]} Adding your SSH key to the ssh-agent}\label{windows-add-ssh-key}
+\subsection{{[}Linux/Mac{]} Adding your SSH key to the ssh-agent}\label{linuxmac-adding-your-ssh-key-to-the-ssh-agent}
+
+These are the instructions if you have a Linux or macOS computer. Go \hyperref[windows-add-ssh-key]{here} for the Windows instructions.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
   In terminal, run the following command:
 
-\begin{verbatim}
-eval "$(ssh-agent -s)"
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{eval} \StringTok{"}\VariableTok{$(}\FunctionTok{ssh{-}agent} \AttributeTok{{-}s}\VariableTok{)}\StringTok{"}
+\end{Highlighting}
+\end{Shaded}
 
   You will get this output:
 
@@ -645,9 +649,11 @@ eval "$(ssh-agent -s)"
   \item
     Check if you have a \texttt{\textasciitilde{}/.ssh/config} file: Run the following command:
 
-\begin{verbatim}
-open ~/.ssh/config
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{open}\NormalTok{ \textasciitilde{}/.ssh/config}
+\end{Highlighting}
+\end{Shaded}
   \item
     If you get the following output:
 
@@ -657,9 +663,11 @@ open ~/.ssh/config
 
     Create the file using the touch command: run the command given below
 
-\begin{verbatim}
-touch ~/.ssh/config
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{touch}\NormalTok{ \textasciitilde{}/.ssh/config}
+\end{Highlighting}
+\end{Shaded}
   \item
     Edit your \texttt{\textasciitilde{}/.ssh/config} file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.
 
@@ -693,38 +701,67 @@ Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
 \item
   Return to terminal. Run the following command:
 
-\begin{verbatim}
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ssh{-}add} \AttributeTok{{-}{-}apple{-}use{-}keychain}\NormalTok{ \textasciitilde{}/.ssh/id\_ed25519}
+\end{Highlighting}
+\end{Shaded}
 
   (You may be asked to enter your passphrase again. This is the same passphrase as before.)
 \end{enumerate}
 
-\subsection{{[}Windows{]} Adding your SSH key to the ssh-agent}\label{windows-adding-your-ssh-key-to-the-ssh-agent}
+\subsection{{[}Windows{]} Adding your SSH key to the ssh-agent}\label{windows-add-ssh-key}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
-  Open PowerShell with admin privileges.
+  Right click on Windows Powershell (you can search for it in your search bar on your taskbar) and select ``Run as administrator''.
+\item
+  Run the following commands:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{Get{-}Service} \AttributeTok{{-}Name}\NormalTok{ ssh{-}agent }\KeywordTok{|} \ExtensionTok{Set{-}Service} \AttributeTok{{-}StartupType}\NormalTok{ Manual}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{Start{-}Service}\NormalTok{ ssh{-}agent}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Open a terminal window (without running as administrator). Run the following command, and \textbf{replace YOU with your GitHub username}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ssh{-}add}\NormalTok{ c:/Users/YOU/.ssh/id\_ed25519}
+\end{Highlighting}
+\end{Shaded}
 \end{enumerate}
 
 \subsection{Adding a new SSH key to your account}\label{adding-a-new-ssh-key-to-your-account}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Copy the SSH public key: Run the following command to copy the content of the \textasciitilde/.ssh/id\_ed25519.pub file to your clipboard:
-\end{enumerate}
 
-\begin{verbatim}
-pbcopy < ~/.ssh/id_ed25519.pub
-\end{verbatim}
+  \textbf{On Mac/Linux:}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{pbcopy} \OperatorTok{\textless{}}\NormalTok{ \textasciitilde{}/.ssh/id\_ed25519.pub}
+\end{Highlighting}
+\end{Shaded}
+
+  \textbf{On Windows:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{clip} \OperatorTok{\textless{}}\NormalTok{ \textasciitilde{}/.ssh/id\_ed25519.pub}
+\end{Highlighting}
+\end{Shaded}
 \item
   Go to your GitHub account on the GitHub website. Click on your profile picture (icon in the upper right). Then, select \textbf{Settings}.
 \item

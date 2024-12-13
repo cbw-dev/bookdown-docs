@@ -195,8 +195,8 @@ div.csl-indent {
 <li class="chapter" data-level="4.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#creating-the-ssh-connection"><i class="fa fa-check"></i><b>4.2</b> Creating the SSH Connection</a>
 <ul>
 <li class="chapter" data-level="4.2.1" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key"><i class="fa fa-check"></i><b>4.2.1</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)" target="_blank">Generating a new SSH key</a></a></li>
-<li class="chapter" data-level="4.2.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#windows-add-ssh-key"><i class="fa fa-check"></i><b>4.2.2</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a></a></li>
-<li class="chapter" data-level="4.2.3" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#windows-adding-your-ssh-key-to-the-ssh-agent"><i class="fa fa-check"></i><b>4.2.3</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a></a></li>
+<li class="chapter" data-level="4.2.2" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#linuxmac-adding-your-ssh-key-to-the-ssh-agent"><i class="fa fa-check"></i><b>4.2.2</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a></a></li>
+<li class="chapter" data-level="4.2.3" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#windows-add-ssh-key"><i class="fa fa-check"></i><b>4.2.3</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a></a></li>
 <li class="chapter" data-level="4.2.4" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#adding-a-new-ssh-key-to-your-account"><i class="fa fa-check"></i><b>4.2.4</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account" target="_blank">Adding a new SSH key to your account</a></a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="command-line-ssh-connection-git-clone.html"><a href="command-line-ssh-connection-git-clone.html#git-clone"><i class="fa fa-check"></i><b>4.3</b> Getting the Template on Your Local Computer - Git Clone!</a></li>
@@ -429,11 +429,10 @@ div.csl-indent {
 </blockquote>
 <div id="generating-a-new-ssh-key" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)" target="_blank">Generating a new SSH key</a><a href="command-line-ssh-connection-git-clone.html#generating-a-new-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>These are the instructions if you have a Linux or macOS computer. Go <a href="command-line-ssh-connection-git-clone.html#windows-add-ssh-key">here</a> for the Windows instructions.</p>
 <ol style="list-style-type: decimal">
 <li><p>Open Terminal.</p></li>
 <li><p>Copy and paste this text into your terminal. <strong>Replace the email given below with your GitHub email address</strong> (the email address you used to sign up for Github). <em>Keep the quotations in your command.</em> Press enter to run the command.</p>
-<pre><code>ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="command-line-ssh-connection-git-clone.html#cb14-1" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">&quot;your_email@example.com&quot;</span></span></code></pre></div>
 <p>You will get this output:</p>
 <pre><code>&gt; Generating public/private ALGORITHM key pair.
 &gt; Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):</code></pre>
@@ -458,22 +457,23 @@ div.csl-indent {
 <p>You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!</p></li>
 </ol>
 </div>
-<div id="windows-add-ssh-key" class="section level3 hasAnchor" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a><a href="command-line-ssh-connection-git-clone.html#windows-add-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="linuxmac-adding-your-ssh-key-to-the-ssh-agent" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a><a href="command-line-ssh-connection-git-clone.html#linuxmac-adding-your-ssh-key-to-the-ssh-agent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>These are the instructions if you have a Linux or macOS computer. Go <a href="command-line-ssh-connection-git-clone.html#windows-add-ssh-key">here</a> for the Windows instructions.</p>
 <ol style="list-style-type: decimal">
 <li><p>In terminal, run the following command:</p>
-<pre><code>eval &quot;$(ssh-agent -s)&quot;</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="command-line-ssh-connection-git-clone.html#cb18-1" tabindex="-1"></a><span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
 <p>You will get this output:</p>
 <pre><code>&gt; Agent pid 59566</code></pre>
 <p><em>(Your number will most likely be different than the one above.)</em></p></li>
 <li><p>If you’re using macOS Sierra 10.12.2 or later additions, you need to modify your <code>~/.ssh/config</code> file.</p>
 <ol style="list-style-type: decimal">
 <li><p>Check if you have a <code>~/.ssh/config</code> file: Run the following command:</p>
-<pre><code>open ~/.ssh/config</code></pre></li>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="command-line-ssh-connection-git-clone.html#cb20-1" tabindex="-1"></a><span class="ex">open</span> ~/.ssh/config</span></code></pre></div></li>
 <li><p>If you get the following output:</p>
 <pre><code>&gt; The file /Users/YOU/.ssh/config does not exist.</code></pre>
 <p>Create the file using the touch command: run the command given below</p>
-<pre><code>touch ~/.ssh/config</code></pre></li>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="command-line-ssh-connection-git-clone.html#cb22-1" tabindex="-1"></a><span class="fu">touch</span> ~/.ssh/config</span></code></pre></div></li>
 <li><p>Edit your <code>~/.ssh/config</code> file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.</p>
 <ul>
 <li>Run <code>nano ~/.ssh/config</code></li>
@@ -490,23 +490,29 @@ div.csl-indent {
 <pre><code>Save modified buffer (ANSWERING &quot;No&quot; WILL DESTROY CHANGES) ?</code></pre></li>
 </ol></li>
 <li><p>Return to terminal. Run the following command:</p>
-<pre><code>ssh-add --apple-use-keychain ~/.ssh/id_ed25519</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="command-line-ssh-connection-git-clone.html#cb25-1" tabindex="-1"></a><span class="fu">ssh-add</span> <span class="at">--apple-use-keychain</span> ~/.ssh/id_ed25519</span></code></pre></div>
 <p>(You may be asked to enter your passphrase again. This is the same passphrase as before.)</p></li>
 </ol>
 </div>
-<div id="windows-adding-your-ssh-key-to-the-ssh-agent" class="section level3 hasAnchor" number="4.2.3">
-<h3><span class="header-section-number">4.2.3</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a><a href="command-line-ssh-connection-git-clone.html#windows-adding-your-ssh-key-to-the-ssh-agent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="windows-add-ssh-key" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a><a href="command-line-ssh-connection-git-clone.html#windows-add-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>Open PowerShell with admin privileges.</li>
+<li><p>Right click on Windows Powershell (you can search for it in your search bar on your taskbar) and select “Run as administrator”.</p></li>
+<li><p>Run the following commands:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="command-line-ssh-connection-git-clone.html#cb26-1" tabindex="-1"></a><span class="ex">Get-Service</span> <span class="at">-Name</span> ssh-agent <span class="kw">|</span> <span class="ex">Set-Service</span> <span class="at">-StartupType</span> Manual</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="command-line-ssh-connection-git-clone.html#cb27-1" tabindex="-1"></a><span class="ex">Start-Service</span> ssh-agent</span></code></pre></div></li>
+<li><p>Open a terminal window (without running as administrator). Run the following command, and <strong>replace YOU with your GitHub username</strong>:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="command-line-ssh-connection-git-clone.html#cb28-1" tabindex="-1"></a><span class="fu">ssh-add</span> c:/Users/YOU/.ssh/id_ed25519</span></code></pre></div></li>
 </ol>
 </div>
 <div id="adding-a-new-ssh-key-to-your-account" class="section level3 hasAnchor" number="4.2.4">
 <h3><span class="header-section-number">4.2.4</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account" target="_blank">Adding a new SSH key to your account</a><a href="command-line-ssh-connection-git-clone.html#adding-a-new-ssh-key-to-your-account" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>Copy the SSH public key: Run the following command to copy the content of the ~/.ssh/id_ed25519.pub file to your clipboard:</li>
-</ol>
-<pre><code>pbcopy &lt; ~/.ssh/id_ed25519.pub</code></pre>
-<ol start="2" style="list-style-type: decimal">
+<li><p>Copy the SSH public key: Run the following command to copy the content of the ~/.ssh/id_ed25519.pub file to your clipboard:</p>
+<p><strong>On Mac/Linux:</strong></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="command-line-ssh-connection-git-clone.html#cb29-1" tabindex="-1"></a><span class="ex">pbcopy</span> <span class="op">&lt;</span> ~/.ssh/id_ed25519.pub</span></code></pre></div>
+<p><strong>On Windows:</strong></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="command-line-ssh-connection-git-clone.html#cb30-1" tabindex="-1"></a><span class="ex">clip</span> <span class="op">&lt;</span> ~/.ssh/id_ed25519.pub</span></code></pre></div></li>
 <li><p>Go to your GitHub account on the <a href="https://github.com/" target="_blank">GitHub</a> website. Click on your profile picture (icon in the upper right). Then, select <strong>Settings</strong>.</p></li>
 <li><p>Under the “Access” section, click <strong>SSH and GPG keys</strong>.</p></li>
 <li><p>Click <strong>New SSH key</strong> or <strong>Add SSH key</strong>.</p></li>

@@ -122,13 +122,11 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
 
 ### <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)" target="_blank">Generating a new SSH key</a>
 
-These are the instructions if you have a Linux or macOS computer. Go [here](#windows-add-ssh-key) for the Windows instructions.
-
 1.  Open Terminal.
 
 2.  Copy and paste this text into your terminal. **Replace the email given below with your GitHub email address** (the email address you used to sign up for Github). *Keep the quotations in your command.* Press enter to run the command.
 
-    ```         
+    ```bash
     ssh-keygen -t ed25519 -C "your_email@example.com"
     ```
 
@@ -169,11 +167,13 @@ These are the instructions if you have a Linux or macOS computer. Go [here](#win
     
     You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!
     
-### <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a> {#windows-add-ssh-key}
+### <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a>
+
+These are the instructions if you have a Linux or macOS computer. Go [here](#windows-add-ssh-key) for the Windows instructions.
 
 1.  In terminal, run the following command:
 
-    ```         
+    ```bash         
     eval "$(ssh-agent -s)"
     ```
 
@@ -189,7 +189,7 @@ These are the instructions if you have a Linux or macOS computer. Go [here](#win
 
     1.  Check if you have a `~/.ssh/config` file: Run the following command:
 
-        ```         
+        ```bash
         open ~/.ssh/config
         ```
 
@@ -201,7 +201,7 @@ These are the instructions if you have a Linux or macOS computer. Go [here](#win
 
         Create the file using the touch command: run the command given below
 
-        ```         
+        ```bash         
         touch ~/.ssh/config
         ```
 
@@ -220,29 +220,52 @@ These are the instructions if you have a Linux or macOS computer. Go [here](#win
         -   Exit nano: `ctrl + X`
         -   Type "Y" and hit enter to save changes, when asked the following
 
-        ```         
+        ```
         Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
         ```
 
 3.  Return to terminal. Run the following command:
 
-    ```         
+    ```bash
     ssh-add --apple-use-keychain ~/.ssh/id_ed25519
     ```
     
     (You may be asked to enter your passphrase again. This is the same passphrase as before.)
 
-### <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a>
+### <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a> {#windows-add-ssh-key}
 
-1. Open PowerShell with admin privileges.
+1. Right click on Windows Powershell (you can search for it in your search bar on your taskbar) and select "Run as administrator".
+
+2. Run the following commands:
+
+    ```bash
+    Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+    ```
+    ```bash
+    Start-Service ssh-agent
+    ```
+3. Open a terminal window (without running as administrator). Run the following command, and **replace YOU with your GitHub username**:
+
+    ```bash
+    ssh-add c:/Users/YOU/.ssh/id_ed25519
+    ```
 
 ### <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account" target="_blank">Adding a new SSH key to your account</a>
 
 1.  Copy the SSH public key: Run the following command to copy the content of the \~/.ssh/id_ed25519.pub file to your clipboard:
 
-```         
-pbcopy < ~/.ssh/id_ed25519.pub
-```
+    **On Mac/Linux:**
+    
+    ```bash
+    pbcopy < ~/.ssh/id_ed25519.pub
+    ```
+    
+    **On Windows:**
+    
+    ```bash
+    clip < ~/.ssh/id_ed25519.pub
+    ```
+
 
 2.  Go to your GitHub account on the <a href="https://github.com/" target="_blank">GitHub</a> website. Click on your profile picture (icon in the upper right). Then, select **Settings**.
 
