@@ -235,7 +235,7 @@ operable program or batch file.
   \begin{itemize}
   \tightlist
   \item
-    When you ran \texttt{git\ —version}, it will have prompted you to install Git. Follow these instructions.
+    When you ran \texttt{git\ -\/-version}, it will have prompted you to install Git. Follow these instructions.
   \end{itemize}
 
   \textbf{Installing Git on Windows}
@@ -258,7 +258,7 @@ operable program or batch file.
   Check that your install worked! Re-run ``git -\/-verison'' and check that you get your git version! (On Windows, this may look like ``git version 2.47.1.windows.1'').
 
   \begin{quote}
-  Note: If you installed Git while having a Command Prompt/Windows PowerShell window open, close this window and open a new one to run ``git --version''. This acts as a refresher to Command Prompt/Windows PowerShell.
+  Note: If you installed Git while having a Command Prompt/Windows PowerShell window open, close this window and open a new one to run ``git -\/-version''. This acts as a refresher to Command Prompt/Windows PowerShell.
   \end{quote}
 
   \end{greenbox}
@@ -431,7 +431,7 @@ They follow the format: ``{[}Linux Command{]} OR''{[}Windows Command{]}''
 \subparagraph*{pwd OR echo \%cd\%}\label{pwd-or-echo-cd}
 \addcontentsline{toc}{subparagraph}{pwd OR echo \%cd\%}
 
-``pwd'' stands for ``print working directory''. It is a \textbf{Linux} command that works \textbf{Windows PowerShell}. The equivalent in \textbf{terminal} is ``echo \%cd\%''. For example, below our output is where in my folders the current .Rmd file that makes up this website is:
+``pwd'' stands for ``print working directory''. It is a command that works in \textbf{Linux} and \textbf{Windows PowerShell}. The equivalent in \textbf{Command Prompt} is ``echo \%cd\%''. For example, below our output is where in my folders the current .Rmd file that makes up this website is:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -446,7 +446,7 @@ They follow the format: ``{[}Linux Command{]} OR''{[}Windows Command{]}''
 \subparagraph*{ls OR dir}\label{ls-or-dir}
 \addcontentsline{toc}{subparagraph}{ls OR dir}
 
-``ls'' is a \textbf{Linux} command that also works in \textbf{Windows PowerShell}. It's short for ``list'' and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)
+``ls'' is a command that works in \textbf{Linux} and \textbf{Windows PowerShell}. It's short for ``list'' and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -553,11 +553,15 @@ Essentially, we're doing these steps to update and receive updates from our GitH
 
 Follow the following 3 main steps. Each of these subheaders links to GitHub's official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you've already been working with GitHub/SSH connection and want to make a new one, consider using the official docs.) The official docs may be more up-to-date.
 
+\emph{If you do decide to use GitHub's docs,} \textbf{\emph{choose the page}} \emph{(the different tabs are clickable at the top of the page) that matches your system (Mac/Windows/Linux).}
+
 \begin{quote}
 Note: You can do these commands anywhere in your files. You do not need to be in your home directory.
 \end{quote}
 
 \subsection{Generating a new SSH key}\label{generating-a-new-ssh-key}
+
+These are the instructions if you have a Linux or macOS computer. Go \hyperref[windows-add-ssh-key]{here} for the Windows instructions.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -615,7 +619,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
   You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!
 \end{enumerate}
 
-\subsection{Adding your SSH key to the ssh-agent}\label{adding-your-ssh-key-to-the-ssh-agent}
+\subsection{{[}Linux/Mac{]} Adding your SSH key to the ssh-agent}\label{windows-add-ssh-key}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -694,6 +698,15 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 \end{verbatim}
 
   (You may be asked to enter your passphrase again. This is the same passphrase as before.)
+\end{enumerate}
+
+\subsection{{[}Windows{]} Adding your SSH key to the ssh-agent}\label{windows-adding-your-ssh-key-to-the-ssh-agent}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Open PowerShell with admin privileges.
 \end{enumerate}
 
 \subsection{Adding a new SSH key to your account}\label{adding-a-new-ssh-key-to-your-account}
