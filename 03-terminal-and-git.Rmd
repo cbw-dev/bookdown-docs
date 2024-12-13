@@ -349,7 +349,7 @@ Thankfully, we only need to do these steps once! Additionally, most security que
     Then put the following command into your command line, within the folder you want the workshop folder to be in. (For example, if my organization is named: jq-11 and my workshop name is "workshop-name", I would enter this into my terminal.)
 
     ```         
-    git clone git@github.com:jq-11/workshop-name.git
+    git clone git@github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git
     ```
 
 3.  You should be ready to go! With your given permissions, you should be able to git push (put your local edits on GitHub) and git pull (pull edits on GitHub to your local computer) fine!
@@ -357,3 +357,5 @@ Thankfully, we only need to do these steps once! Additionally, most security que
 > NOTE: Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
 
 But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? And how exactly is a page made from all these files??? It's time for you to go to the next page :D
+
+## Oops, I Git Cloned the Wrong Repository and I Want to Delete It!

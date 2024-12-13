@@ -20,6 +20,7 @@ linuxmac-adding-your-ssh-key-to-the-ssh-agent
 windows-add-ssh-key
 adding-a-new-ssh-key-to-your-account
 git-clone
+oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it
 so-what-do-these-files-mean
 bookdown-simple-explanation
 opening-your-bookdown-project-in-rstudio
