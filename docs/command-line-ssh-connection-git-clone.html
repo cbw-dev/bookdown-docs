@@ -341,13 +341,13 @@ div.csl-indent {
 <div id="pwd" class="section level6 unnumbered hasAnchor">
 <h6>pwd<a href="command-line-ssh-connection-git-clone.html#pwd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <p>pwd stands for “print working directory”. For example, below our output is where in my folders the current .Rmd file that makes up this website is:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="command-line-ssh-connection-git-clone.html#cb3-1" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="command-line-ssh-connection-git-clone.html#cb6-1" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
 <pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs</code></pre>
 </div>
 <div id="ls-or-dir" class="section level6 unnumbered hasAnchor">
 <h6>ls OR dir<a href="command-line-ssh-connection-git-clone.html#ls-or-dir" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <p>“ls” is a <strong>Terminal</strong> command that also works in <strong>Windows PowerShell</strong>. It short for “list” and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="command-line-ssh-connection-git-clone.html#cb5-1" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="command-line-ssh-connection-git-clone.html#cb8-1" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
 <!-- to save space, only output the first 4 lines -->
 <pre><code>## 01-getting-started.Rmd
 ## 02-git-clone.Rmd
@@ -358,10 +358,10 @@ div.csl-indent {
 <div id="cd" class="section level6 unnumbered hasAnchor">
 <h6>cd<a href="command-line-ssh-connection-git-clone.html#cd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
 <p>“cd” stands for “change directory”. The command produces no output, but it allows you to go to a different directory than the one you’re currently in. For example,</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="command-line-ssh-connection-git-clone.html#cb7-1" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># recall: pwd tells us where we currently are</span></span>
-<span id="cb7-2"><a href="command-line-ssh-connection-git-clone.html#cb7-2" tabindex="-1"></a><span class="bu">cd</span> img <span class="co"># img is a folder in bookdown-docs</span></span>
-<span id="cb7-3"><a href="command-line-ssh-connection-git-clone.html#cb7-3" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;now switching directories&quot;</span> <span class="co"># outputs the following string</span></span>
-<span id="cb7-4"><a href="command-line-ssh-connection-git-clone.html#cb7-4" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="command-line-ssh-connection-git-clone.html#cb10-1" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># recall: pwd tells us where we currently are</span></span>
+<span id="cb10-2"><a href="command-line-ssh-connection-git-clone.html#cb10-2" tabindex="-1"></a><span class="bu">cd</span> img <span class="co"># img is a folder in bookdown-docs</span></span>
+<span id="cb10-3"><a href="command-line-ssh-connection-git-clone.html#cb10-3" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;now switching directories&quot;</span> <span class="co"># outputs the following string</span></span>
+<span id="cb10-4"><a href="command-line-ssh-connection-git-clone.html#cb10-4" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
 <pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
 ## now switching directories
 ## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs/img</code></pre>
@@ -370,22 +370,22 @@ div.csl-indent {
 </blockquote>
 <p><strong>File Location Shorthands</strong> When referring to file addresses, there are helpful shorthands! Here’s a summary: - <code>.</code> = Current Directory - <code>..</code> = Parent Directory - <code>~</code> = Home Directory</p>
 <p>Here’s an example (recall, cd produces no output!):</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="command-line-ssh-connection-git-clone.html#cb9-1" tabindex="-1"></a><span class="bu">pwd</span></span>
-<span id="cb9-2"><a href="command-line-ssh-connection-git-clone.html#cb9-2" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="co"># creates a line</span></span>
-<span id="cb9-3"><a href="command-line-ssh-connection-git-clone.html#cb9-3" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="command-line-ssh-connection-git-clone.html#cb9-4" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Current Directory Example&quot;</span></span>
-<span id="cb9-5"><a href="command-line-ssh-connection-git-clone.html#cb9-5" tabindex="-1"></a><span class="bu">cd</span> .</span>
-<span id="cb9-6"><a href="command-line-ssh-connection-git-clone.html#cb9-6" tabindex="-1"></a><span class="bu">pwd</span></span>
-<span id="cb9-7"><a href="command-line-ssh-connection-git-clone.html#cb9-7" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
-<span id="cb9-8"><a href="command-line-ssh-connection-git-clone.html#cb9-8" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="command-line-ssh-connection-git-clone.html#cb9-9" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Parent Directory Example&quot;</span></span>
-<span id="cb9-10"><a href="command-line-ssh-connection-git-clone.html#cb9-10" tabindex="-1"></a><span class="bu">cd</span> ..</span>
-<span id="cb9-11"><a href="command-line-ssh-connection-git-clone.html#cb9-11" tabindex="-1"></a><span class="bu">pwd</span></span>
-<span id="cb9-12"><a href="command-line-ssh-connection-git-clone.html#cb9-12" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
-<span id="cb9-13"><a href="command-line-ssh-connection-git-clone.html#cb9-13" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="command-line-ssh-connection-git-clone.html#cb9-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Home Directory Example&quot;</span></span>
-<span id="cb9-15"><a href="command-line-ssh-connection-git-clone.html#cb9-15" tabindex="-1"></a><span class="bu">cd</span> ~</span>
-<span id="cb9-16"><a href="command-line-ssh-connection-git-clone.html#cb9-16" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="command-line-ssh-connection-git-clone.html#cb12-1" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb12-2"><a href="command-line-ssh-connection-git-clone.html#cb12-2" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="co"># creates a line</span></span>
+<span id="cb12-3"><a href="command-line-ssh-connection-git-clone.html#cb12-3" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="command-line-ssh-connection-git-clone.html#cb12-4" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Current Directory Example&quot;</span></span>
+<span id="cb12-5"><a href="command-line-ssh-connection-git-clone.html#cb12-5" tabindex="-1"></a><span class="bu">cd</span> .</span>
+<span id="cb12-6"><a href="command-line-ssh-connection-git-clone.html#cb12-6" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb12-7"><a href="command-line-ssh-connection-git-clone.html#cb12-7" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
+<span id="cb12-8"><a href="command-line-ssh-connection-git-clone.html#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="command-line-ssh-connection-git-clone.html#cb12-9" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Parent Directory Example&quot;</span></span>
+<span id="cb12-10"><a href="command-line-ssh-connection-git-clone.html#cb12-10" tabindex="-1"></a><span class="bu">cd</span> ..</span>
+<span id="cb12-11"><a href="command-line-ssh-connection-git-clone.html#cb12-11" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb12-12"><a href="command-line-ssh-connection-git-clone.html#cb12-12" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
+<span id="cb12-13"><a href="command-line-ssh-connection-git-clone.html#cb12-13" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="command-line-ssh-connection-git-clone.html#cb12-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Home Directory Example&quot;</span></span>
+<span id="cb12-15"><a href="command-line-ssh-connection-git-clone.html#cb12-15" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb12-16"><a href="command-line-ssh-connection-git-clone.html#cb12-16" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
 <pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
 ## 
 ## Current Directory Example

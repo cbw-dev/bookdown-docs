@@ -9,34 +9,63 @@ If you're ready to start making a workshop website in bookdown, let's setup your
 First, let's explain installations.
 
 ## Installation
+
 Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated development environment i.e. the platform we will be working in) is RStudio.
 
 <!-- [Maybe we should have more installation instructions - a video?] -->
 
-1. **Download and install R** <a href="https://cran.rstudio.com/" target="_blank">here</a>. (You need R 3.6.0+ installed for RStudio.) Follow the instructions for your operating system (Linux/macOS/Windows).
-    
-    > Note: You can check if windows was installed properly on *macOS* by running the command `R` in terminal. On *windows*, --must test--.
-    
+1.  **Download and install R** <a href="https://cran.rstudio.com/" target="_blank">here</a>. (You need R 3.6.0+ installed for RStudio.) Follow the instructions for your operating system (Linux/macOS/Windows).
+
+    > Check: You can check if windows was installed properly on *macOS* by running the command `R` in terminal. On *windows*, --must test--.
+
     > Note: We will not be using the R console, instead, we will be using RStudio!
 
-2. **Download and install RStudio** <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">here</a>. Scroll down to find downloads for non-macOS.
+2.  **Download and install RStudio** <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">here</a>. Scroll down to find downloads for non-macOS.
 
     > Note: While installing, you may be asked whether to install the 32-bit or 62-bit RStudio version. Download the version that matches your PC.
 
-3. **Install the bookdown R package**: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: ```install.packages("bookdown")```.
+3.  **Install Git, if you don't already have it.** Git is a tool that will help us with version control when editing your workshop. Linux and macOS computers tend to have Git installed. Windows computers must install Git. However, make sure to double check if you already have Git, so that you don't have to install it again! Check if you have Git by running this command in terminal/command prompt:
 
-    - **Download all the packages you will need!** Do this by running the following command:
-      ```r
-      install.packages(c("magrittr", "stringi", "stringr", "reticulate", "tinytex","servr"))
-      ```
+    ```{bash}
+    git --version
+    ```
 
-      You may have to approve some downloads. Say "yes" and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.
-      
-      Finally, **run the following command**
-      
-      ```r
-      tinytex::install_tinytex()
-      ```
+    If your output looks like "git version X.X.X ...", you already have git! Move onto step 4!
+
+    However, if your output says "Git is not recognized" or a similar statement (such as the one provided below), you do not have Git, so you must install it as well.
+
+    ```
+    'git' is not recognized as an internal or external command,
+    operable program or batch file.
+    ```
+    
+    <a href="https://github.com/git-guides/install-git#install-git-on-mac" target="_blank">**Installing Git on macOS**</a>
+    
+    When you ran `git —version`, it will have prompted you to install Git. Follow these instructions.
+    
+    <a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank">**Installing Git on Windows**</a>
+
+    Go to the <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">Git for Windows installer</a> and download Git. Then, install it with all the default settings.
+
+    Click here for instructions on <a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank">**installing Git on Linux**</a>.
+    
+    > DOUBLE CHECK: Check that your install worked! Re-run `git --verison` and check that you get your git version!
+
+4.  **Install the bookdown R package**: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: `install.packages("bookdown")`.
+
+    -   **Download all the packages you will need!** Do this by running the following command:
+
+        ``` r
+        install.packages(c("magrittr", "stringi", "stringr", "reticulate", "tinytex","servr"))
+        ```
+
+        You may have to approve some downloads. Say "yes" and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.
+
+        Finally, **run the following command**
+
+        ``` r
+        tinytex::install_tinytex()
+        ```
 
 We're ready to start working with CBW's bookdown workshop template now!
 

@@ -142,7 +142,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}Last Updated: 2024-12-11}
+\date{\vspace{-2.5em}Last Updated: 2024-12-13}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -196,7 +196,7 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
   \textbf{Download and install R} here. (You need R 3.6.0+ installed for RStudio.) Follow the instructions for your operating system (Linux/macOS/Windows).
 
   \begin{quote}
-  Note: You can check if windows was installed properly on \emph{macOS} by running the command \texttt{R} in terminal. On \emph{windows}, --must test--.
+  Check: You can check if windows was installed properly on \emph{macOS} by running the command \texttt{R} in terminal. On \emph{windows}, --must test--.
   \end{quote}
 
   \begin{quote}
@@ -207,6 +207,41 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 
   \begin{quote}
   Note: While installing, you may be asked whether to install the 32-bit or 62-bit RStudio version. Download the version that matches your PC.
+  \end{quote}
+\item
+  \textbf{Install Git, if you don't already have it.} Git is a tool that will help us with version control when editing your workshop. Linux and macOS computers tend to have Git installed. Windows computers must install Git. However, make sure to double check if you already have Git, so that you don't have to install it again! Check if you have Git by running this command in terminal/command prompt:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git} \AttributeTok{{-}{-}version}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## git version 2.39.5 (Apple Git-154)
+\end{verbatim}
+
+  If your output looks like ``git version X.X.X \ldots{}'', you already have git! Move onto step 4!
+
+  However, if your output says ``Git is not recognized'' or a similar statement (such as the one provided below), you do not have Git, so you must install it as well.
+
+\begin{verbatim}
+'git' is not recognized as an internal or external command,
+operable program or batch file.
+\end{verbatim}
+
+  \textbf{Installing Git on macOS}
+
+  When you ran \texttt{git\ —version}, it will have prompted you to install Git. Follow these instructions.
+
+  \textbf{Installing Git on Windows}
+
+  Go to the Git for Windows installer and download Git. Then, install it with all the default settings.
+
+  Click here for instructions on \textbf{installing Git on Linux}.
+
+  \begin{quote}
+  DOUBLE CHECK: Check that your install worked! Re-run \texttt{git\ -\/-verison} and check that you get your git version!
   \end{quote}
 \item
   \textbf{Install the bookdown R package}: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: \texttt{install.packages("bookdown")}.

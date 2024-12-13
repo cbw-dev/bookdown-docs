@@ -326,7 +326,7 @@ div.csl-indent {
 <ol style="list-style-type: decimal">
 <li><p><strong>Download and install R</strong> <a href="https://cran.rstudio.com/" target="_blank">here</a>. (You need R 3.6.0+ installed for RStudio.) Follow the instructions for your operating system (Linux/macOS/Windows).</p>
 <blockquote>
-<p>Note: You can check if windows was installed properly on <em>macOS</em> by running the command <code>R</code> in terminal. On <em>windows</em>, –must test–.</p>
+<p>Check: You can check if windows was installed properly on <em>macOS</em> by running the command <code>R</code> in terminal. On <em>windows</em>, –must test–.</p>
 </blockquote>
 <blockquote>
 <p>Note: We will not be using the R console, instead, we will be using RStudio!</p>
@@ -335,13 +335,28 @@ div.csl-indent {
 <blockquote>
 <p>Note: While installing, you may be asked whether to install the 32-bit or 62-bit RStudio version. Download the version that matches your PC.</p>
 </blockquote></li>
+<li><p><strong>Install Git, if you don’t already have it.</strong> Git is a tool that will help us with version control when editing your workshop. Linux and macOS computers tend to have Git installed. Windows computers must install Git. However, make sure to double check if you already have Git, so that you don’t have to install it again! Check if you have Git by running this command in terminal/command prompt:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="get-started.html#cb1-1" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div>
+<pre><code>## git version 2.39.5 (Apple Git-154)</code></pre>
+<p>If your output looks like “git version X.X.X …”, you already have git! Move onto step 4!</p>
+<p>However, if your output says “Git is not recognized” or a similar statement (such as the one provided below), you do not have Git, so you must install it as well.</p>
+<pre><code>&#39;git&#39; is not recognized as an internal or external command,
+operable program or batch file.</code></pre>
+<p><a href="https://github.com/git-guides/install-git#install-git-on-mac" target="_blank"><strong>Installing Git on macOS</strong></a></p>
+<p>When you ran <code>git —version</code>, it will have prompted you to install Git. Follow these instructions.</p>
+<p><a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank"><strong>Installing Git on Windows</strong></a></p>
+<p>Go to the <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">Git for Windows installer</a> and download Git. Then, install it with all the default settings.</p>
+<p>Click here for instructions on <a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank"><strong>installing Git on Linux</strong></a>.</p>
+<blockquote>
+<p>DOUBLE CHECK: Check that your install worked! Re-run <code>git --verison</code> and check that you get your git version!</p>
+</blockquote></li>
 <li><p><strong>Install the bookdown R package</strong>: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: <code>install.packages("bookdown")</code>.</p>
 <ul>
 <li><p><strong>Download all the packages you will need!</strong> Do this by running the following command:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="get-started.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;magrittr&quot;</span>, <span class="st">&quot;stringi&quot;</span>, <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;reticulate&quot;</span>, <span class="st">&quot;tinytex&quot;</span>,<span class="st">&quot;servr&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="get-started.html#cb4-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;magrittr&quot;</span>, <span class="st">&quot;stringi&quot;</span>, <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;reticulate&quot;</span>, <span class="st">&quot;tinytex&quot;</span>,<span class="st">&quot;servr&quot;</span>))</span></code></pre></div>
 <p>You may have to approve some downloads. Say “yes” and enter your password when necessary. This tells bookdown you are okay with downloading and installing these packages in their default locations.</p>
 <p>Finally, <strong>run the following command</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="get-started.html#cb2-1" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div></li>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="get-started.html#cb5-1" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div></li>
 </ul></li>
 </ol>
 <p>We’re ready to start working with CBW’s bookdown workshop template now!</p>
