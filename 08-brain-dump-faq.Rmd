@@ -2,32 +2,22 @@
 
 Congrats you got through most of CBW's Bookdown Documentation!
 
-
-
 ## Danger Zones
 
 - renaming your file with this project, doesn't change the .Rprog file!
-
-
-- GIT TIPS PAGE ???
-- BEST PRACTICES PAGE
-
-- MAKE SURE TO EXPLAIN WHAT HAPPENS WHEN MERGE CONFLICTS APPEAR
 
 Ex. Forgot to pull before editing?
 - Your git window will say (at the top of the window) your branch is ahead of the main branch
 - You will probably have to deal with a merge conflict
 - [this is pretty in-depth]
 
-- update favicon.ico image in template with one with higher quality
-
+<!-- GIT CONFLICT EXPLANATION! -->
 
 ## Potential Errors & Bugs
 
 Trying to build and getting **"Exited with status 1."**? Bad news: Your book is not building properly. Good news: here are some *(hopefully)* helpful debugging tricks.
 
 - **"Error: LaTeX failed to compile _main.tex."** - Essentially, something in your code is not allowing the output to be produced properly. Something in your code is producing incorrect output that is not allowing output to be produced. 
-    
     > TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug. 
 
 - If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see **"Permission denied"** in your warning messages, trying running this command ```chmod -R u+w docs``` in terminal, in the folder containing your docs folder [CLARIFY ?]
@@ -58,3 +48,13 @@ Sometimes, RStudio defaults so that there is no text wrapping when viewing your 
 If you are having difficulties using Markdown Syntax, RStudio has a work around! See [Visaul R Markdown](#visual-r-md) for more information.
 
 ## FAQs
+
+1. I made a change via GitHub and and it's not appearing on the website. Why can I not see my edit?
+
+    Let's recall this image.
+    
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=792&amp;h=147">
+    
+    We build our **HTML** files using Bookdown. This means, any edits we make have to be local, so we can build our website and have the changes in our HTML files. GitHub Pages (which generates our website) only looks at the HTML pages, so even though there is a change on GitHub, it is on the .Rmd files. Hence, we don't see it on the actual website!
+    
+    Next Step: Git Pull your change locally. Build the website. Git Push and then see your edits once the website finishes deploying!

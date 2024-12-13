@@ -1,0 +1,13 @@
+# **Recurring Workshop**: Creation [RC] and Deployment
+
+Certain aspects of the setup for workshops will be different depending on your role. Headers ending in "[RC]" are for Regional Coordinators. Headers without "[RC]" are assumed to be relevant to both RC and workshop teams.
+
+## Recreate the Workshop
+
+git fork
+
+## Deploy
+
+
+
+## Edit

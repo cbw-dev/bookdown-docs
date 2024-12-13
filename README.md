@@ -15,17 +15,16 @@ More Helpful Code:
 BUGS:
 - enforcing links to create a new tab, when they are headers, makes a weird sidebar issue, see sidebar for GitHub Instructions
 
-NOTE:
-
-- probably have a separate page of documentation for reusing a workshop from a previous year (git fork?)
-
-
+To-Do List
+- EXPLAIN MERGE CONFLICTS
+- update favicon.ico image in template with one with higher quality
 
 Suggestions:
 - add timing of downloads/installations (R/RStudio, developer tools, reticulate)
 - add code chunk option to the file setup explanation code chunk, so that this takes up the width of the entire page?
 - add border (css styling) to instruction pictures
 - change callout colours ??
+- best practices section ?
 
 
 Potential Colour Template? (see the blue, green and red)
@@ -35,8 +34,8 @@ https://coolors.co/303a2b-d84444-9cc0fa-7cbf73-615d6c
 
 
 
-
 Figure this out:
+- currently, the share links are based on what we put in the '_output.yml' file? This is not that important but we should figure this out at some point.
 ```
 ## Metadata for sharing
 

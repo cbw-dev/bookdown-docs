@@ -300,11 +300,11 @@ Now that you're done the installations, it's time to go to the next step: \hyper
 
 \end{bluebox}
 
-\chapter{\texorpdfstring{Creating {[}RC{]} and Deploying Your \textbf{New} Workshop}{Creating {[}RC{]} and Deploying Your New Workshop}}\label{creating-rc-and-deploying-your-new-workshop}
+\chapter{\texorpdfstring{\textbf{New Workshop}: Creation {[}RC{]} and Deployment}{New Workshop: Creation {[}RC{]} and Deployment}}\label{new-workshop-creation-rc-and-deployment}
 
 Certain aspects of the setup for workshops will be different depending on your role. Headers ending in ``{[}RC{]}'' are for Regional Coordinators. Headers without ``{[}RC{]}'' are assumed to be relevant to both RC and workshop teams.
 
-\section{Workshop Setup {[}RC{]}}\label{rc-workshop-setup}
+\section{Setup the Workshop {[}RC{]}}\label{rc-workshop-setup}
 
 Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop. \textbf{Start these instructions with a GitHub account and being logged in}.
 
@@ -391,6 +391,18 @@ This is a very specific (and unlikely) warning. It occurs when 1 deploy hasn't f
 
 \section{Setting Up Team Access {[}RC?{]} (Nia will fill this in)}\label{setting-up-team-access-rc-nia-will-fill-this-in}
 
+\chapter{\texorpdfstring{\textbf{Recurring Workshop}: Creation {[}RC{]} and Deployment}{Recurring Workshop: Creation {[}RC{]} and Deployment}}\label{recurring-workshop-creation-rc-and-deployment}
+
+Certain aspects of the setup for workshops will be different depending on your role. Headers ending in ``{[}RC{]}'' are for Regional Coordinators. Headers without ``{[}RC{]}'' are assumed to be relevant to both RC and workshop teams.
+
+\section{Recreate the Workshop}\label{recreate-the-workshop}
+
+git fork
+
+\section{Deploy}\label{deploy}
+
+\section{Edit}\label{edit}
+
 \chapter{Command Line, SSH Connection \& Git Clone}\label{command-line-ssh-connection-git-clone}
 
 If you're familiar with the command line and have already established a SSH connection, continue to \hyperref[git-clone]{git cloning your workshop template locally}.
@@ -456,9 +468,9 @@ They follow the format: ``{[}Linux Command{]} OR''{[}Windows Command{]}''
 
 \begin{verbatim}
 ## 01-getting-started.Rmd
-## 02-git-clone.Rmd
-## 03-terminal-and-git.Rmd
-## 04-files-and-build.Rmd
+## 02-git-clone-new.Rmd
+## 03-git-fork-old.Rmd
+## 04-terminal-and-git.Rmd
 \end{verbatim}
 
 A similar command in \textbf{Command Prompt} is \texttt{dir} (short for ``directory''), which also outputs the files and folders in your current directory (along with timestamps)!
@@ -917,13 +929,13 @@ But what do any of these files mean? Which ones do I edit? Which ones shouldn't 
 
 \subsection{Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer!}\label{oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer}
 
-That's ok! Follow these steps to delete the git connection, as well as the entire folder from your local computer.
+That's ok! To delete the entire local repository and the folder itself, run the following command:
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-\end{enumerate}
+\begin{verbatim}
+rm -fr [folder path]
+\end{verbatim}
+
+where ``folder path'' is a file address to the git cloned folder/repository that you want to delete.
 
 \chapter{So What Do These Files Mean?}\label{so-what-do-these-files-mean}
 
@@ -1896,26 +1908,15 @@ Congrats you got through most of CBW's Bookdown Documentation!
 \section{Danger Zones}\label{danger-zones}
 
 \begin{itemize}
+\tightlist
 \item
   renaming your file with this project, doesn't change the .Rprog file!
-\item
-  GIT TIPS PAGE ???
-\item
-  BEST PRACTICES PAGE
-\item
-  MAKE SURE TO EXPLAIN WHAT HAPPENS WHEN MERGE CONFLICTS APPEAR
 \end{itemize}
 
 Ex. Forgot to pull before editing?
 - Your git window will say (at the top of the window) your branch is ahead of the main branch
 - You will probably have to deal with a merge conflict
 - {[}this is pretty in-depth{]}
-
-\begin{itemize}
-\tightlist
-\item
-  update favicon.ico image in template with one with higher quality
-\end{itemize}
 
 \section{Potential Errors \& Bugs}\label{potential-errors-bugs}
 
@@ -1924,10 +1925,7 @@ Trying to build and getting \textbf{``Exited with status 1.''}? Bad news: Your b
 \begin{itemize}
 \item
   **``Error: LaTeX failed to compile \_main.tex.''** - Essentially, something in your code is not allowing the output to be produced properly. Something in your code is producing incorrect output that is not allowing output to be produced.
-
-  \begin{quote}
-  TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug.
-  \end{quote}
+  \textgreater{} TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug.
 \item
   If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see \textbf{``Permission denied''} in your warning messages, trying running this command \texttt{chmod\ -R\ u+w\ docs} in terminal, in the folder containing your docs folder {[}CLARIFY ?{]}
 \item
@@ -1971,6 +1969,18 @@ Sometimes, RStudio defaults so that there is no text wrapping when viewing your 
 If you are having difficulties using Markdown Syntax, RStudio has a work around! See \hyperref[visual-r-md]{Visaul R Markdown} for more information.
 
 \section{FAQs}\label{faqs}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  I made a change via GitHub and and it's not appearing on the website. Why can I not see my edit?
+
+  Let's recall this image.
+
+  We build our \textbf{HTML} files using Bookdown. This means, any edits we make have to be local, so we can build our website and have the changes in our HTML files. GitHub Pages (which generates our website) only looks at the HTML pages, so even though there is a change on GitHub, it is on the .Rmd files. Hence, we don't see it on the actual website!
+
+  Next Step: Git Pull your change locally. Build the website. Git Push and then see your edits once the website finishes deploying!
+\end{enumerate}
 
 \part{DEVELOPERS GUIDE}\label{part-developers-guide}
 
