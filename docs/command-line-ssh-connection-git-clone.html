@@ -454,6 +454,8 @@ div.csl-indent {
 <p>this passphrase is so secretive that won’t see it being typed. You won’t see a cursor moving and you won’t see ● instead of the characters you’re typing. Rest assured, your computer is receiving your text.</p>
 <p>If you make a mistake, it’s best to hit the “delete” bar many times, and retype.</p>
 </div>
+<p style="font-size: 20px;">
+</p>
 <pre><code>&gt; Enter same passphrase again: [TYPE THE SAME PASSPHRASE]</code></pre>
 <blockquote>
 <p>You should keep note of this passphrase for your own use. We (should) never have to use it again after finishing these steps.</p>
@@ -533,7 +535,47 @@ div.csl-indent {
 <div id="git-clone" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Getting the Template on Your Local Computer - Git Clone!<a href="command-line-ssh-connection-git-clone.html#git-clone" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li><p>Navigate to where in your local file system you want to have your workshop in (hint: cd + <code>tab</code>).</p></li>
+<li><p>Navigate to where in your local file system you want to have your workshop in Terminal/Windows PowerShell/Command Prompt.</p>
+<div class="bluebox">
+<p><strong>Recommended Workshop Location:</strong></p>
+<p>CBW recommends that you create a folder within your Documents folder called “CBWGitHub”, which is where you will place your CBW workshop project files.</p>
+In Finder/File Explorer:
+<ul>
+<li>Navigate to ‘Documents’</li>
+<li>Create a folder and name it “CBWGithub”</li>
+</ul>
+<br>
+<strong>Copy the file address of the CBWGithub folder:</strong>
+<ul>
+<li>On <strong>Windows</strong>
+<ul>
+<li>Using File Explorer, find your “CBWGithub” folder.</li>
+<li>Right click the “CBWGithub” folder and press “<em>Copy as path</em>”.
+<ul>
+<li>If you are currently inside the “CBWGithub” folder, you can right click on it’s name in the header and press either “<em>Copy Address</em>” or “<em>Copy Address as Text</em>”</li>
+</ul></li>
+</ul></li>
+<li>On <strong>Mac</strong>
+<ul>
+<li>Go to the folder holding your “CBWGithub” folder (recommended to be your Documents folder)</li>
+<li>Right-click (or tap your mouse pad with 2 fingers) the “CBWGithub” folder and press the “Options” keyboard key (in the bottom left).</li>
+<li>While holding the “Options” key, go the the 4th section from the top, and click “Copy "CBWGithub" as Pathname”.</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>You may want to paste your file address somewhere where you can quickly find it, so it is easier to navigate to in the future.</p>
+</blockquote>
+</div>
+<p style="font-size: 8px;">
+</p>
+<div class="greenbox">
+<div class="center">
+<p><strong>Navigate to your workshop folder in Terminal:</strong></p>
+</div>
+<p>Navigate using the “cd” command. For example, if you used the recommended instructions, you should run “cd” and paste (since you already copied the file address).</p>
+<p>If you didn’t use the recommended path and folder name, you can use “cd + tab” (where tab is the keyboard key, “tab”) to try to find your path and folder.</p>
+</div>
+<p><br></p></li>
 <li><p>Return to your workshop repository on GitHub.</p>
 <p>Find the ssh for your workshop repository:</p>
 <ul>

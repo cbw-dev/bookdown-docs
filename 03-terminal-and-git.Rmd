@@ -166,6 +166,7 @@ In the GitHub instructions, commands start with "\$" sign. In Linux, the termina
     
     If you make a mistake, it's best to hit the "delete" bar many times, and retype. 
     ::::
+    <p style="font-size: 20px;"></p>
     
     ```
     > Enter same passphrase again: [TYPE THE SAME PASSPHRASE]
@@ -297,7 +298,44 @@ Thankfully, we only need to do these steps once! Additionally, most security que
 
 ## Getting the Template on Your Local Computer - Git Clone! {#git-clone}
 
-1.  Navigate to where in your local file system you want to have your workshop in (hint: cd + `tab`).
+1.  Navigate to where in your local file system you want to have your workshop in Terminal/Windows PowerShell/Command Prompt.
+
+    :::: {.bluebox data-latex=""}
+    **Recommended Workshop Location:**
+    
+    CBW recommends that you create a folder within your Documents folder called "CBWGitHub", which is where you will place your CBW workshop project files.
+    
+    In Finder/File Explorer:
+    - Navigate to 'Documents'
+    - Create a folder and name it "CBWGithub" 
+    
+    <br>
+    **Copy the file address of the CBWGithub folder:**
+    - On **Windows**
+      - Using File Explorer, find your "CBWGithub" folder.
+      - Right click the "CBWGithub" folder and press "*Copy as path*".
+        - If you are currently inside the "CBWGithub" folder, you can right click on it's name in the header and press either "*Copy Address*" or "*Copy Address as Text*"
+    
+    - On **Mac**
+      - Go to the folder holding your "CBWGithub" folder (recommended to be your Documents folder)
+      - Right-click (or tap your mouse pad with 2 fingers) the "CBWGithub" folder and press the "Options" keyboard key (in the bottom left).
+      - While holding the "Options" key, go the the 4th section from the top, and click "Copy \"CBWGithub\" as Pathname".
+    
+    > You may want to paste your file address somewhere where you can quickly find it, so it is easier to navigate to in the future.
+    ::::
+    
+      <p style="font-size: 8px;"></p>
+    
+    :::: {.greenbox data-latex=""}
+    ::: {.center data-latex=""}
+    **Navigate to your workshop folder in Terminal:**
+    :::
+    
+    Navigate using the "cd" command. For example, if you used the recommended instructions, you should run "cd" and paste (since you already copied the file address).
+    
+    If you didn't use the recommended path and folder name, you can use "cd + tab" (where tab is the keyboard key, "tab") to try to find your path and folder.
+    ::::
+    <br>
 
 2.  Return to your workshop repository on GitHub.
 

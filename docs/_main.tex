@@ -798,7 +798,76 @@ Thankfully, we only need to do these steps once! Additionally, most security que
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Navigate to where in your local file system you want to have your workshop in (hint: cd + \texttt{tab}).
+  Navigate to where in your local file system you want to have your workshop in Terminal/Windows PowerShell/Command Prompt.
+
+  \begin{bluebox}
+
+  \textbf{Recommended Workshop Location:}
+
+  CBW recommends that you create a folder within your Documents folder called ``CBWGitHub'', which is where you will place your CBW workshop project files.
+
+  In Finder/File Explorer:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Navigate to `Documents'
+  \item
+    Create a folder and name it ``CBWGithub''
+  \end{itemize}
+
+  \textbf{Copy the file address of the CBWGithub folder:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    On \textbf{Windows}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Using File Explorer, find your ``CBWGithub'' folder.
+    \item
+      Right click the ``CBWGithub'' folder and press ``\emph{Copy as path}''.
+
+      \begin{itemize}
+      \tightlist
+      \item
+        If you are currently inside the ``CBWGithub'' folder, you can right click on it's name in the header and press either ``\emph{Copy Address}'' or ``\emph{Copy Address as Text}''
+      \end{itemize}
+    \end{itemize}
+  \item
+    On \textbf{Mac}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Go to the folder holding your ``CBWGithub'' folder (recommended to be your Documents folder)
+    \item
+      Right-click (or tap your mouse pad with 2 fingers) the ``CBWGithub'' folder and press the ``Options'' keyboard key (in the bottom left).
+    \item
+      While holding the ``Options'' key, go the the 4th section from the top, and click ``Copy "CBWGithub" as Pathname''.
+    \end{itemize}
+  \end{itemize}
+
+  \begin{quote}
+  You may want to paste your file address somewhere where you can quickly find it, so it is easier to navigate to in the future.
+  \end{quote}
+
+  \end{bluebox}
+
+  \begin{greenbox}
+
+  \begin{center}
+  \textbf{Navigate to your workshop folder in Terminal:}
+
+  \end{center}
+
+  Navigate using the ``cd'' command. For example, if you used the recommended instructions, you should run ``cd'' and paste (since you already copied the file address).
+
+  If you didn't use the recommended path and folder name, you can use ``cd + tab'' (where tab is the keyboard key, ``tab'') to try to find your path and folder.
+
+  \end{greenbox}
 \item
   Return to your workshop repository on GitHub.
 
@@ -1645,7 +1714,7 @@ Write your tip here.
 \begin{quote}
 \textbf{Formatting Tip:}
 
-Put \texttt{\textless{}br\textgreater{}} on the line after \texttt{::::} to create a line between your callout and the next piece of content.
+Put \texttt{\textless{}br\textgreater{}} on the line after \texttt{::::} to create a line between your callout and the next piece of content. If this line break is too big, try adding this instead \texttt{\textless{}p\ style="font-size:\ 8px;"\textgreater{}\textless{}/p\textgreater{}}, and change the font size to increase/decrease the line height.
 \end{quote}
 
 This formatting is a div that is specified in Pandoc (recall: a library Bookdown uses to create our .html website pages). Bookdown will help colour your divs so that you hopefully won't forget to include the proper amount of colons. This ends your div properly. If you stick to our callouts, you will need 4 colons at the end (\texttt{::::}).
@@ -1655,6 +1724,17 @@ This formatting is a div that is specified in Pandoc (recall: a library Bookdown
 
 If you do not end your div, all following code will not render (as if your book ends with the unfinished div)!
 \end{quote}
+
+\begin{redbox}
+
+\begin{center}
+\textbf{Warning about Callout Blocks}
+
+\end{center}
+
+Our Callout blocks are written with white text. Hence, code does not appear well in our callout blocks, since it has a light white/grey background.
+
+\end{redbox}
 
 Creating your own callouts can be difficult, and you should account for making sure both the wesbite and pdf (which uses LaTeX, so you will likely have to edit \texttt{preamble.tex}) generate properly.
 

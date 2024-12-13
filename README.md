@@ -8,6 +8,9 @@ DEV RULES:
 <a href="placeholder.com" target="_blank">Opens in new tab</a>
 ```
 
+More Helpful Code:
+- `<p style="font-size: 8px;"></p>` creates a line with height=8px
+
 
 BUGS:
 - enforcing links to create a new tab, when they are headers, makes a weird sidebar issue, see sidebar for GitHub Instructions
