@@ -335,25 +335,27 @@ div.csl-indent {
 <h3><span class="header-section-number">4.1.2</span> Common Commands (for us)<a href="command-line-ssh-connection-git-clone.html#common-commands-for-us" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <!-- Consider making this explanation a video -->
 <p>We won’t need to know that many commands, but for easy navigation and understanding, here is what you (generally) need:</p>
-<blockquote>
-<p>Note: Command headers below tend to follow the format: “[Linux Command] OR”[Windows Command]”</p>
-</blockquote>
-<div id="pwd" class="section level6 unnumbered hasAnchor">
-<h6>pwd<a href="command-line-ssh-connection-git-clone.html#pwd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
-<p>pwd stands for “print working directory”. For example, below our output is where in my folders the current .Rmd file that makes up this website is:</p>
+<div class="greenbox">
+<p><strong>Note:</strong></p>
+<p>Commands are written below as headers, with an explanation provided beneath.</p>
+<p>They follow the format: “[Linux Command] OR”[Windows Command]”</p>
+</div>
+<div id="pwd-or-echo-cd" class="section level6 unnumbered hasAnchor">
+<h6>pwd OR echo %cd%<a href="command-line-ssh-connection-git-clone.html#pwd-or-echo-cd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“pwd” stands for “print working directory”. It is a <strong>Linux</strong> command that works <strong>Windows PowerShell</strong>. The equivalent in <strong>terminal</strong> is “echo %cd%”. For example, below our output is where in my folders the current .Rmd file that makes up this website is:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="command-line-ssh-connection-git-clone.html#cb6-1" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
 <pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs</code></pre>
 </div>
 <div id="ls-or-dir" class="section level6 unnumbered hasAnchor">
 <h6>ls OR dir<a href="command-line-ssh-connection-git-clone.html#ls-or-dir" class="anchor-section" aria-label="Anchor link to header"></a></h6>
-<p>“ls” is a <strong>Terminal</strong> command that also works in <strong>Windows PowerShell</strong>. It short for “list” and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)</p>
+<p>“ls” is a <strong>Linux</strong> command that also works in <strong>Windows PowerShell</strong>. It’s short for “list” and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="command-line-ssh-connection-git-clone.html#cb8-1" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
 <!-- to save space, only output the first 4 lines -->
 <pre><code>## 01-getting-started.Rmd
 ## 02-git-clone.Rmd
 ## 03-terminal-and-git.Rmd
 ## 04-files-and-build.Rmd</code></pre>
-<p>A similar command in <strong>Command Prompt</strong> is <code>dir</code>, which also outputs the files and folders in your current directory (along with timestamps)!</p>
+<p>A similar command in <strong>Command Prompt</strong> is <code>dir</code> (short for “directory”), which also outputs the files and folders in your current directory (along with timestamps)!</p>
 </div>
 <div id="cd" class="section level6 unnumbered hasAnchor">
 <h6>cd<a href="command-line-ssh-connection-git-clone.html#cd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
@@ -439,6 +441,13 @@ div.csl-indent {
 <p>If you have already created a SSH key and you are asked to rewrite another key, look at the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name." target="_blank">GitHub Docs</a> for specific steps.</p></li>
 <li><p>Type a secure passphrase (make up a password) when prompted with:</p>
 <pre><code>&gt; Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]</code></pre>
+<div class="redbox">
+<div class="center">
+<p><strong>Before you freak out,</strong></p>
+</div>
+<p>this passphrase is so secretive that won’t see it being typed. You won’t see a cursor moving and you won’t see ● instead of the characters you’re typing. Rest assured, your computer is receiving your text.</p>
+<p>If you make a mistake, it’s best to hit the “delete” bar many times, and retype.</p>
+</div>
 <pre><code>&gt; Enter same passphrase again: [TYPE THE SAME PASSPHRASE]</code></pre>
 <blockquote>
 <p>You should keep note of this passphrase for your own use. We (should) never have to use it again after finishing these steps.</p>

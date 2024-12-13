@@ -24,11 +24,17 @@ We can use the command line using certain tools and applications. Terminal is a 
 
 We won't need to know that many commands, but for easy navigation and understanding, here is what you (generally) need:
 
-> Note: Command headers below tend to follow the format: "[Linux Command] OR "[Windows Command]"
+:::: {.greenbox data-latex=""}
+**Note:**
 
-###### pwd {.unnumbered}
+Commands are written below as headers, with an explanation provided beneath.
 
-pwd stands for "print working directory". For example, below our output is where in my folders the current .Rmd file that makes up this website is:
+They follow the format: "[Linux Command] OR "[Windows Command]"
+::::
+
+###### pwd OR echo %cd% {.unnumbered}
+
+"pwd" stands for "print working directory". It is a **Linux** command that works **Windows PowerShell**. The equivalent in **terminal** is "echo %cd%". For example, below our output is where in my folders the current .Rmd file that makes up this website is:
 
 ```{bash}
 pwd
@@ -36,7 +42,7 @@ pwd
 
 ###### ls OR dir {.unnumbered}
 
-"ls" is a **Terminal** command that also works in **Windows PowerShell**. It short for "list" and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)
+"ls" is a **Linux** command that also works in **Windows PowerShell**. It's short for "list" and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)
 
 ```{bash, results='hide'}
 ls
@@ -48,7 +54,7 @@ ls
 ls | head -n 4
 ```
 
-A similar command in **Command Prompt** is `dir`, which also outputs the files and folders in your current directory (along with timestamps)!
+A similar command in **Command Prompt** is `dir` (short for "directory"), which also outputs the files and folders in your current directory (along with timestamps)!
 
 ###### cd {.unnumbered}
 
@@ -136,10 +142,21 @@ Follow the following 3 main steps. Each of these subheaders links to GitHub's of
     If you have already created a SSH key and you are asked to rewrite another key, look at the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name." target="_blank">GitHub Docs</a> for specific steps.
 
 3.  Type a secure passphrase (make up a password) when prompted with:
-
+    
     ```         
     > Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]
     ```
+    
+    :::: {.redbox data-latex=""}
+    ::: {.center data-latex=""}
+    **Before you freak out,**
+    :::
+    
+    this passphrase is so secretive that won't see it being typed. You won't see a cursor moving and you won't see ● instead of the characters you're typing. Rest assured, your computer is receiving your text.
+    
+    If you make a mistake, it's best to hit the "delete" bar many times, and retype. 
+    ::::
+    
     ```
     > Enter same passphrase again: [TYPE THE SAME PASSPHRASE]
     ```

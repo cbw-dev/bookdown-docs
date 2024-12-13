@@ -41,15 +41,25 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
     
     <a href="https://github.com/git-guides/install-git#install-git-on-mac" target="_blank">**Installing Git on macOS**</a>
     
-    When you ran `git —version`, it will have prompted you to install Git. Follow these instructions.
+    - When you ran `git —version`, it will have prompted you to install Git. Follow these instructions.
     
     <a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank">**Installing Git on Windows**</a>
 
-    Go to the <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">Git for Windows installer</a> and download Git. Then, install it with all the default settings.
+    - Go to the <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">Git for Windows installer</a> and download Git. Then, install it with all the default settings.
 
     Click here for instructions on <a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank">**installing Git on Linux**</a>.
     
-    > DOUBLE CHECK: Check that your install worked! Re-run `git --verison` and check that you get your git version!
+    :::: {.greenbox data-latex=""}
+    ::: {.center data-latex=""}
+    **Double Check!**
+    :::
+    
+    Check that your install worked! Re-run "git -\-verison" and check that you get your git version! (On Windows, this may look like "git version 2.47.1.windows.1").
+    
+    > Note: If you installed Git while having a Command Prompt/Windows PowerShell window open, close this window and open a new one to run "git --version". This acts as a refresher to Command Prompt/Windows PowerShell.
+    
+    ::::
+    <br>
 
 4.  **Install the bookdown R package**: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: `install.packages("bookdown")`.
 

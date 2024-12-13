@@ -343,13 +343,24 @@ div.csl-indent {
 <pre><code>&#39;git&#39; is not recognized as an internal or external command,
 operable program or batch file.</code></pre>
 <p><a href="https://github.com/git-guides/install-git#install-git-on-mac" target="_blank"><strong>Installing Git on macOS</strong></a></p>
-<p>When you ran <code>git —version</code>, it will have prompted you to install Git. Follow these instructions.</p>
+<ul>
+<li>When you ran <code>git —version</code>, it will have prompted you to install Git. Follow these instructions.</li>
+</ul>
 <p><a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank"><strong>Installing Git on Windows</strong></a></p>
-<p>Go to the <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">Git for Windows installer</a> and download Git. Then, install it with all the default settings.</p>
+<ul>
+<li>Go to the <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">Git for Windows installer</a> and download Git. Then, install it with all the default settings.</li>
+</ul>
 <p>Click here for instructions on <a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank"><strong>installing Git on Linux</strong></a>.</p>
+<div class="greenbox">
+<div class="center">
+<p><strong>Double Check!</strong></p>
+</div>
+<p>Check that your install worked! Re-run “git --verison” and check that you get your git version! (On Windows, this may look like “git version 2.47.1.windows.1”).</p>
 <blockquote>
-<p>DOUBLE CHECK: Check that your install worked! Re-run <code>git --verison</code> and check that you get your git version!</p>
-</blockquote></li>
+<p>Note: If you installed Git while having a Command Prompt/Windows PowerShell window open, close this window and open a new one to run “git –version”. This acts as a refresher to Command Prompt/Windows PowerShell.</p>
+</blockquote>
+</div>
+<p><br></p></li>
 <li><p><strong>Install the bookdown R package</strong>: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: <code>install.packages("bookdown")</code>.</p>
 <ul>
 <li><p><strong>Download all the packages you will need!</strong> Do this by running the following command:</p>
