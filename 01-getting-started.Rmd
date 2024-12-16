@@ -23,19 +23,27 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
     
     *MacOS*
     
-    Run the command "R" in terminal. An R Console should start and you should be able to start running R commands. <br>
+    Run the command "R" in terminal. An R Console should start and you should be able to start running R commands. If not, your install was unsuccessful. <br>
     
     *Windows*
     
+    1. Click the "Start" menu icon in your bottom left of your taskbar (often a window pane). 
+    2. Cick "All >" (in the top right of the popup) to see all the programs you have installed.
+    3. Scroll to the "R" section. If "R X.X.X" (where the X's can differ, and depend on the R version you installed) is present, you installed R properly! If not, your install was unsuccessful.
+    
+    <br>
+    > If you have not installed R properly, try deleting your previous attempt download. Redownloading, and reinstalling. 
     ::::
     
-    > Note: **We will not be using the R console**, instead, we will be using RStudio!
+    <p style="font-size: 8px;"></p>
+    
+    > Note: **We will not be using the R console** (which will open if you try clicking R X.X.X), instead, we will be using RStudio!
 
 2.  **Download and install RStudio** <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">here</a>. Scroll down to find downloads for non-macOS.
 
     > Note: While installing, you may be asked whether to install the 32-bit or 62-bit RStudio version. Download the version that matches your PC.
 
-3.  **Install Git, if you don't already have it.** Git is a tool that will help us with version control when editing your workshop. Linux and macOS computers tend to have Git installed. Windows computers must install Git. However, make sure to double check if you already have Git, so that you don't have to install it again! Check if you have Git by running this command in terminal/command prompt:
+3.  **Install Git, if you don't already have it.** Git is a tool that will help us with version control when editing your workshop. Linux and macOS computers tend to have Git installed. Windows computers must install Git. However, make sure to double check if you already have Git, so that you don't have to install it again! **Check if you have Git** by running this command in terminal/command prompt:
 
     ```{bash}
     git --version

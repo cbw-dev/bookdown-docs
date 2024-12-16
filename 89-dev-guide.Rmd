@@ -1,0 +1,15 @@
+# Developer's Guide
+
+Is something going wrong? Does nobody know why?
+
+> Tip: Try asking Nia!
+
+Hi. I'm Julia. I made the initial copy of the Bookdown Docs. If you have the need to read the developer guide, that means I messed up the documentation, to the point where you have to look through the core parts of the bookdown website development to figure out what went wrong. 
+
+This developer's guide will have the core understanding of what's going on behind bookdown.
+
+Tips: I have a document of Lab Notes. It's rough, but all my struggles have been either documented here or there.
+
+**[DEV GUIDE IS A WORK IN PROGRESS]**
+
+<!-- Julia will probably not finish this before she leaves. -->

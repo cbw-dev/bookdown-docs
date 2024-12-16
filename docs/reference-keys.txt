@@ -61,6 +61,7 @@ ease-of-use
 wrapping-your-code
 visual-r-markdown
 faqs
+developers-guide
 build-site
 how-to-edit-_bookdown.yml
 how-to-edit-_output.yml-rc

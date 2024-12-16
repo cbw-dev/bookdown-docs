@@ -16,14 +16,14 @@ We will be creating a copy the existing workshop and workshop website by git for
 
 **How to Git Fork**
 
-1. Go to the pre-existing workshop repository under the <a href="https://github.com/bioinformaticsdotca/" target="_blank">bioinformaticsdotca GitHub</a>. For example, if we wanted to create a new workshop version of <a href="https://github.com/bioinformaticsdotca/AUR_2024" target="_blank">Analysis Using R 2024 (AUR 2024)</a>, we would go to this page:
+1. **Go to the pre-existing workshop repository** under the <a href="https://github.com/bioinformaticsdotca/" target="_blank">bioinformaticsdotca GitHub</a> for the workshop you want to recreate. For example, if we wanted to create a new workshop version of <a href="https://github.com/bioinformaticsdotca/AUR_2024" target="_blank">Analysis Using R 2024 (AUR 2024)</a>, we would go to this page:
    
    <img src="https://docs.google.com/drawings/d/e/2PACX-1vR6kuw0wnLD1WL01iuZfnP3rPrDVhB-oClsjUribaDS7GpJNXw9QXbUVZ3aBCIO5N4pBKJXGtwpScfV/pub?w=2068&amp;h=597" alt="Analysis Using R 2024 GitHub Repo Screenshot">
 
-2. Click "Fork" as shown below.
+2. **Click "Fork"** as shown below.
      <img src="https://docs.google.com/drawings/d/e/2PACX-1vQKy0kL2lRkDMug28L6zdgEw_WmUIDGhUi5vor_N5SpLyUMFvtSwTnoHpmefZChkSbEQhEcYHHNFy2Z/pub?w=2867&amp;h=997" alt="Where to find the fork button on a GitHub Repo">
      
-3. You will be brought to this page. You need to update the following parts: the owner (change to bioinformaticsdotca, as shown), the new repository name (follow CBW Guidelines) and the description. The fork will automatically have "Copy the `main` branch only", which it should be (do not deselect this). Then, click the green `fork` button in the bottom right, as highlighted below.
+3. You will be brought to this page. You need to **update** the following parts: the **owner** (change to bioinformaticsdotca, as shown), the **new repository name** (follow CBW Guidelines) and the **description**. The fork will automatically have "Copy the `main` branch only", which it should be (do not deselect this). Then, click the green `fork` button in the bottom right, as highlighted below.
 
     <img src="https://docs.google.com/drawings/d/e/2PACX-1vQGQ5pL3qc29i5p5m_aQmyH4YOFUCMVvfryHx3kpR8d-AviF0BKDdCd40GJSM4qc8N2P42TNMp2UIkD/pub?w=2864&amp;h=1624" alt="fork page, with edits highlighted">
 
