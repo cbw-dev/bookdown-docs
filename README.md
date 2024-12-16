@@ -17,6 +17,7 @@ BUGS:
 
 To-Do List
 - EXPLAIN MERGE CONFLICTS
+- FIND A BETTER WAY TO SHOW TABLES
 - update favicon.ico image in template with one with higher quality
 
 Suggestions:
