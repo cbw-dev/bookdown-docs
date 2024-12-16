@@ -326,13 +326,30 @@ div.csl-indent {
 <div id="recurring-workshop-copying-rc-and-deployment" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">4</span> <strong>Recurring Workshop</strong>: Copying [RC] and Deployment<a href="recurring-workshop-copying-rc-and-deployment.html#recurring-workshop-copying-rc-and-deployment" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Certain aspects of the setup for workshops will be different depending on your role. Headers ending in “[RC]” are for Regional Coordinators. Headers without “[RC]” are assumed to be relevant to both RC and workshop teams.</p>
+<div class="greenbox">
+<div class="center">
+<p><strong>How’s this different than the <a href="new-workshop-create-deploy.html#new-workshop-create-deploy">New Workshop: Creation [RC] and Deployment</a> page?</strong></p>
+</div>
+<p>You should be on this page if CBW already has a version of this workshop as a website, and you mainly wanted to reuse it (maybe with some edits).</p>
+</div>
 <div id="recreate-the-workshop" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Recreate the Workshop<a href="recurring-workshop-copying-rc-and-deployment.html#recreate-the-workshop" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>git fork</p>
+<p>We will be creating a copy the existing workshop and workshop website by git forking the repository that hosts the existing workshop website. (This is explained more thoroughly as you actually create your website!)</p>
+<p><strong>How to Git Fork</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Go to the pre-existing workshop repository under the <a href="https://github.com/bioinformaticsdotca/" target="_blank">bioinformaticsdotca GitHub</a>. For example, if we wanted to create a new workshop version of <a href="https://github.com/bioinformaticsdotca/AUR_2024" target="_blank">Analysis Using R 2024 (AUR 2024)</a>, we would go to this page:</p>
+<p><img src="https://docs.google.com/drawings/d/e/2PACX-1vR6kuw0wnLD1WL01iuZfnP3rPrDVhB-oClsjUribaDS7GpJNXw9QXbUVZ3aBCIO5N4pBKJXGtwpScfV/pub?w=2068&amp;h=597" alt="Analysis Using R 2024 GitHub Repo Screenshot"></p></li>
+<li><p>Click “Fork” as shown below.
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQKy0kL2lRkDMug28L6zdgEw_WmUIDGhUi5vor_N5SpLyUMFvtSwTnoHpmefZChkSbEQhEcYHHNFy2Z/pub?w=2867&amp;h=997" alt="Where to find the fork button on a GitHub Repo"></p></li>
+<li><p>You will be brought to this page. You need to update the following parts: the owner (change to bioinformaticsdotca, as shown), the new repository name (follow CBW Guidelines) and the description. The fork will automatically have “Copy the <code>main</code> branch only”, which it should be (do not deselect this). Then, click the green <code>fork</code> button in the bottom right, as highlighted below.</p>
+<p><img src="https://docs.google.com/drawings/d/e/2PACX-1vQGQ5pL3qc29i5p5m_aQmyH4YOFUCMVvfryHx3kpR8d-AviF0BKDdCd40GJSM4qc8N2P42TNMp2UIkD/pub?w=2864&amp;h=1624" alt="fork page, with edits highlighted"></p></li>
+<li><p>You will be brought to your new repository, which will host the updated version of the pre-existing workshop!</p></li>
+</ol>
+<p>Now it’s time to generate a website from your newly forked repository!</p>
 </div>
 <div id="deploying-your-workshop-website" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Deploying Your Workshop Website<a href="recurring-workshop-copying-rc-and-deployment.html#deploying-your-workshop-website" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Deploying your (turning your files into a) website is actually the exact same as deploying for a new workshop website.</p>
+<p>Deploying your (turning these files into a) website is actually the exact same as deploying for a new workshop website.</p>
 <p>Read all content starting from <a href="new-workshop-create-deploy.html#workshop-vs-repo">Workshop Repo VS Workshop Website</a> on the <a href="new-workshop-create-deploy.html#new-workshop-create-deploy"><strong>New Workshop</strong>: Creation [RC] and Deployment</a> page
 <!-- For now, we can just link to that part in the, deploying a new workshop website, page. Alternatively, we can just copy paste it here and make some edits, or combine the 2 pages. --></p>
 </div>

@@ -326,7 +326,7 @@ Certain aspects of the setup for workshops will be different depending on your r
 
 \subsection{Workshop Repo VS Workshop Website}\label{workshop-vs-repo}
 
-Now, you have made a repository that holds what GitHub needs to make our website (the basic workshop template). Essentially, the template has already been configured so that the html files that make up our website go into a folder called \texttt{docs}. We need to tell GitHub to look at the \texttt{docs} folder to find our website files and make it available to see online (a.k.a deploy it).
+Now, you have made a repository that holds what GitHub needs to make our website (the basic workshop template). Essentially, the template has already been configured so that the html files that make up our website go into a folder called \texttt{docs}. We need to tell GitHub to look at the \texttt{docs} folder to find our website files and make it available to see online (a.k.a deploy it). This is what we mean when we say CBW uses GitHub pages to deploy our website.
 
 \begin{quote}
 Distinction:
@@ -393,13 +393,40 @@ This is a very specific (and unlikely) warning. It occurs when 1 deploy hasn't f
 
 Certain aspects of the setup for workshops will be different depending on your role. Headers ending in ``{[}RC{]}'' are for Regional Coordinators. Headers without ``{[}RC{]}'' are assumed to be relevant to both RC and workshop teams.
 
+\begin{greenbox}
+
+\begin{center}
+\textbf{How's this different than the \hyperref[new-workshop-create-deploy]{New Workshop: Creation {[}RC{]} and Deployment} page?}
+
+\end{center}
+
+You should be on this page if CBW already has a version of this workshop as a website, and you mainly wanted to reuse it (maybe with some edits).
+
+\end{greenbox}
+
 \section{Recreate the Workshop}\label{recreate-the-workshop}
 
-git fork
+We will be creating a copy the existing workshop and workshop website by git forking the repository that hosts the existing workshop website. (This is explained more thoroughly as you actually create your website!)
+
+\textbf{How to Git Fork}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Go to the pre-existing workshop repository under the bioinformaticsdotca GitHub. For example, if we wanted to create a new workshop version of Analysis Using R 2024 (AUR 2024), we would go to this page:
+\item
+  Click ``Fork'' as shown below.
+\item
+  You will be brought to this page. You need to update the following parts: the owner (change to bioinformaticsdotca, as shown), the new repository name (follow CBW Guidelines) and the description. The fork will automatically have ``Copy the \texttt{main} branch only'', which it should be (do not deselect this). Then, click the green \texttt{fork} button in the bottom right, as highlighted below.
+\item
+  You will be brought to your new repository, which will host the updated version of the pre-existing workshop!
+\end{enumerate}
+
+Now it's time to generate a website from your newly forked repository!
 
 \section{Deploying Your Workshop Website}\label{deploying-your-workshop-website}
 
-Deploying your (turning your files into a) website is actually the exact same as deploying for a new workshop website.
+Deploying your (turning these files into a) website is actually the exact same as deploying for a new workshop website.
 
 Read all content starting from \hyperref[workshop-vs-repo]{Workshop Repo VS Workshop Website} on the \hyperref[new-workshop-create-deploy]{\textbf{New Workshop}: Creation {[}RC{]} and Deployment} page
 
