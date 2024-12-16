@@ -247,6 +247,8 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#ordered-list"><i class="fa fa-check"></i><font color="6495ED">Ordered List</font></a></li>
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#code"><i class="fa fa-check"></i><font color="6495ED">Code</font></a></li>
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#images"><i class="fa fa-check"></i><font color="6495ED">Images</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#pdfs"><i class="fa fa-check"></i><font color="6495ED">PDFs</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#inserting-youtube-videos"><i class="fa fa-check"></i><font color="6495ED">Inserting YouTube Videos</font></a></li>
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#links"><i class="fa fa-check"></i><font color="6495ED">Links</font></a></li>
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#links-to-other-pagessections-within-your-workshop-wesbite"><i class="fa fa-check"></i><font color="6495ED">Links to Other Pages/Sections within your Workshop Wesbite</font></a></li>
 </ul></li>
@@ -302,7 +304,7 @@ div.csl-indent {
 <li class="chapter" data-level="14.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#github-repo"><i class="fa fa-check"></i><b>14.1</b> GitHub Repo</a></li>
 <li class="chapter" data-level="14.2" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#diagram-links"><i class="fa fa-check"></i><b>14.2</b> Diagram Links</a>
 <ul>
-<li class="chapter" data-level="14.2.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#how-to-edit-a-google-drawing"><i class="fa fa-check"></i><b>14.2.1</b> How to Edit a Google Drawing</a></li>
+<li class="chapter" data-level="14.2.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#publish-google-draw"><i class="fa fa-check"></i><b>14.2.1</b> How to Publish a Google Drawing</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -329,7 +331,7 @@ div.csl-indent {
 <h1><span class="header-section-number">8</span> How to Render/Compile Code<a href="render-code.html#render-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>There are many ways to render and compile code using Bookdown!</p>
 <p>Here are most of the “language engines” (programming languages) available to render, run and compile in Bookdown!</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="render-code.html#cb66-1" tabindex="-1"></a><span class="fu">names</span>(knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">get</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="render-code.html#cb67-1" tabindex="-1"></a><span class="fu">names</span>(knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">get</span>())</span></code></pre></div>
 <pre><code>##  [1] &quot;awk&quot;         &quot;bash&quot;        &quot;coffee&quot;      &quot;gawk&quot;        &quot;groovy&quot;     
 ##  [6] &quot;haskell&quot;     &quot;lein&quot;        &quot;mysql&quot;       &quot;node&quot;        &quot;octave&quot;     
 ## [11] &quot;perl&quot;        &quot;php&quot;         &quot;psql&quot;        &quot;Rscript&quot;     &quot;ruby&quot;       
@@ -361,8 +363,8 @@ x &lt;- 42
 x
 ```</code></pre>
 <p>renders into:</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="render-code.html#cb71-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
-<span id="cb71-2"><a href="render-code.html#cb71-2" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="render-code.html#cb72-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb72-2"><a href="render-code.html#cb72-2" tabindex="-1"></a>x</span></code></pre></div>
 <p>Notice that since <code>&lt;-</code> is how to assign values to variables in R, it is highlighted. If we were to replace “r” with a different language, this may not be highlighted (depending if “&lt;-” is a relevant symbol in that language.)</p>
 </div>
 <div id="rendering-and-compiling-code" class="section level2 hasAnchor" number="8.3">
@@ -375,8 +377,8 @@ x
 htmltools::HTML(&#39;&lt;b&gt;LEFT`RIGHT&lt;/b&gt;&#39;) htmltools::HTML(&#39;&lt;b&gt;LEFT`RIGHT&lt;/b&gt;&#39;) htmltools::HTML(&#39;&lt;b&gt;LEFT`RIGHT&lt;/b&gt;&#39;)
 ```</code></pre>
 <p>renders and compiles into:</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="render-code.html#cb73-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
-<span id="cb73-2"><a href="render-code.html#cb73-2" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="render-code.html#cb74-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb74-2"><a href="render-code.html#cb74-2" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 42</code></pre>
 <p>The second bar you see is the output of R command!</p>
 <p>You can run these “code chunks” without previewing or building the book! To the right of your code chunk, there are 3 symbols (as seen below).</p>
@@ -456,8 +458,8 @@ plot(pressure, type = &#39;b&#39;, pch = 19)
 <p>This renders into:</p>
 <hr />
 <p>See Figure <a href="render-code.html#fig:nice-fig">8.1</a>.</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="render-code.html#cb78-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb78-2"><a href="render-code.html#cb78-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="render-code.html#cb79-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
+<span id="cb79-2"><a href="render-code.html#cb79-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
 <img src="_main_files/figure-html/nice-fig-1.png" alt="Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases." width="80%" />
 <p class="caption">
@@ -477,10 +479,10 @@ knitr::kable(
 <p>This renders into:</p>
 <hr />
 <p>Don’t miss Table <a href="render-code.html#tab:nice-tab">8.1</a>.</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="render-code.html#cb80-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb80-2"><a href="render-code.html#cb80-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb80-3"><a href="render-code.html#cb80-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb80-4"><a href="render-code.html#cb80-4" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="render-code.html#cb81-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb81-2"><a href="render-code.html#cb81-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
+<span id="cb81-3"><a href="render-code.html#cb81-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb81-4"><a href="render-code.html#cb81-4" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <caption><span id="tab:nice-tab">Table 8.1: </span>Here is a nice table!</caption>
 <thead>

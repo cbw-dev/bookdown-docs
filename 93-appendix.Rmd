@@ -10,7 +10,7 @@ The Bookdown Docs are hosted from the [cbw-dev/bookdown-docs](https://github.com
 
 Most diagrams shown on these docs **should** be in this [Google folder](https://drive.google.com/drive/folders/136sy6WIiSG3tBFVpHt8yQwLakB4TFJvn?usp=sharing).
 
-### How to Edit a Google Drawing
+### How to Publish a Google Drawing {#publish-google-draw}
 
 1. Open the drawing.
 2. Edit.

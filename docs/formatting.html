@@ -247,6 +247,8 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#ordered-list"><i class="fa fa-check"></i><font color="6495ED">Ordered List</font></a></li>
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#code"><i class="fa fa-check"></i><font color="6495ED">Code</font></a></li>
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#images"><i class="fa fa-check"></i><font color="6495ED">Images</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#pdfs"><i class="fa fa-check"></i><font color="6495ED">PDFs</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#inserting-youtube-videos"><i class="fa fa-check"></i><font color="6495ED">Inserting YouTube Videos</font></a></li>
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#links"><i class="fa fa-check"></i><font color="6495ED">Links</font></a></li>
 <li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#links-to-other-pagessections-within-your-workshop-wesbite"><i class="fa fa-check"></i><font color="6495ED">Links to Other Pages/Sections within your Workshop Wesbite</font></a></li>
 </ul></li>
@@ -302,7 +304,7 @@ div.csl-indent {
 <li class="chapter" data-level="14.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#github-repo"><i class="fa fa-check"></i><b>14.1</b> GitHub Repo</a></li>
 <li class="chapter" data-level="14.2" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#diagram-links"><i class="fa fa-check"></i><b>14.2</b> Diagram Links</a>
 <ul>
-<li class="chapter" data-level="14.2.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#how-to-edit-a-google-drawing"><i class="fa fa-check"></i><b>14.2.1</b> How to Edit a Google Drawing</a></li>
+<li class="chapter" data-level="14.2.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#publish-google-draw"><i class="fa fa-check"></i><b>14.2.1</b> How to Publish a Google Drawing</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -486,6 +488,41 @@ div.csl-indent {
 <blockquote>
 <p>Note: Before adding the “\”, Bookdown will show you the image that you are referring to (double-click the file address link) and it will remain on screen, within your .Rmd file. <em>You can use this to double check the file address is correct.</em> After adding the “\”, you can double-click to check the file address is pointing to the right image (and it should hover below), but it will not remain on screen.</p>
 </blockquote>
+<div class="bluebox">
+<div class="center">
+<p><strong>Note!</strong></p>
+</div>
+<p>If you want to easily annotate and update your images, consider publishing a Google Drawing! See the <a href="appendix-links-for-developers.html#publish-google-draw">Developer’s Guide</a> for instructions.</p>
+</div>
+</div>
+<div id="pdfs" class="section level3 unnumbered hasAnchor">
+<h3><font color="6495ED">PDFs</font><a href="formatting.html#pdfs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Inserting PDFs is essentially the same notation as inserting images! See the module 1 file of the template for an example.</p>
+<p>Essentially, it will look like this:</p>
+<pre><code>![insert alt text for pdf here](content-files/sample-pdf.pdf){width=100% height=900}\</code></pre>
+<p><embed src="content-files/sample-pdf.pdf" style="width:100.0%" height="900" /><br />
+</p>
+<blockquote>
+<p>Recall: Your files for your content should be organized into the “content-files” folder.</p>
+</blockquote>
+<p>The width and height elements are HTML code, and are up to you!</p>
+</div>
+<div id="inserting-youtube-videos" class="section level3 unnumbered hasAnchor">
+<h3><font color="6495ED">Inserting YouTube Videos</font><a href="formatting.html#inserting-youtube-videos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>YouTube generates HTML code to insert YouTube videos into your pages! You should specifically edit the width and height (what you edit it to is up to you). CBW recommends that {width=“100%”}.</p>
+<p>How to get the HTML Code:</p>
+<ol style="list-style-type: decimal">
+<li>Go to the YouTube video you want to embed.</li>
+<li>Click “Share”, which is below the video.</li>
+<li>Click the <code>&lt; &gt; Embed</code> symbol.</li>
+<li>Select your desired options and press copy.</li>
+<li>Paste the code into your .Rmd file.</li>
+<li>Edit the width and height options.</li>
+<li>Done!</li>
+</ol>
+<p>An example of a YouTube video inserted into a Bookdown page is shown below!</p>
+<iframe width="100%" height="440px" src="https://www.youtube.com/embed/MwsGSgybBVU?list=PL3izGL6oi0S_e5T8qx-74WRaMR5K5U8V5" title="Infectious Disease Genomic Epidemiology 2024 | 1: Introduction to Genomic Epidemiology" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
 </div>
 <div id="links" class="section level3 unnumbered hasAnchor">
 <h3><font color="6495ED">Links</font><a href="formatting.html#links" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -525,19 +562,19 @@ div.csl-indent {
 <h2><span class="header-section-number">7.6</span> Citations<a href="formatting.html#citations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Bookdown can help us create citations!</p>
 <p>First, tell bookdown your sources!</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="formatting.html#cb57-1" tabindex="-1"></a><span class="co"># automatically create a bib database for R packages</span></span>
-<span id="cb57-2"><a href="formatting.html#cb57-2" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">write_bib</span>(<span class="fu">c</span>(</span>
-<span id="cb57-3"><a href="formatting.html#cb57-3" tabindex="-1"></a>  <span class="fu">.packages</span>(), <span class="st">&#39;bookdown&#39;</span>, <span class="st">&#39;knitr&#39;</span>, <span class="st">&#39;rmarkdown&#39;</span></span>
-<span id="cb57-4"><a href="formatting.html#cb57-4" tabindex="-1"></a>), <span class="st">&#39;packages.bib&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="formatting.html#cb58-1" tabindex="-1"></a><span class="co"># automatically create a bib database for R packages</span></span>
+<span id="cb58-2"><a href="formatting.html#cb58-2" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">write_bib</span>(<span class="fu">c</span>(</span>
+<span id="cb58-3"><a href="formatting.html#cb58-3" tabindex="-1"></a>  <span class="fu">.packages</span>(), <span class="st">&#39;bookdown&#39;</span>, <span class="st">&#39;knitr&#39;</span>, <span class="st">&#39;rmarkdown&#39;</span></span>
+<span id="cb58-4"><a href="formatting.html#cb58-4" tabindex="-1"></a>), <span class="st">&#39;packages.bib&#39;</span>)</span></code></pre></div>
 <p>This R code created a file called ‘packages.bib’ (which is in the bookdown template) which is now filled with a bunch of bibliography entries. ‘book.bib’ also has a manually entered bibliography entry. We must tell bookdown the files with bibliography information via the YAML <code>bibliography</code> key in index.Rmd. A bibliography entry essentially looks like:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="formatting.html#cb58-1" tabindex="-1"></a><span class="sc">@</span>type{key,</span>
-<span id="cb58-2"><a href="formatting.html#cb58-2" tabindex="-1"></a>  title <span class="ot">=</span> {...},</span>
-<span id="cb58-3"><a href="formatting.html#cb58-3" tabindex="-1"></a>  author <span class="ot">=</span> {...},</span>
-<span id="cb58-4"><a href="formatting.html#cb58-4" tabindex="-1"></a>  organization <span class="ot">=</span> {...},</span>
-<span id="cb58-5"><a href="formatting.html#cb58-5" tabindex="-1"></a>  year <span class="ot">=</span> {...},</span>
-<span id="cb58-6"><a href="formatting.html#cb58-6" tabindex="-1"></a>  url <span class="ot">=</span> {...},</span>
-<span id="cb58-7"><a href="formatting.html#cb58-7" tabindex="-1"></a>  ... <span class="co"># see more possible fields at https://en.wikipedia.org/wiki/BibTeX</span></span>
-<span id="cb58-8"><a href="formatting.html#cb58-8" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="formatting.html#cb59-1" tabindex="-1"></a><span class="sc">@</span>type{key,</span>
+<span id="cb59-2"><a href="formatting.html#cb59-2" tabindex="-1"></a>  title <span class="ot">=</span> {...},</span>
+<span id="cb59-3"><a href="formatting.html#cb59-3" tabindex="-1"></a>  author <span class="ot">=</span> {...},</span>
+<span id="cb59-4"><a href="formatting.html#cb59-4" tabindex="-1"></a>  organization <span class="ot">=</span> {...},</span>
+<span id="cb59-5"><a href="formatting.html#cb59-5" tabindex="-1"></a>  year <span class="ot">=</span> {...},</span>
+<span id="cb59-6"><a href="formatting.html#cb59-6" tabindex="-1"></a>  url <span class="ot">=</span> {...},</span>
+<span id="cb59-7"><a href="formatting.html#cb59-7" tabindex="-1"></a>  ... <span class="co"># see more possible fields at https://en.wikipedia.org/wiki/BibTeX</span></span>
+<span id="cb59-8"><a href="formatting.html#cb59-8" tabindex="-1"></a>}</span></code></pre></div>
 <p><code>@type</code> refers to what type of source it is (ex. an article, book, manual, …). <code>@key</code> refers to the name we refer to it by in in-text citations.</p>
 <p>For example, <code>@R-bookdown</code> renders to <span class="citation">Xie (<a href="#ref-R-bookdown">2024</a>)</span>. Adding square brackets also adds parentheses once it’s rendered: so <code>[@R-bookdown]</code> becomes <span class="citation">(<a href="#ref-R-bookdown">Xie 2024</a>)</span>.</p>
 <p><strong>Note:</strong> The <a href="formatting.html#visual-r-md">RStudio Visual Markdown Editor</a> can also make it easier to insert citations!</p>
@@ -547,10 +584,10 @@ div.csl-indent {
 <div id="equations" class="section level2 hasAnchor" number="7.7">
 <h2><span class="header-section-number">7.7</span> Equations<a href="formatting.html#equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Equations are written in latex. You can refer to them with a label you specify after writing it out!</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb59-1"><a href="formatting.html#cb59-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
-<span id="cb59-2"><a href="formatting.html#cb59-2" tabindex="-1"></a><span class="ss">  f</span><span class="sc">\left</span><span class="ss">(k</span><span class="sc">\right</span><span class="ss">) = </span><span class="sc">\binom</span><span class="ss">{n}{k} p^k</span><span class="sc">\left</span><span class="ss">(1-p</span><span class="sc">\right</span><span class="ss">)^{n-k}</span></span>
-<span id="cb59-3"><a href="formatting.html#cb59-3" tabindex="-1"></a><span class="ss">  (</span><span class="sc">\#</span><span class="ss">eq:binom) # the label!</span></span>
-<span id="cb59-4"><a href="formatting.html#cb59-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb60-1"><a href="formatting.html#cb60-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb60-2"><a href="formatting.html#cb60-2" tabindex="-1"></a><span class="ss">  f</span><span class="sc">\left</span><span class="ss">(k</span><span class="sc">\right</span><span class="ss">) = </span><span class="sc">\binom</span><span class="ss">{n}{k} p^k</span><span class="sc">\left</span><span class="ss">(1-p</span><span class="sc">\right</span><span class="ss">)^{n-k}</span></span>
+<span id="cb60-3"><a href="formatting.html#cb60-3" tabindex="-1"></a><span class="ss">  (</span><span class="sc">\#</span><span class="ss">eq:binom) # the label!</span></span>
+<span id="cb60-4"><a href="formatting.html#cb60-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span></code></pre></div>
 <p><span class="math display" id="eq:binom">\[\begin{equation}
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
   \tag{7.1}
@@ -576,13 +613,13 @@ $$a^2 + b^2 = c^2$$
 <p>CBW’s Bookdown template comes equipped with a “warning”, “tip” and “note: callout blocks!</p>
 <p>Here are the code you will use to add them to your template and the rendered output.</p>
 <!-- Specify a language so that the code formats well? -->
-<div class="sourceCode" id="cb61"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb61-1"><a href="formatting.html#cb61-1" tabindex="-1"></a>:::: {.redbox data-latex=&quot;&quot;}</span>
-<span id="cb61-2"><a href="formatting.html#cb61-2" tabindex="-1"></a>::: {.center data-latex=&quot;&quot;}</span>
-<span id="cb61-3"><a href="formatting.html#cb61-3" tabindex="-1"></a>**WARNING!**</span>
-<span id="cb61-4"><a href="formatting.html#cb61-4" tabindex="-1"></a>:::</span>
-<span id="cb61-5"><a href="formatting.html#cb61-5" tabindex="-1"></a></span>
-<span id="cb61-6"><a href="formatting.html#cb61-6" tabindex="-1"></a>Write your warning text here.</span>
-<span id="cb61-7"><a href="formatting.html#cb61-7" tabindex="-1"></a>::::</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb62-1"><a href="formatting.html#cb62-1" tabindex="-1"></a>:::: {.redbox data-latex=&quot;&quot;}</span>
+<span id="cb62-2"><a href="formatting.html#cb62-2" tabindex="-1"></a>::: {.center data-latex=&quot;&quot;}</span>
+<span id="cb62-3"><a href="formatting.html#cb62-3" tabindex="-1"></a>**WARNING!**</span>
+<span id="cb62-4"><a href="formatting.html#cb62-4" tabindex="-1"></a>:::</span>
+<span id="cb62-5"><a href="formatting.html#cb62-5" tabindex="-1"></a></span>
+<span id="cb62-6"><a href="formatting.html#cb62-6" tabindex="-1"></a>Write your warning text here.</span>
+<span id="cb62-7"><a href="formatting.html#cb62-7" tabindex="-1"></a>::::</span></code></pre></div>
 <div class="redbox">
 <div class="center">
 <p><strong>WARNING!</strong></p>

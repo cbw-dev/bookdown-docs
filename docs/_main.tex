@@ -1608,6 +1608,64 @@ Note: Markdown does not actually require the backslash ``\textbackslash{}''. How
 Note: Before adding the ``\textbackslash{}'', Bookdown will show you the image that you are referring to (double-click the file address link) and it will remain on screen, within your .Rmd file. \emph{You can use this to double check the file address is correct.} After adding the ``\textbackslash{}'', you can double-click to check the file address is pointing to the right image (and it should hover below), but it will not remain on screen.
 \end{quote}
 
+\begin{bluebox}
+
+\begin{center}
+\textbf{Note!}
+
+\end{center}
+
+If you want to easily annotate and update your images, consider publishing a Google Drawing! See the \hyperref[publish-google-draw]{Developer's Guide} for instructions.
+
+\end{bluebox}
+
+\subsection*{PDFs}\label{pdfs}
+\addcontentsline{toc}{subsection}{PDFs}
+
+Inserting PDFs is essentially the same notation as inserting images! See the module 1 file of the template for an example.
+
+Essentially, it will look like this:
+
+\begin{verbatim}
+![insert alt text for pdf here](content-files/sample-pdf.pdf){width=100% height=900}\
+\end{verbatim}
+
+\includegraphics[width=1\textwidth,height=9.375in]{content-files/sample-pdf.pdf}\\
+
+\begin{quote}
+Recall: Your files for your content should be organized into the ``content-files'' folder.
+\end{quote}
+
+The width and height elements are HTML code, and are up to you!
+
+\subsection*{Inserting YouTube Videos}\label{inserting-youtube-videos}
+\addcontentsline{toc}{subsection}{Inserting YouTube Videos}
+
+YouTube generates HTML code to insert YouTube videos into your pages! You should specifically edit the width and height (what you edit it to is up to you). CBW recommends that \{width=``100\%''\}.
+
+How to get the HTML Code:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Go to the YouTube video you want to embed.
+\item
+  Click ``Share'', which is below the video.
+\item
+  Click the \texttt{\textless{}\ \textgreater{}\ Embed} symbol.
+\item
+  Select your desired options and press copy.
+\item
+  Paste the code into your .Rmd file.
+\item
+  Edit the width and height options.
+\item
+  Done!
+\end{enumerate}
+
+An example of a YouTube video inserted into a Bookdown page is shown below!
+
 \subsection*{Links}\label{links}
 \addcontentsline{toc}{subsection}{Links}
 
@@ -2590,7 +2648,7 @@ The Bookdown Docs are hosted from the \href{https://github.com/cbw-dev/bookdown-
 
 Most diagrams shown on these docs \textbf{should} be in this \href{https://drive.google.com/drive/folders/136sy6WIiSG3tBFVpHt8yQwLakB4TFJvn?usp=sharing}{Google folder}.
 
-\subsection{How to Edit a Google Drawing}\label{how-to-edit-a-google-drawing}
+\subsection{How to Publish a Google Drawing}\label{publish-google-draw}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}

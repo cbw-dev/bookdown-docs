@@ -77,4 +77,4 @@ how-to-deploy-your-workshop-website
 appendix-links-for-developers
 github-repo
 diagram-links
-how-to-edit-a-google-drawing
+publish-google-draw
