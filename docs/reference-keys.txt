@@ -24,7 +24,7 @@ linuxmac-adding-your-ssh-key-to-the-ssh-agent
 windows-add-ssh-key
 adding-a-new-ssh-key-to-your-account
 git-clone
-oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer
+delete-git-folder-locally
 file-explanation
 bookdown-simple-explanation
 opening-your-bookdown-project-in-rstudio

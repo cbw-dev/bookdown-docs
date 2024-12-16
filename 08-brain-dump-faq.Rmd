@@ -48,6 +48,18 @@ Trying to build and getting **"Exited with status 1."**? Bad news: Your book is 
 
     > For example: **"File '...\_svg-tex.pdf' is missing."** is a bug that only occurs when producing bookdown::pdf_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code. 
 
+- **Lines ?-? in \_main.Rmd caused 50+ errors**. This is most likely because of a bug in your code. Fixing this bug and rebuilding should fix this.
+
+  :::: {.redbox data-latex=""}
+  ::: {.center data-latex=""}
+  *A very weird bug...*
+  :::
+  
+  In the process of debugging, did you try editing/deleting lines of code you knew were related to bug? When you tried to rebuild your website, did those lines of code regenerate?
+  
+  This is a very weird bug, and it is hard to say what causes it (for me, it was because I accidentally deleted a comma). My best piece of advice is to copy all the changes you made, that didn't cause a bug. Then, test it on a different device (perhaps one of your workshop team members, so we know bookdown has been working properly). Rebuild the website. (If you can not test on another device, make sure you copy your valid changes somewhere you can access it. You can try manually editing files on GitHub, to include code you know won't fail.) Then, [delete the project from your local computer](#delete-git-folder-locally), and [reclone the repository from your GitHub](#git-clone). Make sure to git pull the updates!
+  ::::
+
 ## Ease of Use
 
 ### Wrapping Your Code

@@ -1,15 +1,5 @@
 # CBW's Bookdown Documentation
 
-
-
-
-
-- no jekyll clarification
-- make note about that massive bug
-
-
-
-
 This is the repo that hosts the CBW's bookdown documentation website.
 
 DEV RULES:

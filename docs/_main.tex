@@ -991,7 +991,7 @@ Consider having only one team member (or perhaps your RC) make git pushes or con
 
 But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? And how exactly is a page made from all these files??? It's time for you to go to the next page :D
 
-\subsection{Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer!}\label{oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer}
+\subsection{Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer!}\label{delete-git-folder-locally}
 
 That's ok! To delete the entire local repository and the folder itself, run the following command:
 
@@ -2265,6 +2265,21 @@ Trying to build and getting \textbf{``Exited with status 1.''}? Bad news: Your b
   \begin{quote}
   For example: \textbf{``File `\ldots\_svg-tex.pdf' is missing.''} is a bug that only occurs when producing bookdown::pdf\_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code.
   \end{quote}
+\item
+  \textbf{Lines ?-? in \_main.Rmd caused 50+ errors}. This is most likely because of a bug in your code. Fixing this bug and rebuilding should fix this.
+
+  \begin{redbox}
+
+  \begin{center}
+  \emph{A very weird bug\ldots{}}
+
+  \end{center}
+
+  In the process of debugging, did you try editing/deleting lines of code you knew were related to bug? When you tried to rebuild your website, did those lines of code regenerate?
+
+  This is a very weird bug, and it is hard to say what causes it (for me, it was because I accidentally deleted a comma). My best piece of advice is to copy all the changes you made, that didn't cause a bug. Then, test it on a different device (perhaps one of your workshop team members, so we know bookdown has been working properly). Rebuild the website. (If you can not test on another device, make sure you copy your valid changes somewhere you can access it. You can try manually editing files on GitHub, to include code you know won't fail.) Then, \hyperref[delete-git-folder-locally]{delete the project from your local computer}, and \hyperref[git-clone]{reclone the repository from your GitHub}. Make sure to git pull the updates!
+
+  \end{redbox}
 \end{itemize}
 
 \section{Ease of Use}\label{ease-of-use}
