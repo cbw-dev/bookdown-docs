@@ -202,4 +202,4 @@ knitr::kable(
 
 ---
 
-You can find more inforamtion on figures and tables in Bookdown <a href="https://bookdown.org/yihui/rmarkdown/r-code.html#figures" target="_blank">here</a>!
+You can find more information on figures and tables in Bookdown <a href="https://bookdown.org/yihui/rmarkdown/r-code.html#figures" target="_blank">here</a>!

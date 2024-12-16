@@ -12,7 +12,7 @@ set in the _output.yml file.</p>" />
 
   <meta property="og:title" content="9 Brain Dump / FAQ | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
-  <meta property="og:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics.ca-logo.svg" />
+  <meta property="og:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics_logo.png" />
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
@@ -24,7 +24,7 @@ set in the _output.yml file.</p>" />
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
-  <meta name="twitter:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics.ca-logo.svg" />
+  <meta name="twitter:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics_logo.png" />
 
 
 
@@ -165,7 +165,7 @@ div.csl-indent {
 
 <ul class="summary">
 <a href="https://bioinformaticsdotca.github.io/">
-<img src="img/bioinformatics.ca-logo.svg" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+<img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
 </a>
 <li><a href="./">CBW's Bookdown Template Documentation</a></li>
 
@@ -348,6 +348,15 @@ div.csl-indent {
 <li><p>**“Error: LaTeX failed to compile _main.tex.”** - Essentially, something in your code is not allowing the output to be produced properly. Something in your code is producing incorrect output that is not allowing output to be produced.
 &gt; TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug.</p></li>
 <li><p><strong>[X].html not found</strong> - This may result in bad syntax that creates a faulty file. First, fix whatever bug caused that faulty file to occur. Then, rebuild. If you continue to get this error, it may be because the rebuild did not delete the previous faulty html file. Try deleting the docs file and rebuilding. (This can be a good debug solution in general!)</p></li>
+</ul>
+<div class="redbox">
+<div class="center">
+<p><strong>WARNING!</strong></p>
+</div>
+<p><em>If you delete the docs folder, make sure to create an empty file, named </em>".nojekyll" <em>and put it inside the /docs folder. R-generated figures will not appear without this.</em></p>
+</div>
+<p><br></p>
+<ul>
 <li><p>If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see <strong>“Permission denied”</strong> in your warning messages, trying running this command <code>chmod -R u+w docs</code> in terminal, in the folder containing your docs folder [CLARIFY ?]</p></li>
 <li><p><strong>“Could not produce X output”</strong> - by default, bookdown builds all possible formats: gitbook, pdf, epub versions. We only need the gitbook, so if you’re having issues, change your build settings to only creating the gitbook [CLARIFY + INCLUDE IMAGES]</p></li>
 <li><p>A very common bug is <strong>“missing X package”</strong>, just install it using this command in your console (the bottom left window in RStudio) <code>install.packages("missing package name, include these surrouding quotations")</code></p></li>
@@ -356,8 +365,10 @@ div.csl-indent {
 <li>bookdown::render_book() <strong>failed to render the output format</strong> ‘bookdown::pdf_book’</li>
 <li>bookdown::render_book() failed to render the output format ‘bookdown::epub_book’</li>
 </ul>
-<p>There is an easy fix! Press the dropdown options in the “Build Book” button and select “bookdown::gitbook”. We only need to produce the gitbook (the html pages!) so it’s ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format. For example:</p>
-<pre><code>  - **&quot;File &#39;..._svg-tex.pdf&#39; is missing.&quot;** is a bug that only occurs when producing bookdown::pdf_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code. </code></pre></li>
+<p>There is an easy fix! Press the dropdown options in the “Build Book” button and select “bookdown::gitbook”. We only need to produce the gitbook (the html pages!) so it’s ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format.</p>
+<blockquote>
+<p>For example: <b>“File ’…_svg-tex.pdf’ is missing.”</b> is a bug that only occurs when producing bookdown::pdf_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code.</p>
+</blockquote></li>
 </ul>
 </div>
 <div id="ease-of-use" class="section level2 hasAnchor" number="9.3">

@@ -195,12 +195,23 @@ Since bookdown is an R package, you will need R. Plus, our ideal IDE (integrated
 \item
   \textbf{Download and install R} here. (You need R 3.6.0+ installed for RStudio.) Follow the instructions for your operating system (Linux/macOS/Windows).
 
-  \begin{quote}
-  Check: You can check if windows was installed properly on \emph{macOS} by running the command \texttt{R} in terminal. On \emph{windows}, --must test--.
-  \end{quote}
+  \begin{greenbox}
+
+  \begin{center}
+  \textbf{Check if you installed properly!}
+
+  \end{center}
+
+  \emph{MacOS}
+
+  Run the command ``R'' in terminal. An R Console should start and you should be able to start running R commands.
+
+  \emph{Windows}
+
+  \end{greenbox}
 
   \begin{quote}
-  Note: We will not be using the R console, instead, we will be using RStudio!
+  Note: \textbf{We will not be using the R console}, instead, we will be using RStudio!
   \end{quote}
 \item
   \textbf{Download and install RStudio} here. Scroll down to find downloads for non-macOS.
@@ -487,7 +498,7 @@ They follow the format: ``{[}Linux Command{]} OR''{[}Windows Command{]}''
 \end{Shaded}
 
 \begin{verbatim}
-## /Users/jqiu/Documents/bookdown-docs
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
 \end{verbatim}
 
 \subparagraph*{ls OR dir}\label{ls-or-dir}
@@ -525,9 +536,9 @@ A similar command in \textbf{Command Prompt} is \texttt{dir} (short for ``direct
 \end{Shaded}
 
 \begin{verbatim}
-## /Users/jqiu/Documents/bookdown-docs
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
 ## now switching directories
-## /Users/jqiu/Documents/bookdown-docs/img
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs/img
 \end{verbatim}
 
 \begin{quote}
@@ -560,13 +571,13 @@ Here's an example (recall, cd produces no output!):
 \end{Shaded}
 
 \begin{verbatim}
-## /Users/jqiu/Documents/bookdown-docs
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
 ## 
 ## Current Directory Example
-## /Users/jqiu/Documents/bookdown-docs
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
 ## 
 ## Parent Directory Example
-## /Users/jqiu/Documents
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs
 ## 
 ## Home Directory Example
 ## /Users/jqiu
@@ -1248,6 +1259,17 @@ Bookdown makes some folders to store .html files, among other files that help cr
 \textbf{Debugging Tip 2}: Each time we build, we produce a ``docs'' folder. If we have already built once, we just add new files to it. HTML files that were produced from .Rmd that were deleted are not removed. Hence, if you see errors from files that no longer exist in your root project folder, try deleting the whole docs folder, and rebuilding.
 \end{quote}
 
+\begin{redbox}
+
+\begin{center}
+\textbf{WARNING!}
+
+\end{center}
+
+\emph{If you delete the docs folder, make sure to create an empty file, named }".nojekyll" \emph{and put it inside the /docs folder. R-generated figures will not appear without this.}
+
+\end{redbox}
+
 \section{Push to GitHub via RStudio}\label{push-to-github-via-rstudio}
 
 Now, we know what our files mean and how to edit them. How do we get this onto GitHub? We can write git commands into our Terminal/Command Prompt, or alternatively (and more easily), RStudio has a built-in git interface.
@@ -1557,10 +1579,10 @@ The basic notation for a file is:
 For example:
 
 \begin{verbatim}
-![bioinformatics.ca logo](img/bioinformatics.ca-logo.jpg)\
+![bioinformatics.ca logo](img/bioinformatics_logo.png)\
 \end{verbatim}
 
-\includegraphics{img/bioinformatics.ca-logo.jpg}\\
+\includegraphics{img/bioinformatics_logo.png}\\
 
 Note: Markdown does not actually require the backslash ``\textbackslash{}''. However, since Bookdown uses Pandoc, we should add a backslash so that the alternative text does not become a caption for the image. This occurs when the image is not directly following or followed by text. \href{https://pandoc.org/MANUAL.html\#extension-implicit_figures}{Here} is where it's discussed in the Pandoc documentation!
 
@@ -2151,7 +2173,7 @@ temperature & pressure\\
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-You can find more inforamtion on figures and tables in Bookdown here!
+You can find more information on figures and tables in Bookdown here!
 
 \chapter{Brain Dump / FAQ}\label{help}
 
@@ -2189,6 +2211,20 @@ Trying to build and getting \textbf{``Exited with status 1.''}? Bad news: Your b
   \textgreater{} TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug.
 \item
   \textbf{{[}X{]}.html not found} - This may result in bad syntax that creates a faulty file. First, fix whatever bug caused that faulty file to occur. Then, rebuild. If you continue to get this error, it may be because the rebuild did not delete the previous faulty html file. Try deleting the docs file and rebuilding. (This can be a good debug solution in general!)
+\end{itemize}
+
+\begin{redbox}
+
+\begin{center}
+\textbf{WARNING!}
+
+\end{center}
+
+\emph{If you delete the docs folder, make sure to create an empty file, named }".nojekyll" \emph{and put it inside the /docs folder. R-generated figures will not appear without this.}
+
+\end{redbox}
+
+\begin{itemize}
 \item
   If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see \textbf{``Permission denied''} in your warning messages, trying running this command \texttt{chmod\ -R\ u+w\ docs} in terminal, in the folder containing your docs folder {[}CLARIFY ?{]}
 \item
@@ -2206,11 +2242,11 @@ Trying to build and getting \textbf{``Exited with status 1.''}? Bad news: Your b
     bookdown::render\_book() failed to render the output format `bookdown::epub\_book'
   \end{itemize}
 
-  There is an easy fix! Press the dropdown options in the ``Build Book'' button and select ``bookdown::gitbook''. We only need to produce the gitbook (the html pages!) so it's ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format. For example:
+  There is an easy fix! Press the dropdown options in the ``Build Book'' button and select ``bookdown::gitbook''. We only need to produce the gitbook (the html pages!) so it's ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format.
 
-\begin{verbatim}
-  - **"File '..._svg-tex.pdf' is missing."** is a bug that only occurs when producing bookdown::pdf_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code. 
-\end{verbatim}
+  \begin{quote}
+  For example: ``File '\ldots\_svg-tex.pdf' is missing.'' is a bug that only occurs when producing bookdown::pdf\_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code.
+  \end{quote}
 \end{itemize}
 
 \section{Ease of Use}\label{ease-of-use}

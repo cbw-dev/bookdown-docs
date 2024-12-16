@@ -214,6 +214,15 @@ Bookdown makes some folders to store .html files, among other files that help cr
 
 > **Debugging Tip 2**: Each time we build, we produce a "docs" folder. If we have already built once, we just add new files to it. HTML files that were produced from .Rmd that were deleted are not removed. Hence, if you see errors from files that no longer exist in your root project folder, try deleting the whole docs folder, and rebuilding.
 
+:::: {.redbox data-latex=""}
+::: {.center data-latex=""}
+**WARNING!**
+:::
+
+*If you delete the docs folder, make sure to create an empty file, named *\".nojekyll\" *and put it inside the /docs folder. R-generated figures will not appear without this.*
+::::
+
+
 ## Push to GitHub via RStudio
 
 Now, we know what our files mean and how to edit them. How do we get this onto GitHub? We can write git commands into our Terminal/Command Prompt, or alternatively (and more easily), RStudio has a built-in git interface.

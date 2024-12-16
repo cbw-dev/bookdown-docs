@@ -12,7 +12,7 @@ set in the _output.yml file.</p>" />
 
   <meta property="og:title" content="6 So What Do These Files Mean? | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
-  <meta property="og:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics.ca-logo.svg" />
+  <meta property="og:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics_logo.png" />
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
@@ -24,7 +24,7 @@ set in the _output.yml file.</p>" />
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
-  <meta name="twitter:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics.ca-logo.svg" />
+  <meta name="twitter:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics_logo.png" />
 
 
 
@@ -165,7 +165,7 @@ div.csl-indent {
 
 <ul class="summary">
 <a href="https://bioinformaticsdotca.github.io/">
-<img src="img/bioinformatics.ca-logo.svg" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+<img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
 </a>
 <li><a href="./">CBW's Bookdown Template Documentation</a></li>
 
@@ -517,6 +517,12 @@ You have 6 Rmd input file(s) but only 4 first-level heading(s). Did you forget f
 <blockquote>
 <p><strong>Debugging Tip 2</strong>: Each time we build, we produce a “docs” folder. If we have already built once, we just add new files to it. HTML files that were produced from .Rmd that were deleted are not removed. Hence, if you see errors from files that no longer exist in your root project folder, try deleting the whole docs folder, and rebuilding.</p>
 </blockquote>
+<div class="redbox">
+<div class="center">
+<p><strong>WARNING!</strong></p>
+</div>
+<p><em>If you delete the docs folder, make sure to create an empty file, named </em>".nojekyll" <em>and put it inside the /docs folder. R-generated figures will not appear without this.</em></p>
+</div>
 </div>
 </div>
 <div id="push-to-github-via-rstudio" class="section level2 hasAnchor" number="6.6">

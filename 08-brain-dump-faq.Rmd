@@ -24,6 +24,15 @@ Trying to build and getting **"Exited with status 1."**? Bad news: Your book is 
 
 - **[X].html not found** - This may result in bad syntax that creates a faulty file. First, fix whatever bug caused that faulty file to occur. Then, rebuild. If you continue to get this error, it may be because the rebuild did not delete the previous faulty html file. Try deleting the docs file and rebuilding. (This can be a good debug solution in general!)
 
+:::: {.redbox data-latex=""}
+::: {.center data-latex=""}
+**WARNING!**
+:::
+
+*If you delete the docs folder, make sure to create an empty file, named *\".nojekyll\" *and put it inside the /docs folder. R-generated figures will not appear without this.*
+::::
+<br>
+
 - If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see **"Permission denied"** in your warning messages, trying running this command ```chmod -R u+w docs``` in terminal, in the folder containing your docs folder [CLARIFY ?]
 
 - **"Could not produce X output"** - by default, bookdown builds all possible formats: gitbook, pdf, epub versions. We only need the gitbook, so if you're having issues, change your build settings to only creating the gitbook [CLARIFY + INCLUDE IMAGES]
@@ -35,9 +44,9 @@ Trying to build and getting **"Exited with status 1."**? Bad news: Your book is 
     - bookdown::render_book() **failed to render the output format** 'bookdown::pdf_book'
     - bookdown::render_book() failed to render the output format 'bookdown::epub_book'
     
-    There is an easy fix! Press the dropdown options in the "Build Book" button and select "bookdown::gitbook". We only need to produce the gitbook (the html pages!) so it's ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format. For example: 
+    There is an easy fix! Press the dropdown options in the "Build Book" button and select "bookdown::gitbook". We only need to produce the gitbook (the html pages!) so it's ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format. 
 
-        - **"File '..._svg-tex.pdf' is missing."** is a bug that only occurs when producing bookdown::pdf_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code. 
+    > For example: <b>"File '..._svg-tex.pdf' is missing."</b> is a bug that only occurs when producing bookdown::pdf_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code. 
 
 ## Ease of Use
 

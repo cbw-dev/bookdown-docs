@@ -202,10 +202,10 @@ The basic notation for a file is:
 For example:
 
 ```         
-![bioinformatics.ca logo](img/bioinformatics.ca-logo.jpg)\
+![bioinformatics.ca logo](img/bioinformatics_logo.png)\
 ```
 
-![bioinformatics.ca logo](img/bioinformatics.ca-logo.jpg)\
+![bioinformatics.ca logo](img/bioinformatics_logo.png)\
 
 Note: Markdown does not actually require the backslash "\\". However, since Bookdown uses Pandoc, we should add a backslash so that the alternative text does not become a caption for the image. This occurs when the image is not directly following or followed by text. [Here](https://pandoc.org/MANUAL.html#extension-implicit_figures) is where it's discussed in the Pandoc documentation!
 
