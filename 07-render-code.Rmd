@@ -1,7 +1,5 @@
 # How to Render/Compile Code {#render-code}
 
-## [PAGE UNDER CONSTRUCTION]
-
 There are many ways to render and compile code using Bookdown!
 
 Here are most of the "language engines" (programming languages) available to render, run and compile in Bookdown!
@@ -11,9 +9,67 @@ names(knitr::knit_engines$get())
 ```
 ## Rendering Code
 
-Just rendering code refers to Bookdown formatting code so that our users can view it. The code does not run or compile. This is very similar to what is shown in 020-module-1.Rmd of the bookdown template.
+Just rendering code refers to Bookdown formatting code so that our users can view it. The code does not run or compile. This is very similar to what is shown in 020-module-1.Rmd of the bookdown template. An example is shown below.
 
-## Rendering Code with Highlights
+````
+```
+insert code here
+```
+````
+
+which appears as
+
+```
+insert code here
+```
+
+These are called "code chunks".
+
+## Rendering Code with Highlights for Specific Languages
+
+Bookdown also highlights (specific to the language) the outputted code for the ease of understanding. To do so, add the name of the language (of the many shown above) after the first  3 ``` ` ``` symbols. Note that the language is not case sensitive (so both "r" and "R" would render the same below). For example:
+
+````
+```r
+x <- 42
+x
+```
+````
+
+renders into: 
+
+```r
+x <- 42
+x
+```
+
+Notice that since `<-` is how to assign values to variables in R, it is highlighted. If we were to replace "r" with a different language, this may not be highlighted (depending if "<-" is a relevant symbol in that language.)
+
+## Rendering and Compiling Code
+
+To have the code actually compile, we need to put "{" and "}" brackets around the language, which we still put after the first 3 ``` ` ``` symbols. For example:
+
+<!-- make the language some arbirtary language, since we just want to show what the code would look like -->
+
+````{r, highlight=FALSE, eval=FALSE}
+```{r}
+x <- 42
+x
+```
+````
+````
+renders and compiles into: 
+
+```{r}
+x <- 42
+x
+```
+
+The second bar you see is the output of R command!
+
+You can run these "code chunks" without previewing or building the book! To the right of your code chunk, there are 3 symbols (as seen below). 
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWwloWK_sYRV44BYYCC2lhBpxLQQvkSYlJECfHnlYTwg7aPSPgOWuUfp_ybZQkAQ8QYSwUpH378Hv/pub?w=3763&amp;h=1237" alt="Picture of a R code chunk in RStudio">
 
 ## Captioned figures and tables
 

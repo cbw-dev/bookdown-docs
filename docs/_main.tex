@@ -142,7 +142,7 @@
 
 \title{CBW's Bookdown Template Documentation}
 \author{}
-\date{\vspace{-2.5em}Last Updated: 2024-12-15}
+\date{\vspace{-2.5em}Last Updated: 2024-12-16}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1846,8 +1846,6 @@ Here are some examples:
 
 \chapter{How to Render/Compile Code}\label{render-code}
 
-\section{{[}PAGE UNDER CONSTRUCTION{]}}\label{page-under-construction}
-
 There are many ways to render and compile code using Bookdown!
 
 Here are most of the ``language engines'' (programming languages) available to render, run and compile in Bookdown!
@@ -1876,9 +1874,74 @@ Here are most of the ``language engines'' (programming languages) available to r
 
 \section{Rendering Code}\label{rendering-code}
 
-Just rendering code refers to Bookdown formatting code so that our users can view it. The code does not run or compile. This is very similar to what is shown in 020-module-1.Rmd of the bookdown template.
+Just rendering code refers to Bookdown formatting code so that our users can view it. The code does not run or compile. This is very similar to what is shown in 020-module-1.Rmd of the bookdown template. An example is shown below.
 
-\section{Rendering Code with Highlights}\label{rendering-code-with-highlights}
+\begin{verbatim}
+```
+insert code here
+```
+\end{verbatim}
+
+which appears as
+
+\begin{verbatim}
+insert code here
+\end{verbatim}
+
+These are called ``code chunks''.
+
+\section{Rendering Code with Highlights for Specific Languages}\label{rendering-code-with-highlights-for-specific-languages}
+
+Bookdown also highlights (specific to the language) the outputted code for the ease of understanding. To do so, add the name of the language (of the many shown above) after the first 3 \texttt{\textasciigrave{}} symbols. Note that the language is not case sensitive (so both ``r'' and ``R'' would render the same below). For example:
+
+\begin{verbatim}
+```r
+x <- 42
+x
+```
+\end{verbatim}
+
+renders into:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \DecValTok{42}
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+Notice that since \texttt{\textless{}-} is how to assign values to variables in R, it is highlighted. If we were to replace ``r'' with a different language, this may not be highlighted (depending if ``\textless-'' is a relevant symbol in that language.)
+
+\section{Rendering and Compiling Code}\label{rendering-and-compiling-code}
+
+To have the code actually compile, we need to put ``\{'' and ``\}'' brackets around the language, which we still put after the first 3 \texttt{\textasciigrave{}} symbols. For example:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r\}}
+\NormalTok{x \textless{}{-} 42}
+\NormalTok{x}
+\NormalTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+````
+renders and compiles into:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \DecValTok{42}
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 42
+\end{verbatim}
+
+The second bar you see is the output of R command!
+
+You can run these ``code chunks'' without previewing or building the book! To the right of your code chunk, there are 3 symbols (as seen below).
 
 \section{Captioned figures and tables}\label{captioned-figures-and-tables}
 
@@ -1946,15 +2009,21 @@ Here are some common mistakes that can lead to problems - danger zones!
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Forgetting to pull your workshop teams recent edits before you edit!
-\end{enumerate}
 
-Ex. Forgot to pull before editing?
-- Your git window will say (at the top of the window) your branch is ahead of the main branch
-- You will probably have to deal with a merge conflict
-- {[}this is pretty in-depth{]}
+  Ex. Forgot to pull before editing?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Your git window will say (at the top of the window) your branch is ahead of the main branch
+  \item
+    You will probably have to deal with a merge conflict
+  \item
+    {[}this is pretty in-depth{]}
+  \end{itemize}
+\end{enumerate}
 
 \section{Potential Errors \& Bugs}\label{potential-errors-bugs}
 

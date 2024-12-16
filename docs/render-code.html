@@ -258,9 +258,9 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8" data-path="render-code.html"><a href="render-code.html"><i class="fa fa-check"></i><b>8</b> How to Render/Compile Code</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="render-code.html"><a href="render-code.html#page-under-construction"><i class="fa fa-check"></i><b>8.1</b> [PAGE UNDER CONSTRUCTION]</a></li>
-<li class="chapter" data-level="8.2" data-path="render-code.html"><a href="render-code.html#rendering-code"><i class="fa fa-check"></i><b>8.2</b> Rendering Code</a></li>
-<li class="chapter" data-level="8.3" data-path="render-code.html"><a href="render-code.html#rendering-code-with-highlights"><i class="fa fa-check"></i><b>8.3</b> Rendering Code with Highlights</a></li>
+<li class="chapter" data-level="8.1" data-path="render-code.html"><a href="render-code.html#rendering-code"><i class="fa fa-check"></i><b>8.1</b> Rendering Code</a></li>
+<li class="chapter" data-level="8.2" data-path="render-code.html"><a href="render-code.html#rendering-code-with-highlights-for-specific-languages"><i class="fa fa-check"></i><b>8.2</b> Rendering Code with Highlights for Specific Languages</a></li>
+<li class="chapter" data-level="8.3" data-path="render-code.html"><a href="render-code.html#rendering-and-compiling-code"><i class="fa fa-check"></i><b>8.3</b> Rendering and Compiling Code</a></li>
 <li class="chapter" data-level="8.4" data-path="render-code.html"><a href="render-code.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>8.4</b> Captioned figures and tables</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>9</b> Brain Dump / FAQ</a>
@@ -325,8 +325,6 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="render-code" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">8</span> How to Render/Compile Code<a href="render-code.html#render-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="page-under-construction" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> [PAGE UNDER CONSTRUCTION]<a href="render-code.html#page-under-construction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are many ways to render and compile code using Bookdown!</p>
 <p>Here are most of the “language engines” (programming languages) available to render, run and compile in Bookdown!</p>
 <div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="render-code.html#cb66-1" tabindex="-1"></a><span class="fu">names</span>(knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">get</span>())</span></code></pre></div>
@@ -343,20 +341,51 @@ div.csl-indent {
 ## [51] &quot;tikz&quot;        &quot;verbatim&quot;    &quot;theorem&quot;     &quot;lemma&quot;       &quot;corollary&quot;  
 ## [56] &quot;proposition&quot; &quot;conjecture&quot;  &quot;definition&quot;  &quot;example&quot;     &quot;exercise&quot;   
 ## [61] &quot;hypothesis&quot;  &quot;proof&quot;       &quot;remark&quot;      &quot;solution&quot;</code></pre>
+<div id="rendering-code" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Rendering Code<a href="render-code.html#rendering-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Just rendering code refers to Bookdown formatting code so that our users can view it. The code does not run or compile. This is very similar to what is shown in 020-module-1.Rmd of the bookdown template. An example is shown below.</p>
+<pre><code>```
+insert code here
+```</code></pre>
+<p>which appears as</p>
+<pre><code>insert code here</code></pre>
+<p>These are called “code chunks”.</p>
 </div>
-<div id="rendering-code" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Rendering Code<a href="render-code.html#rendering-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Just rendering code refers to Bookdown formatting code so that our users can view it. The code does not run or compile. This is very similar to what is shown in 020-module-1.Rmd of the bookdown template.</p>
+<div id="rendering-code-with-highlights-for-specific-languages" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Rendering Code with Highlights for Specific Languages<a href="render-code.html#rendering-code-with-highlights-for-specific-languages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Bookdown also highlights (specific to the language) the outputted code for the ease of understanding. To do so, add the name of the language (of the many shown above) after the first 3 <code>`</code> symbols. Note that the language is not case sensitive (so both “r” and “R” would render the same below). For example:</p>
+<pre><code>```r
+x &lt;- 42
+x
+```</code></pre>
+<p>renders into:</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="render-code.html#cb71-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb71-2"><a href="render-code.html#cb71-2" tabindex="-1"></a>x</span></code></pre></div>
+<p>Notice that since <code>&lt;-</code> is how to assign values to variables in R, it is highlighted. If we were to replace “r” with a different language, this may not be highlighted (depending if “&lt;-” is a relevant symbol in that language.)</p>
 </div>
-<div id="rendering-code-with-highlights" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Rendering Code with Highlights<a href="render-code.html#rendering-code-with-highlights" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="rendering-and-compiling-code" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Rendering and Compiling Code<a href="render-code.html#rendering-and-compiling-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To have the code actually compile, we need to put “{” and “}” brackets around the language, which we still put after the first 3 <code>`</code> symbols. For example:</p>
+<!-- make the language some arbirtary language, since we just want to show what the code would look like -->
+<pre class="text"><code>```{r}
+x &lt;- 42
+x
+```</code></pre>
+<p>````
+renders and compiles into:</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="render-code.html#cb73-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb73-2"><a href="render-code.html#cb73-2" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## [1] 42</code></pre>
+<p>The second bar you see is the output of R command!</p>
+<p>You can run these “code chunks” without previewing or building the book! To the right of your code chunk, there are 3 symbols (as seen below).</p>
+<p><img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWwloWK_sYRV44BYYCC2lhBpxLQQvkSYlJECfHnlYTwg7aPSPgOWuUfp_ybZQkAQ8QYSwUpH378Hv/pub?w=3763&amp;h=1237" alt="Picture of a R code chunk in RStudio"></p>
 </div>
 <div id="captioned-figures-and-tables" class="section level2 hasAnchor" number="8.4">
 <h2><span class="header-section-number">8.4</span> Captioned figures and tables<a href="render-code.html#captioned-figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Figures and tables <em>with captions</em> can also be cross-referenced from elsewhere in your book using <code>\@ref(fig:chunk-label)</code> and <code>\@ref(tab:chunk-label)</code>, respectively.</p>
 <p>See Figure <a href="render-code.html#fig:nice-fig">8.1</a>.</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="render-code.html#cb68-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb68-2"><a href="render-code.html#cb68-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="render-code.html#cb75-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
+<span id="cb75-2"><a href="render-code.html#cb75-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
 <img src="_main_files/figure-html/nice-fig-1.png" alt="Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases." width="80%" />
 <p class="caption">
@@ -364,10 +393,10 @@ Figure 8.1: Here is a nice figure!
 </p>
 </div>
 <p>Don’t miss Table <a href="render-code.html#tab:nice-tab">8.1</a>.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="render-code.html#cb69-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb69-2"><a href="render-code.html#cb69-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb69-3"><a href="render-code.html#cb69-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb69-4"><a href="render-code.html#cb69-4" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="render-code.html#cb76-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb76-2"><a href="render-code.html#cb76-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
+<span id="cb76-3"><a href="render-code.html#cb76-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb76-4"><a href="render-code.html#cb76-4" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <caption><span id="tab:nice-tab">Table 8.1: </span>Here is a nice table!</caption>
 <thead>

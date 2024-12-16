@@ -49,9 +49,9 @@ theorems-and-proofs
 callout-blocks
 use-html
 render-code
-page-under-construction
 rendering-code
-rendering-code-with-highlights
+rendering-code-with-highlights-for-specific-languages
+rendering-and-compiling-code
 captioned-figures-and-tables
 help
 danger-zones
@@ -76,4 +76,3 @@ appendix-links-for-developers
 github-repo
 diagram-links
 how-to-edit-a-google-drawing
-thm:tri
