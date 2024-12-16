@@ -127,29 +127,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -327,20 +304,17 @@ div.csl-indent {
 <h1><span class="header-section-number">8</span> How to Render/Compile Code<a href="render-code.html#render-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>There are many ways to render and compile code using Bookdown!</p>
 <p>Here are most of the “language engines” (programming languages) available to render, run and compile in Bookdown!</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="render-code.html#cb66-1" tabindex="-1"></a><span class="fu">names</span>(knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">get</span>())</span></code></pre></div>
-<pre><code>##  [1] &quot;awk&quot;         &quot;bash&quot;        &quot;coffee&quot;      &quot;gawk&quot;        &quot;groovy&quot;     
-##  [6] &quot;haskell&quot;     &quot;lein&quot;        &quot;mysql&quot;       &quot;node&quot;        &quot;octave&quot;     
-## [11] &quot;perl&quot;        &quot;php&quot;         &quot;psql&quot;        &quot;Rscript&quot;     &quot;ruby&quot;       
-## [16] &quot;sas&quot;         &quot;scala&quot;       &quot;sed&quot;         &quot;sh&quot;          &quot;stata&quot;      
-## [21] &quot;zsh&quot;         &quot;asis&quot;        &quot;asy&quot;         &quot;block&quot;       &quot;block2&quot;     
-## [26] &quot;bslib&quot;       &quot;c&quot;           &quot;cat&quot;         &quot;cc&quot;          &quot;comment&quot;    
-## [31] &quot;css&quot;         &quot;ditaa&quot;       &quot;dot&quot;         &quot;embed&quot;       &quot;eviews&quot;     
-## [36] &quot;exec&quot;        &quot;fortran&quot;     &quot;fortran95&quot;   &quot;go&quot;          &quot;highlight&quot;  
-## [41] &quot;js&quot;          &quot;julia&quot;       &quot;python&quot;      &quot;R&quot;           &quot;Rcpp&quot;       
-## [46] &quot;sass&quot;        &quot;scss&quot;        &quot;sql&quot;         &quot;stan&quot;        &quot;targets&quot;    
-## [51] &quot;tikz&quot;        &quot;verbatim&quot;    &quot;theorem&quot;     &quot;lemma&quot;       &quot;corollary&quot;  
-## [56] &quot;proposition&quot; &quot;conjecture&quot;  &quot;definition&quot;  &quot;example&quot;     &quot;exercise&quot;   
-## [61] &quot;hypothesis&quot;  &quot;proof&quot;       &quot;remark&quot;      &quot;solution&quot;</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="render-code.html#cb1-1" tabindex="-1"></a><span class="fu">names</span>(knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">get</span>())</span></code></pre></div>
+<pre><code>##  [1] &quot;awk&quot;         &quot;bash&quot;        &quot;coffee&quot;      &quot;gawk&quot;        &quot;groovy&quot;      &quot;haskell&quot;     &quot;lein&quot;       
+##  [8] &quot;mysql&quot;       &quot;node&quot;        &quot;octave&quot;      &quot;perl&quot;        &quot;php&quot;         &quot;psql&quot;        &quot;Rscript&quot;    
+## [15] &quot;ruby&quot;        &quot;sas&quot;         &quot;scala&quot;       &quot;sed&quot;         &quot;sh&quot;          &quot;stata&quot;       &quot;zsh&quot;        
+## [22] &quot;asis&quot;        &quot;asy&quot;         &quot;block&quot;       &quot;block2&quot;      &quot;bslib&quot;       &quot;c&quot;           &quot;cat&quot;        
+## [29] &quot;cc&quot;          &quot;comment&quot;     &quot;css&quot;         &quot;ditaa&quot;       &quot;dot&quot;         &quot;embed&quot;       &quot;eviews&quot;     
+## [36] &quot;exec&quot;        &quot;fortran&quot;     &quot;fortran95&quot;   &quot;go&quot;          &quot;highlight&quot;   &quot;js&quot;          &quot;julia&quot;      
+## [43] &quot;python&quot;      &quot;R&quot;           &quot;Rcpp&quot;        &quot;sass&quot;        &quot;scss&quot;        &quot;sql&quot;         &quot;stan&quot;       
+## [50] &quot;targets&quot;     &quot;tikz&quot;        &quot;verbatim&quot;    &quot;theorem&quot;     &quot;lemma&quot;       &quot;corollary&quot;   &quot;proposition&quot;
+## [57] &quot;conjecture&quot;  &quot;definition&quot;  &quot;example&quot;     &quot;exercise&quot;    &quot;hypothesis&quot;  &quot;proof&quot;       &quot;remark&quot;     
+## [64] &quot;solution&quot;    &quot;glue&quot;        &quot;glue_sql&quot;    &quot;gluesql&quot;</code></pre>
 <div id="rendering-code" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Rendering Code<a href="render-code.html#rendering-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Just rendering code refers to Bookdown formatting code so that our users can view it. The code does not run or compile. This is very similar to what is shown in 020-module-1.Rmd of the bookdown template. An example is shown below.</p>
@@ -359,8 +333,8 @@ x &lt;- 42
 x
 ```</code></pre>
 <p>renders into:</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="render-code.html#cb71-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
-<span id="cb71-2"><a href="render-code.html#cb71-2" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="render-code.html#cb6-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb6-2"><a href="render-code.html#cb6-2" tabindex="-1"></a>x</span></code></pre></div>
 <p>Notice that since <code>&lt;-</code> is how to assign values to variables in R, it is highlighted. If we were to replace “r” with a different language, this may not be highlighted (depending if “&lt;-” is a relevant symbol in that language.)</p>
 </div>
 <div id="rendering-and-compiling-code" class="section level2 hasAnchor" number="8.3">
@@ -373,19 +347,34 @@ x
 ```</code></pre>
 <p>````
 renders and compiles into:</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="render-code.html#cb73-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
-<span id="cb73-2"><a href="render-code.html#cb73-2" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="render-code.html#cb8-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb8-2"><a href="render-code.html#cb8-2" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 42</code></pre>
 <p>The second bar you see is the output of R command!</p>
 <p>You can run these “code chunks” without previewing or building the book! To the right of your code chunk, there are 3 symbols (as seen below).</p>
 <p><img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWwloWK_sYRV44BYYCC2lhBpxLQQvkSYlJECfHnlYTwg7aPSPgOWuUfp_ybZQkAQ8QYSwUpH378Hv/pub?w=3763&amp;h=1237" alt="Picture of a R code chunk in RStudio"></p>
+<p>A rectangular box will appear below your code chunk, with the output of your code. Plus, notice that in your bottom left window, any code you run also runs in your console. Both of these ways of checking your code happens for all languages! If you are previewing your book, you must re-preview it, since running the code becomes the new action for your console, instead of previewing the book.</p>
+<div class="redbox">
+<div class="center">
+<p><strong>Note!</strong></p>
+</div>
+<p>If you want to run a certain language, you must have the language installed! R and python are already setup for you. (Python relies on the RStudio interface option, reticulate - you can reconfigure this if you’d like.) You may have to configure new languages so that they can run in RStudio, but generally, they should be able to run automatically.</p>
+</div>
+<p style="font-size: 8px;">
+</p>
+<div class="bluebox">
+<div class="center">
+<p><strong>Exiting the Console</strong></p>
+</div>
+<p>If you’re running R, you don’t have to exit the console (we already work in the R console when using Bookdown). However, if you’re running a different language (for example, python), you will remain in the Python console, and must exit it to run Bookdown commands. You can look online for different ways to exit certain consoles, but generally running “quit” will return you to the R console.</p>
+</div>
 </div>
 <div id="captioned-figures-and-tables" class="section level2 hasAnchor" number="8.4">
 <h2><span class="header-section-number">8.4</span> Captioned figures and tables<a href="render-code.html#captioned-figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Figures and tables <em>with captions</em> can also be cross-referenced from elsewhere in your book using <code>\@ref(fig:chunk-label)</code> and <code>\@ref(tab:chunk-label)</code>, respectively.</p>
 <p>See Figure <a href="render-code.html#fig:nice-fig">8.1</a>.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="render-code.html#cb75-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb75-2"><a href="render-code.html#cb75-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="render-code.html#cb10-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
+<span id="cb10-2"><a href="render-code.html#cb10-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
 <img src="_main_files/figure-html/nice-fig-1.png" alt="Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases." width="80%" />
 <p class="caption">
@@ -393,10 +382,10 @@ Figure 8.1: Here is a nice figure!
 </p>
 </div>
 <p>Don’t miss Table <a href="render-code.html#tab:nice-tab">8.1</a>.</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="render-code.html#cb76-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb76-2"><a href="render-code.html#cb76-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb76-3"><a href="render-code.html#cb76-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb76-4"><a href="render-code.html#cb76-4" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="render-code.html#cb11-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb11-2"><a href="render-code.html#cb11-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
+<span id="cb11-3"><a href="render-code.html#cb11-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
+<span id="cb11-4"><a href="render-code.html#cb11-4" tabindex="-1"></a>)</span></code></pre></div>
 <table>
 <caption><span id="tab:nice-tab">Table 8.1: </span>Here is a nice table!</caption>
 <thead>
@@ -511,20 +500,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

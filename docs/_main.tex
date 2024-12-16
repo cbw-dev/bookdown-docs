@@ -1943,6 +1943,30 @@ The second bar you see is the output of R command!
 
 You can run these ``code chunks'' without previewing or building the book! To the right of your code chunk, there are 3 symbols (as seen below).
 
+A rectangular box will appear below your code chunk, with the output of your code. Plus, notice that in your bottom left window, any code you run also runs in your console. Both of these ways of checking your code happens for all languages! If you are previewing your book, you must re-preview it, since running the code becomes the new action for your console, instead of previewing the book.
+
+\begin{redbox}
+
+\begin{center}
+\textbf{Note!}
+
+\end{center}
+
+If you want to run a certain language, you must have the language installed! R and python are already setup for you. (Python relies on the RStudio interface option, reticulate - you can reconfigure this if you'd like.) You may have to configure new languages so that they can run in RStudio, but generally, they should be able to run automatically.
+
+\end{redbox}
+
+\begin{bluebox}
+
+\begin{center}
+\textbf{Exiting the Console}
+
+\end{center}
+
+If you're running R, you don't have to exit the console (we already work in the R console when using Bookdown). However, if you're running a different language (for example, python), you will remain in the Python console, and must exit it to run Bookdown commands. You can look online for different ways to exit certain consoles, but generally running ``quit'' will return you to the R console.
+
+\end{bluebox}
+
 \section{Captioned figures and tables}\label{captioned-figures-and-tables}
 
 Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
