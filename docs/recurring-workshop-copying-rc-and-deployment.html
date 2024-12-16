@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9 Brain Dump / FAQ | CBW’s Bookdown Template Documentation</title>
+  <title>4 Recurring Workshop: Copying [RC] and Deployment | CBW’s Bookdown Template Documentation</title>
   <meta name="description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9 Brain Dump / FAQ | CBW’s Bookdown Template Documentation" />
+  <meta property="og:title" content="4 Recurring Workshop: Copying [RC] and Deployment | CBW’s Bookdown Template Documentation" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics.ca-logo.svg" />
   <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="cbw-dev/bookdown-docs" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9 Brain Dump / FAQ | CBW’s Bookdown Template Documentation" />
+  <meta name="twitter:title" content="4 Recurring Workshop: Copying [RC] and Deployment | CBW’s Bookdown Template Documentation" />
   
   <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
 The HTML output format for this example is bookdown::gitbook,
@@ -34,8 +34,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="render-code.html"/>
-<link rel="next" href="build-site.html"/>
+<link rel="prev" href="new-workshop-create-deploy.html"/>
+<link rel="next" href="git-instruct.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -323,76 +323,34 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="help" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">9</span> Brain Dump / FAQ<a href="help.html#help" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Congrats you got through most of CBW’s Bookdown Documentation!</p>
-<div id="danger-zones" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> Danger Zones<a href="help.html#danger-zones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>renaming your file with this project, doesn’t change the .Rprog file!</li>
-</ul>
-<p>Ex. Forgot to pull before editing?
-- Your git window will say (at the top of the window) your branch is ahead of the main branch
-- You will probably have to deal with a merge conflict
-- [this is pretty in-depth]</p>
-<!-- GIT CONFLICT EXPLANATION! - will probably be have to explained by Nia? -->
+<div id="recurring-workshop-copying-rc-and-deployment" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> <strong>Recurring Workshop</strong>: Copying [RC] and Deployment<a href="recurring-workshop-copying-rc-and-deployment.html#recurring-workshop-copying-rc-and-deployment" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Certain aspects of the setup for workshops will be different depending on your role. Headers ending in “[RC]” are for Regional Coordinators. Headers without “[RC]” are assumed to be relevant to both RC and workshop teams.</p>
+<div id="recreate-the-workshop" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Recreate the Workshop<a href="recurring-workshop-copying-rc-and-deployment.html#recreate-the-workshop" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>git fork</p>
 </div>
-<div id="potential-errors-bugs" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> Potential Errors &amp; Bugs<a href="help.html#potential-errors-bugs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Trying to build and getting <strong>“Exited with status 1.”</strong>? Bad news: Your book is not building properly. Good news: here are some <em>(hopefully)</em> helpful debugging tricks.</p>
-<ul>
-<li><p>**“Error: LaTeX failed to compile _main.tex.”** - Essentially, something in your code is not allowing the output to be produced properly. Something in your code is producing incorrect output that is not allowing output to be produced.
-&gt; TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug.</p></li>
-<li><p><strong>[X].html not found</strong> - This may result in bad syntax that creates a faulty file. First, fix whatever bug caused that faulty file to occur. Then, rebuild. If you continue to get this error, it may be because the rebuild did not delete the previous faulty html file. Try deleting the docs file and rebuilding. (This can be a good debug solution in general!)</p></li>
-<li><p>If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see <strong>“Permission denied”</strong> in your warning messages, trying running this command <code>chmod -R u+w docs</code> in terminal, in the folder containing your docs folder [CLARIFY ?]</p></li>
-<li><p><strong>“Could not produce X output”</strong> - by default, bookdown builds all possible formats: gitbook, pdf, epub versions. We only need the gitbook, so if you’re having issues, change your build settings to only creating the gitbook [CLARIFY + INCLUDE IMAGES]</p></li>
-<li><p>A very common bug is <strong>“missing X package”</strong>, just install it using this command in your console (the bottom left window in RStudio) <code>install.packages("missing package name, include these surrouding quotations")</code></p></li>
-<li><p>Not being able to produce a specific format - If you’re getting one of the following errors:</p>
-<ul>
-<li>bookdown::render_book() <strong>failed to render the output format</strong> ‘bookdown::pdf_book’</li>
-<li>bookdown::render_book() failed to render the output format ‘bookdown::epub_book’</li>
-</ul>
-<p>There is an easy fix! Press the dropdown options in the “Build Book” button and select “bookdown::gitbook”. We only need to produce the gitbook (the html pages!) so it’s ok if we can not produce the other pages. (However, it is ideal if we could produce all format types, since not being able to may lead to more errors.) This was likely due to creating something in one of the other formats that does not work in that format. For example:</p>
-<pre><code>  - **&quot;File &#39;..._svg-tex.pdf&#39; is missing.&quot;** is a bug that only occurs when producing bookdown::pdf_book. It occurs since you are calling a svg image in regular markdown, which is not allowed. If you want to display a .svg image, use HTML code. </code></pre></li>
-</ul>
+<div id="deploying-your-workshop-website" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Deploying Your Workshop Website<a href="recurring-workshop-copying-rc-and-deployment.html#deploying-your-workshop-website" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Deploying your (turning your files into a) website is actually the exact same as deploying for a new workshop website.</p>
+<p>Read all content starting from <a href="new-workshop-create-deploy.html#workshop-vs-repo">Workshop Repo VS Workshop Website</a> on the <a href="new-workshop-create-deploy.html#new-workshop-create-deploy"><strong>New Workshop</strong>: Creation [RC] and Deployment</a> page
+<!-- For now, we can just link to that part in the, deploying a new workshop website, page. Alternatively, we can just copy paste it here and make some edits, or combine the 2 pages. --></p>
 </div>
-<div id="ease-of-use" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> Ease of Use<a href="help.html#ease-of-use" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="wrapping-your-code" class="section level3 hasAnchor" number="9.3.1">
-<h3><span class="header-section-number">9.3.1</span> Wrapping Your Code<a href="help.html#wrapping-your-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Sometimes, RStudio defaults so that there is no text wrapping when viewing your files. If you notice that you have to scroll horizontally to see the long lines in your files, turn on “Soft-Wrap Long Lines”.</p>
-<ol style="list-style-type: decimal">
-<li><p>In your upper left corner of your RStudio Window, you will see options “File”, “Edit”, “Code”. (If you are in full-screen on a mac, you will have to bring your cursor to the upper left corner before seeing these options). Click “Code”.</p></li>
-<li><p>Go to the 5th option “Soft-Wrap Long Lines” and select it.</p></li>
-</ol>
-</div>
-<div id="visual-r-markdown" class="section level3 hasAnchor" number="9.3.2">
-<h3><span class="header-section-number">9.3.2</span> Visual R Markdown<a href="help.html#visual-r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If you are having difficulties using Markdown Syntax, RStudio has a work around! See <a href="formatting.html#visual-r-md">Visaul R Markdown</a> for more information.</p>
-</div>
-</div>
-<div id="faqs" class="section level2 hasAnchor" number="9.4">
-<h2><span class="header-section-number">9.4</span> FAQs<a href="help.html#faqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li><p>I made a change via GitHub and and it’s not appearing on the website. Why can I not see my edit?</p>
-<p>Let’s recall this image.</p>
-<p><img src="https://docs.google.com/drawings/d/e/2PACX-1vSf5dxJdl-7PAlIBqdqPiSxdtzFVWOUnbbPzhrTu9POTXnzJ3NvoNUPwZHh8vDQRJ3p99FTST4uXUa7/pub?w=792&amp;h=147"></p>
-<p>We build our <strong>HTML</strong> files using Bookdown. This means, any edits we make have to be local, so we can build our website and have the changes in our HTML files. GitHub Pages (which generates our website) only looks at the HTML pages, so even though there is a change on GitHub, it is on the .Rmd files. Hence, we don’t see it on the actual website!</p>
-<p>Next Step: Git Pull your change locally. Build the website. Git Push and then see your edits once the website finishes deploying!</p></li>
-</ol>
+<div id="making-updates" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Making Updates<a href="recurring-workshop-copying-rc-and-deployment.html#making-updates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Follow the <a href="git-instruct.html#git-instruct">Command Line, SSH Connection &amp; Git Clone</a> and <a href="file-explanation.html#file-explanation">So What Do These Files Mean?</a> pages to figure out how to start editing your workshop. However, since it is a recurring workshop, you may not need to edit much.</p>
+<p>If you are only editing the name, date and other small details <!-- there is a word for this I can't think of right now -->, consider only editing the _output.yml and index.Rmd file.</p>
+<p>See <a href="formatting.html#formatting">Formatting Your Content - Markdown</a> for an explanation in how to edit the actual files, and more on Markdown syntax!</p>
 
 </div>
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="render-code.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="build-site.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="new-workshop-create-deploy.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="git-instruct.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -423,7 +381,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cbw-dev/bookdown-docs/blob/main/08-brain-dump-faq.Rmd",
+"link": "https://github.com/cbw-dev/bookdown-docs/blob/main/03-git-fork-old.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -1,4 +1,4 @@
-# **Recurring Workshop**: Creation [RC] and Deployment
+# **Recurring Workshop**: Copying [RC] and Deployment
 
 Certain aspects of the setup for workshops will be different depending on your role. Headers ending in "[RC]" are for Regional Coordinators. Headers without "[RC]" are assumed to be relevant to both RC and workshop teams.
 
@@ -10,6 +10,7 @@ git fork
 
 Deploying your (turning your files into a) website is actually the exact same as deploying for a new workshop website.
 
+Read all content starting from [Workshop Repo VS Workshop Website](#workshop-vs-repo) on the [**New Workshop**: Creation [RC] and Deployment](#new-workshop-create-deploy) page
 <!-- For now, we can just link to that part in the, deploying a new workshop website, page. Alternatively, we can just copy paste it here and make some edits, or combine the 2 pages. -->
 
 ## Making Updates

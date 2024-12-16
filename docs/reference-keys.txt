@@ -4,13 +4,13 @@ tab:nice-tab
 cbws-bookdown-documentation
 get-started
 installation
-new-workshop-creation-rc-and-deployment
+new-workshop-create-deploy
 rc-workshop-setup
-workshop-repo-vs-workshop-website
+workshop-vs-repo
 deploy-website
 check-deploy
 setting-up-team-access-rc-nia-will-fill-this-in
-recurring-workshop-creation-rc-and-deployment
+recurring-workshop-copying-rc-and-deployment
 recreate-the-workshop
 deploying-your-workshop-website
 making-updates
