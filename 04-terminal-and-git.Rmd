@@ -1,4 +1,4 @@
-# Command Line, SSH Connection & Git Clone
+# Command Line, SSH Connection & Git Clone {#git-instruct}
 
 If you're familiar with the command line and have already established a SSH connection, continue to [git cloning your workshop template locally](#git-clone).
 
@@ -381,7 +381,7 @@ But what do any of these files mean? Which ones do I edit? Which ones shouldn't 
 That's ok! To delete the entire local repository and the folder itself, run the following command:
 
 ```
-rm -fr [folder path]
+rm -fr folder-path
 ```
 
-where "folder path" is a file address to the git cloned folder/repository that you want to delete.
+where "folder-path" is a file address to the git cloned folder/repository that you want to delete.

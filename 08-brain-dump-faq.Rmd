@@ -11,7 +11,7 @@ Ex. Forgot to pull before editing?
 - You will probably have to deal with a merge conflict
 - [this is pretty in-depth]
 
-<!-- GIT CONFLICT EXPLANATION! -->
+<!-- GIT CONFLICT EXPLANATION! - will probably be have to explained by Nia? -->
 
 ## Potential Errors & Bugs
 
@@ -19,6 +19,8 @@ Trying to build and getting **"Exited with status 1."**? Bad news: Your book is 
 
 - **"Error: LaTeX failed to compile _main.tex."** - Essentially, something in your code is not allowing the output to be produced properly. Something in your code is producing incorrect output that is not allowing output to be produced. 
     > TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug. 
+
+- **[X].html not found** - This may result in bad syntax that creates a faulty file. First, fix whatever bug caused that faulty file to occur. Then, rebuild. If you continue to get this error, it may be because the rebuild did not delete the previous faulty html file. Try deleting the docs file and rebuilding. (This can be a good debug solution in general!)
 
 - If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see **"Permission denied"** in your warning messages, trying running this command ```chmod -R u+w docs``` in terminal, in the folder containing your docs folder [CLARIFY ?]
 

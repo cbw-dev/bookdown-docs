@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Command Line, SSH Connection &amp; Git Clone | CBW’s Bookdown Template Documentation</title>
+  <meta name="description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Command Line, SSH Connection &amp; Git Clone | CBW’s Bookdown Template Documentation" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics.ca-logo.svg" />
+  <meta property="og:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="cbw-dev/bookdown-docs" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Command Line, SSH Connection &amp; Git Clone | CBW’s Bookdown Template Documentation" />
+  
+  <meta name="twitter:description" content="<p>This is the (in-progress) documentation to make a bookdown CBW workshop.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="twitter:image" content="https://cbw-dev.github.io/bookdown-docs/img/bioinformatics.ca-logo.svg" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="recurring-workshop-creation-rc-and-deployment.html"/>
+<link rel="next" href="file-explanation.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://bioinformaticsdotca.github.io/">
+<img src="img/bioinformatics.ca-logo.svg" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
+</a>
+<li><a href="./">CBW's Bookdown Template Documentation</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> CBW’s Bookdown Documentation</a></li>
+<li class="chapter" data-level="2" data-path="get-started.html"><a href="get-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="get-started.html"><a href="get-started.html#installation"><i class="fa fa-check"></i><b>2.1</b> Installation</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="new-workshop-creation-rc-and-deployment.html"><a href="new-workshop-creation-rc-and-deployment.html"><i class="fa fa-check"></i><b>3</b> <strong>New Workshop</strong>: Creation [RC] and Deployment</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="new-workshop-creation-rc-and-deployment.html"><a href="new-workshop-creation-rc-and-deployment.html#rc-workshop-setup"><i class="fa fa-check"></i><b>3.1</b> Setup the Workshop [RC]</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="new-workshop-creation-rc-and-deployment.html"><a href="new-workshop-creation-rc-and-deployment.html#workshop-repo-vs-workshop-website"><i class="fa fa-check"></i><b>3.1.1</b> Workshop Repo VS Workshop Website</a></li>
+<li class="chapter" data-level="3.1.2" data-path="new-workshop-creation-rc-and-deployment.html"><a href="new-workshop-creation-rc-and-deployment.html#deploy-website"><i class="fa fa-check"></i><b>3.1.2</b> How to Deploy Your Workshop Website</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="new-workshop-creation-rc-and-deployment.html"><a href="new-workshop-creation-rc-and-deployment.html#check-deploy"><i class="fa fa-check"></i><b>3.2</b> Check Your Deploy and See your Website!</a></li>
+<li class="chapter" data-level="3.3" data-path="new-workshop-creation-rc-and-deployment.html"><a href="new-workshop-creation-rc-and-deployment.html#setting-up-team-access-rc-nia-will-fill-this-in"><i class="fa fa-check"></i><b>3.3</b> Setting Up Team Access [RC?] (Nia will fill this in)</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="recurring-workshop-creation-rc-and-deployment.html"><a href="recurring-workshop-creation-rc-and-deployment.html"><i class="fa fa-check"></i><b>4</b> <strong>Recurring Workshop</strong>: Creation [RC] and Deployment</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="recurring-workshop-creation-rc-and-deployment.html"><a href="recurring-workshop-creation-rc-and-deployment.html#recreate-the-workshop"><i class="fa fa-check"></i><b>4.1</b> Recreate the Workshop</a></li>
+<li class="chapter" data-level="4.2" data-path="recurring-workshop-creation-rc-and-deployment.html"><a href="recurring-workshop-creation-rc-and-deployment.html#deploying-your-workshop-website"><i class="fa fa-check"></i><b>4.2</b> Deploying Your Workshop Website</a></li>
+<li class="chapter" data-level="4.3" data-path="recurring-workshop-creation-rc-and-deployment.html"><a href="recurring-workshop-creation-rc-and-deployment.html#making-updates"><i class="fa fa-check"></i><b>4.3</b> Making Updates</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="git-instruct.html"><a href="git-instruct.html"><i class="fa fa-check"></i><b>5</b> Command Line, SSH Connection &amp; Git Clone</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="git-instruct.html"><a href="git-instruct.html#introduction-to-the-command-line"><i class="fa fa-check"></i><b>5.1</b> Introduction to the Command Line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="git-instruct.html"><a href="git-instruct.html#terminal-command-prompt-and-windows-powershell"><i class="fa fa-check"></i><b>5.1.1</b> Terminal, Command Prompt and Windows PowerShell</a></li>
+<li class="chapter" data-level="5.1.2" data-path="git-instruct.html"><a href="git-instruct.html#common-commands-for-us"><i class="fa fa-check"></i><b>5.1.2</b> Common Commands (for us)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="git-instruct.html"><a href="git-instruct.html#creating-the-ssh-connection"><i class="fa fa-check"></i><b>5.2</b> Creating the SSH Connection</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="git-instruct.html"><a href="git-instruct.html#generating-a-new-ssh-key"><i class="fa fa-check"></i><b>5.2.1</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)" target="_blank">Generating a new SSH key</a></a></li>
+<li class="chapter" data-level="5.2.2" data-path="git-instruct.html"><a href="git-instruct.html#linuxmac-adding-your-ssh-key-to-the-ssh-agent"><i class="fa fa-check"></i><b>5.2.2</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a></a></li>
+<li class="chapter" data-level="5.2.3" data-path="git-instruct.html"><a href="git-instruct.html#windows-add-ssh-key"><i class="fa fa-check"></i><b>5.2.3</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a></a></li>
+<li class="chapter" data-level="5.2.4" data-path="git-instruct.html"><a href="git-instruct.html#adding-a-new-ssh-key-to-your-account"><i class="fa fa-check"></i><b>5.2.4</b> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account" target="_blank">Adding a new SSH key to your account</a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="git-instruct.html"><a href="git-instruct.html#git-clone"><i class="fa fa-check"></i><b>5.3</b> Getting the Template on Your Local Computer - Git Clone!</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="git-instruct.html"><a href="git-instruct.html#oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer"><i class="fa fa-check"></i><b>5.3.1</b> Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer!</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="file-explanation.html"><a href="file-explanation.html"><i class="fa fa-check"></i><b>6</b> So What Do These Files Mean?</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="file-explanation.html"><a href="file-explanation.html#bookdown-simple-explanation"><i class="fa fa-check"></i><b>6.1</b> Bookdown Simple Explanation</a></li>
+<li class="chapter" data-level="6.2" data-path="file-explanation.html"><a href="file-explanation.html#opening-your-bookdown-project-in-rstudio"><i class="fa fa-check"></i><b>6.2</b> Opening Your Bookdown Project in RStudio</a></li>
+<li class="chapter" data-level="6.3" data-path="file-explanation.html"><a href="file-explanation.html#explaining-rstudio"><i class="fa fa-check"></i><b>6.3</b> Explaining RStudio</a></li>
+<li class="chapter" data-level="6.4" data-path="file-explanation.html"><a href="file-explanation.html#build-the-book"><i class="fa fa-check"></i><b>6.4</b> Build the Book</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="file-explanation.html"><a href="file-explanation.html#other-ways-to-build-your-book"><i class="fa fa-check"></i><b>6.4.1</b> Other Ways to Build Your Book</a></li>
+<li class="chapter" data-level="6.4.2" data-path="file-explanation.html"><a href="file-explanation.html#knit-your-book"><i class="fa fa-check"></i><b>6.4.2</b> Knit Your Book</a></li>
+<li class="chapter" data-level="6.4.3" data-path="file-explanation.html"><a href="file-explanation.html#preview-your-book"><i class="fa fa-check"></i><b>6.4.3</b> Preview Your Book</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="file-explanation.html"><a href="file-explanation.html#file-setup"><i class="fa fa-check"></i><b>6.5</b> File Setup Explanation</a></li>
+<li class="chapter" data-level="6.6" data-path="file-explanation.html"><a href="file-explanation.html#push-to-github-via-rstudio"><i class="fa fa-check"></i><b>6.6</b> Push to GitHub via RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="formatting.html"><a href="formatting.html"><i class="fa fa-check"></i><b>7</b> Formatting Your Content - Markdown</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="formatting.html"><a href="formatting.html#visual-r-md"><i class="fa fa-check"></i><b>7.1</b> Visaul R Markdown</a></li>
+<li class="chapter" data-level="7.2" data-path="formatting.html"><a href="formatting.html#chapters"><i class="fa fa-check"></i><b>7.2</b> Chapters</a></li>
+<li class="chapter" data-level="7.3" data-path="formatting.html"><a href="formatting.html#subheader"><i class="fa fa-check"></i><b>7.3</b> Subheader</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="formatting.html"><a href="formatting.html#subheader-1"><i class="fa fa-check"></i><b>7.3.1</b> Subheader</a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#an-unnumbered-subheader"><i class="fa fa-check"></i>An unnumbered subheader</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="formatting.html"><a href="formatting.html#parts"><i class="fa fa-check"></i><b>7.4</b> Parts</a></li>
+<li class="chapter" data-level="7.5" data-path="formatting.html"><a href="formatting.html#text-formatting"><i class="fa fa-check"></i><b>7.5</b> Text Formatting</a>
+<ul>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#bold"><i class="fa fa-check"></i><font color="6495ED">Bold</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#italics"><i class="fa fa-check"></i><font color="6495ED">Italics</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#subscript"><i class="fa fa-check"></i><font color="6495ED">Subscript</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#superscript"><i class="fa fa-check"></i><font color="6495ED">Superscript</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#footnotes"><i class="fa fa-check"></i><font color="6495ED">Footnotes</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#horizontal-line"><i class="fa fa-check"></i><font color="6495ED">Horizontal Line</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#blockquote"><i class="fa fa-check"></i><font color="6495ED">Blockquote</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#unordered-list"><i class="fa fa-check"></i><font color="6495ED">Unordered List</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#ordered-list"><i class="fa fa-check"></i><font color="6495ED">Ordered List</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#code"><i class="fa fa-check"></i><font color="6495ED">Code</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#images"><i class="fa fa-check"></i><font color="6495ED">Images</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#links"><i class="fa fa-check"></i><font color="6495ED">Links</font></a></li>
+<li class="chapter" data-level="" data-path="formatting.html"><a href="formatting.html#links-to-other-pagessections-within-your-workshop-wesbite"><i class="fa fa-check"></i><font color="6495ED">Links to Other Pages/Sections within your Workshop Wesbite</font></a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="formatting.html"><a href="formatting.html#citations"><i class="fa fa-check"></i><b>7.6</b> Citations</a></li>
+<li class="chapter" data-level="7.7" data-path="formatting.html"><a href="formatting.html#equations"><i class="fa fa-check"></i><b>7.7</b> Equations</a></li>
+<li class="chapter" data-level="7.8" data-path="formatting.html"><a href="formatting.html#theorems-and-proofs"><i class="fa fa-check"></i><b>7.8</b> Theorems and Proofs</a></li>
+<li class="chapter" data-level="7.9" data-path="formatting.html"><a href="formatting.html#callout-blocks"><i class="fa fa-check"></i><b>7.9</b> Callout blocks</a></li>
+<li class="chapter" data-level="7.10" data-path="formatting.html"><a href="formatting.html#use-html"><i class="fa fa-check"></i><b>7.10</b> TIP: Markdown Not Working/Not Enough? Use HTML!</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="render-code.html"><a href="render-code.html"><i class="fa fa-check"></i><b>8</b> How to Render/Compile Code</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="render-code.html"><a href="render-code.html#page-under-construction"><i class="fa fa-check"></i><b>8.1</b> [PAGE UNDER CONSTRUCTION]</a></li>
+<li class="chapter" data-level="8.2" data-path="render-code.html"><a href="render-code.html#rendering-code"><i class="fa fa-check"></i><b>8.2</b> Rendering Code</a></li>
+<li class="chapter" data-level="8.3" data-path="render-code.html"><a href="render-code.html#rendering-code-with-highlights"><i class="fa fa-check"></i><b>8.3</b> Rendering Code with Highlights</a></li>
+<li class="chapter" data-level="8.4" data-path="render-code.html"><a href="render-code.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>8.4</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>9</b> Brain Dump / FAQ</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="help.html"><a href="help.html#danger-zones"><i class="fa fa-check"></i><b>9.1</b> Danger Zones</a></li>
+<li class="chapter" data-level="9.2" data-path="help.html"><a href="help.html#potential-errors-bugs"><i class="fa fa-check"></i><b>9.2</b> Potential Errors &amp; Bugs</a></li>
+<li class="chapter" data-level="9.3" data-path="help.html"><a href="help.html#ease-of-use"><i class="fa fa-check"></i><b>9.3</b> Ease of Use</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="help.html"><a href="help.html#wrapping-your-code"><i class="fa fa-check"></i><b>9.3.1</b> Wrapping Your Code</a></li>
+<li class="chapter" data-level="9.3.2" data-path="help.html"><a href="help.html#visual-r-markdown"><i class="fa fa-check"></i><b>9.3.2</b> Visual R Markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="help.html"><a href="help.html#faqs"><i class="fa fa-check"></i><b>9.4</b> FAQs</a></li>
+</ul></li>
+<li class="part"><span><b>I DEVELOPERS GUIDE</b></span></li>
+<li class="chapter" data-level="10" data-path="build-site.html"><a href="build-site.html"><i class="fa fa-check"></i><b>10</b> Build Site</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="build-site.html"><a href="build-site.html#how-to-edit-_bookdown.yml"><i class="fa fa-check"></i><b>10.1</b> How to edit _bookdown.yml</a></li>
+<li class="chapter" data-level="10.2" data-path="build-site.html"><a href="build-site.html#how-to-edit-_output.yml-rc"><i class="fa fa-check"></i><b>10.2</b> How to edit _output.yml (RC)</a></li>
+<li class="chapter" data-level="10.3" data-path="build-site.html"><a href="build-site.html#mandatory-index.rmd-landing-page"><i class="fa fa-check"></i><b>10.3</b> Mandatory “index.Rmd” landing page</a></li>
+<li class="chapter" data-level="10.4" data-path="build-site.html"><a href="build-site.html#build-the-book-1"><i class="fa fa-check"></i><b>10.4</b> Build the book:</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="build-site.html"><a href="build-site.html#render-book"><i class="fa fa-check"></i><b>10.4.1</b> Render book</a></li>
+<li class="chapter" data-level="10.4.2" data-path="build-site.html"><a href="build-site.html#preview-book"><i class="fa fa-check"></i><b>10.4.2</b> Preview book</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="git-instructions.html"><a href="git-instructions.html"><i class="fa fa-check"></i><b>11</b> Git Instructions</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="git-instructions.html"><a href="git-instructions.html#how-to-make-a-git-repo-rc"><i class="fa fa-check"></i><b>11.1</b> How to Make a Git Repo (RC)</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="git-instructions.html"><a href="git-instructions.html#how-to-make-the-git-connection-adding-your-local-repo-to-github"><i class="fa fa-check"></i><b>11.1.1</b> How to Make the Git Connection (Adding your Local Repo to GitHub)</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="git-instructions.html"><a href="git-instructions.html#updating-github-via-rstudio"><i class="fa fa-check"></i><b>11.2</b> Updating GitHub via RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="how-to-deploy-your-workshop-website.html"><a href="how-to-deploy-your-workshop-website.html"><i class="fa fa-check"></i><b>12</b> How to Deploy Your Workshop Website</a></li>
+<li class="chapter" data-level="13" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html"><i class="fa fa-check"></i><b>13</b> Appendix [Links for Developers]</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#github-repo"><i class="fa fa-check"></i><b>13.1</b> GitHub Repo</a></li>
+<li class="chapter" data-level="13.2" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#diagram-links"><i class="fa fa-check"></i><b>13.2</b> Diagram Links</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="appendix-links-for-developers.html"><a href="appendix-links-for-developers.html#how-to-edit-a-google-drawing"><i class="fa fa-check"></i><b>13.2.1</b> How to Edit a Google Drawing</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CBW’s Bookdown Template Documentation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="git-instruct" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Command Line, SSH Connection &amp; Git Clone<a href="git-instruct.html#git-instruct" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>If you’re familiar with the command line and have already established a SSH connection, continue to <a href="git-instruct.html#git-clone">git cloning your workshop template locally</a>.</p>
+<div id="introduction-to-the-command-line" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Introduction to the Command Line<a href="git-instruct.html#introduction-to-the-command-line" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is for those who have no (or extremely little) experience with the command line.</p>
+<p>Using the command line, you can use text commands to interact with your computer’s operating system. For us, we will be using it to move around our folders and to <a href="git-instruct.html#git-clone">git clone</a> our workshop into our computer, so we can work on it using RStudio!</p>
+<blockquote>
+<p>Note:</p>
+<p>Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!</p>
+</blockquote>
+<div id="terminal-command-prompt-and-windows-powershell" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Terminal, Command Prompt and Windows PowerShell<a href="git-instruct.html#terminal-command-prompt-and-windows-powershell" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.</p>
+<blockquote>
+<p>Note: Windows PowerShell tends to be more advanced than Command Prompt, and often can accept more commands that are accepted by Terminal than Command Prompt.</p>
+</blockquote>
+</div>
+<div id="common-commands-for-us" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Common Commands (for us)<a href="git-instruct.html#common-commands-for-us" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<!-- Consider making this explanation a video -->
+<p>We won’t need to know that many commands, but for easy navigation and understanding, here is what you (generally) need:</p>
+<div class="greenbox">
+<p><strong>Note:</strong></p>
+<p>Commands are written below as headers, with an explanation provided beneath.</p>
+<p>They follow the format: “[Linux Command] OR”[Windows Command]”</p>
+</div>
+<div id="pwd-or-echo-cd" class="section level6 unnumbered hasAnchor">
+<h6>pwd OR echo %cd%<a href="git-instruct.html#pwd-or-echo-cd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“pwd” stands for “print working directory”. It is a command that works in <strong>Linux</strong> and <strong>Windows PowerShell</strong>. The equivalent in <strong>Command Prompt</strong> is “echo %cd%”. For example, below our output is where in my folders the current .Rmd file that makes up this website is:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="git-instruct.html#cb6-1" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs</code></pre>
+</div>
+<div id="ls-or-dir" class="section level6 unnumbered hasAnchor">
+<h6>ls OR dir<a href="git-instruct.html#ls-or-dir" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“ls” is a command that works in <strong>Linux</strong> and <strong>Windows PowerShell</strong>. It’s short for “list” and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="git-instruct.html#cb8-1" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<!-- to save space, only output the first 4 lines -->
+<pre><code>## 01-getting-started.Rmd
+## 02-git-clone-new.Rmd
+## 03-git-fork-old.Rmd
+## 04-terminal-and-git.Rmd</code></pre>
+<p>A similar command in <strong>Command Prompt</strong> is <code>dir</code> (short for “directory”), which also outputs the files and folders in your current directory (along with timestamps)!</p>
+</div>
+<div id="cd" class="section level6 unnumbered hasAnchor">
+<h6>cd<a href="git-instruct.html#cd" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“cd” stands for “change directory”. The command produces no output, but it allows you to go to a different directory than the one you’re currently in. For example,</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="git-instruct.html#cb10-1" tabindex="-1"></a><span class="bu">pwd</span> <span class="co"># recall: pwd tells us where we currently are</span></span>
+<span id="cb10-2"><a href="git-instruct.html#cb10-2" tabindex="-1"></a><span class="bu">cd</span> img <span class="co"># img is a folder in bookdown-docs</span></span>
+<span id="cb10-3"><a href="git-instruct.html#cb10-3" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;now switching directories&quot;</span> <span class="co"># outputs the following string</span></span>
+<span id="cb10-4"><a href="git-instruct.html#cb10-4" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+## now switching directories
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs/img</code></pre>
+<blockquote>
+<p><strong>Tip</strong>:<br>Typing “cd” and then hitting the <code>tab</code> key will give you the available directories you can go to from where you are, or what you have currently typed in. If there is only one option, hitting <code>tab</code> will fill in your command with that option. (This works when typing in any file location into your command line, not only using “cd”). On macOS, the terminal will give you a list if there are multiple options. On Windows, both Command Prompt and Windows Powershell will fill in potential options, and you can hit tab multiple times untill you find your desired file destination.</p>
+</blockquote>
+<p><strong>File Location Shorthands</strong> When referring to file addresses, there are helpful shorthands! Here’s a summary: - <code>.</code> = Current Directory - <code>..</code> = Parent Directory - <code>~</code> = Home Directory</p>
+<p>Here’s an example (recall, cd produces no output!):</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="git-instruct.html#cb12-1" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb12-2"><a href="git-instruct.html#cb12-2" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="co"># creates a line</span></span>
+<span id="cb12-3"><a href="git-instruct.html#cb12-3" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="git-instruct.html#cb12-4" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Current Directory Example&quot;</span></span>
+<span id="cb12-5"><a href="git-instruct.html#cb12-5" tabindex="-1"></a><span class="bu">cd</span> .</span>
+<span id="cb12-6"><a href="git-instruct.html#cb12-6" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb12-7"><a href="git-instruct.html#cb12-7" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
+<span id="cb12-8"><a href="git-instruct.html#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="git-instruct.html#cb12-9" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Parent Directory Example&quot;</span></span>
+<span id="cb12-10"><a href="git-instruct.html#cb12-10" tabindex="-1"></a><span class="bu">cd</span> ..</span>
+<span id="cb12-11"><a href="git-instruct.html#cb12-11" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb12-12"><a href="git-instruct.html#cb12-12" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span></span>
+<span id="cb12-13"><a href="git-instruct.html#cb12-13" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="git-instruct.html#cb12-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Home Directory Example&quot;</span></span>
+<span id="cb12-15"><a href="git-instruct.html#cb12-15" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb12-16"><a href="git-instruct.html#cb12-16" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+## 
+## Current Directory Example
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-docs
+## 
+## Parent Directory Example
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs
+## 
+## Home Directory Example
+## /Users/jqiu</code></pre>
+</div>
+<div id="mkdir" class="section level6 unnumbered hasAnchor">
+<h6>mkdir<a href="git-instruct.html#mkdir" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“mkdir [directory address]” stands for “make directory”. Essentially, mkdir will make an empty directory (folder) at a specified location. For example: <code>mkdir test</code> would create a folder named “test” in our current directory. The following commands do the same thing. Note: <code>mkdir ./test</code> does the same thing.</p>
+</div>
+<div id="rmdir" class="section level6 unnumbered hasAnchor">
+<h6>rmdir<a href="git-instruct.html#rmdir" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“rmdir [directory address]” removes an <em>empty</em> directory. For example, <code>rmdir test</code> would delete the directory we just made!</p>
+</div>
+<div id="rmdir--r-or-rmdir-s" class="section level6 unnumbered hasAnchor">
+<h6>rmdir -r OR rmdir /s<a href="git-instruct.html#rmdir--r-or-rmdir-s" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>“rmdir -r [directory address]” (Terminal &amp; Windows PowerShell) and “rmdir /s [directory address]” removes a directory recursively, meaning it deletes all the contents of the folder as we all as the folder in itself. Be careful, you can not restore a directory you removed using “rmdir”!</p>
+</div>
+<div id="up-and-down-arrows" class="section level6 unnumbered hasAnchor">
+<h6>Up [⬆] and Down [⬇] Arrows<a href="git-instruct.html#up-and-down-arrows" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>One of the most useful tips for using the command line is to use your up [↑] and down [↓] arrow keys. Using the up [↑] key gives you the previous commands you typed, and the down [↓] arrow returns you to your earlier commands.</p>
+</div>
+</div>
+</div>
+<div id="creating-the-ssh-connection" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Creating the SSH Connection<a href="git-instruct.html#creating-the-ssh-connection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We need to create an SSH connection. You have already set this up if you have been git cloning, pulling from and pushing to GitHub. If you have, continue to <a href="git-instruct.html#git-clone">git cloning</a>. If you haven’t, keep reading!</p>
+<p>Essentially, we’re doing these steps to update and receive updates from our GitHub repository, with security!</p>
+<p>Follow the following 3 main steps. Each of these subheaders links to GitHub’s official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you’ve already been working with GitHub/SSH connection and want to make a new one, consider using the official docs.) The official docs may be more up-to-date.</p>
+<p><em>If you do decide to use GitHub’s docs,</em> <strong><em>choose the page</em></strong> <em>(the different tabs are clickable at the top of the page) that matches your system (Mac/Windows/Linux).</em></p>
+<blockquote>
+<p>Note: You can do these commands anywhere in your files. You do not need to be in your home directory.</p>
+</blockquote>
+<div class="bluebox">
+<div class="center">
+<p><strong>Output VS Commands</strong></p>
+</div>
+<p>In our instructions (and the GitHub docs), output is prefaced by a “&gt;” sign.</p>
+<p>In the GitHub instructions, commands start with “$” sign. In Linux, the terminal tends to give you a “$” to indicate where to run your command. Thus, GitHub uses a “$” to indicate that what comes after is the command you should run. <strong>The “$” is not part of the command.</strong> (We do not do this in our instructions).</p>
+</div>
+<div id="generating-a-new-ssh-key" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)" target="_blank">Generating a new SSH key</a><a href="git-instruct.html#generating-a-new-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Open Terminal.</p></li>
+<li><p>Copy and paste this text into your terminal. <strong>Replace the email given below with your GitHub email address</strong> (the email address you used to sign up for Github). <em>Keep the quotations in your command.</em> Press enter to run the command.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="git-instruct.html#cb14-1" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">&quot;your_email@example.com&quot;</span></span></code></pre></div>
+<p>You will get this output:</p>
+<pre><code>&gt; Generating public/private ALGORITHM key pair.
+&gt; Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM):</code></pre>
+<p>Press enter. (This uses a default file and default file location.)</p>
+<p>If you have already created a SSH key and you are asked to rewrite another key, look at the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name." target="_blank">GitHub Docs</a> for specific steps.</p></li>
+<li><p>Type a secure passphrase (make up a password) when prompted with:</p>
+<pre><code>&gt; Enter passphrase (empty for no passphrase): [TYPE YOUR PASSPHRASE]</code></pre>
+<div class="redbox">
+<div class="center">
+<p><strong>Before you freak out,</strong></p>
+</div>
+<p>this passphrase is so secretive that won’t see it being typed. You won’t see a cursor moving and you won’t see ● instead of the characters you’re typing. Rest assured, your computer is receiving your text.</p>
+<p>If you make a mistake, it’s best to hit the “delete” bar many times, and retype.</p>
+</div>
+<p style="font-size: 20px;">
+</p>
+<pre><code>&gt; Enter same passphrase again: [TYPE THE SAME PASSPHRASE]</code></pre>
+<blockquote>
+<p>You should keep note of this passphrase for your own use. We (should) never have to use it again after finishing these steps.</p>
+</blockquote>
+<p>You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!</p></li>
+</ol>
+</div>
+<div id="linuxmac-adding-your-ssh-key-to-the-ssh-agent" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a><a href="git-instruct.html#linuxmac-adding-your-ssh-key-to-the-ssh-agent" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>These are the instructions if you have a Linux or macOS computer. Go <a href="git-instruct.html#windows-add-ssh-key">here</a> for the Windows instructions.</p>
+<ol style="list-style-type: decimal">
+<li><p>In terminal, run the following command:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="git-instruct.html#cb18-1" tabindex="-1"></a><span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
+<p>You will get this output:</p>
+<pre><code>&gt; Agent pid 59566</code></pre>
+<p><em>(Your number will most likely be different than the one above.)</em></p></li>
+<li><p>If you’re using macOS Sierra 10.12.2 or later additions, you need to modify your <code>~/.ssh/config</code> file.</p>
+<ol style="list-style-type: decimal">
+<li><p>Check if you have a <code>~/.ssh/config</code> file: Run the following command:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="git-instruct.html#cb20-1" tabindex="-1"></a><span class="ex">open</span> ~/.ssh/config</span></code></pre></div></li>
+<li><p>If you get the following output:</p>
+<pre><code>&gt; The file /Users/YOU/.ssh/config does not exist.</code></pre>
+<p>Create the file using the touch command: run the command given below</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="git-instruct.html#cb22-1" tabindex="-1"></a><span class="fu">touch</span> ~/.ssh/config</span></code></pre></div></li>
+<li><p>Edit your <code>~/.ssh/config</code> file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.</p>
+<ul>
+<li>Run <code>nano ~/.ssh/config</code></li>
+<li>Add the following lines to this file.</li>
+</ul>
+<pre><code>Host github.com
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_ed25519</code></pre>
+<ul>
+<li>Exit nano: <code>ctrl + X</code></li>
+<li>Type “Y” and hit enter to save changes, when asked the following</li>
+</ul>
+<pre><code>Save modified buffer (ANSWERING &quot;No&quot; WILL DESTROY CHANGES) ?</code></pre></li>
+</ol></li>
+<li><p>Return to terminal. Run the following command:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="git-instruct.html#cb25-1" tabindex="-1"></a><span class="fu">ssh-add</span> <span class="at">--apple-use-keychain</span> ~/.ssh/id_ed25519</span></code></pre></div>
+<p>(You may be asked to enter your passphrase again. This is the same passphrase as before.)</p></li>
+</ol>
+</div>
+<div id="windows-add-ssh-key" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a><a href="git-instruct.html#windows-add-ssh-key" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Right click on Windows Powershell (you can search for it in your search bar on your taskbar) and select “Run as administrator”.</p></li>
+<li><p>Run the following commands:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="git-instruct.html#cb26-1" tabindex="-1"></a><span class="ex">Get-Service</span> <span class="at">-Name</span> ssh-agent <span class="kw">|</span> <span class="ex">Set-Service</span> <span class="at">-StartupType</span> Manual</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="git-instruct.html#cb27-1" tabindex="-1"></a><span class="ex">Start-Service</span> ssh-agent</span></code></pre></div></li>
+<li><p>Open a terminal window (without running as administrator). Run the following command, and <strong>replace YOU with your GitHub username</strong>:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="git-instruct.html#cb28-1" tabindex="-1"></a><span class="fu">ssh-add</span> c:/Users/YOU/.ssh/id_ed25519</span></code></pre></div></li>
+</ol>
+</div>
+<div id="adding-a-new-ssh-key-to-your-account" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account" target="_blank">Adding a new SSH key to your account</a><a href="git-instruct.html#adding-a-new-ssh-key-to-your-account" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Copy the SSH public key: Run the following command to copy the content of the ~/.ssh/id_ed25519.pub file to your clipboard:</p>
+<p><strong>On Mac/Linux:</strong></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="git-instruct.html#cb29-1" tabindex="-1"></a><span class="ex">pbcopy</span> <span class="op">&lt;</span> ~/.ssh/id_ed25519.pub</span></code></pre></div>
+<p><strong>On Windows:</strong></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="git-instruct.html#cb30-1" tabindex="-1"></a><span class="ex">clip</span> <span class="op">&lt;</span> ~/.ssh/id_ed25519.pub</span></code></pre></div></li>
+<li><p>Go to your GitHub account on the <a href="https://github.com/" target="_blank">GitHub</a> website. Click on your profile picture (icon in the upper right). Then, select <strong>Settings</strong>.</p></li>
+<li><p>Under the “Access” section, click <strong>SSH and GPG keys</strong>.</p></li>
+<li><p>Click <strong>New SSH key</strong> or <strong>Add SSH key</strong>.</p></li>
+<li><p>In the “Title” field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key: “Personal Laptop”).</p></li>
+<li><p>Leave the type of key as “authentication” (rather than “signing”). For our purposes, selecting authentication is fine.</p></li>
+<li><p>In the “Key” field, paste (we are pasting what we copied in step 1).</p></li>
+<li><p>Click <strong>Add SSH Key</strong>.</p></li>
+<li><p>If you are prompted, confirm access to your GitHub account.</p></li>
+</ol>
+<p>Finally, we’re all done! We’ve created a SSH connection between your device and GitHub!</p>
+<p>Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps or confirm authentication.</p>
+</div>
+</div>
+<div id="git-clone" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Getting the Template on Your Local Computer - Git Clone!<a href="git-instruct.html#git-clone" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Navigate to where in your local file system you want to have your workshop in Terminal/Windows PowerShell/Command Prompt.</p>
+<div class="bluebox">
+<p><strong>Recommended Workshop Location:</strong></p>
+<p>CBW recommends that you create a folder within your Documents folder called “CBWGitHub”, which is where you will place your CBW workshop project files.</p>
+In Finder/File Explorer:
+<ul>
+<li>Navigate to ‘Documents’</li>
+<li>Create a folder and name it “CBWGithub”</li>
+</ul>
+<br>
+<strong>Copy the file address of the CBWGithub folder:</strong>
+<ul>
+<li>On <strong>Windows</strong>
+<ul>
+<li>Using File Explorer, find your “CBWGithub” folder.</li>
+<li>Right click the “CBWGithub” folder and press “<em>Copy as path</em>”.
+<ul>
+<li>If you are currently inside the “CBWGithub” folder, you can right click on it’s name in the header and press either “<em>Copy Address</em>” or “<em>Copy Address as Text</em>”</li>
+</ul></li>
+</ul></li>
+<li>On <strong>Mac</strong>
+<ul>
+<li>Go to the folder holding your “CBWGithub” folder (recommended to be your Documents folder)</li>
+<li>Right-click (or tap your mouse pad with 2 fingers) the “CBWGithub” folder and press the “Options” keyboard key (in the bottom left).</li>
+<li>While holding the “Options” key, go the the 4th section from the top, and click “Copy "CBWGithub" as Pathname”.</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>You may want to paste your file address somewhere where you can quickly find it, so it is easier to navigate to in the future.</p>
+</blockquote>
+</div>
+<p style="font-size: 8px;">
+</p>
+<div class="greenbox">
+<div class="center">
+<p><strong>Navigate to your workshop folder in Terminal:</strong></p>
+</div>
+<p>Navigate using the “cd” command. For example, if you used the recommended instructions, you should run “cd” and paste (since you already copied the file address).</p>
+<p>If you didn’t use the recommended path and folder name, you can use “cd + tab” (where tab is the keyboard key, “tab”) to try to find your path and folder.</p>
+</div>
+<p><br></p></li>
+<li><p>Return to your workshop repository on GitHub. Press <code>&lt; &gt; Code</code>, which is the leftmost tab in the header bar on GitHub.</p>
+<p>Find the ssh for your workshop repository:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Click the green button entitled <code>&lt; &gt; Code</code> ands see the drop down options.</p></li>
+<li><p>Click the SSH tab, as seen below, and then copy the text below it. The text should be something like <a href="mailto:git@github.com" class="email">git@github.com</a>:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
+<img src="img/git-instruct/copy-ssh.png" alt="how to find the ssh for your repo" /><br />
+</p></li>
+<li><p><strong>Edit</strong> and <strong>run the following command</strong> in Terminal/PowerShell/Command Prompt, within the folder you want the workshop folder to be in. (Recall that we navigated there in step 1.)</p></li>
+</ol>
+<div class="redbox">
+<div class="center">
+<p><strong>EDIT THE FOLLOWING COMMAND!</strong></p>
+</div>
+<p>You can essentially type “git clone” and then paste the SSH url, and then hit enter. Below, you must delete the entire “<span>git@</span>github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git” text, and replace it with the text you copied.</p>
+</div>
+<!-- The <span></span> html code is to stop git@github.com from turning into a link -->
+<p style="font-size: 8px;">
+</p>
+<pre><code>git clone git@github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git</code></pre></li>
+<li><p>You should be ready to go! With your given permissions, you should be able to git push (put your local edits on GitHub) and git pull (pull edits on GitHub to your local computer) fine!</p></li>
+</ol>
+<div class="bluebox">
+<div class="center">
+<p><strong>Git Version Control Tip!</strong></p>
+</div>
+<p>Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.</p>
+</div>
+<p><br></p>
+<p>But what do any of these files mean? Which ones do I edit? Which ones shouldn’t I edit? How do I open this in RStudio? And how exactly is a page made from all these files??? It’s time for you to go to the next page :D</p>
+<div id="oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer!<a href="git-instruct.html#oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>That’s ok! To delete the entire local repository and the folder itself, run the following command:</p>
+<pre><code>rm -fr folder-path</code></pre>
+<p>where “folder-path” is a file address to the git cloned folder/repository that you want to delete.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="recurring-workshop-creation-rc-and-deployment.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="file-explanation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/cbw-dev/bookdown-docs/blob/main/04-terminal-and-git.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

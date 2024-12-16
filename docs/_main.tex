@@ -306,8 +306,6 @@ Certain aspects of the setup for workshops will be different depending on your r
 
 \section{Setup the Workshop {[}RC{]}}\label{rc-workshop-setup}
 
-Regional Coordinators will be tasked with creating and slightly editing each new repository for each new workshop. \textbf{Start these instructions with a GitHub account and being logged in}.
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
@@ -399,11 +397,19 @@ Certain aspects of the setup for workshops will be different depending on your r
 
 git fork
 
-\section{Deploy}\label{deploy}
+\section{Deploying Your Workshop Website}\label{deploying-your-workshop-website}
 
-\section{Edit}\label{edit}
+Deploying your (turning your files into a) website is actually the exact same as deploying for a new workshop website.
 
-\chapter{Command Line, SSH Connection \& Git Clone}\label{command-line-ssh-connection-git-clone}
+\section{Making Updates}\label{making-updates}
+
+Follow the \hyperref[git-instruct]{Command Line, SSH Connection \& Git Clone} and \hyperref[file-explanation]{So What Do These Files Mean?} pages to figure out how to start editing your workshop. However, since it is a recurring workshop, you may not need to edit much.
+
+If you are only editing the name, date and other small details , consider only editing the \_output.yml and index.Rmd file.
+
+See \hyperref[formatting]{Formatting Your Content - Markdown} for an explanation in how to edit the actual files, and more on Markdown syntax!
+
+\chapter{Command Line, SSH Connection \& Git Clone}\label{git-instruct}
 
 If you're familiar with the command line and have already established a SSH connection, continue to \hyperref[git-clone]{git cloning your workshop template locally}.
 
@@ -932,12 +938,12 @@ But what do any of these files mean? Which ones do I edit? Which ones shouldn't 
 That's ok! To delete the entire local repository and the folder itself, run the following command:
 
 \begin{verbatim}
-rm -fr [folder path]
+rm -fr folder-path
 \end{verbatim}
 
-where ``folder path'' is a file address to the git cloned folder/repository that you want to delete.
+where ``folder-path'' is a file address to the git cloned folder/repository that you want to delete.
 
-\chapter{So What Do These Files Mean?}\label{so-what-do-these-files-mean}
+\chapter{So What Do These Files Mean?}\label{file-explanation}
 
 Ok now we have our workshop locally (on our computer), which is made up of all these files and folders?
 
@@ -1247,7 +1253,7 @@ Now, we're done! We should see the updates on GitHub now. Also note, if we ever 
 
 Git pushing will automatically update the website, you can see the updates and progress in the actions window we saw previously. (Check out your website on the web once it's done deploying!)
 
-\chapter{Formatting Your Content - Markdown}\label{formatting-your-content---markdown}
+\chapter{Formatting Your Content - Markdown}\label{formatting}
 
 Now we know which files to edit, but how can we edit these files? How do we format our text, links, headers, \ldots?
 
@@ -1926,6 +1932,8 @@ Trying to build and getting \textbf{``Exited with status 1.''}? Bad news: Your b
 \item
   **``Error: LaTeX failed to compile \_main.tex.''** - Essentially, something in your code is not allowing the output to be produced properly. Something in your code is producing incorrect output that is not allowing output to be produced.
   \textgreater{} TIP: Try to comment out recent changes. Try to decipher what exactly caused the build to fail. This will help you find your bug.
+\item
+  \textbf{{[}X{]}.html not found} - This may result in bad syntax that creates a faulty file. First, fix whatever bug caused that faulty file to occur. Then, rebuild. If you continue to get this error, it may be because the rebuild did not delete the previous faulty html file. Try deleting the docs file and rebuilding. (This can be a good debug solution in general!)
 \item
   If you get a bug where your website builds into a website that looks like it is made using very simple html, you may have to change your permissions. If you see \textbf{``Permission denied''} in your warning messages, trying running this command \texttt{chmod\ -R\ u+w\ docs} in terminal, in the folder containing your docs folder {[}CLARIFY ?{]}
 \item

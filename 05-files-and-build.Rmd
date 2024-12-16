@@ -1,4 +1,4 @@
-# So What Do These Files Mean?
+# So What Do These Files Mean? {#file-explanation}
 
 Ok now we have our workshop locally (on our computer), which is made up of all these files and folders?
 
