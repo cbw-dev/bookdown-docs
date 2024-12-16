@@ -71,9 +71,15 @@ You can run these "code chunks" without previewing or building the book! To the 
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWwloWK_sYRV44BYYCC2lhBpxLQQvkSYlJECfHnlYTwg7aPSPgOWuUfp_ybZQkAQ8QYSwUpH378Hv/pub?w=3763&amp;h=1237" alt="Picture of a R code chunk in RStudio">
 
+The <span style="color:#FF0000;">gear symbol</span> leads to more chunk options click on it to see more options.
 
+The <span style="color:#ff9900;">down arrow symbol</span> runs all previous chunks and the current chunk. This is helpful if previous chunks define a variable that you will need in your current chunk.
 
-A rectangular box will appear below your code chunk, with the output of your code. Plus, notice that in your bottom left window, any code you run also runs in your console. Both of these ways of checking your code happens for all languages! If you are previewing your book, you must re-preview it, since running the code becomes the new action for your console, instead of previewing the book.
+> **Note:** Hence, we can use variables from previous chunks!
+
+The <span style="color:#05a34f;">right-pointing arrow symbol</span> runs the current code chunk. A rectangular box will appear below your code chunk, with the output of your code.
+
+Additionally, notice that in your bottom left window, any code you run also runs in your console. Both of these ways of checking your code happens for all languages! If you are previewing your book, you must re-preview it, since running the code becomes the new action for your console, instead of previewing the book.
 
 :::: {.redbox data-latex=""}
 ::: {.center data-latex=""}
