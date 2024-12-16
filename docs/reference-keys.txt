@@ -76,3 +76,4 @@ appendix-links-for-developers
 github-repo
 diagram-links
 how-to-edit-a-google-drawing
+thm:tri

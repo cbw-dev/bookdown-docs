@@ -4,12 +4,14 @@ Congrats you got through most of CBW's Bookdown Documentation!
 
 ## Danger Zones
 
-- renaming your file with this project, doesn't change the .Rprog file!
+Here are some common mistakes that can lead to problems - danger zones!
 
-Ex. Forgot to pull before editing?
-- Your git window will say (at the top of the window) your branch is ahead of the main branch
-- You will probably have to deal with a merge conflict
-- [this is pretty in-depth]
+1. Forgetting to pull your workshop teams recent edits before you edit!
+
+    Ex. Forgot to pull before editing?
+    - Your git window will say (at the top of the window) your branch is ahead of the main branch
+    - You will probably have to deal with a merge conflict
+    - [this is pretty in-depth]
 
 <!-- GIT CONFLICT EXPLANATION! - will probably be have to explained by Nia? -->
 
