@@ -52,7 +52,8 @@ render-code
 rendering-code
 rendering-code-with-highlights-for-specific-languages
 rendering-and-compiling-code
-captioned-figures-and-tables
+code-chunk-options
+code-chunks-for-code-generated-figures-and-tables
 help
 danger-zones
 potential-errors-bugs
