@@ -1,5 +1,3 @@
-# (PART) DEVELOPERS GUIDE {-}
-
 # Build Site
 
 ## How to edit _bookdown.yml
