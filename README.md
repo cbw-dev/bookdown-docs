@@ -18,7 +18,6 @@ BUGS:
 To-Do List
 - EXPLAIN MERGE CONFLICTS
 - FIND A BETTER WAY TO SHOW TABLES
-- update favicon.ico image in template with one with higher quality
 
 Suggestions:
 - add timing of downloads/installations (R/RStudio, developer tools, reticulate)
@@ -26,7 +25,7 @@ Suggestions:
 - add border (css styling) to instruction pictures
 - change callout colours ??
 - best practices section ?
-
+- favicon.ico taken from bioinformaticsdotca.github.io, can update if you'd like
 
 Potential Colour Template? (see the blue, green and red)
 currently used: https://coolors.co/8db580-4d4730-301a4b-f39a9d-acd2ed
