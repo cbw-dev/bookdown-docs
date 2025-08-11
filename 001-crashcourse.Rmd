@@ -1,0 +1,53 @@
+# (PART) Cheat Sheet {-}
+
+# Regional Coordinator Crash Course
+This section will teach you to set up your GitHub Pages site for workshops. Note that it assumes you've already followed the installation instructions in the next section.
+
+## Create your repo
+1. At the **<a href="https://github.com/cbw-dev/bookdown-template" target="_blank">bookdown template</a>**, click "Use this template" and then "Create a new repository". 
+
+2. Set your details
+* Repo name = workshop code (e.g. INR_Mon-2510)
+* Visibility = public
+* Save
+
+3. Configure your workshop
+* Open workshop_config.json in your browser and replace all variables. Commit.
+
+4. Deploy
+* From your repo on GitHub, go to Settings > Pages
+* Ensure it is set to "Deploy from a branch"
+* Set branch to "main"
+* Change folder to /docs
+* Save!
+* Check deploy by going to Actions
+
+5. Clone to your computer
+* On your repo page on GitHub's website, click the green Code button, ensure SSH is selected, and copy the text in the box
+* On your local machine, open your terminal and navigate to the folder where you store your CBW Github repos
+* Run ``git clone [THE TEXT YOU JUST COPIED]``
+
+6. Configure your repo
+* Open the .Rproj file in the folder you've just downloaded
+* Upload your workshop icon to the ``img/`` folder
+* In _output.yml, replace ``missingLogo.png`` with your icon's filename
+* Hit "Build Book" and check preview once complete
+* Commit and push
+
+## Give your team access
+
+1. Set up your faculty team
+* On GitHub's website, go to the [bioinformaticsdotca organization teams page](https://github.com/orgs/bioinformaticsdotca/teams)
+* Create a team named as your workshop code (e.g. INR_Mon-2510); leave all settings as their defaults
+* Add your instructors and TAs to the team
+
+2. Give repo access
+* On your repo page on GitHub's website, navigate to Settings > Collaborators and Teams
+* Click "Add Teams" and select your team
+* Give your team Maintain access
+
+
+# Instructor Crash Course
+
+## Clone your repo
+Your coordinator will have already created your repository.

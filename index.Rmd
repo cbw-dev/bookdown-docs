@@ -7,7 +7,7 @@ bibliography: [book.bib, packages.bib]
 url: https://cbw-dev.github.io/bookdown-docs/
 cover-image: img/bioinformatics_logo.png
 description: |
-  This is the (in-progress) documentation to make a bookdown CBW workshop.
+  This is the documentation to make a bookdown CBW workshop.
   The HTML output format for this example is bookdown::gitbook,
   set in the _output.yml file.
 link-citations: yes
@@ -17,17 +17,13 @@ favicon: img/favicon.ico
 
 # CBW's Bookdown Documentation
 
-Welcome to CBW's documentation for creating a workshop website using Bookdown. Bookdown is an R package that is used to build books, and in our case, the websites hosting CBW's workshops!
+Welcome to CBW's documentation for creating a workshop website using Bookdown. Bookdown is an R package that is used to build books, and in our case, the websites hosting CBW's workshops! You will only need to know markdown and whatever coding language you will be using to learn bookdown.
 
-You only need to know markdown and whatever coding language you will be using to learn bookdown!
+Please note: this is the documentation to create a workshop using *bookdown*. If **Jupyter Book** suits you better, see [here](https://cbw-dev.github.io/jupyterbook-docs/).
 
-Note, this is the documentation to create a workshop using *bookdown*. If **Jupyter Book** suits you better, see [here](https://cbw-dev.github.io/jupyterbook-docs/).
-
-If you don't know which one to use, use the following flowchart to help decide!
+If you don't know which one to use, use the following flowchart to help decide:
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSZaIjEG1ebE4EpmajloUcBcG304StHdlC53Uio9obBFmxK5j190fcgpiNhx5p5p-FYILaoWz9Y5ZXb/pub?w=1663&amp;h=1044">
-
-If Jupyter Book is right for you, click the link on the bottom right arrow, or click [here](#get-started) to get started!
 
 
 To add:  
@@ -50,3 +46,16 @@ Class photo - how to get embed code
 
 Help!
 - my alt text is showing below my image
+
+
+:::: {.callout type="red" style="subtle" title="Subtle Red Title (No Icon)" icon="false"}
+
+This is the content of your subtle red callout.
+It will have a subtle red left border and a light background, but no icon will be displayed next to the title.
+
+You can include any Markdown content here:
+- Like lists
+- Or `inline code`.
+
+::::
+

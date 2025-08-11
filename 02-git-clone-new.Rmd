@@ -4,7 +4,7 @@ Certain aspects of the setup for workshops will be different depending on your r
 
 ## Setup the Workshop [RC] {#rc-workshop-setup}
 
-1. First, let's **go to the <a href="https://github.com/cbw-dev/bookdown-template" target="_blank">bookdown template</a>**.
+1. Fist, let's **go to the <a href="https://github.com/cbw-dev/bookdown-template" target="_blank">bookdown template</a>**.
 
 2. **Click on the "Use this template"** green button, which is to the right of the title of the repository "bookdown-template". Then, press the dropdown option: "**Create a new repository**", as seen below.
 
@@ -39,7 +39,7 @@ Now, you have made a repository that holds what GitHub needs to make our website
 ![Selecting pages from the settings page](img/git-instruct/github-select-pages.png)
 
 3. "Deploy from a branch" is already selected, which is what we want. We must **change the branch from "none" to "main"**. Select the "None" dropdown button and select "main".
-![Select main as the branc](img/git-instruct/github-deploy-main.png)\
+![Select main as the branch](img/git-instruct/github-deploy-main.png)\
 
 4. Then, change the folder from `/ root` to `/docs`. Then **press save**.
 ![Select /docs as the branch](img/git-instruct/github-deploy-docs.png)\
