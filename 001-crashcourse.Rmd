@@ -30,7 +30,7 @@ This section will teach you to set up your GitHub Pages site for workshops. Note
 6. Configure your repo
 * Open the .Rproj file in the folder you've just downloaded
 * Upload your workshop icon to the ``img/`` folder
-* In _output.yml, replace ``missingLogo.png`` with your icon's filename
+* In _output.yml, replace ``missingimg.png`` with your icon's filename
 * Hit "Build Book" and check preview once complete
 * Commit and push
 

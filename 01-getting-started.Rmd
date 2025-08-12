@@ -71,7 +71,7 @@ Bookdown is an open-source R package that helps write books and articles. Before
 
     <br>
 
-4.  **Install the bookdown R package**: Open RStudio and in the console (in the bottom left window of RStudio) run the following command: `install.packages("bookdown")`.
+4.  **Install the bookdown R package**: Open RStudio and run the following command in the console (in the bottom left window of RStudio): `install.packages("bookdown")`.
 
     -   **Download all the packages you will need!** Do this by running the following command:
 
